@@ -1,0 +1,44 @@
+project: "Full Adder (Doom?)"
+metadata:
+  source: "https://github.com/TobisMa/GDS"
+signals:
+  A:
+    type: "input"
+    width: 1
+  B:
+    type: "input"
+    width: 1
+  Cin:
+    type: "input"
+    width: 1
+  Sum:
+    type: "output"
+    width: 1
+  Cout:
+    type: "output"
+    width: 1
+test_steps:
+  - name: "0+0+0"
+    cycles: 1
+    values: { A: 0, B: 0, Cin: 0, Sum: 0, Cout: 0 }
+  - name: "0+0+1"
+    cycles: 1
+    values: { A: 0, B: 0, Cin: 1, Sum: 1, Cout: 0 }
+  - name: "0+1+0"
+    cycles: 1
+    values: { A: 0, B: 1, Cin: 0, Sum: 1, Cout: 0 }
+  - name: "0+1+1"
+    cycles: 1
+    values: { A: 0, B: 1, Cin: 1, Sum: 0, Cout: 1 }
+  - name: "1+0+0"
+    cycles: 1
+    values: { A: 1, B: 0, Cin: 0, Sum: 1, Cout: 0 }
+  - name: "1+0+1"
+    cycles: 1
+    values: { A: 1, B: 0, Cin: 1, Sum: 0, Cout: 1 }
+  - name: "1+1+0"
+    cycles: 1
+    values: { A: 1, B: 1, Cin: 0, Sum: 0, Cout: 1 }
+  - name: "1+1+1"
+    cycles: 1
+    values: { A: 1, B: 1, Cin: 1, Sum: 1, Cout: 1 }

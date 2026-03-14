@@ -1,0 +1,31 @@
+project: "GDS Test (Inverter + Pass-through)"
+metadata:
+  source: "https://github.com/Daddybot/GDS"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "All Zeros"
+    cycles: 1
+    values:
+      UI_IN: 0x00
+      UO_OUT: 0x0F
+  - name: "All Ones"
+    cycles: 1
+    values:
+      UI_IN: 0xFF
+      UO_OUT: 0xF0
+  - name: "Alternating 1"
+    cycles: 1
+    values:
+      UI_IN: 0x55
+      UO_OUT: 0x5A
+  - name: "Alternating 2"
+    cycles: 1
+    values:
+      UI_IN: 0xAA
+      UO_OUT: 0xA5
