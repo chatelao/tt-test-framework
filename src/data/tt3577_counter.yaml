@@ -1,0 +1,21 @@
+project: "18-bit Ripple Counter"
+metadata:
+  source: "https://github.com/by-Tobd/tinytapeout"
+signals:
+  CLK:
+    type: "clock"
+    width: 1
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial Reset"
+    cycles: 1
+    values:
+      UO_OUT: 0x00
+  - name: "Initial Count States"
+    cycles: 4
+    values:
+      UO_OUT: 0x00
+# NOTE: For an 18-bit ripple counter, UO_OUT (connected to 7-segment display)
+# will remain zero for many initial clock cycles at low frequencies.
