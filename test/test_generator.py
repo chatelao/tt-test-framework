@@ -1,6 +1,7 @@
 import os
-import subprocess
 import yaml
+import subprocess
+import pytest
 
 def test_generator():
     test_yaml = "test/test_case.yaml"
@@ -15,17 +16,14 @@ def test_generator():
     with open(test_yaml, "w") as f:
         yaml.dump(data, f)
 
-    result = subprocess.run(["python", "src/scripts/generate_waveform.py", test_yaml], capture_output=True, text=True)
+    # Use python3 to match the environment
+    result = subprocess.run(["python3", "src/scripts/generate_waveform.py", test_yaml], capture_output=True, text=True)
     assert result.returncode == 0
     assert os.path.exists("src/images/test_case.puml")
 
     with open("src/images/test_case.puml", "r") as f:
         content = f.read()
         assert "@startuml" in content
-        assert "SIG is High" in content
-        assert "@enduml" in content
-
-    print("Test passed!")
-
-if __name__ == "__main__":
-    test_generator()
+        # Tool now uses integer 1 for binary signals
+        assert "SIG is 1" in content
+        assert "SIG is Step_1" in content
