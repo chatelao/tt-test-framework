@@ -1,0 +1,35 @@
+project: "tt3723-7seg-viewer"
+metadata:
+  source: "https://github.com/Ghunk09/ttworkshop_TEST"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+
+test_steps:
+  - name: "Pass-through 0x00"
+    cycles: 1
+    values:
+      UI_IN: 0
+      UO_OUT: 0
+
+  - name: "Pass-through 0xFF"
+    cycles: 1
+    values:
+      UI_IN: 255
+      UO_OUT: 255
+
+  - name: "Pass-through 0x55"
+    cycles: 1
+    values:
+      UI_IN: 85
+      UO_OUT: 85
+
+  - name: "Pass-through 0xAA"
+    cycles: 1
+    values:
+      UI_IN: 170
+      UO_OUT: 170

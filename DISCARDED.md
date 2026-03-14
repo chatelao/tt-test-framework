@@ -29,3 +29,13 @@
 ### Solution 3: Long observation (10 cycles)
 - **Description**: A single test step with 10 cycles just to observe the waveform.
 - **Reasoning for Discarding**: Does not provide per-cycle value verification, which is a key feature of the framework.
+
+## 4-Bit Adder Verification Strategy (Test-ID 3657) (2025-05-23 13:00)
+
+### Solution 2: Full Truth Table (256 cycles)
+- **Description**: Exhaustively test all combinations of two 4-bit inputs.
+- **Reasoning for Discarding**: Too many steps for a simple illustrative test case in YAML.
+
+### Solution 3: Random Sampling (10 cycles)
+- **Description**: Use 10 random pairs of inputs.
+- **Reasoning for Discarding**: Less deterministic and may miss specific edge cases like carry-out.

@@ -1,0 +1,49 @@
+project: "tt3657-4bit-adder"
+metadata:
+  source: "https://github.com/madsamtoft/TinyTapeout2"
+signals:
+  A:
+    type: "input"
+    width: 4
+  B:
+    type: "input"
+    width: 4
+  Sum:
+    type: "output"
+    width: 5
+
+test_steps:
+  - name: "0 + 0 = 0"
+    cycles: 1
+    values:
+      A: 0
+      B: 0
+      Sum: 0
+
+  - name: "1 + 1 = 2"
+    cycles: 1
+    values:
+      A: 1
+      B: 1
+      Sum: 2
+
+  - name: "15 + 1 = 16"
+    cycles: 1
+    values:
+      A: 15
+      B: 1
+      Sum: 16
+
+  - name: "15 + 15 = 30"
+    cycles: 1
+    values:
+      A: 15
+      B: 15
+      Sum: 30
+
+  - name: "5 + 10 = 15"
+    cycles: 1
+    values:
+      A: 5
+      B: 10
+      Sum: 15
