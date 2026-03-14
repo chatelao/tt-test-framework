@@ -1,0 +1,60 @@
+project: "test hard macro"
+metadata:
+  source: "https://github.com/jalcim/ttihp-jalcim_ihp_analog_tester"
+signals:
+  A:
+    type: "input"
+    width: 4
+  B:
+    type: "input"
+    width: 4
+  Cin:
+    type: "input"
+    width: 1
+  CLK:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  Sum:
+    type: "output"
+    width: 4
+  Cout:
+    type: "output"
+    width: 1
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      A: 0
+      B: 0
+      Cin: 0
+      RST_N: 0
+      Sum: 0
+      Cout: 0
+  - name: "Sum 5+3"
+    cycles: 1
+    values:
+      A: 5
+      B: 3
+      Cin: 0
+      RST_N: 1
+      Sum: 8
+      Cout: 0
+  - name: "Sum 10+5+1"
+    cycles: 1
+    values:
+      A: 10
+      B: 5
+      Cin: 1
+      Sum: 0
+      Cout: 1
+  - name: "Max Sum"
+    cycles: 1
+    values:
+      A: 15
+      B: 15
+      Cin: 1
+      Sum: 15
+      Cout: 1

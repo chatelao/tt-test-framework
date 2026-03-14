@@ -1,0 +1,39 @@
+project: "tinytapeout_henningp_2bin_to_4bit_decoder"
+metadata:
+  source: "https://wokwi.com/projects/456576419565744129"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  CLK:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Select 0"
+    cycles: 1
+    values:
+      UI_IN: 0x00
+      RST_N: 0
+      UO_OUT: 0x01
+  - name: "Select 1"
+    cycles: 1
+    values:
+      UI_IN: 0x01
+      RST_N: 1
+      UO_OUT: 0x02
+  - name: "Select 2"
+    cycles: 1
+    values:
+      UI_IN: 0x02
+      UO_OUT: 0x04
+  - name: "Select 3"
+    cycles: 1
+    values:
+      UI_IN: 0x03
+      UO_OUT: 0x08

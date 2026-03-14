@@ -1,6 +1,26 @@
 # Roadmap
 
 ## Finished
+- [x] Create simple testcase for Test-ID 3565 (FH Joanneum TinyTapeout) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3534 (Herald) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3682 (I2C to SPI Bridge) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3662 (ttip-test) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3726 (Johnson counter) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3975 (vga_ca) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3618 (tt-verilog) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3707 (tinytapeout_henningp_2bin_to_4bit_decoder) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3609 (tinytapeout) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3759 (test hard macro) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3538 (tinytapout_test) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3724 (sree) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3970 (smolCPU) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3581 (random stuff) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3587 (lriglooCs-first-Wokwi-design) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3556 (Yturkeri_Mytinytapeout) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3638 (Yet another VGA tinytapeout) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3957 (VoGAl) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3737 (Verilog ring oscillator V2) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3603 (TinyTapeout logic gate test) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3711 (Logic Gates Test) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3614 (1-bit Full Adder) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3647 (2x2 Systolic array) (2026-03-14)
@@ -61,22 +81,27 @@
     - [x] Test-ID: [3647](https://app.tinytapeout.com/projects/3647), Repo: https://github.com/Essenceia/Systolic_Array_with_DFT_v2 (2026-03-14)
     - [x] Test-ID: [3614](https://app.tinytapeout.com/projects/3614), Repo: https://github.com/nusli7/TT-Project (2026-03-14)
     - [x] Test-ID: [3711](https://app.tinytapeout.com/projects/3711), Repo: https://github.com/ds-anik/Tiny-Tapeout (2026-03-14)
-    - [ ] Test-ID: [3603](https://app.tinytapeout.com/projects/3603), Repo: https://github.com/XxFanny17xX/tinytapeoutFY
-    - [ ] Test-ID: [3737](https://app.tinytapeout.com/projects/3737), Repo: https://github.com/ChiranjitPatel/tt_ihp26a_ringosc_stdcell
-    - [ ] Test-ID: [3957](https://app.tinytapeout.com/projects/3957), Repo: https://github.com/michaelstambach/vogal
-    - [ ] Test-ID: [3638](https://app.tinytapeout.com/projects/3638), Repo: https://github.com/zouzias/ttihp-verilog-eth
-    - [ ] Test-ID: [3556](https://app.tinytapeout.com/projects/3556), Repo: https://github.com/Duwandervall/yturkeri_mytinytapeout
-    - [ ] Test-ID: [3523](https://app.tinytapeout.com/projects/3523), Repo: https://github.com/hoene/tt_um_hoene_firsttry
-    - [ ] Test-ID: [3587](https://app.tinytapeout.com/projects/3587), Repo: https://github.com/lriglooC/tiny-tapeout-first-design
-    - [ ] Test-ID: [3581](https://app.tinytapeout.com/projects/3581), Repo: https://github.com/vlad-penchev/tinytapeoutz
-    - [ ] Test-ID: [3970](https://app.tinytapeout.com/projects/3970), Repo: https://github.com/TscherterJunior/tt_um_TscherterJunior_top
-    - [ ] Test-ID: [3724](https://app.tinytapeout.com/projects/3724), Repo: https://github.com/shreeveni-x90/SREE
-    - [ ] Test-ID: [3538](https://app.tinytapeout.com/projects/3538), Repo: https://github.com/mohamedelsharkawy101/tinytapout_test
-    - [ ] Test-ID: [3759](https://app.tinytapeout.com/projects/3759), Repo: https://github.com/jalcim/ttihp-jalcim_ihp_analog_tester
-    - [ ] Test-ID: [3609](https://app.tinytapeout.com/projects/3609), Repo: https://github.com/tippfehlr/tinytapeout
-    - [ ] Test-ID: [3707](https://app.tinytapeout.com/projects/3707), Repo: https://github.com/skippersboat/tinytapeout_create_your_gds
-    - [ ] Test-ID: [3618](https://app.tinytapeout.com/projects/3618), Repo: https://github.com/BenediktKeppner/tt-verilog
-    - [ ] Test-ID: [3975](https://app.tinytapeout.com/projects/3975), Repo: https://github.com/znah/ihp-ca
+    - [x] Test-ID: [3603](https://app.tinytapeout.com/projects/3603), Repo: https://github.com/XxFanny17xX/tinytapeoutFY (2026-03-14)
+    - [x] Test-ID: [3737](https://app.tinytapeout.com/projects/3737), Repo: https://github.com/ChiranjitPatel/tt_ihp26a_ringosc_stdcell (2026-03-14)
+    - [x] Test-ID: [3957](https://app.tinytapeout.com/projects/3957), Repo: https://github.com/michaelstambach/vogal (2026-03-14)
+    - [x] Test-ID: [3638](https://app.tinytapeout.com/projects/3638), Repo: https://github.com/zouzias/ttihp-verilog-eth (2026-03-14)
+    - [x] Test-ID: [3556](https://app.tinytapeout.com/projects/3556), Repo: https://github.com/Duwandervall/yturkeri_mytinytapeout (2026-03-14)
+    - [ ] Test-ID: [3523](https://app.tinytapeout.com/projects/3523), Repo: https://github.com/hoene/tt_um_hoene_firsttry (Skipped - Analog)
+    - [x] Test-ID: [3587](https://app.tinytapeout.com/projects/3587), Repo: https://github.com/lriglooC/tiny-tapeout-first-design (2026-03-14)
+    - [x] Test-ID: [3581](https://app.tinytapeout.com/projects/3581), Repo: https://github.com/vlad-penchev/tinytapeoutz (2026-03-14)
+    - [x] Test-ID: [3970](https://app.tinytapeout.com/projects/3970), Repo: https://github.com/TscherterJunior/tt_um_TscherterJunior_top (2026-03-14)
+    - [x] Test-ID: [3724](https://app.tinytapeout.com/projects/3724), Repo: https://github.com/shreeveni-x90/SREE (2026-03-14)
+    - [x] Test-ID: [3538](https://app.tinytapeout.com/projects/3538), Repo: https://github.com/mohamedelsharkawy101/tinytapout_test (2026-03-14)
+    - [x] Test-ID: [3759](https://app.tinytapeout.com/projects/3759), Repo: https://github.com/jalcim/ttihp-jalcim_ihp_analog_tester (2026-03-14)
+    - [x] Test-ID: [3609](https://app.tinytapeout.com/projects/3609), Repo: https://github.com/tippfehlr/tinytapeout (2026-03-14)
+    - [x] Test-ID: [3707](https://app.tinytapeout.com/projects/3707), Repo: https://github.com/skippersboat/tinytapeout_create_your_gds (2026-03-14)
+    - [x] Test-ID: [3618](https://app.tinytapeout.com/projects/3618), Repo: https://github.com/BenediktKeppner/tt-verilog (2026-03-14)
+    - [x] Test-ID: [3975](https://app.tinytapeout.com/projects/3975), Repo: https://github.com/znah/ihp-ca (2026-03-14)
+    - [x] Test-ID: [3726](https://app.tinytapeout.com/projects/3726), Repo: https://github.com/EhsanKhodadad/ttihp-wokwi (2026-03-14)
+    - [x] Test-ID: [3662](https://app.tinytapeout.com/projects/3662), Repo: https://github.com/YashKarthik/ttihp-counter (2026-03-14)
+    - [x] Test-ID: [3682](https://app.tinytapeout.com/projects/3682), Repo: https://github.com/vermiscore/ttihp26a-i2c-spi-bridge (2026-03-14)
+    - [x] Test-ID: [3534](https://app.tinytapeout.com/projects/3534), Repo: https://github.com/pranav0x0112/ttihp26a-Herald (2026-03-14)
+    - [x] Test-ID: [3565](https://app.tinytapeout.com/projects/3565), Repo: https://github.com/leo0111001/TTIHP26a-FH-Joanneum (2026-03-14)
 
 - [ ] Add support for asynchronous signals (Planned)
 - [ ] Integrate with GHDL/Verilator for automated verification (Planned)

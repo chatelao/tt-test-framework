@@ -1,0 +1,32 @@
+project: "I2C to SPI Bridge"
+metadata:
+  source: "https://github.com/vermiscore/ttihp26a-i2c-spi-bridge"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  CLK:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      UO_OUT: 0x1C
+  - name: "Idle"
+    cycles: 1
+    values:
+      RST_N: 1
+      UO_OUT: 0x1C
+  - name: "Clocking"
+    cycles: 3
+    values:
+      CLK: 1
+      UO_OUT: 0x1C
