@@ -42,6 +42,20 @@
 - **Description**: Use YAML's `---` separator to define multiple complete test documents within a single file.
 - **Reasoning for Discarding**: This would require duplicating `project` and `signals` definitions in every document or implementing a complex merging logic.
 
+## 2-Bit Adder Verification Strategy (2025-05-23 11:00)
+
+### Solution 1: Full Truth Table (8 cycles) (Chosen)
+- **Description**: Define eight test steps to cover all combinations of inputs A, B, and Cin.
+- **Reasoning**: This provides comprehensive verification of the combinational logic for a simple 2-bit (full) adder.
+
+### Solution 2: Random Sampling (4 cycles)
+- **Description**: Test only a few representative cases (e.g., all zeros, all ones, and two mixed cases).
+- **Reasoning for Discarding**: While faster, it doesn't guarantee the correctness of the entire logic circuit.
+
+### Solution 3: Sequential Input Sweeping (8 cycles)
+- **Description**: Use a single test case with 8 cycles where inputs change at each clock edge.
+- **Reasoning for Discarding**: Similar to Solution 1 but less explicit in naming each step's purpose in the YAML.
+
 ## Counter Verification Strategy (2025-05-23 10:00)
 
 ### Solution 1: One full period (4 cycles) (Chosen)
