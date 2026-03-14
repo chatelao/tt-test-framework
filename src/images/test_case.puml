@@ -1,0 +1,16 @@
+@startuml
+robust "CLK" as CLK
+concise "Signals" as SIG
+robust "SIG" as SIG
+
+SIG is {undef}
+
+@ 0
+SIG is "Step 1"
+SIG is High
+@ 0
+CLK is High
+@ 0.5
+CLK is Low
+@ 1
+@enduml

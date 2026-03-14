@@ -1,0 +1,10 @@
+project: test
+signals:
+  SIG:
+    type: input
+    width: 1
+test_steps:
+- cycles: 1
+  name: Step 1
+  values:
+    SIG: 1

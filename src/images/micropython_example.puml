@@ -1,0 +1,239 @@
+@startuml
+robust "CLK" as CLK
+concise "Signals" as SIG
+robust "ENA" as ENA
+robust "RST_N" as RST_N
+robust "UI_IN" as UI_IN
+robust "UIO" as UIO
+robust "UO_OUT" as UO_OUT
+
+ENA is {undef}
+RST_N is {undef}
+UI_IN is {undef}
+UIO is {undef}
+UO_OUT is {undef}
+
+@ 0
+SIG is "Reset"
+ENA is High
+RST_N is Low
+UI_IN is "0x0"
+UIO is "0x0"
+@ 0
+CLK is High
+@ 0.5
+CLK is Low
+
+@ 1
+SIG is "Cycle 0 (IDLE)"
+ENA is High
+RST_N is High
+UI_IN is "0x0"
+UIO is "0x0"
+@ 1
+CLK is High
+@ 1.5
+CLK is Low
+
+@ 2
+SIG is "Cycle 1 (Load Scale A & Config)"
+UI_IN is "0x7f"
+UIO is "0x0"
+@ 2
+CLK is High
+@ 2.5
+CLK is Low
+
+@ 3
+SIG is "Cycle 2 (Load Scale B & Format B)"
+UI_IN is "0x7f"
+UIO is "0x0"
+@ 3
+CLK is High
+@ 3.5
+CLK is Low
+
+@ 4
+SIG is "Cycles 3-34 (Stream 32 elements)"
+UI_IN is "0x38"
+UIO is "0x38"
+@ 4
+CLK is High
+@ 4.5
+CLK is Low
+@ 5
+CLK is High
+@ 5.5
+CLK is Low
+@ 6
+CLK is High
+@ 6.5
+CLK is Low
+@ 7
+CLK is High
+@ 7.5
+CLK is Low
+@ 8
+CLK is High
+@ 8.5
+CLK is Low
+@ 9
+CLK is High
+@ 9.5
+CLK is Low
+@ 10
+CLK is High
+@ 10.5
+CLK is Low
+@ 11
+CLK is High
+@ 11.5
+CLK is Low
+@ 12
+CLK is High
+@ 12.5
+CLK is Low
+@ 13
+CLK is High
+@ 13.5
+CLK is Low
+@ 14
+CLK is High
+@ 14.5
+CLK is Low
+@ 15
+CLK is High
+@ 15.5
+CLK is Low
+@ 16
+CLK is High
+@ 16.5
+CLK is Low
+@ 17
+CLK is High
+@ 17.5
+CLK is Low
+@ 18
+CLK is High
+@ 18.5
+CLK is Low
+@ 19
+CLK is High
+@ 19.5
+CLK is Low
+@ 20
+CLK is High
+@ 20.5
+CLK is Low
+@ 21
+CLK is High
+@ 21.5
+CLK is Low
+@ 22
+CLK is High
+@ 22.5
+CLK is Low
+@ 23
+CLK is High
+@ 23.5
+CLK is Low
+@ 24
+CLK is High
+@ 24.5
+CLK is Low
+@ 25
+CLK is High
+@ 25.5
+CLK is Low
+@ 26
+CLK is High
+@ 26.5
+CLK is Low
+@ 27
+CLK is High
+@ 27.5
+CLK is Low
+@ 28
+CLK is High
+@ 28.5
+CLK is Low
+@ 29
+CLK is High
+@ 29.5
+CLK is Low
+@ 30
+CLK is High
+@ 30.5
+CLK is Low
+@ 31
+CLK is High
+@ 31.5
+CLK is Low
+@ 32
+CLK is High
+@ 32.5
+CLK is Low
+@ 33
+CLK is High
+@ 33.5
+CLK is Low
+@ 34
+CLK is High
+@ 34.5
+CLK is Low
+@ 35
+CLK is High
+@ 35.5
+CLK is Low
+
+@ 36
+SIG is "Cycle 35 (Pipeline Flush)"
+UI_IN is "0x0"
+UIO is "0x0"
+@ 36
+CLK is High
+@ 36.5
+CLK is Low
+
+@ 37
+SIG is "Cycle 36 (Final Shared Scaling)"
+UI_IN is "0x0"
+UIO is "0x0"
+@ 37
+CLK is High
+@ 37.5
+CLK is Low
+
+@ 38
+SIG is "Cycle 37 (Read Result Byte 3)"
+UO_OUT is "Result[31:24]"
+@ 38
+CLK is High
+@ 38.5
+CLK is Low
+
+@ 39
+SIG is "Cycle 38 (Read Result Byte 2)"
+UO_OUT is "Result[23:16]"
+@ 39
+CLK is High
+@ 39.5
+CLK is Low
+
+@ 40
+SIG is "Cycle 39 (Read Result Byte 1)"
+UO_OUT is "Result[15:8]"
+@ 40
+CLK is High
+@ 40.5
+CLK is Low
+
+@ 41
+SIG is "Cycle 40 (Read Result Byte 0)"
+UO_OUT is "Result[7:0]"
+@ 41
+CLK is High
+@ 41.5
+CLK is Low
+@ 42
+@enduml

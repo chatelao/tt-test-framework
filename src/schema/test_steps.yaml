@@ -1,0 +1,15 @@
+# Test Steps Schema
+# This file defines the structure for test data YAML files.
+
+project: "Name of the project"
+signals:
+  SIGNAL_NAME:
+    type: "input | output | inout | clock"
+    width: 8 # Number of bits
+
+test_steps:
+  - name: "Phase name (e.g., IDLE, Load Scale A)"
+    cycles: 1 # Number of cycles this phase lasts
+    values:
+      SIGNAL_NAME: 0x00 # Value for the signal during this phase
+      OTHER_SIGNAL: 1
