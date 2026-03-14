@@ -1,6 +1,11 @@
 # Roadmap
 
 ## Finished
+- [x] Create simple testcase for Test-ID 3526 (tinyTapeVerilog_out) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3524 (Digital Lock with Easter Eggs) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3499 (Oscillating Bones) (Skipped - Analog) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3487 (Tiny Tapeout Factory Test) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3486 (Chip ROM) (2026-03-14)
 - [x] Render all testsets into /waveform with -wf suffix using WaveDrom (2026-03-14)
 - [x] Create simple testcase for Test-ID 3565 (FH Joanneum TinyTapeout) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3534 (Herald) (2026-03-14)
@@ -123,6 +128,11 @@
     - [x] Test-ID: [3514](https://app.tinytapeout.com/projects/3514), Repo: https://github.com/StaCu/ttihp-snake-game (2026-03-14)
     - [x] Test-ID: [3515](https://app.tinytapeout.com/projects/3515), Repo: https://github.com/yuya0421/tt_ihp_cic_filter (2026-03-14)
     - [x] Test-ID: [3519](https://app.tinytapeout.com/projects/3519), Repo: https://github.com/xzackli/ttihp-verilog-spi-aggregator (2026-03-14)
+    - [x] Test-ID: [3486](https://app.tinytapeout.com/projects/3486), Repo: https://github.com/TinyTapeout/tt-chip-rom (2026-03-14)
+    - [x] Test-ID: [3487](https://app.tinytapeout.com/projects/3487), Repo: https://github.com/TinyTapeout/ttihp26a-factory-test (2026-03-14)
+    - [x] Test-ID: [3499](https://app.tinytapeout.com/projects/3499), Repo: https://github.com/urish/ttihp-oscillating-bones (Skipped - Analog) (2026-03-14)
+    - [x] Test-ID: [3524](https://app.tinytapeout.com/projects/3524), Repo: https://github.com/pacalodu/tinytapeout (2026-03-14)
+    - [x] Test-ID: [3526](https://app.tinytapeout.com/projects/3526), Repo: https://github.com/floAfentaki/tinyTapeVerilog_out (2026-03-14)
 
 - [ ] Add support for asynchronous signals (Planned)
 - [ ] Integrate with GHDL/Verilator for automated verification (Planned)

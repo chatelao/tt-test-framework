@@ -1,0 +1,54 @@
+project: "Tiny Tapeout Factory Test"
+metadata:
+  source: "https://github.com/TinyTapeout/ttihp26a-factory-test"
+signals:
+  CLK:
+    type: "clock"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+  UIO_IN:
+    type: "input"
+    width: 8
+  UIO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Reset"
+    cycles: 2
+    values:
+      RST_N: 0
+      UI_IN: 0x00
+      UIO_IN: 0x00
+      UO_OUT: 0x00
+      UIO_OUT: 0x00
+  - name: "Pass-through mode"
+    cycles: 2
+    values:
+      RST_N: 1
+      UI_IN: 0x00
+      UIO_IN: 0xAA
+      UO_OUT: 0xAA
+      UIO_OUT: 0x00
+  - name: "Counter mode start"
+    cycles: 1
+    values:
+      RST_N: 1
+      UI_IN: 0x01
+      UIO_IN: 0x00
+      UO_OUT: 0x00
+      UIO_OUT: 0x00
+  - name: "Counter incrementing"
+    cycles: 2
+    values:
+      RST_N: 1
+      UI_IN: 0x01
+      UO_OUT: "0x01-0x02"
+      UIO_OUT: "0x01-0x02"

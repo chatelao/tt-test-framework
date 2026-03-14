@@ -1,0 +1,36 @@
+project: "Digital Lock with Easter Eggs"
+metadata:
+  source: "https://github.com/pacalodu/tinytapeout"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Locked"
+    cycles: 1
+    values:
+      UI_IN: 0x00
+      UO_OUT: 0x00
+  - name: "Unlock code (1011)"
+    cycles: 1
+    values:
+      UI_IN: 11
+      UO_OUT: 1
+  - name: "Easter egg 0 (1010)"
+    cycles: 1
+    values:
+      UI_IN: 10
+      UO_OUT: 2
+  - name: "Easter egg 1 (1001)"
+    cycles: 1
+    values:
+      UI_IN: 9
+      UO_OUT: 4
+  - name: "Easter egg 2 (0011)"
+    cycles: 1
+    values:
+      UI_IN: 3
+      UO_OUT: 8

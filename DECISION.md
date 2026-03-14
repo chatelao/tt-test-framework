@@ -1,5 +1,45 @@
 # Decisions
 
+## tinyTapeVerilog_out Verification Strategy (Test-ID 3526) (2026-03-14 23:00)
+
+### Solution 1: Counter Sequence (Chosen)
+- **Description**: Observe the counter incrementing over several cycles after reset and verify enable logic.
+- **Reasoning**: Verifies the core functional block and confirms that both reset and enable signals work as expected.
+
+### Solution 2: Reset only
+- **Description**: Only verify that counter is 0 after reset.
+- **Reasoning for Discarding**: Does not verify the primary functionality of the design (counting).
+
+## Digital Lock Verification Strategy (Test-ID 3524) (2026-03-14 23:00)
+
+### Solution 1: Code Verification (Chosen)
+- **Description**: Test the unlock code (1011) and representative near-misses (Easter eggs 1010, 1001, 0011).
+- **Reasoning**: Provides targeted verification of the design's specific functional requirements and edge cases.
+
+### Solution 2: Exhaustive 4-bit search
+- **Description**: Test all 16 possible 4-bit combinations.
+- **Reasoning for Discarding**: Unnecessarily verbose for a simple combinational lock.
+
+## Factory Test Verification Strategy (Test-ID 3487) (2026-03-14 23:00)
+
+### Solution 1: Mode Switching (Chosen)
+- **Description**: Test both pass-through mode (ui_in[0]=0) and counter mode (ui_in[0]=1) with internal reset synchronization.
+- **Reasoning**: Comprehensive check of both operational modes and the control logic that selects between them.
+
+### Solution 2: Counter Only Test
+- **Description**: Only test the incrementing counter behavior.
+- **Reasoning for Discarding**: Fails to verify the pass-through logic which is half of the design's purpose.
+
+## Chip ROM Verification Strategy (Test-ID 3486) (2026-03-14 23:00)
+
+### Solution 1: Pass-through Verification (Chosen)
+- **Description**: Verify that the output matches the input as per the placeholder Verilog implementation.
+- **Reasoning**: Since the actual ROM is generated later, verifying the wrapper's pass-through logic is the only deterministic test available at this stage.
+
+### Solution 2: Random Address Testing
+- **Description**: Apply several random addresses and check if they pass through.
+- **Reasoning for Discarding**: Less systematic than testing specific bit patterns like all-zeros and all-ones.
+
 ## Batch Rendering and WaveDrom Strategy (2026-03-14 18:30)
 
 ### Solution 1: WaveDrom for Waveform Generation (Chosen)
