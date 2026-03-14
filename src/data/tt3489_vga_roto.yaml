@@ -1,0 +1,21 @@
+project: "VGA Tiny Logo Roto Zoomer"
+metadata:
+  source: "https://github.com/rejunity/ttihp26a-vga-tiny-logo-rotozoomer"
+  project_id: "3489"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial Reset"
+    cycles: 5
+    values:
+      ui_in: 0
+      uo_out: 0
+  - name: "Wait for Sync"
+    cycles: 20
+    values:
+      ui_in: 0

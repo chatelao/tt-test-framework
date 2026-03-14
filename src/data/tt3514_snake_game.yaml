@@ -1,0 +1,27 @@
+project: "SnakeGame"
+metadata:
+  source: "https://github.com/StaCu/ttihp-snake-game"
+  project_id: "3514"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+  uio_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial"
+    cycles: 5
+    values:
+      ui_in: 0x00
+  - name: "Restart"
+    cycles: 5
+    values:
+      ui_in: 0x20
+  - name: "Move Up"
+    cycles: 5
+    values:
+      ui_in: 0x01

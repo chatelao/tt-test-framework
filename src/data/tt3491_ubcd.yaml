@@ -1,0 +1,29 @@
+project: "Universal Binary to Segment Decoder"
+metadata:
+  source: "https://github.com/RebeccaRGB/ttihp-ubcd"
+  project_id: "3491"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+  uio_in:
+    type: "input"
+    width: 8
+test_steps:
+  - name: "Mode 0: Seven Segment"
+    cycles: 5
+    values:
+      uio_in: 0x00 # Mode 0
+      ui_in: 0x00 # Input 0
+  - name: "Mode 0: Input 1"
+    cycles: 5
+    values:
+      ui_in: 0x01
+  - name: "Mode 1: ASCII"
+    cycles: 5
+    values:
+      uio_in: 0x40 # Mode 1 (M0=1, M1=0)
+      ui_in: 0x41 # 'A'

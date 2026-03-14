@@ -1,0 +1,24 @@
+project: "RandomNum"
+metadata:
+  source: "https://github.com/aakarsh1011/tiny-tapeout"
+  project_id: "3503"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Input 0"
+    cycles: 5
+    values:
+      ui_in: 0x00
+  - name: "Pass through test"
+    cycles: 5
+    values:
+      ui_in: 0x08 # IN3
+  - name: "XOR test"
+    cycles: 5
+    values:
+      ui_in: 0x60 # IN5=1, IN6=1 -> OUT6 should be 0
