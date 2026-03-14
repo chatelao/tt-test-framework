@@ -1,0 +1,57 @@
+project: "TTIHP26a_Luke_Meta"
+metadata:
+  source: "https://github.com/lucapezza/ttIHP26a_luke_meta"
+  project_id: "3709"
+signals:
+  clk:
+    type: clock
+    width: 1
+  rst_n:
+    type: input
+    width: 1
+  UI_IN:
+    type: input
+    width: 8
+  UO_OUT:
+    type: output
+    width: 8
+  UIO:
+    type: inout
+    width: 8
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      clk: 0
+      rst_n: 0
+      UI_IN: 0
+      UIO: 0
+  - name: "Wait for reset"
+    cycles: 1
+    values:
+      clk: 1
+      rst_n: 0
+  - name: "Set inputs"
+    cycles: 1
+    values:
+      clk: 0
+      rst_n: 1
+      UI_IN: 5
+      UIO: 3
+  - name: "Check addition"
+    cycles: 1
+    values:
+      clk: 1
+      rst_n: 1
+      UO_OUT: 8
+  - name: "Change inputs"
+    cycles: 1
+    values:
+      clk: 0
+      UI_IN: 10
+      UIO: 2
+  - name: "Verify addition"
+    cycles: 1
+    values:
+      clk: 1
+      UO_OUT: 12

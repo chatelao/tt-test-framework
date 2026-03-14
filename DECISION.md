@@ -1,5 +1,11 @@
 # Decisions
 
+## Verification Strategy for 12 TTIHP26a Projects (2026-03-14 18:00)
+
+### Solution 1: Manual exploration and YAML creation (Chosen)
+- **Description**: Implement each test case manually by exploring the project's repository to understand its logic and pinout, then create meaningful test steps in YAML.
+- **Reasoning**: This ensures high-quality and accurate test data that accurately reflects the intended behavior of each project, especially for complex designs like SoCs and FPGAs.
+
 ## tinyTapeVerilog_out Verification Strategy (Test-ID 3526) (2026-03-14 23:00)
 
 ### Solution 1: Counter Sequence (Chosen)

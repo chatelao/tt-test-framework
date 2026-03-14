@@ -1,0 +1,44 @@
+project: "FABulous FPGA"
+metadata:
+  source: "https://github.com/mole99/tt-fabulous-ihp-26a"
+  project_id: "3744"
+signals:
+  clk:
+    type: clock
+    width: 1
+  rst_n:
+    type: input
+    width: 1
+  UI_IN:
+    type: input
+    width: 8
+  UO_OUT:
+    type: output
+    width: 8
+  UIO:
+    type: inout
+    width: 8
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      clk: 0
+      rst_n: 0
+      UI_IN: 0
+      UIO: 0
+  - name: "Wait for reset"
+    cycles: 1
+    values:
+      clk: 1
+      rst_n: 0
+  - name: "Config start"
+    cycles: 1
+    values:
+      clk: 0
+      rst_n: 0 # Config is active when design is reset
+      UI_IN: 1 # sample = 1
+  - name: "Bitbang data"
+    cycles: 8
+    values:
+      clk: 1
+      UI_IN: 3 # sample = 1, data = 1

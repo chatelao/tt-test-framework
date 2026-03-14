@@ -1,0 +1,48 @@
+project: "Photo Frame"
+metadata:
+  source: "https://github.com/MichaelBell/ttihp26a-photo-frame"
+  project_id: "3756"
+signals:
+  clk:
+    type: clock
+    width: 1
+  rst_n:
+    type: input
+    width: 1
+  UI_IN:
+    type: input
+    width: 8
+  UO_OUT:
+    type: output
+    width: 8
+  UIO:
+    type: inout
+    width: 8
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      clk: 0
+      rst_n: 0
+      UI_IN: 0
+      UIO: 0
+  - name: "Wait for reset"
+    cycles: 1
+    values:
+      clk: 1
+      rst_n: 0
+  - name: "Enable display"
+    cycles: 1
+    values:
+      clk: 0
+      rst_n: 1
+      UI_IN: 0b00000100 # Display enable = 1
+  - name: "Watch VGA"
+    cycles: 20
+    values:
+      clk: 1
+  - name: "Check syncs"
+    cycles: 1
+    values:
+      clk: 0
+      UO_OUT: 0b10001000 # hsync=bit 7, vsync=bit 3
