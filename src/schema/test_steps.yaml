@@ -17,6 +17,19 @@ properties:
           minimum: 1
       required: [type, width]
   test_steps:
+    $ref: "#/definitions/test_steps"
+  test_cases:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+        test_steps:
+          $ref: "#/definitions/test_steps"
+      required: [name, test_steps]
+definitions:
+  test_steps:
     type: array
     items:
       type: object
@@ -33,4 +46,7 @@ properties:
               - type: integer
               - type: string
       required: [name, cycles, values]
-required: [project, signals, test_steps]
+required: [project, signals]
+oneOf:
+  - required: [test_steps]
+  - required: [test_cases]

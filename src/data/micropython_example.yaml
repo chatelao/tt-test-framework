@@ -16,69 +16,85 @@ signals:
     type: "output"
     width: 8
 
-test_steps:
-  - name: "Reset"
-    cycles: 1
-    values:
-      ENA: 1
-      RST_N: 0
-      UI_IN: 0
-      UIO: 0
+test_cases:
+  - name: "Full Protocol"
+    test_steps:
+      - name: "Reset"
+        cycles: 1
+        values:
+          ENA: 1
+          RST_N: 0
+          UI_IN: 0
+          UIO: 0
 
-  - name: "Cycle 0 (IDLE)"
-    cycles: 1
-    values:
-      ENA: 1
-      RST_N: 1
-      UI_IN: 0
-      UIO: 0
+      - name: "Cycle 0 (IDLE)"
+        cycles: 1
+        values:
+          ENA: 1
+          RST_N: 1
+          UI_IN: 0
+          UIO: 0
 
-  - name: "Cycle 1 (Load Scale A & Config)"
-    cycles: 1
-    values:
-      UI_IN: 127
-      UIO: 0
+      - name: "Cycle 1 (Load Scale A & Config)"
+        cycles: 1
+        values:
+          UI_IN: 127
+          UIO: 0
 
-  - name: "Cycle 2 (Load Scale B & Format B)"
-    cycles: 1
-    values:
-      UI_IN: 127
-      UIO: 0
+      - name: "Cycle 2 (Load Scale B & Format B)"
+        cycles: 1
+        values:
+          UI_IN: 127
+          UIO: 0
 
-  - name: "Cycles 3-34 (Stream 32 elements)"
-    cycles: 32
-    values:
-      UI_IN: 0x38
-      UIO: 0x38
+      - name: "Cycles 3-34 (Stream 32 elements)"
+        cycles: 32
+        values:
+          UI_IN: 0x38
+          UIO: 0x38
 
-  - name: "Cycle 35 (Pipeline Flush)"
-    cycles: 1
-    values:
-      UI_IN: 0
-      UIO: 0
+      - name: "Cycle 35 (Pipeline Flush)"
+        cycles: 1
+        values:
+          UI_IN: 0
+          UIO: 0
 
-  - name: "Cycle 36 (Final Shared Scaling)"
-    cycles: 1
-    values:
-      UI_IN: 0
-      UIO: 0
+      - name: "Cycle 36 (Final Shared Scaling)"
+        cycles: 1
+        values:
+          UI_IN: 0
+          UIO: 0
 
-  - name: "Cycle 37 (Read Result Byte 3)"
-    cycles: 1
-    values:
-      UO_OUT: "Result[31:24]"
+      - name: "Cycle 37 (Read Result Byte 3)"
+        cycles: 1
+        values:
+          UO_OUT: "Result[31:24]"
 
-  - name: "Cycle 38 (Read Result Byte 2)"
-    cycles: 1
-    values:
-      UO_OUT: "Result[23:16]"
+      - name: "Cycle 38 (Read Result Byte 2)"
+        cycles: 1
+        values:
+          UO_OUT: "Result[23:16]"
 
-  - name: "Cycle 39 (Read Result Byte 1)"
-    cycles: 1
-    values:
-      UO_OUT: "Result[15:8]"
+      - name: "Cycle 39 (Read Result Byte 1)"
+        cycles: 1
+        values:
+          UO_OUT: "Result[15:8]"
 
-  - name: "Cycle 40 (Read Result Byte 0)"
-    cycles: 1
-    values:
-      UO_OUT: "Result[7:0]"
+      - name: "Cycle 40 (Read Result Byte 0)"
+        cycles: 1
+        values:
+          UO_OUT: "Result[7:0]"
+
+  - name: "Short Reset"
+    test_steps:
+      - name: "Reset"
+        cycles: 2
+        values:
+          ENA: 1
+          RST_N: 0
+          UI_IN: 0
+          UIO: 0
+      - name: "Idle"
+        cycles: 1
+        values:
+          RST_N: 1

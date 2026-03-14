@@ -4,7 +4,7 @@ import os
 import requests
 from plantuml import PlantUML
 
-def generate_puml(data):
+def generate_puml(data, test_steps):
     puml = ["@startuml"]
 
     # Declarations
@@ -29,13 +29,12 @@ def generate_puml(data):
         if sig_name == 'CLK': continue
         puml.append(f"{sig_name} is 0")
 
-    steps = data.get('test_steps', [])
     current_time = 0
     cycle_count = 0
     # Increased max cycles to capture the whole protocol
     max_cycles = 100
 
-    for step in steps:
+    for step in test_steps:
         if cycle_count >= max_cycles:
             break
 
@@ -82,6 +81,20 @@ def render_png(puml_content, output_path):
     except Exception as e:
         print(f"Error rendering: {e}")
 
+def process_test_case(data, test_steps, base_name, case_name=None):
+    puml_content = generate_puml(data, test_steps)
+
+    suffix = f"_{case_name}" if case_name else ""
+    puml_path = os.path.join("src/images", f"{base_name}{suffix}.puml")
+    png_path = os.path.join("src/images", f"{base_name}{suffix}.png")
+
+    os.makedirs("src/images", exist_ok=True)
+    with open(puml_path, 'w') as f:
+        f.write(puml_content)
+    print(f"Generated PlantUML source: {puml_path}")
+
+    render_png(puml_content, png_path)
+
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python generate_waveform.py <input_yaml>")
@@ -91,15 +104,14 @@ if __name__ == "__main__":
     with open(input_yaml, 'r') as f:
         data = yaml.safe_load(f)
 
-    puml_content = generate_puml(data)
-
     base_name = os.path.splitext(os.path.basename(input_yaml))[0]
-    puml_path = os.path.join("src/images", f"{base_name}.puml")
-    png_path = os.path.join("src/images", f"{base_name}.png")
 
-    os.makedirs("src/images", exist_ok=True)
-    with open(puml_path, 'w') as f:
-        f.write(puml_content)
-    print(f"Generated PlantUML source: {puml_path}")
-
-    render_png(puml_content, png_path)
+    if 'test_cases' in data:
+        for case in data['test_cases']:
+            print(f"Processing test case: {case['name']}")
+            process_test_case(data, case['test_steps'], base_name, case['name'].replace(" ", "_"))
+    elif 'test_steps' in data:
+        process_test_case(data, data['test_steps'], base_name)
+    else:
+        print("Error: No test_steps or test_cases found in YAML")
+        sys.exit(1)
