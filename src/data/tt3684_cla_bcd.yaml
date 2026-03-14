@@ -1,0 +1,31 @@
+project: "7 Segment BCD / CLA"
+metadata:
+  source: "https://github.com/gcgc321/Tiny-Tapeout-Carry-Look-Ahead-Adder"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Digit 0"
+    cycles: 1
+    values:
+      UI_IN: 0x00
+      UO_OUT: 0x3F # segments for 0
+  - name: "Digit 1"
+    cycles: 1
+    values:
+      UI_IN: 0x01
+      UO_OUT: 0x06 # segments for 1
+  - name: "Digit 8"
+    cycles: 1
+    values:
+      UI_IN: 0x08
+      UO_OUT: 0x7F # segments for 8
+  - name: "Digit 9"
+    cycles: 1
+    values:
+      UI_IN: 0x09
+      UO_OUT: 0x6F # segments for 9

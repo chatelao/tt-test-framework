@@ -1,0 +1,27 @@
+project: "2x2 Systolic Array"
+metadata:
+  source: "https://github.com/Essenceia/Systolic_Array_with_DFT_v2"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+  UIO_IN:
+    type: "input"
+    width: 8
+  UIO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Reset"
+    cycles: 5
+    values:
+      UI_IN: 0x00
+      UIO_IN: 0x00
+  - name: "Idle"
+    cycles: 5
+    values:
+      UI_IN: 0x00
+      UIO_IN: 0x00

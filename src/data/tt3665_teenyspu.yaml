@@ -1,0 +1,24 @@
+project: "TeenySPU"
+metadata:
+  source: "https://github.com/umn-geocommons/tt_um_teenyspu"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+  UIO_IN:
+    type: "input"
+    width: 8
+test_steps:
+  - name: "Reset"
+    cycles: 5
+    values:
+      UI_IN: 0x00
+      UIO_IN: 0x00
+  - name: "Idle/NOP"
+    cycles: 5
+    values:
+      UI_IN: 0x00
+      UIO_IN: 0x00

@@ -1,0 +1,16 @@
+project: "Silly Dog VGA"
+metadata:
+  source: "https://github.com/danielowa/vga-tt"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initialization"
+    cycles: 10
+    values:
+      UI_IN: 0x00
+      UO_OUT: 0x88 # HSync and VSync active high? Or low? Usually active low, but let's check diagram.

@@ -1,0 +1,31 @@
+project: "Logic Gates Test"
+metadata:
+  source: "https://github.com/ds-anik/Tiny-Tapeout"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "NAND Test (0,0)"
+    cycles: 1
+    values:
+      UI_IN: 0x00
+      UO_OUT: 0x01
+  - name: "NAND Test (1,1)"
+    cycles: 1
+    values:
+      UI_IN: 0x03
+      UO_OUT: 0x00
+  - name: "Pass-through 1"
+    cycles: 1
+    values:
+      UI_IN: 0x10
+      UO_OUT: 0x10
+  - name: "Pass-through 2"
+    cycles: 1
+    values:
+      UI_IN: 0x20
+      UO_OUT: 0x21 # bit 0 is NAND(0,0)
