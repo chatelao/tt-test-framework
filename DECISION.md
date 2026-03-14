@@ -1,5 +1,23 @@
 # Decisions
 
+## Batch Rendering and WaveDrom Strategy (2026-03-14 18:30)
+
+### Solution 1: WaveDrom for Waveform Generation (Chosen)
+- **Description**: Use the WaveDrom engine (via the `wavedrom` Python library) to generate waveforms instead of PlantUML.
+- **Reasoning**: WaveDrom is specifically designed for digital timing diagrams and provides a more industry-standard look and feel for these types of projects.
+
+### Solution 2: Parameterized Script with `argparse` (Chosen)
+- **Description**: Enhance `generate_waveform.py` to accept `--outdir` and `--suffix` arguments.
+- **Reasoning**: Provides a clean, flexible interface for batch processing and custom naming without breaking existing workflows.
+
+### Solution 2: Environment Variable Overrides
+- **Description**: Use environment variables to change the default output directories and suffixes.
+- **Reasoning for Discarding**: Less explicit than command-line flags and harder to use for one-off variations in a loop.
+
+### Solution 3: Dedicated Batch Script
+- **Description**: Create a separate script specifically for this batch rendering task.
+- **Reasoning for Discarding**: Introduces maintenance overhead and duplicates rendering logic instead of improving the core tool.
+
 ## 1-bit Full Adder Verification Strategy (Test-ID 3614) (2026-03-14 16:30)
 
 ### Solution 1: Full Truth Table (8 cycles) (Chosen)

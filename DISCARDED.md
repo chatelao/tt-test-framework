@@ -1,5 +1,19 @@
 # Discarded Solutions
 
+## Batch Rendering and WaveDrom Strategy (2026-03-14 18:30)
+
+### Solution 1: Stick with PlantUML
+- **Description**: Continue using PlantUML for waveform generation.
+- **Reasoning for Discarding**: User explicitly requested the use of WaveDrom, which is better suited for the task.
+
+### Solution 2: Environment Variable Overrides
+- **Description**: Use environment variables to change the default output directories and suffixes.
+- **Reasoning for Discarding**: Less explicit than command-line flags and harder to use for one-off variations in a loop.
+
+### Solution 3: Dedicated Batch Script
+- **Description**: Create a separate script specifically for this batch rendering task.
+- **Reasoning for Discarding**: Introduces maintenance overhead and duplicates rendering logic instead of improving the core tool.
+
 ## GDS Test Verification Strategy (Test-ID 3697) (2026-03-14 14:10)
 
 ### Solution 2: Full 8-bit Truth Table (256 cycles)

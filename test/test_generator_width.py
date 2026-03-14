@@ -21,12 +21,11 @@ def test_generator_concise_width(tmp_path):
     result = subprocess.run([sys.executable, "src/scripts/generate_waveform.py", str(test_yaml)], capture_output=True, text=True)
     assert result.returncode == 0
 
-    puml_file = "src/puml/concise_width.puml"
-    assert os.path.exists(puml_file)
+    svg_file = "images/concise_width.svg"
+    assert os.path.exists(svg_file)
 
-    with open(puml_file, "r") as f:
+    with open(svg_file, "r") as f:
         content = f.read()
-        assert 'concise "BUS" as BUS' in content
-        assert 'binary "BIT" as BIT' in content
-        assert "BUS is 10" in content
-        assert "BIT is 1" in content
+        assert "BUS" in content
+        assert "BIT" in content
+        assert "10" in content
