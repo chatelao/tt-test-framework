@@ -1,4 +1,6 @@
 project: "tt3541-2bit-adder"
+metadata:
+  source: "https://github.com/zeynepdemirdag/tiny-tapeout-submission"
 signals:
   A:
     type: "input"

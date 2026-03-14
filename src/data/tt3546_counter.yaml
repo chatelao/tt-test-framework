@@ -1,4 +1,6 @@
 project: "tt3546-counter"
+metadata:
+  source: "https://github.com/mlhktp/ttihp-wokwi"
 signals:
   RST_N:
     type: "input"

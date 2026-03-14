@@ -1,5 +1,11 @@
 # Decisions
 
+## Implementation of Metadata and Source Field (2026-03-14 13:08)
+
+### Solution 1: Root and test_cases level metadata object (Chosen)
+- **Description**: Add a `metadata` object that can contain a `source` field at both the root level (global) and within each test case in `test_cases`.
+- **Reasoning**: Provides flexibility to specify a source for the entire file or for individual test cases if they come from different sources.
+
 ## Project Structure Reorganization (2025-05-23 09:00)
 
 ### Solution 1: Move images to /images and .puml to /src/puml (Chosen)

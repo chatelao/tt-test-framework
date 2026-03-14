@@ -1,5 +1,15 @@
 # Discarded Solutions
 
+## Implementation of Metadata and Source Field (2026-03-14 13:08)
+
+### Solution 2: Root level only metadata object
+- **Description**: Add a `metadata` object only at the root level of the YAML file.
+- **Reasoning for Discarding**: Limits the ability to specify different sources for multiple test cases within the same file.
+
+### Solution 3: Directly at root/case level without metadata object
+- **Description**: Add a `source` field directly at the root level or inside `test_cases` items without wrapping it in a `metadata` object.
+- **Reasoning for Discarding**: Less organized and makes it harder to add more metadata fields in the future without cluttering the top-level structure.
+
 ## 2-Bit Adder Verification Strategy (2025-05-23 11:00)
 
 ### Solution 2: Random Sampling (4 cycles)
