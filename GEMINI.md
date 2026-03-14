@@ -17,7 +17,8 @@
 - Before publishing a pull request to GitHub, pull main from the  origin and resolve all merge conflicts.
 
 ## Finishing
-- Check the boxes of solved tasks in the ROADMAP.md an
+- Check the boxes of solved tasks in the ROADMAP.md
+- Be sure all /src/data have generated /src/plantuml and /images
 
 # Project structure
 - ROADMAP.md - Planned & finished tasks of the product
