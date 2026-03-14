@@ -41,3 +41,9 @@
 ### Solution 3: Multi-document YAML
 - **Description**: Use YAML's `---` separator to define multiple complete test documents within a single file.
 - **Reasoning for Discarding**: This would require duplicating `project` and `signals` definitions in every document or implementing a complex merging logic.
+
+## Counter Verification Strategy (2025-05-23 10:00)
+
+### Solution 1: One full period (4 cycles) (Chosen)
+- **Description**: Define four test steps, each 1 cycle long, to verify the sequence 1, 2, 3, 4.
+- **Reasoning**: This is the most efficient way to confirm the core functionality of the counter as described in the specifications.
