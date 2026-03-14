@@ -3,9 +3,9 @@
 
 # Planning & Progress tracking
 - Keep an up to date file "ROADMAP.md" with the next 5 steps and all past steps having checkboxes.
-  - Chapter Planned: Human added tasks, don't modify their content only execute them if next/ready and move if done.
-  - Chapter Proposed: Before sending the PR add here things you would like to add and/or improve.
-  - Chapter Finished: Before sending the PR move and insert finished task at first place into the chapter.
+  - Chapter 1. Planned: Human added tasks, don't modify their content only execute them if next/ready and move if done.
+  - Chapter 2. Proposed: Before sending the PR add here things you would like to add and/or improve.
+  - Chapter 4. Finished: Before sending the PR move and insert finished task at first place into the chapter.
 
 ## Planning
 - If necessary split steps into 2-5 additional substeps if the complexity of the task is high.
