@@ -1,5 +1,15 @@
 # Discarded Solutions
 
+## 2-Bit Adder Verification Strategy (2025-05-23 11:00)
+
+### Solution 2: Random Sampling (4 cycles)
+- **Description**: Test only a few representative cases (e.g., all zeros, all ones, and two mixed cases).
+- **Reasoning for Discarding**: While faster, it doesn't guarantee the correctness of the entire logic circuit.
+
+### Solution 3: Sequential Input Sweeping (8 cycles)
+- **Description**: Use a single test case with 8 cycles where inputs change at each clock edge.
+- **Reasoning for Discarding**: Similar to Solution 1 but less explicit in naming each step's purpose in the YAML.
+
 ## Counter Verification Strategy (2025-05-23 10:00)
 
 ### Solution 2: Two full periods (8 cycles)
