@@ -36,7 +36,3 @@
 - /src/images  - Images generated from the data
 - /test   - Test cases for all tasks, used to verify everything in src
 - /.github/workflows - For every push on every branch, re-generate all deliverables from the sources
-
-# Design Documentation Rules
-- For each standard cell, maintain a Markdown file in `/design` with layer-by-layer ASCII art.
-- The ASCII art should follow the character mapping defined in `specifications/MODELING_GUIDELINES.md`.
