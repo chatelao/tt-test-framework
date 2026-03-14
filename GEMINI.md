@@ -33,6 +33,7 @@
 - /src/data    - Instances of the test schema
 - /src/scripts - Tools to verify the data and generate the images/documents
 - /src/docs    - The documentation generated based on the data
-- /src/images  - Images generated from the data
+- /src/puml    - PlantUML source files generated from the data
+- /images      - Images generated from the data
 - /test   - Test cases for all tasks, used to verify everything in src
 - /.github/workflows - For every push on every branch, re-generate all deliverables from the sources

@@ -19,9 +19,9 @@ def test_generator(tmp_path):
     # Use sys.executable to match the environment
     result = subprocess.run([sys.executable, "src/scripts/generate_waveform.py", str(test_yaml)], capture_output=True, text=True)
     assert result.returncode == 0
-    assert os.path.exists("src/images/test_case.puml")
+    assert os.path.exists("src/puml/test_case.puml")
 
-    with open("src/images/test_case.puml", "r") as f:
+    with open("src/puml/test_case.puml", "r") as f:
         content = f.read()
         assert "@startuml" in content
         # Tool now uses integer 1 for binary signals
@@ -52,15 +52,15 @@ def test_generator_multiple_cases(tmp_path):
     result = subprocess.run([sys.executable, "src/scripts/generate_waveform.py", str(test_yaml)], capture_output=True, text=True)
     assert result.returncode == 0
 
-    assert os.path.exists("src/images/multi_case_CaseA.puml")
-    assert os.path.exists("src/images/multi_case_CaseB.puml")
+    assert os.path.exists("src/puml/multi_case_CaseA.puml")
+    assert os.path.exists("src/puml/multi_case_CaseB.puml")
 
-    with open("src/images/multi_case_CaseA.puml", "r") as f:
+    with open("src/puml/multi_case_CaseA.puml", "r") as f:
         content = f.read()
         assert "SIG is Step_A" in content
         assert "SIG is 1" in content
 
-    with open("src/images/multi_case_CaseB.puml", "r") as f:
+    with open("src/puml/multi_case_CaseB.puml", "r") as f:
         content = f.read()
         assert "SIG is Step_B" in content
         assert "SIG is 0" in content

@@ -1,5 +1,19 @@
 # Decisions
 
+## Project Structure Reorganization (2025-05-23 09:00)
+
+### Solution 1: Move images to /images and .puml to /src/puml (Chosen)
+- **Description**: Relocate generated PNG images to the root `/images` directory and PlantUML source files to `/src/puml`.
+- **Reasoning**: Adheres to the user's specific request for better organization and separation of source files from generated artifacts.
+
+### Solution 2: Move all artifacts to a single /artifacts directory
+- **Description**: Consolidate all generated files into a single root-level directory.
+- **Reasoning for Discarding**: Does not follow the specific organizational preference requested by the user.
+
+### Solution 3: Use a flat structure in /src
+- **Description**: Keep all files in the root of `/src`.
+- **Reasoning for Discarding**: This would clutter the source directory and make it harder to distinguish between logic, data, and artifacts.
+
 ## YAML Validator Implementation (2025-05-22 11:00)
 
 ### Solution 1: Use `jsonschema` library (Chosen)
