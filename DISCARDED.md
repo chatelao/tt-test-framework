@@ -1,5 +1,29 @@
 # Discarded Solutions
 
+## tinyTapeVerilog_out Verification Strategy (Test-ID 3526) (2026-03-14 23:00)
+
+### Solution 2: Reset only
+- **Description**: Only verify that counter is 0 after reset.
+- **Reasoning for Discarding**: Does not verify the primary functionality of the design (counting).
+
+## Digital Lock Verification Strategy (Test-ID 3524) (2026-03-14 23:00)
+
+### Solution 2: Exhaustive 4-bit search
+- **Description**: Test all 16 possible 4-bit combinations.
+- **Reasoning for Discarding**: Unnecessarily verbose for a simple combinational lock.
+
+## Factory Test Verification Strategy (Test-ID 3487) (2026-03-14 23:00)
+
+### Solution 2: Counter Only Test
+- **Description**: Only test the incrementing counter behavior.
+- **Reasoning for Discarding**: Fails to verify the pass-through logic which is half of the design's purpose.
+
+## Chip ROM Verification Strategy (Test-ID 3486) (2026-03-14 23:00)
+
+### Solution 2: Random Address Testing
+- **Description**: Apply several random addresses and check if they pass through.
+- **Reasoning for Discarding**: Less systematic than testing specific bit patterns like all-zeros and all-ones.
+
 ## Batch Rendering and WaveDrom Strategy (2026-03-14 18:30)
 
 ### Solution 1: Stick with PlantUML

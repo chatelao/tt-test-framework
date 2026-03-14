@@ -1,0 +1,39 @@
+project: "tinyTapeVerilog_out"
+metadata:
+  source: "https://github.com/floAfentaki/tinyTapeVerilog_out"
+signals:
+  CLK:
+    type: "clock"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  ENA:
+    type: "input"
+    width: 1
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      ENA: 0
+      UO_OUT: 0x00
+  - name: "Idle"
+    cycles: 1
+    values:
+      RST_N: 1
+      ENA: 0
+      UO_OUT: 0x00
+  - name: "Counting"
+    cycles: 3
+    values:
+      ENA: 1
+      UO_OUT: "0x01-0x03"
+  - name: "Pause"
+    cycles: 1
+    values:
+      ENA: 0
+      UO_OUT: 0x03
