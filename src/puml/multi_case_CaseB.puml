@@ -9,8 +9,8 @@ SIG is {-}
 SIG is 0
 
 @0
-SIG is "Step_1"
-SIG is 1
+SIG is "Step_B"
+SIG is 0
 @0
 CLK is High
 @0.5

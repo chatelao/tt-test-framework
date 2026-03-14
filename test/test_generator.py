@@ -26,7 +26,7 @@ def test_generator(tmp_path):
         assert "@startuml" in content
         # Tool now uses integer 1 for binary signals
         assert "SIG is 1" in content
-        assert "SIG is Step_1" in content
+        assert 'SIG is "Step_1"' in content
 
 def test_generator_multiple_cases(tmp_path):
     test_yaml = tmp_path / "multi_case.yaml"
@@ -57,10 +57,10 @@ def test_generator_multiple_cases(tmp_path):
 
     with open("src/puml/multi_case_CaseA.puml", "r") as f:
         content = f.read()
-        assert "SIG is Step_A" in content
+        assert 'SIG is "Step_A"' in content
         assert "SIG is 1" in content
 
     with open("src/puml/multi_case_CaseB.puml", "r") as f:
         content = f.read()
-        assert "SIG is Step_B" in content
+        assert 'SIG is "Step_B"' in content
         assert "SIG is 0" in content

@@ -1,0 +1,114 @@
+@startuml
+robust "CLK" as CLK
+concise "Phase" as SIG
+binary "A" as A
+binary "B" as B
+binary "Cin" as Cin
+binary "Sum" as Sum
+binary "Cout" as Cout
+
+@0
+CLK is Low
+SIG is {-}
+A is 0
+B is 0
+Cin is 0
+Sum is 0
+Cout is 0
+
+@0
+SIG is "0+0+0"
+A is 0
+B is 0
+Cin is 0
+Sum is 0
+Cout is 0
+@0
+CLK is High
+@0.5
+CLK is Low
+
+@1
+SIG is "0+0+1"
+A is 0
+B is 0
+Cin is 1
+Sum is 1
+Cout is 0
+@1
+CLK is High
+@1.5
+CLK is Low
+
+@2
+SIG is "0+1+0"
+A is 0
+B is 1
+Cin is 0
+Sum is 1
+Cout is 0
+@2
+CLK is High
+@2.5
+CLK is Low
+
+@3
+SIG is "0+1+1"
+A is 0
+B is 1
+Cin is 1
+Sum is 0
+Cout is 1
+@3
+CLK is High
+@3.5
+CLK is Low
+
+@4
+SIG is "1+0+0"
+A is 1
+B is 0
+Cin is 0
+Sum is 1
+Cout is 0
+@4
+CLK is High
+@4.5
+CLK is Low
+
+@5
+SIG is "1+0+1"
+A is 1
+B is 0
+Cin is 1
+Sum is 0
+Cout is 1
+@5
+CLK is High
+@5.5
+CLK is Low
+
+@6
+SIG is "1+1+0"
+A is 1
+B is 1
+Cin is 0
+Sum is 0
+Cout is 1
+@6
+CLK is High
+@6.5
+CLK is Low
+
+@7
+SIG is "1+1+1"
+A is 1
+B is 1
+Cin is 1
+Sum is 1
+Cout is 1
+@7
+CLK is High
+@7.5
+CLK is Low
+@enduml
