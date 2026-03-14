@@ -1,0 +1,26 @@
+project: "Copenhagen Workshop Project"
+metadata:
+  source: "https://github.com/edwar1r/TinyTapeoutCopenhagenFeb2026"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Logic Check 1"
+    cycles: 1
+    values:
+      UI_IN: 0x01
+      UO_OUT: 0x02
+  - name: "Logic Check 2"
+    cycles: 1
+    values:
+      UI_IN: 0x30
+      UO_OUT: 0x10
+  - name: "Logic Check 3"
+    cycles: 1
+    values:
+      UI_IN: 0xC0
+      UO_OUT: 0x20

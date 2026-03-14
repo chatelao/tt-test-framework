@@ -1,0 +1,24 @@
+project: "Silly Mixer"
+metadata:
+  source: "https://github.com/BoredSemiRetiredEngineer/ttihp_submission_other_tile"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+  UIO_IN:
+    type: "input"
+    width: 8
+test_steps:
+  - name: "Mix 1"
+    cycles: 1
+    values:
+      UI_IN: 0x55
+      UIO_IN: 0xAA
+  - name: "Mix 2"
+    cycles: 1
+    values:
+      UI_IN: 0xFF
+      UIO_IN: 0x00

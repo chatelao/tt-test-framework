@@ -1,0 +1,25 @@
+project: "Hello GDS"
+metadata:
+  source: "https://github.com/edga/tt_hello_gds"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial state"
+    cycles: 1
+    values:
+      UI_IN: 0x00
+      UO_OUT: 0x00
+  - name: "Toggle Input"
+    cycles: 1
+    values:
+      UI_IN: 0x80
+      UO_OUT: 0x00
+  - name: "Wait for toggle"
+    cycles: 3
+    values:
+      UI_IN: 0x80

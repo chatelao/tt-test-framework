@@ -1,0 +1,31 @@
+project: "1-bit Full Adder"
+metadata:
+  source: "https://github.com/nusli7/TT-Project"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "0 + 0 + 0"
+    cycles: 1
+    values:
+      UI_IN: 0x00
+      UO_OUT: 0x00
+  - name: "1 + 0 + 0"
+    cycles: 1
+    values:
+      UI_IN: 0x01
+      UO_OUT: 0x01
+  - name: "1 + 1 + 0"
+    cycles: 1
+    values:
+      UI_IN: 0x03
+      UO_OUT: 0x02
+  - name: "1 + 1 + 1"
+    cycles: 1
+    values:
+      UI_IN: 0x07
+      UO_OUT: 0x03

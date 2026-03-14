@@ -1,0 +1,34 @@
+project: "Moving Average Filter"
+metadata:
+  source: "https://github.com/jonathan-farah/Sensors_and_Security"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+  UIO_IN:
+    type: "input"
+    width: 6 # data_in[7:2]
+  UIO_OUT:
+    type: "output"
+    width: 2 # result_out[6:5]
+test_steps:
+  - name: "Reset"
+    cycles: 5
+    values:
+      UI_IN: 0x00
+  - name: "Configure (1 tap)"
+    cycles: 1
+    values:
+      UI_IN: 0x03 # enable=1, num_taps=1
+  - name: "Send Data 50"
+    cycles: 1
+    values:
+      UI_IN: 0x23 # data_valid=1, data_in[1:0]=0
+      UIO_IN: 0x0C # data_in[7:2]=50>>2=12
+  - name: "Wait for Result"
+    cycles: 3
+    values:
+      UI_IN: 0x03

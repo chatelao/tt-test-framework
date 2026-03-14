@@ -1,5 +1,173 @@
 # Decisions
 
+## 1-bit Full Adder Verification Strategy (Test-ID 3614) (2026-03-14 16:30)
+
+### Solution 1: Full Truth Table (8 cycles) (Chosen)
+- **Description**: Define eight test steps to cover all combinations of inputs A, B, and Carry.
+- **Reasoning**: Provides comprehensive verification of the combinational logic for the 1-bit full adder.
+
+### Solution 2: Pattern Testing (4 cycles)
+- **Description**: Test only representative cases like 0+0+0, 1+1+0, 1+1+1.
+- **Reasoning for Discarding**: Does not guarantee full correctness of all logic branches.
+
+### Solution 3: Sequential sweeping
+- **Description**: Sweep through inputs in a single multi-cycle test case.
+- **Reasoning for Discarding**: Less descriptive than individual steps.
+
+## Logic Gates Verification Strategy (Test-ID 3711) (2026-03-14 16:30)
+
+### Solution 1: Pattern Testing (4 cycles) (Chosen)
+- **Description**: Test various input combinations to verify NAND and other logic gate outputs.
+- **Reasoning**: Efficiently confirms the basic logic gate operations implemented in the Wokwi project.
+
+### Solution 2: Full Truth Table
+- **Description**: Test all 64 combinations of the 6 inputs.
+- **Reasoning for Discarding**: Too verbose for a simple logic gate test.
+
+### Solution 3: Random Sampling
+- **Description**: Test a few random input patterns.
+- **Reasoning for Discarding**: May miss specific logic transitions.
+
+## 7-Segment BCD Verification Strategy (Test-ID 3684) (2026-03-14 16:30)
+
+### Solution 1: Representative Digits (5 cycles) (Chosen)
+- **Description**: Test values 0, 1, 2, 8, 9 to verify the BCD to 7-segment decoding logic.
+- **Reasoning**: Covers the most distinctive patterns for 7-segment displays without being exhaustive.
+
+### Solution 2: Full 0-9 sequence
+- **Description**: Test every digit from 0 to 9.
+- **Reasoning for Discarding**: Slightly redundant for verifying the core functionality.
+
+### Solution 3: Pass-through testing
+- **Description**: Check if inputs are just passed to outputs.
+- **Reasoning for Discarding**: Incorrect as the project implements decoding logic.
+
+## Copenhagen Workshop Verification Strategy (Test-ID 3720) (2026-03-14 16:30)
+
+### Solution 1: Logic Verification (4 cycles) (Chosen)
+- **Description**: Test the AND, OR, NAND, and XOR gates mapped to the outputs.
+- **Reasoning**: Directly verifies the simple combinational logic components found in the Wokwi diagram.
+
+### Solution 2: Pattern Testing
+- **Description**: Test all zeros and all ones.
+- **Reasoning for Discarding**: Insufficient to distinguish between different gate types.
+
+### Solution 3: Random Sampling
+- **Description**: Use random inputs.
+- **Reasoning for Discarding**: Unreliable for specific logic verification.
+
+## TeenySPU Verification Strategy (Test-ID 3665) (2026-03-14 16:30)
+
+### Solution 1: Initial Reset and NOP (5 cycles) (Chosen)
+- **Description**: Verify the processor stays in a neutral state after reset with no-operation instructions.
+- **Reasoning**: Confirms basic sanity of the sequential logic and reset behavior for the spatial processing unit.
+
+### Solution 2: Basic Addition Test
+- **Description**: Execute a simple addition instruction.
+- **Reasoning for Discarding**: Requires more complex setup of opcode and operand signals than necessary for a basic functional test.
+
+### Solution 3: Loop Verification
+- **Description**: Run a small program loop.
+- **Reasoning for Discarding**: Too complex for a simple YAML-based waveform generation.
+
+## Silly Mixer Verification Strategy (Test-ID 3764) (2026-03-14 16:30)
+
+### Solution 1: Pattern Testing (4 cycles) (Chosen)
+- **Description**: Test various input patterns to verify the mixing/summing logic.
+- **Reasoning**: Provides a quick check of the project's ability to process and output data based on inputs.
+
+### Solution 2: Full Summation Test
+- **Description**: Exhaustively test multiple input pairs.
+- **Reasoning for Discarding**: Complexity of the internal mixer logic makes exhaustive testing difficult without more detail.
+
+### Solution 3: Zero Input Test
+- **Description**: Verify that zero inputs result in zero output.
+- **Reasoning for Discarding**: Too basic to confirm anything beyond simple connection.
+
+## VGA Silly Dog Verification Strategy (Test-ID 3512) (2026-03-14 16:30)
+
+### Solution 1: Sync Signal Verification (10 cycles) (Chosen)
+- **Description**: Verify that HSync and VSync signals are initialized correctly after reset.
+- **Reasoning**: Most reliable way to test a VGA project in a short simulation window without full frame rendering.
+
+### Solution 2: Pixel Data Testing
+- **Description**: Check RGB values at specific coordinates.
+- **Reasoning for Discarding**: Coordinates depend on internal counters that take thousands of cycles to reach interesting areas.
+
+### Solution 3: Clock Swapping
+- **Description**: Test with different clock frequencies.
+- **Reasoning for Discarding**: Not supported by the current YAML framework's timing diagram generator.
+
+## Paafu Verification Strategy (Test-ID 3685) (2026-03-14 16:30)
+
+### Solution 1: Pattern Testing (4 cycles) (Chosen)
+- **Description**: Test alternating inputs to verify the 1:1 or simple logic mapping.
+- **Reasoning**: Sufficient for a very simple project with only one active input and output.
+
+### Solution 2: Static Input Test
+- **Description**: Hold input at 1.
+- **Reasoning for Discarding**: Doesn't verify signal propagation or transitions.
+
+### Solution 3: Random Sampling
+- **Description**: Use random input patterns.
+- **Reasoning for Discarding**: Overkill for such a simple design.
+
+## Moving Average Filter Verification Strategy (Test-ID 3666) (2026-03-14 16:30)
+
+### Solution 1: Pass-Through Mode (4 cycles) (Chosen)
+- **Description**: Set number of taps to 1 and verify that data_in is passed to result_out.
+- **Reasoning**: Simplest way to verify the entire data path and control signals (ready/valid) in a short sequence.
+
+### Solution 2: Small Average (8 cycles)
+- **Description**: Set taps to 2 and send a few samples.
+- **Reasoning for Discarding**: Requires more cycles to observe the first valid result, making the waveform harder to read.
+
+### Solution 3: Reset Verification
+- **Description**: Only test that the busy signal goes low after reset.
+- **Reasoning for Discarding**: Doesn't verify the core functional logic of the filter.
+
+## Mein Hund Gniesbert Verification Strategy (Test-ID 3551) (2026-03-14 16:30)
+
+### Solution 1: "Number 3" Verification (4 cycles) (Chosen)
+- **Description**: Test inputs that sum to 3 and verify the specific output pattern described.
+- **Reasoning**: Directly tests the unique functional requirement of this "3-only" adder.
+
+### Solution 2: Zero Test
+- **Description**: Check if 0+0 results in zero.
+- **Reasoning for Discarding**: The project description suggests it might only work for 3, so zero might not be as interesting.
+
+### Solution 3: Exhaustive 3-bit Test
+- **Description**: Test all combinations of the 3-bit input.
+- **Reasoning for Discarding**: Less focused on the "Number 3" theme.
+
+## Hello GDS Verification Strategy (Test-ID 3704) (2026-03-14 16:30)
+
+### Solution 1: Basic Toggling (5 cycles) (Chosen)
+- **Description**: Verify that internal flops and outputs toggle or remain stable as expected under a clock.
+- **Reasoning**: Confirms that the sequential elements and basic gate logic in this "random" project are active.
+
+### Solution 2: Reset Test
+- **Description**: Only verify the reset state.
+- **Reasoning for Discarding**: Doesn't prove the design works once out of reset.
+
+### Solution 3: Static Pattern Test
+- **Description**: Apply static inputs and check outputs.
+- **Reasoning for Discarding**: The design has internal state (flops), so a sequential test is more appropriate.
+
+## Systolic Array Verification Strategy (Test-ID 3647) (2026-03-14 16:30)
+
+### Solution 1: Initial Reset and Idle (5 cycles) (Chosen)
+- **Description**: Verify that the array is correctly initialized and remains idle when no data is valid.
+- **Reasoning**: Essential first step for complex sequential designs like systolic arrays to ensure the control logic starts correctly.
+
+### Solution 2: Single MAC operation
+- **Description**: Feed one set of data and observe one multiplication-accumulation.
+- **Reasoning for Discarding**: Too many cycles and complex signal sequences (JTAG/Data Mode) for a basic YAML test.
+
+### Solution 3: JTAG IDCODE Read
+- **Description**: Verify JTAG interface by reading the IDCODE.
+- **Reasoning for Discarding**: Focuses on JTAG rather than the core systolic array logic.
+
 ## GDS Test Verification Strategy (Test-ID 3697) (2026-03-14 14:10)
 
 ### Solution 1: Pattern Testing (4 cycles) (Chosen)
