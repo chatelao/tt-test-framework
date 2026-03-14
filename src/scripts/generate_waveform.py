@@ -86,10 +86,11 @@ def process_test_case(data, test_steps, output_base, case_name=None):
     puml_content = generate_puml(data, test_steps)
 
     suffix = f"_{case_name}" if case_name else ""
-    puml_path = os.path.join("src/images", f"{output_base}{suffix}.puml")
-    png_path = os.path.join("src/images", f"{output_base}{suffix}.png")
+    puml_path = os.path.join("src/puml", f"{output_base}{suffix}.puml")
+    png_path = os.path.join("images", f"{output_base}{suffix}.png")
 
-    os.makedirs("src/images", exist_ok=True)
+    os.makedirs("src/puml", exist_ok=True)
+    os.makedirs("images", exist_ok=True)
     with open(puml_path, 'w') as f:
         f.write(puml_content)
     print(f"Generated PlantUML source: {puml_path}")

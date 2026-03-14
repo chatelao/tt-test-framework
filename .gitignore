@@ -2,6 +2,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 .pytest_cache/
-src/images/*.png
-src/images/*.puml
+images/*.png
+src/puml/*.puml
 test/*.yaml
