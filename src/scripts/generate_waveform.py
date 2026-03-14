@@ -46,7 +46,7 @@ def generate_puml(data, test_steps):
 
         # Apply signal changes at start of step
         puml.append(f"\n@{current_time}")
-        puml.append(f'SIG is {name}')
+        puml.append(f'SIG is "{name}"')
         for sig_name, val in values.items():
             if sig_name == 'CLK': continue
             if isinstance(val, int):

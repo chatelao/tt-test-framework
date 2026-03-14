@@ -13,7 +13,7 @@ B is 0
 Sum is 0
 
 @0
-SIG is 0_+_0_=_0
+SIG is "0_+_0_=_0"
 A is 0
 B is 0
 Sum is 0
@@ -23,7 +23,7 @@ CLK is High
 CLK is Low
 
 @1
-SIG is 1_+_1_=_2
+SIG is "1_+_1_=_2"
 A is 1
 B is 1
 Sum is 2
@@ -33,7 +33,7 @@ CLK is High
 CLK is Low
 
 @2
-SIG is 15_+_1_=_16
+SIG is "15_+_1_=_16"
 A is 15
 B is 1
 Sum is 16
@@ -43,7 +43,7 @@ CLK is High
 CLK is Low
 
 @3
-SIG is 15_+_15_=_30
+SIG is "15_+_15_=_30"
 A is 15
 B is 15
 Sum is 30
@@ -53,7 +53,7 @@ CLK is High
 CLK is Low
 
 @4
-SIG is 5_+_10_=_15
+SIG is "5_+_10_=_15"
 A is 5
 B is 10
 Sum is 15

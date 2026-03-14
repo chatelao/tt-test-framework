@@ -11,7 +11,7 @@ UI_IN is 0
 UO_OUT is 0
 
 @0
-SIG is All_Zeros
+SIG is "All_Zeros"
 UI_IN is 0
 UO_OUT is 15
 @0
@@ -20,7 +20,7 @@ CLK is High
 CLK is Low
 
 @1
-SIG is All_Ones
+SIG is "All_Ones"
 UI_IN is 255
 UO_OUT is 240
 @1
@@ -29,7 +29,7 @@ CLK is High
 CLK is Low
 
 @2
-SIG is Pattern_10101010
+SIG is "Pattern_10101010"
 UI_IN is 170
 UO_OUT is 165
 @2
@@ -38,7 +38,7 @@ CLK is High
 CLK is Low
 
 @3
-SIG is Pattern_01010101
+SIG is "Pattern_01010101"
 UI_IN is 85
 UO_OUT is 90
 @3

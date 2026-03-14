@@ -11,7 +11,7 @@ BIT is 0
 BUS is 0
 
 @0
-SIG is Step_1
+SIG is "Step_1"
 BIT is 1
 BUS is 10
 @0

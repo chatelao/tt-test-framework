@@ -11,7 +11,7 @@ RST_N is 0
 UO_OUT is 0
 
 @0
-SIG is Reset
+SIG is "Reset"
 RST_N is 0
 UO_OUT is "???"
 @0
@@ -20,7 +20,7 @@ CLK is High
 CLK is Low
 
 @1
-SIG is Count_1
+SIG is "Count_1"
 RST_N is 1
 UO_OUT is 1
 @1
@@ -29,7 +29,7 @@ CLK is High
 CLK is Low
 
 @2
-SIG is Count_2
+SIG is "Count_2"
 RST_N is 1
 UO_OUT is 2
 @2
@@ -38,7 +38,7 @@ CLK is High
 CLK is Low
 
 @3
-SIG is Count_3
+SIG is "Count_3"
 RST_N is 1
 UO_OUT is 3
 @3
@@ -47,7 +47,7 @@ CLK is High
 CLK is Low
 
 @4
-SIG is Count_4
+SIG is "Count_4"
 RST_N is 1
 UO_OUT is 4
 @4

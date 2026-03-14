@@ -9,7 +9,7 @@ SIG is {-}
 UO_OUT is 0
 
 @0
-SIG is Initial_Reset
+SIG is "Initial_Reset"
 UO_OUT is 0
 @0
 CLK is High
@@ -17,7 +17,7 @@ CLK is High
 CLK is Low
 
 @1
-SIG is Initial_Count_States
+SIG is "Initial_Count_States"
 UO_OUT is 0
 @1
 CLK is High

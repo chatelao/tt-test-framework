@@ -11,7 +11,7 @@ UI_IN is 0
 UO_OUT is 0
 
 @0
-SIG is Pass-through_0x00
+SIG is "Pass-through_0x00"
 UI_IN is 0
 UO_OUT is 0
 @0
@@ -20,7 +20,7 @@ CLK is High
 CLK is Low
 
 @1
-SIG is Pass-through_0xFF
+SIG is "Pass-through_0xFF"
 UI_IN is 255
 UO_OUT is 255
 @1
@@ -29,7 +29,7 @@ CLK is High
 CLK is Low
 
 @2
-SIG is Pass-through_0x55
+SIG is "Pass-through_0x55"
 UI_IN is 85
 UO_OUT is 85
 @2
@@ -38,7 +38,7 @@ CLK is High
 CLK is Low
 
 @3
-SIG is Pass-through_0xAA
+SIG is "Pass-through_0xAA"
 UI_IN is 170
 UO_OUT is 170
 @3
