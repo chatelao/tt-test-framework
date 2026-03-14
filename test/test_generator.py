@@ -2,10 +2,10 @@ import os
 import yaml
 import subprocess
 import pytest
+import sys
 
-def test_generator():
-    test_yaml = "test/test_case.yaml"
-    os.makedirs("test", exist_ok=True)
+def test_generator(tmp_path):
+    test_yaml = tmp_path / "test_case.yaml"
 
     data = {
         "project": "test",
@@ -16,8 +16,8 @@ def test_generator():
     with open(test_yaml, "w") as f:
         yaml.dump(data, f)
 
-    # Use python3 to match the environment
-    result = subprocess.run(["python3", "src/scripts/generate_waveform.py", test_yaml], capture_output=True, text=True)
+    # Use sys.executable to match the environment
+    result = subprocess.run([sys.executable, "src/scripts/generate_waveform.py", str(test_yaml)], capture_output=True, text=True)
     assert result.returncode == 0
     assert os.path.exists("src/images/test_case.puml")
 

@@ -1,0 +1,6 @@
+PyYAML
+requests
+plantuml
+six
+jsonschema
+pytest
