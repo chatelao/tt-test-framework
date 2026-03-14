@@ -1,6 +1,7 @@
 # Roadmap
 
 ## Finished
+- [x] Render all testsets into /waveform with -wf suffix using WaveDrom (2026-03-14)
 - [x] Create simple testcase for Test-ID 3565 (FH Joanneum TinyTapeout) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3534 (Herald) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3682 (I2C to SPI Bridge) (2026-03-14)
