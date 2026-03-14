@@ -1,0 +1,35 @@
+project: "tt-verilog"
+metadata:
+  source: "https://github.com/BenediktKeppner/tt-verilog"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  CLK:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UO_OUT:
+    type: "output"
+    width: 8
+  UIO:
+    type: "inout"
+    width: 8
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      UIO: 0x00
+  - name: "Out of Reset"
+    cycles: 1
+    values:
+      RST_N: 1
+      UIO: 0x00
+  - name: "Clocking"
+    cycles: 3
+    values:
+      CLK: 1
+      UIO: 0x00

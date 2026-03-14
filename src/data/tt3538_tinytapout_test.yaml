@@ -1,0 +1,39 @@
+project: "tinytapout_test"
+metadata:
+  source: "https://wokwi.com/projects/354858054593504257"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  CLK:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UO_OUT:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      UI_IN: 0x00
+      RST_N: 0
+      UO_OUT: 0x00
+  - name: "Out of Reset"
+    cycles: 1
+    values:
+      UI_IN: 0x00
+      RST_N: 1
+      UO_OUT: 0x02
+  - name: "Gates Test 1"
+    cycles: 1
+    values:
+      UI_IN: 0x01
+      UO_OUT: 0x06
+  - name: "Gates Test 2"
+    cycles: 1
+    values:
+      UI_IN: 0x03
+      UO_OUT: 0x05
