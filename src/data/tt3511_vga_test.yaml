@@ -1,0 +1,20 @@
+project: "vga test project"
+metadata:
+  source: "https://github.com/mbdaneshvar/sv_tapeout"
+  project_id: "3511"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial"
+    cycles: 5
+    values:
+      ui_in: 0x00
+  - name: "Wait for sync"
+    cycles: 20
+    values:
+      ui_in: 0x00

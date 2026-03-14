@@ -1,0 +1,20 @@
+project: "test"
+metadata:
+  source: "https://github.com/hemanthkrishna5/tiny_tape_out"
+  project_id: "3504"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial"
+    cycles: 5
+    values:
+      ui_in: 0x00
+  - name: "Set inputs"
+    cycles: 5
+    values:
+      ui_in: 0x83 # a=1, b=1, d=1

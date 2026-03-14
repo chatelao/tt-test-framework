@@ -1,0 +1,25 @@
+project: "Hardware UTF Encoder/Decoder"
+metadata:
+  source: "https://github.com/RebeccaRGB/ttihp-hardware-utf8"
+  project_id: "3492"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+  uio_in:
+    type: "input"
+    width: 8
+test_steps:
+  - name: "Initial state"
+    cycles: 5
+    values:
+      ui_in: 0xFF # All active-low inputs high
+      uio_in: 0x00
+  - name: "Write operation"
+    cycles: 5
+    values:
+      ui_in: 0xEF # READ/WRITE low (write)
+      uio_in: 0x41 # 'A'

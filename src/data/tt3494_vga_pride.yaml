@@ -1,0 +1,24 @@
+project: "VGA Pride"
+metadata:
+  source: "https://github.com/RebeccaRGB/ttihp-vga-pride"
+  project_id: "3494"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial Reset"
+    cycles: 5
+    values:
+      ui_in: 0x80 # reset high
+  - name: "Next Flag"
+    cycles: 5
+    values:
+      ui_in: 0x40 # next high
+  - name: "Wait"
+    cycles: 10
+    values:
+      ui_in: 0x00

@@ -1,0 +1,29 @@
+project: "INTERCAL ALU"
+metadata:
+  source: "https://github.com/RebeccaRGB/ttihp-intercal-alu"
+  project_id: "3493"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+  uio_in:
+    type: "input"
+    width: 8
+test_steps:
+  - name: "Idle"
+    cycles: 5
+    values:
+      ui_in: 0xC0 # /OE and /WE high
+      uio_in: 0x00
+  - name: "Write to register"
+    cycles: 5
+    values:
+      ui_in: 0x40 # /WE low, /OE high
+      uio_in: 0xAA
+  - name: "Read from register"
+    cycles: 5
+    values:
+      ui_in: 0x80 # /WE high, /OE low

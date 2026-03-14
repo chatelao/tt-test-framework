@@ -1,0 +1,20 @@
+project: "test_prj"
+metadata:
+  source: "https://github.com/mbdaneshvar/mo_tapeout"
+  project_id: "3507"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Idle"
+    cycles: 5
+    values:
+      ui_in: 0x00
+  - name: "Test In"
+    cycles: 5
+    values:
+      ui_in: 0x01
