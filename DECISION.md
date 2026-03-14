@@ -13,3 +13,17 @@
 ### Solution 3: Use `pydantic`
 - **Description**: Define the schema using Pydantic models and parse the YAML into these models.
 - **Reasoning for Discarding**: While powerful, it adds a heavier dependency and might be more complex than needed for simple schema validation in this context.
+
+## Support for Multiple Test Cases (2025-05-22 14:00)
+
+### Solution 1: Nested `test_cases` array (Chosen)
+- **Description**: Introduce a `test_cases` key at the root, which is an array of objects. Each object contains a `name` and its own `test_steps` array.
+- **Reasoning**: This provides a clear, named structure for multiple sequences while allowing them to share the top-level `project` and `signals` definitions.
+
+### Solution 2: Dictionary-based `test_steps`
+- **Description**: Modify `test_steps` to optionally be a dictionary where keys are case names and values are the step arrays.
+- **Reasoning for Discarding**: It makes the schema for `test_steps` more complex (union type) and is less explicit than a dedicated `test_cases` field.
+
+### Solution 3: Multi-document YAML
+- **Description**: Use YAML's `---` separator to define multiple complete test documents within a single file.
+- **Reasoning for Discarding**: This would require duplicating `project` and `signals` definitions in every document or implementing a complex merging logic.
