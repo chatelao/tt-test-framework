@@ -29,11 +29,11 @@
 - /specifications - Convert "non .md" files for caching and readability purpose to Markdown
 - /design - Keep a human well readable design specification, write them before implementing
 - /design - Keep a human well readable design specification, write them before implementing
+- /src/scripts - Tools to verify the data and generate the images/documents
 - /src/schema  - The schema of the test data files
 - /src/data    - Instances of the test schema
-- /src/scripts - Tools to verify the data and generate the images/documents
-- /src/docs    - The documentation generated based on the data
-- /src/puml    - PlantUML source files generated from the data
-- /images      - Images generated from the data
+- /src/puml    - Generate PlantUML timing diagramm files from every data file
+- /images      - Generate timing diagramm files from every plantuml file
+- /src/docs    - Generate documentation for each test set
 - /test   - Test cases for all tasks, used to verify everything in src
 - /.github/workflows - For every push on every branch, re-generate all deliverables from the sources
