@@ -1,6 +1,5 @@
 # Project Goal
 - Create a YAML based test framework to feed and verify test data into Tiny-Tapeout projects
-- 
 
 # Planning & Progress tracking
 - Keep an up to date file "ROADMAP.md" with the next 5 steps and all past steps having checkboxes.
@@ -12,8 +11,9 @@
 - If necessary split steps into 2-5 additional substeps if the complexity of the task is high.
 
 ## Solving
-- For each problem  first draft three different solutions and then choose the best one.
-- Track the discarded solutions to discard as 1-2 sentences with timestamp in "DISCARDED.md".
+- For each problem first draft three different solutions and then choose the best one.
+   - Insert each problem with timestamp (heading) and each variant solutions (sub-heading)
+     with one sentence of the reasoning at the top of "DECISION.md".
 - Before publishing a pull request to GitHub, pull main from the  origin and resolve all merge conflicts.
 
 ## Finishing
