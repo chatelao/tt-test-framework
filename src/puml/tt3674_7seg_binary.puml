@@ -1,0 +1,48 @@
+@startuml
+robust "CLK" as CLK
+concise "Phase" as SIG
+concise "UI_IN" as UI_IN
+concise "UO_OUT" as UO_OUT
+
+@0
+CLK is Low
+SIG is {-}
+UI_IN is 0
+UO_OUT is 0
+
+@0
+SIG is All_Zeros
+UI_IN is 0
+UO_OUT is 15
+@0
+CLK is High
+@0.5
+CLK is Low
+
+@1
+SIG is All_Ones
+UI_IN is 255
+UO_OUT is 240
+@1
+CLK is High
+@1.5
+CLK is Low
+
+@2
+SIG is Pattern_10101010
+UI_IN is 170
+UO_OUT is 165
+@2
+CLK is High
+@2.5
+CLK is Low
+
+@3
+SIG is Pattern_01010101
+UI_IN is 85
+UO_OUT is 90
+@3
+CLK is High
+@3.5
+CLK is Low
+@enduml

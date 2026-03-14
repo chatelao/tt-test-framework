@@ -1,0 +1,21 @@
+@startuml
+robust "CLK" as CLK
+concise "Phase" as SIG
+binary "BIT" as BIT
+concise "BUS" as BUS
+
+@0
+CLK is Low
+SIG is {-}
+BIT is 0
+BUS is 0
+
+@0
+SIG is Step_1
+BIT is 1
+BUS is 10
+@0
+CLK is High
+@0.5
+CLK is Low
+@enduml
