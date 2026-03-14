@@ -1,6 +1,7 @@
 # Roadmap
 
 ## Finished
+- [x] Add optional source field to test case data (2026-03-14)
 - [x] Create simple testcase for Test-ID 3541 (2 Bit Adder) (2025-05-23)
 - [x] Create simple testcase for Test-ID 3564 (2-Bit Adder) (2025-05-23)
 - [x] Create simple testcase for Test-ID 3546 (1-4 Counter) (2025-05-23)
