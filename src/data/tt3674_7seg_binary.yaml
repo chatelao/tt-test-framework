@@ -1,0 +1,35 @@
+project: "tt3674-7seg-binary"
+metadata:
+  source: "https://github.com/jonbng/tinytapeout-binary-to-7segment"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+
+test_steps:
+  - name: "All Zeros"
+    cycles: 1
+    values:
+      UI_IN: 0
+      UO_OUT: 15 # 0x0F: Bottom 4 bits inverted (~0=1), Top 4 bits direct (0)
+
+  - name: "All Ones"
+    cycles: 1
+    values:
+      UI_IN: 255
+      UO_OUT: 240 # 0xF0: Bottom 4 bits inverted (~1=0), Top 4 bits direct (1)
+
+  - name: "Pattern 10101010"
+    cycles: 1
+    values:
+      UI_IN: 170 # 0xAA
+      UO_OUT: 165 # 0xA5: Top 4 (0xA) direct, Bottom 4 (0xA -> 0x5) inverted
+
+  - name: "Pattern 01010101"
+    cycles: 1
+    values:
+      UI_IN: 85 # 0x55
+      UO_OUT: 90 # 0x5A: Top 4 (0x5) direct, Bottom 4 (0x5 -> 0xA) inverted

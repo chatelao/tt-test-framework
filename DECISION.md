@@ -81,3 +81,29 @@
 ### Solution 3: Randomized Input Testing
 - **Description**: Generate random pairs of 2-bit numbers and verify the sum.
 - **Reasoning for Discarding**: Difficult to implement in a static YAML-based test framework without a script to pre-calculate results.
+
+## 4-Bit Adder Verification Strategy (Test-ID 3657) (2025-05-23 13:00)
+
+### Solution 1: Representative Edge Cases (5 cycles) (Chosen)
+- **Description**: Test 0+0, 1+1, 15+1 (carry out), 15+15 (max value), and 5+10.
+- **Reasoning**: Provides good coverage of typical and edge cases for a 4-bit adder without the 256 steps required for a full truth table.
+
+### Solution 2: Full Truth Table (256 cycles)
+- **Description**: Exhaustively test all combinations of two 4-bit inputs.
+- **Reasoning for Discarding**: Too many steps for a simple illustrative test case in YAML.
+
+### Solution 3: Random Sampling (10 cycles)
+- **Description**: Use 10 random pairs of inputs.
+- **Reasoning for Discarding**: Less deterministic and may miss specific edge cases like carry-out.
+
+## 7 Segment Binary Viewer Verification (Test-ID 3674) (2025-05-23 13:10)
+
+### Solution 1: Pattern Testing (4 cycles) (Chosen)
+- **Description**: Test all zeros, all ones, and alternating bit patterns.
+- **Reasoning**: Efficiently verifies the observed signal inversion in the Wokwi diagram for the lower 4 bits.
+
+## 7 Segment Number Viewer Verification (Test-ID 3723) (2025-05-23 13:20)
+
+### Solution 1: Pass-through Testing (4 cycles) (Chosen)
+- **Description**: Test various patterns to ensure 1:1 input to output mapping.
+- **Reasoning**: Matches the simple OR-gate-based pass-through logic seen in the project's Wokwi diagram.

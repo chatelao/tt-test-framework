@@ -1,6 +1,9 @@
 # Roadmap
 
 ## Finished
+- [x] Create simple testcase for Test-ID 3723 (7 segment number viewer) (2025-05-23)
+- [x] Create simple testcase for Test-ID 3674 (7 Segment Binary Viewer) (2025-05-23)
+- [x] Create simple testcase for Test-ID 3657 (4-Bit Adder) (2025-05-23)
 - [x] Add optional source field to test case data (2026-03-14)
 - [x] Create simple testcase for Test-ID 3541 (2 Bit Adder) (2025-05-23)
 - [x] Create simple testcase for Test-ID 3564 (2-Bit Adder) (2025-05-23)
@@ -17,9 +20,9 @@
     - [x] Test-ID: [3546](https://app.tinytapeout.com/projects/3546), Repo: https://github.com/mlhktp/ttihp-wokwi (2025-05-23)
     - [x] Test-ID: [3541](https://app.tinytapeout.com/projects/3541), Repo: https://github.com/zeynepdemirdag/tiny-tapeout-submission (2025-05-23)
     - [x] Test-ID: [3564](https://app.tinytapeout.com/projects/3564), Repo: https://github.com/DeeJayTF/deejay-tinytapeout (2025-05-23)
-    - [ ] Test-ID: [3657](https://app.tinytapeout.com/projects/3657), Repo: https://github.com/madsamtoft/TinyTapeout2
-    - [ ] Test-ID: [3674](https://app.tinytapeout.com/projects/3674), Repo: https://github.com/jonbng/tinytapeout-binary-to-7segment
-    - [ ] Test-ID: [3723](https://app.tinytapeout.com/projects/3723), Repo: https://github.com/Ghunk09/ttworkshop_TEST
+    - [x] Test-ID: [3657](https://app.tinytapeout.com/projects/3657), Repo: https://github.com/madsamtoft/TinyTapeout2 (2025-05-23)
+    - [x] Test-ID: [3674](https://app.tinytapeout.com/projects/3674), Repo: https://github.com/jonbng/tinytapeout-binary-to-7segment (2025-05-23)
+    - [x] Test-ID: [3723](https://app.tinytapeout.com/projects/3723), Repo: https://github.com/Ghunk09/ttworkshop_TEST (2025-05-23)
     - [ ] Test-ID: [3625](https://app.tinytapeout.com/projects/3625), Repo: https://github.com/terrywtr/Tianrui-Wang
     - [ ] Test-ID: [3778](https://app.tinytapeout.com/projects/3778), Repo: https://github.com/TechHU-GS/analog-trial
     - [ ] Test-ID: [3577](https://app.tinytapeout.com/projects/3577), Repo: https://github.com/by-Tobd/tinytapeout
