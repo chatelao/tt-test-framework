@@ -1,0 +1,25 @@
+project: "Quad SPI Aggregator"
+metadata:
+  source: "https://github.com/xzackli/ttihp-verilog-spi-aggregator"
+  project_id: "3519"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+  uio_in:
+    type: "input"
+    width: 8
+test_steps:
+  - name: "Initial Config"
+    cycles: 5
+    values:
+      ui_in: 0x00
+      uio_in: 0x00
+  - name: "Active"
+    cycles: 20
+    values:
+      ui_in: 0xAA
+      uio_in: 0x55

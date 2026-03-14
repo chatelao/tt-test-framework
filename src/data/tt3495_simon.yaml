@@ -1,0 +1,27 @@
+project: "Simon Says memory game"
+metadata:
+  source: "https://github.com/urish/tt-simon-game"
+  project_id: "3495"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+  uio_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Idle"
+    cycles: 10
+    values:
+      ui_in: 0x00
+  - name: "Press Button 1"
+    cycles: 5
+    values:
+      ui_in: 0x01
+  - name: "Release"
+    cycles: 5
+    values:
+      ui_in: 0x00

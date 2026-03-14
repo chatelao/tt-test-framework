@@ -1,0 +1,24 @@
+project: "Discrete-to-ASIC Delta-Sigma Acquisition System"
+metadata:
+  source: "https://github.com/yuya0421/tt_ihp_cic_filter"
+  project_id: "3515"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "PDM Input 0"
+    cycles: 5
+    values:
+      ui_in: 0x00
+  - name: "PDM Input 1"
+    cycles: 5
+    values:
+      ui_in: 0x01
+  - name: "Wait for PCM output"
+    cycles: 20
+    values:
+      ui_in: 0x01

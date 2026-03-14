@@ -1,0 +1,24 @@
+project: "MBIST + MBISR Built-In Memory Test & Repair"
+metadata:
+  source: "https://github.com/adityapundir1985/tt_um_aksp_mbist_mbisr"
+  project_id: "3498"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Idle"
+    cycles: 5
+    values:
+      ui_in: 0x00
+  - name: "Start MBIST"
+    cycles: 5
+    values:
+      ui_in: 0x01
+  - name: "Wait for completion"
+    cycles: 20
+    values:
+      ui_in: 0x01

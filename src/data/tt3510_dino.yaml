@@ -1,0 +1,20 @@
+project: "Not a Dinosaur"
+metadata:
+  source: "https://github.com/tulrich2/ttihp-verilog"
+  project_id: "3510"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial"
+    cycles: 5
+    values:
+      ui_in: 0x00
+  - name: "Wait for frame"
+    cycles: 20
+    values:
+      ui_in: 0x00
