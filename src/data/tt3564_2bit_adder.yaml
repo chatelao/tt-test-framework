@@ -1,0 +1,64 @@
+project: "tt3564-2bit-adder"
+signals:
+  A:
+    type: "input"
+    width: 2
+  B:
+    type: "input"
+    width: 2
+  Result:
+    type: "output"
+    width: 2
+  Cout:
+    type: "output"
+    width: 1
+
+test_steps:
+  - name: "0+0"
+    cycles: 1
+    values: {A: 0, B: 0, Result: 0, Cout: 0}
+  - name: "0+1"
+    cycles: 1
+    values: {A: 0, B: 1, Result: 1, Cout: 0}
+  - name: "0+2"
+    cycles: 1
+    values: {A: 0, B: 2, Result: 2, Cout: 0}
+  - name: "0+3"
+    cycles: 1
+    values: {A: 0, B: 3, Result: 3, Cout: 0}
+  - name: "1+0"
+    cycles: 1
+    values: {A: 1, B: 0, Result: 1, Cout: 0}
+  - name: "1+1"
+    cycles: 1
+    values: {A: 1, B: 1, Result: 2, Cout: 0}
+  - name: "1+2"
+    cycles: 1
+    values: {A: 1, B: 2, Result: 3, Cout: 0}
+  - name: "1+3"
+    cycles: 1
+    values: {A: 1, B: 3, Result: 0, Cout: 1}
+  - name: "2+0"
+    cycles: 1
+    values: {A: 2, B: 0, Result: 2, Cout: 0}
+  - name: "2+1"
+    cycles: 1
+    values: {A: 2, B: 1, Result: 3, Cout: 0}
+  - name: "2+2"
+    cycles: 1
+    values: {A: 2, B: 2, Result: 0, Cout: 1}
+  - name: "2+3"
+    cycles: 1
+    values: {A: 2, B: 3, Result: 1, Cout: 1}
+  - name: "3+0"
+    cycles: 1
+    values: {A: 3, B: 0, Result: 3, Cout: 0}
+  - name: "3+1"
+    cycles: 1
+    values: {A: 3, B: 1, Result: 0, Cout: 1}
+  - name: "3+2"
+    cycles: 1
+    values: {A: 3, B: 2, Result: 1, Cout: 1}
+  - name: "3+3"
+    cycles: 1
+    values: {A: 3, B: 3, Result: 2, Cout: 1}

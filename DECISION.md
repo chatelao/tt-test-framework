@@ -61,3 +61,17 @@
 ### Solution 1: One full period (4 cycles) (Chosen)
 - **Description**: Define four test steps, each 1 cycle long, to verify the sequence 1, 2, 3, 4.
 - **Reasoning**: This is the most efficient way to confirm the core functionality of the counter as described in the specifications.
+
+## 2-Bit Adder Verification Strategy (Test-ID 3564) (2025-05-23 12:00)
+
+### Solution 1: Full Truth Table (16 cycles) (Chosen)
+- **Description**: Define 16 test steps to cover all combinations of two 2-bit inputs.
+- **Reasoning**: Provides exhaustive verification of the combinational logic for the 2-bit adder.
+
+### Solution 2: Representative Cases (8 cycles)
+- **Description**: Test only a subset of inputs (e.g., all zeros, all ones, and mixed values).
+- **Reasoning for Discarding**: Does not guarantee full correctness of the circuit, though faster to define.
+
+### Solution 3: Randomized Input Testing
+- **Description**: Generate random pairs of 2-bit numbers and verify the sum.
+- **Reasoning for Discarding**: Difficult to implement in a static YAML-based test framework without a script to pre-calculate results.

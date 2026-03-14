@@ -12,9 +12,10 @@ def generate_puml(data, test_steps):
     puml.append('concise "Phase" as SIG')
 
     signals = data.get('signals', {})
-    for sig_name in signals:
+    for sig_name, sig_info in signals.items():
         if sig_name == 'CLK': continue
-        if sig_name in ['UI_IN', 'UIO', 'UO_OUT']:
+        width = sig_info.get('width', 1)
+        if width > 1 or sig_name in ['UI_IN', 'UIO', 'UO_OUT']:
             puml.append(f'concise "{sig_name}" as {sig_name}')
         else:
             puml.append(f'binary "{sig_name}" as {sig_name}')
