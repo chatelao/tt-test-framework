@@ -1,6 +1,7 @@
 # Roadmap
 
 ## Finished
+- [x] Create simple testcase for Test-ID 3546 (1-4 Counter) (2025-05-23)
 - [x] Support for multiple test cases in one YAML file (2025-05-22)
 - [x] Implement YAML validator against the schema (2025-05-22)
 - [x] Create YAML data for "micropython-example-tt-devkit" (2025-05-22)
@@ -10,7 +11,7 @@
 
 ## Planned
   - [ ] Create simple testcase for each assigned tile from TTIHP26A shuttle
-    - [ ] Test-ID: [3546](https://app.tinytapeout.com/projects/3546), Repo: https://github.com/mlhktp/ttihp-wokwi
+    - [x] Test-ID: [3546](https://app.tinytapeout.com/projects/3546), Repo: https://github.com/mlhktp/ttihp-wokwi (2025-05-23)
     - [ ] Test-ID: [3541](https://app.tinytapeout.com/projects/3541), Repo: https://github.com/zeynepdemirdag/tiny-tapeout-submission
     - [ ] Test-ID: [3564](https://app.tinytapeout.com/projects/3564), Repo: https://github.com/DeeJayTF/deejay-tinytapeout
     - [ ] Test-ID: [3657](https://app.tinytapeout.com/projects/3657), Repo: https://github.com/madsamtoft/TinyTapeout2
