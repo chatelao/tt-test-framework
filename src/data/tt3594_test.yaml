@@ -1,0 +1,24 @@
+project: "Test"
+metadata:
+  source: "https://github.com/darius1702/tt-asic"
+  project_id: "3594"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial state"
+    cycles: 1
+    values:
+      ui_in: 0
+  - name: "AND Gate Test"
+    cycles: 1
+    values:
+      ui_in: 0b00000011 # IN0=1, IN1=1
+  - name: "Clock Flop"
+    cycles: 1
+    values:
+      ui_in: 0

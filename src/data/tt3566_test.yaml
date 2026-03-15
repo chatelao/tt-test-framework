@@ -1,0 +1,34 @@
+project: "test (AND gate)"
+metadata:
+  source: "https://github.com/DasKunstUngetuem/tt"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+  clk:
+    type: "clock"
+    width: 1
+test_steps:
+  - name: "AND test 0 & 0"
+    cycles: 1
+    values:
+      ui_in: 0b00000000
+      uo_out: 0b00000000
+  - name: "AND test 1 & 0"
+    cycles: 1
+    values:
+      ui_in: 0b00000001
+      uo_out: 0b00000000
+  - name: "AND test 1 & 1"
+    cycles: 1
+    values:
+      ui_in: 0b00000011
+      uo_out: 0b00000001
+  - name: "AND test 0 & 1"
+    cycles: 1
+    values:
+      ui_in: 0b00000010
+      uo_out: 0b00000000

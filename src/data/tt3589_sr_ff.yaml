@@ -1,0 +1,24 @@
+project: "83rk: Tiny Tapeout"
+metadata:
+  source: "https://github.com/83rk/83rkFlipFlop"
+  project_id: "3589"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial state"
+    cycles: 1
+    values:
+      ui_in: 0
+  - name: "Set input"
+    cycles: 1
+    values:
+      ui_in: 1
+  - name: "Clock pulse"
+    cycles: 1
+    values:
+      ui_in: 1

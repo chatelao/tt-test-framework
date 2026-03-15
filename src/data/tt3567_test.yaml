@@ -1,0 +1,35 @@
+project: "Inverter Template Test"
+metadata:
+  source: "https://github.com/trupus/tt"
+signals:
+  ui[0:3]: {name: "UI_LOW", type: input, width: 4}
+  ui[4:7]: {name: "UI_HIGH", type: input, width: 4}
+  uo[0:3]: {name: "UO_INV", type: output, width: 4}
+  uo[4:7]: {name: "UO_PASS", type: output, width: 4}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0:3]: 0
+      ui[4:7]: 0
+  - name: "Test All Zeros"
+    cycles: 1
+    values:
+      ui[0:3]: 0x0
+      ui[4:7]: 0x0
+      uo[0:3]: 0xF
+      uo[4:7]: 0x0
+  - name: "Test All Ones"
+    cycles: 1
+    values:
+      ui[0:3]: 0xF
+      ui[4:7]: 0xF
+      uo[0:3]: 0x0
+      uo[4:7]: 0xF
+  - name: "Test Mixed Patterns"
+    cycles: 1
+    values:
+      ui[0:3]: 0xA
+      ui[4:7]: 0x5
+      uo[0:3]: 0x5
+      uo[4:7]: 0x5

@@ -1,5 +1,15 @@
 # Discarded Solutions
 
+## 10 Projects (project-id modulo 5 = 2) Verification Strategy (Test-IDs 3562-3617) (2026-03-16 11:30)
+
+### Solution 2: Static Reset Only Verification
+- **Description**: Only verify that the outputs are in a stable reset state.
+- **Reasoning for Discarding**: Fails to verify any functional logic after reset, which is the primary goal of the test framework.
+
+### Solution 3: Exhaustive Truth Table Testing
+- **Description**: Test all possible input combinations (256 for 8-bit inputs).
+- **Reasoning for Discarding**: Resulting timing diagrams would be unreadable and the YAML files would be excessively large.
+
 ## m6502 Microcontroller Verification Strategy (Test-ID 3528) (2026-03-15 13:57)
 
 ### Solution 2: NOP Fetch
@@ -147,3 +157,13 @@
 ### Solution 3: Sequential Input Sweeping (8 cycles)
 - **Description**: Use a single test case with 8 cycles where inputs change at each clock edge.
 - **Reasoning for Discarding**: Similar to Solution 1 but less explicit in naming each step's purpose in the YAML.
+
+## 10 Additional TTIHP26a Projects (ID % 5 = 0) (2026-03-16 16:00)
+
+### Solution 2: Generic Reset and Pattern Test
+- **Description**: Use a uniform test template (reset + basic patterns) for all 10 projects regardless of their internal logic.
+- **Reasoning for Discarding**: While faster, it fails to verify the specific functionality of complex designs like VGA controllers or debouncers.
+
+### Solution 3: Automated Truth Table Generation
+- **Description**: Attempt to automatically generate all possible input combinations for each project.
+- **Reasoning for Discarding**: Impractical for sequential designs and results in excessively large YAML files that are difficult to review.

@@ -1,0 +1,22 @@
+project: "VGA Squares"
+metadata:
+  source: "https://github.com/matth-fischer/TT_VGA"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  ui[0]: {name: "Speed", type: input, width: 1}
+  ui[1]: {name: "Direction", type: input, width: 1}
+  uo[0:2]: {name: "RGB1", type: output, width: 3}
+  uo[3]: {name: "VSync", type: output, width: 1}
+  uo[4:6]: {name: "RGB0", type: output, width: 3}
+  uo[7]: {name: "HSync", type: output, width: 1}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0]: 0
+      ui[1]: 0
+  - name: "Active"
+    cycles: 10
+    values:
+      ui[0]: 1
+      ui[1]: 1

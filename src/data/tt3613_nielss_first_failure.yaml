@@ -1,0 +1,11 @@
+project: "Nielss first failure"
+metadata:
+  source: "https://github.com/Engelbrecht-N/Wokiwi_template"
+signals:
+  CLK: {type: clock, width: 1}
+  UI_IN: {type: input, width: 8}
+  UO_OUT: {type: output, width: 8}
+test_steps:
+  - name: "Idle"
+    cycles: 4
+    values: {UI_IN: 0}
