@@ -39,9 +39,9 @@
     - [ ] Test-ID: [3623](https://app.tinytapeout.com/projects/3623), Repo: https://github.com/pauld0503/paul_tiny_tapeout
     - [ ] Test-ID: [3626](https://app.tinytapeout.com/projects/3626), Repo: https://github.com/sam-m7/tinyTapeoutChip1
     - [ ] Test-ID: [3632](https://app.tinytapeout.com/projects/3632), Repo: https://github.com/matth-fischer/TT_VGA
-    - [ ] Test-ID: [3635](https://app.tinytapeout.com/projects/3635), Repo: https://github.com/apedersen00/tt6581
+    - [ ] Test-ID: [3633](https://app.tinytapeout.com/projects/3633), Repo: https://github.com/phsauter/vga-playground-maze
     - [ ] Test-ID: [3641](https://app.tinytapeout.com/projects/3641), Repo: https://github.com/brmurrell3/tt_um_brmurrell3_m31_accel
-    - [ ] Test-ID: [3645](https://app.tinytapeout.com/projects/3645), Repo: https://github.com/gonsolo/borg_tinyqv
+    - [ ] Test-ID: [3648](https://app.tinytapeout.com/projects/3648), Repo: https://github.com/pgfarley/tophat
     - [ ] Test-ID: [3651](https://app.tinytapeout.com/projects/3651), Repo: https://github.com/BoredSemiRetiredEngineer/ttihp_submission
     - [ ] Test-ID: [3654](https://app.tinytapeout.com/projects/3654), Repo: https://github.com/EzraWolf/TinyMOA-IHP26a
     - [ ] Test-ID: [3656](https://app.tinytapeout.com/projects/3656), Repo: https://github.com/tjarker/ttihp-feb-2026
@@ -49,17 +49,14 @@
     - [ ] Test-ID: [3664](https://app.tinytapeout.com/projects/3664), Repo: https://github.com/pakesson/tt_glitcher
     - [ ] Test-ID: [3669](https://app.tinytapeout.com/projects/3669), Repo: https://github.com/karlmose/tinytapeout_wokwi_test
     - [ ] Test-ID: [3671](https://app.tinytapeout.com/projects/3671), Repo: https://github.com/Biboulder/TinyTapeout-wokwi-template
-    - [ ] Test-ID: [3675](https://app.tinytapeout.com/projects/3675), Repo: https://github.com/calonso88/dtu_tt_workshop
     - [ ] Test-ID: [3676](https://app.tinytapeout.com/projects/3676), Repo: https://github.com/Mr-Seoul/TinyTapeOutGDS
     - [ ] Test-ID: [3681](https://app.tinytapeout.com/projects/3681), Repo: https://github.com/mjuels/tinytapeoutworkshop
     - [ ] Test-ID: [3686](https://app.tinytapeout.com/projects/3686), Repo: https://github.com/pablo-dk/TinyTapeoutDTU_chip
     - [ ] Test-ID: [3689](https://app.tinytapeout.com/projects/3689), Repo: https://github.com/McHerman/Tinytapeout
     - [ ] Test-ID: [3691](https://app.tinytapeout.com/projects/3691), Repo: https://github.com/Sirius-DK/456571875721383937
     - [ ] Test-ID: [3694](https://app.tinytapeout.com/projects/3694), Repo: https://github.com/SciFiCarrot/tiny-tapeout-workshop
-    - [ ] Test-ID: [3695](https://app.tinytapeout.com/projects/3695), Repo: https://github.com/Malthe2512/Tinytape
     - [ ] Test-ID: [3696](https://app.tinytapeout.com/projects/3696), Repo: https://github.com/5gyyzwxbd4-svg/First
     - [ ] Test-ID: [3699](https://app.tinytapeout.com/projects/3699), Repo: https://github.com/Skillygonzales/tiny_tapeout_demo
-    - [ ] Test-ID: [3700](https://app.tinytapeout.com/projects/3700), Repo: https://github.com/gusish89/tinytapeout_wokwi0
     - [ ] Test-ID: [3701](https://app.tinytapeout.com/projects/3701), Repo: https://github.com/celien-14/cremedelacreme
     - [ ] Test-ID: [3706](https://app.tinytapeout.com/projects/3706), Repo: https://github.com/giffel1/Scott-s-first-Wokwi-design
     - [ ] Test-ID: [3713](https://app.tinytapeout.com/projects/3713), Repo: https://github.com/Jfvind/tt-jfvind
@@ -68,19 +65,15 @@
     - [ ] Test-ID: [3722](https://app.tinytapeout.com/projects/3722), Repo: https://github.com/donmonki/tt01_chip_design
     - [ ] Test-ID: [3728](https://app.tinytapeout.com/projects/3728), Repo: https://github.com/GitteBailey/TinyTapeoutWorkshop
     - [ ] Test-ID: [3729](https://app.tinytapeout.com/projects/3729), Repo: https://github.com/martaalfonso/pomasic
-    - [ ] Test-ID: [3730](https://app.tinytapeout.com/projects/3730), Repo: https://github.com/kurimm/GitHub-Wokwi-Template
     - [ ] Test-ID: [3731](https://app.tinytapeout.com/projects/3731), Repo: https://github.com/Nazgul-0/tinytapeoutGDS
     - [ ] Test-ID: [3734](https://app.tinytapeout.com/projects/3734), Repo: https://github.com/tarkor111/tiny-tapeout-design
-    - [ ] Test-ID: [3735](https://app.tinytapeout.com/projects/3735), Repo: https://github.com/MikkelKofoed/TinyTapeoutWorkshop
     - [ ] Test-ID: [3757](https://app.tinytapeout.com/projects/3757), Repo: https://github.com/crockpotveggies/neuron-ttihp
     - [ ] Test-ID: [3763](https://app.tinytapeout.com/projects/3763), Repo: https://github.com/coastalwhite/tinytapeout-ihp-canright
-    - [ ] Test-ID: [3765](https://app.tinytapeout.com/projects/3765), Repo: https://github.com/ermalfierza1/E-Beam-Inspection-Pixel-Core
     - [ ] Test-ID: [3766](https://app.tinytapeout.com/projects/3766), Repo: https://github.com/DelosReyesJordan/ttihp26a-FP8-SEM-Multiplier
     - [ ] Test-ID: [3768](https://app.tinytapeout.com/projects/3768), Repo: https://github.com/intv0id/tt-ihp-TinyKalman
     - [ ] Test-ID: [3769](https://app.tinytapeout.com/projects/3769), Repo: https://github.com/JPGHhb/ttihp-vga-tetris
     - [ ] Test-ID: [3771](https://app.tinytapeout.com/projects/3771), Repo: https://github.com/Isk1337/Count-To-Ten
     - [ ] Test-ID: [3772](https://app.tinytapeout.com/projects/3772), Repo: https://github.com/risc-v-wg/ttihp-26a-risc-v-wg-swc1
-    - [ ] Test-ID: [3775](https://app.tinytapeout.com/projects/3775), Repo: https://github.com/TechHU-GS/tt_rv32_trial
     - [ ] Test-ID: [3948](https://app.tinytapeout.com/projects/3948), Repo: https://github.com/Neuromurf/ttihp26a-inferenceFCNN-16h3
     - [ ] Test-ID: [3949](https://app.tinytapeout.com/projects/3949), Repo: https://github.com/obrhubr/ttihp-submission
     - [ ] Test-ID: [3960](https://app.tinytapeout.com/projects/3960), Repo: https://github.com/anujic/anujic_ttihp26a (Skipped - Analog)
@@ -110,16 +103,16 @@
 - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
-- [x] Create simple testcase for Test-ID 3708 (My first design) (2026-03-16)
-- [x] Create simple testcase for Test-ID 3703 (And_Or) (2026-03-16)
-- [x] Create simple testcase for Test-ID 3698 (4-bit full adder) (2026-03-16)
-- [x] Create simple testcase for Test-ID 3693 (TinyTapeNkTest) (2026-03-16)
-- [x] Create simple testcase for Test-ID 3688 (idk) (2026-03-16)
-- [x] Create simple testcase for Test-ID 3678 (2 Digit Display) (2026-03-16)
-- [x] Create simple testcase for Test-ID 3668 (Tiny tapeout and gate test) (2026-03-16)
-- [x] Create simple testcase for Test-ID 3653 (SID Voice Synthesizer) (2026-03-16)
-- [x] Create simple testcase for Test-ID 3648 (tophat) (2026-03-16)
-- [x] Create simple testcase for Test-ID 3633 (VGA Maze Runner) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3755 (Tiny Tapeout Factory Test for ttihp-timer) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3775 (Repo: https://github.com/TechHU-GS/tt_rv32_trial) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3765 (Repo: https://github.com/ermalfierza1/E-Beam-Inspection-Pixel-Core) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3735 (Repo: https://github.com/MikkelKofoed/TinyTapeoutWorkshop) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3730 (Repo: https://github.com/kurimm/GitHub-Wokwi-Template) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3700 (Repo: https://github.com/gusish89/tinytapeout_wokwi0) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3695 (Repo: https://github.com/Malthe2512/Tinytape) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3675 (Repo: https://github.com/calonso88/dtu_tt_workshop) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3645 (Repo: https://github.com/gonsolo/borg_tinyqv) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3635 (Repo: https://github.com/apedersen00/tt6581) (2026-03-15)
 - [x] Add Novelty column to TTIHP26A_PROJECTS.md (2026-03-15)
 - [x] Create project overview table TTIHP26A_PROJECTS.md (2026-03-16)
 - [x] Create simple testcase for Test-ID 3559 (Just logic) (2026-03-16)

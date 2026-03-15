@@ -1,0 +1,43 @@
+project: "Tiny Tapeout Test"
+metadata:
+  source: "https://github.com/kurimm/GitHub-Wokwi-Template"
+  project_id: "3730"
+signals:
+  ENA:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ENA: 1
+      RST_N: 0
+      UI_IN: 0
+      UO_OUT: 0
+
+  - name: "NOT logic"
+    cycles: 1
+    values:
+      RST_N: 1
+      UI_IN: 0x0F
+      UO_OUT: 0xF0 # NOT on lower 4 bits, pass-through on upper 4 bits?
+      # Let's re-verify:
+      # IN0 -> NOT -> OUT0
+      # IN1 -> NOT -> OUT1
+      # IN2 -> NOT -> OUT2
+      # IN3 -> NOT -> OUT3
+      # IN4 -> OUT4
+      # IN5 -> OUT5
+      # IN6 -> OUT6
+      # IN7 -> OUT7
+      # So UI_IN 0x0F -> UO_OUT 0xF0
