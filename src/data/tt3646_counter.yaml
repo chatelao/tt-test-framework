@@ -1,0 +1,32 @@
+project: "4-bit Counter"
+metadata:
+  source: "https://github.com/Galayuda/tt-counter"
+signals:
+  clk:
+    type: "clock"
+    width: 1
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Count"
+    cycles: 4
+    values:
+      uo_out: "static"
+    # Verification of sequence
+  - name: "Step 0"
+    cycles: 1
+    values:
+      uo_out: 0
+  - name: "Step 1"
+    cycles: 1
+    values:
+      uo_out: 1
+  - name: "Step 2"
+    cycles: 1
+    values:
+      uo_out: 2
+  - name: "Step 3"
+    cycles: 1
+    values:
+      uo_out: 3

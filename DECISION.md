@@ -1,18 +1,10 @@
 # Decisions
 
-## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3560-3610) (2026-03-16 14:00)
+## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3563-3663) (2026-03-16 12:00)
 
 ### Solution 1: Targeted Functional Verification (Chosen)
-- **Description**: Implement specific functional tests for each project based on their description and pinout (e.g., PWM duty cycle, Serializer sequence, Logic gates).
-- **Reasoning**: Provides meaningful verification of the unique logic in each project and ensures higher quality test data.
-
-### Solution 2: Generic Pattern Testing
-- **Description**: Apply a standard set of patterns (all zeros, all ones, alternating) to all 10 projects.
-- **Reasoning for Discarding**: Faster to implement but may not verify specific functional blocks correctly, especially for sequential or specialized designs like serializers.
-
-### Solution 3: Reset-only Verification
-- **Description**: Only verify the reset state of the projects.
-- **Reasoning for Discarding**: Too minimal; doesn't prove the design actually works or transitions between states.
+- **Description**: Implement simple functional test cases for the next batch of 10 projects (RS Half Adder, My first tapeout, Custom ASIC, neb tt26a first asic, custom_lol, Workshop Day, Freddys tapeout, Nielss first failure, little frequency divider, Johnson counter).
+- **Reasoning**: Ensures all projects in the current modulo-based batch are verified based on their specific architectures (Wokwi or Verilog).
 
 ## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3548-3559) (2026-03-16 10:00)
 

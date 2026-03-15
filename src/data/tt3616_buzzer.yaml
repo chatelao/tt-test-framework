@@ -1,0 +1,19 @@
+project: "Two Song Buzzer Player"
+metadata:
+  source: "https://github.com/CT4111/test_WOKWI_Circute"
+signals:
+  clk:
+    type: "clock"
+    width: 1
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Observe PWM"
+    cycles: 10
+    values:
+      ui_in: 0
+    # uo_out[0] will toggle.

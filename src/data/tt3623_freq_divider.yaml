@@ -1,0 +1,23 @@
+project: "little frequency divider"
+metadata:
+  source: "https://github.com/pauld0503/paul_tiny_tapeout"
+signals:
+  CLK: {type: clock, width: 1}
+  UI_IN: {type: input, width: 8}
+  UO_OUT: {type: output, width: 8}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values: {UI_IN: 1}
+  - name: "Shift 1"
+    cycles: 1
+    values: {UI_IN: 0}
+  - name: "Shift 2"
+    cycles: 1
+    values: {UI_IN: 0}
+  - name: "Shift 3"
+    cycles: 1
+    values: {UI_IN: 0}
+  - name: "Shift 4"
+    cycles: 1
+    values: {UI_IN: 0, UO_OUT: 1}

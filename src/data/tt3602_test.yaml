@@ -1,0 +1,41 @@
+project: "Flip-Flop Test"
+metadata:
+  source: "https://github.com/PleinR02/test"
+signals:
+  ui[2]: {name: "D0", type: input, width: 1}
+  ui[3]: {name: "CLK0", type: input, width: 1}
+  ui[4]: {name: "D1_CLK1", type: input, width: 1}
+  ui[6]: {name: "RST1", type: input, width: 1}
+  uo[3]: {name: "Q0", type: output, width: 1}
+  uo[7]: {name: "Q1", type: output, width: 1}
+test_steps:
+  - name: "Initialize"
+    cycles: 1
+    values:
+      ui[2]: 0
+      ui[3]: 0
+      ui[4]: 0
+      ui[6]: 1 # Reset flop2
+  - name: "Load FF0"
+    cycles: 1
+    values:
+      ui[2]: 1
+      ui[3]: 1
+      uo[3]: 1
+  - name: "FF0 Hold"
+    cycles: 1
+    values:
+      ui[2]: 0
+      ui[3]: 0
+      uo[3]: 1
+  - name: "Load FF1 (D tied to CLK)"
+    cycles: 1
+    values:
+      ui[4]: 1
+      ui[6]: 0
+      uo[7]: 1
+  - name: "Reset FF1"
+    cycles: 1
+    values:
+      ui[6]: 1
+      uo[7]: 0

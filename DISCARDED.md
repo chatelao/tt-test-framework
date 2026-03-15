@@ -1,14 +1,14 @@
 # Discarded Solutions
 
-## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3560-3610) (2026-03-16 14:00)
+## 10 Projects (project-id modulo 5 = 2) Verification Strategy (Test-IDs 3562-3617) (2026-03-16 11:30)
 
-### Solution 2: Generic Pattern Testing
-- **Description**: Apply a standard set of patterns (all zeros, all ones, alternating) to all 10 projects.
-- **Reasoning for Discarding**: Faster to implement but may not verify specific functional blocks correctly, especially for sequential or specialized designs like serializers.
+### Solution 2: Static Reset Only Verification
+- **Description**: Only verify that the outputs are in a stable reset state.
+- **Reasoning for Discarding**: Fails to verify any functional logic after reset, which is the primary goal of the test framework.
 
-### Solution 3: Reset-only Verification
-- **Description**: Only verify the reset state of the projects.
-- **Reasoning for Discarding**: Too minimal; doesn't prove the design actually works or transitions between states.
+### Solution 3: Exhaustive Truth Table Testing
+- **Description**: Test all possible input combinations (256 for 8-bit inputs).
+- **Reasoning for Discarding**: Resulting timing diagrams would be unreadable and the YAML files would be excessively large.
 
 ## m6502 Microcontroller Verification Strategy (Test-ID 3528) (2026-03-15 13:57)
 
