@@ -1,5 +1,15 @@
 # Discarded Solutions
 
+## Handling of Project 3390 (mini mosbius) (2026-03-14 18:40)
+
+### Solution 2: Implement basic test case for Project 3390
+- **Description**: Create a minimal YAML test case for Project 3390 despite its analog nature.
+- **Reasoning for Discarding**: Our framework is optimized for digital logic, and analog projects are explicitly skipped according to project memory and guidelines.
+
+### Solution 3: Add to Planned section for ttsky25b
+- **Description**: Keep Project 3390 in the roadmap but move it to a future shuttle section.
+- **Reasoning for Discarding**: Unnecessary complexity as the current focus is entirely on completing the `ttihp26a` shuttle.
+
 ## tinyTapeVerilog_out Verification Strategy (Test-ID 3526) (2026-03-14 23:00)
 
 ### Solution 2: Reset only
