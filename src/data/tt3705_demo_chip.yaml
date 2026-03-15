@@ -1,0 +1,17 @@
+project: "demo_chip"
+metadata:
+  source: "https://github.com/carlhyldborglundstroem-code/TinyTapeoutCarlHL"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  UI_IN: {name: "UI_IN", type: input, width: 8}
+  UO_OUT: {name: "UO_OUT", type: output, width: 8}
+test_steps:
+  - name: "Initialization"
+    cycles: 1
+    values: {UI_IN: 0, UO_OUT: 0}
+  - name: "Input Pattern 1"
+    cycles: 1
+    values: {UI_IN: 0x01, UO_OUT: 0x01}
+  - name: "Input Pattern 2"
+    cycles: 1
+    values: {UI_IN: 0x05, UO_OUT: 0x05}

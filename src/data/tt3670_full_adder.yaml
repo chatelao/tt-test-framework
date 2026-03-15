@@ -1,0 +1,20 @@
+project: "Full Adder"
+metadata:
+  source: "https://github.com/AAmirinejad/TinyTapeoutWorkshop"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  UI_IN: {name: "UI_IN", type: input, width: 8}
+  UO_OUT: {name: "UO_OUT", type: output, width: 8}
+test_steps:
+  - name: "0 + 0 + 0 = 0, Cout=0"
+    cycles: 1
+    values: {UI_IN: 0, UO_OUT: 0}
+  - name: "1 + 0 + 0 = 1, Cout=0"
+    cycles: 1
+    values: {UI_IN: 1, UO_OUT: 1}
+  - name: "1 + 1 + 0 = 0, Cout=1"
+    cycles: 1
+    values: {UI_IN: 3, UO_OUT: 2}
+  - name: "1 + 1 + 1 = 1, Cout=1"
+    cycles: 1
+    values: {UI_IN: 7, UO_OUT: 3}
