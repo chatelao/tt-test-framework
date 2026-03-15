@@ -2,17 +2,6 @@
 
 ## Planned
   - [ ] Create simple testcase for each assigned tile from TTIHP26A shuttle
-    - [ ] Test-ID: [3502](https://app.tinytapeout.com/projects/3502), Repo: https://github.com/pranav0x0112/ttihp26a-Herald
-    - [ ] Test-ID: [3528](https://app.tinytapeout.com/projects/3528), Repo: https://github.com/chrismoos/tt-led-controller
-    - [ ] Test-ID: [3531](https://app.tinytapeout.com/projects/3531), Repo: https://github.com/Electronic-and-Computer-Engineering/TT_IHP26a_FH_uC
-    - [ ] Test-ID: [3533](https://app.tinytapeout.com/projects/3533), Repo: https://github.com/Fing2525/piggy_bag
-    - [ ] Test-ID: [3537](https://app.tinytapeout.com/projects/3537), Repo: https://github.com/svens0210/Roulette_Game
-    - [ ] Test-ID: [3539](https://app.tinytapeout.com/projects/3539), Repo: https://github.com/thravax/tt-test
-    - [ ] Test-ID: [3540](https://app.tinytapeout.com/projects/3540), Repo: https://github.com/PolykarposV/tt_workshop
-    - [ ] Test-ID: [3542](https://app.tinytapeout.com/projects/3542), Repo: https://github.com/ezelioli/tt-efcl-workshop
-    - [ ] Test-ID: [3543](https://app.tinytapeout.com/projects/3543), Repo: https://github.com/sotatek-dev/ttihp-SotaSoC
-    - [ ] Test-ID: [3545](https://app.tinytapeout.com/projects/3545), Repo: https://github.com/Byte-01100110/TT-Ape-out
-    - [ ] Test-ID: [3547](https://app.tinytapeout.com/projects/3547), Repo: https://github.com/raninninn/tiny-tapeout-working-repo
     - [ ] Test-ID: [3548](https://app.tinytapeout.com/projects/3548), Repo: https://github.com/joh-1x/tiny-tapeout-workshop
     - [ ] Test-ID: [3549](https://app.tinytapeout.com/projects/3549), Repo: https://github.com/tomolt/tomolt_tiny_tapeout_ic
     - [ ] Test-ID: [3550](https://app.tinytapeout.com/projects/3550), Repo: https://github.com/elFuchso/tinytapeout-wokwi
@@ -179,6 +168,17 @@
 - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
+- [x] Create simple testcase for Test-ID 3547 (tiny-tapeout-workshop-result) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3545 (Tiny Ape Out) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3543 (SotaSoC) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3542 (VGABlock) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3540 (My first Wokwi design) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3539 (secretNo) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3537 (6 Bit Roulette) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3533 (Piggybag) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3531 (FH Joanneum TinyTapeout) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3528 (m6502 Microcontroller) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3502 (Herald) (2026-03-15)
 - [x] Create simple testcase for Test-ID 3990 (OCP MXFP8 Streaming MAC Unit) (2026-03-15)
 - [x] Create simple testcase for Test-ID 3390 (mini mosbius) (Skipped - Analog / Not in shuttle ttihp26a) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3756 (Photo Frame) (2026-03-14)
@@ -250,4 +250,3 @@
 - [x] Implement Python script to generate PlantUML timing diagram from YAML (2025-05-22)
 - [x] Define YAML schema for test steps (2025-05-22)
 - [x] Initial project structure created (2025-05-22)
-

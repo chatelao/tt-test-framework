@@ -1,0 +1,31 @@
+project: "My first Wokwi design"
+metadata:
+  source: "https://github.com/PolykarposV/tt_workshop"
+signals:
+  SWITCHES:
+    type: "input"
+    width: 8
+  SEGMENTS:
+    type: "output"
+    width: 8
+  CLK:
+    type: "clock"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      SWITCHES: 0x00
+  - name: "Secret Code"
+    cycles: 1
+    values:
+      RST_N: 1
+      SWITCHES: 0x42
+  - name: "Other Code"
+    cycles: 1
+    values:
+      SWITCHES: 0xFF

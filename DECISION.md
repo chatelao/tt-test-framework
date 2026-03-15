@@ -1,5 +1,81 @@
 # Decisions
 
+## m6502 Microcontroller Verification Strategy (Test-ID 3528) (2026-03-15 13:57)
+
+### Solution 1: Bus Initialization (Chosen)
+- **Description**: Verify that the PHI1/PHI2 clocks start toggling and the R/W signal is initialized to Read after reset.
+- **Reasoning**: Confirms the basic operation of the CPU's internal clock generator and the initial state of the memory interface.
+
+### Solution 2: NOP Fetch
+- **Description**: Provide NOP instructions on the data bus and observe the address increment.
+- **Reasoning for Discarding**: Requires several cycles of complex bus multiplexing which is too verbose for a simple functional test.
+
+### Solution 3: Reset only
+- **Description**: Verify outputs are stable during reset.
+- **Reasoning for Discarding**: Does not verify that the CPU starts operation after reset.
+
+## FH Joanneum TinyTapeout Verification Strategy (Test-ID 3531) (2026-03-15 13:57)
+
+### Solution 1: Reset State (Chosen)
+- **Description**: Verify that SPI and GPIO outputs are in their default (likely zero or high-Z) state after reset.
+- **Reasoning**: A safe and necessary sanity check for an SoC to ensure it doesn't drive unexpected values on boot.
+
+### Solution 2: SPI Echo
+- **Description**: Send a byte via SPI and expect an echo or response.
+- **Reasoning for Discarding**: Depends on the software loaded into the SERV core, which is not easily deterministic without full RTL simulation.
+
+### Solution 3: GPIO Toggle
+- **Description**: Set GPIO inputs and expect a change on outputs.
+- **Reasoning for Discarding**: Similarly depends on the internal software state.
+
+## Piggybag Verification Strategy (Test-ID 3533) (2026-03-15 13:57)
+
+### Solution 1: Pattern Testing (Chosen)
+- **Description**: Test various input patterns to verify the 1:1 or simple logic mapping in this Wokwi project.
+- **Reasoning**: Appropriate for simple Wokwi designs with direct pin mappings.
+
+## 6 Bit Roulette Verification Strategy (Test-ID 3537) (2026-03-15 13:57)
+
+### Solution 1: Reset and Idle (Chosen)
+- **Description**: Verify the LED segments (outputs) are in a known state after reset.
+- **Reasoning**: Confirms the sequential logic of the roulette game is correctly initialized.
+
+## secretNo Verification Strategy (Test-ID 3539) (2026-03-15 13:57)
+
+### Solution 1: Logic Verification (Chosen)
+- **Description**: Test the 4-bit input combinations to verify the unlocking logic.
+- **Reasoning**: Directly tests the core functional requirement of this "secret number" project.
+
+## My first Wokwi design Verification Strategy (Test-ID 3540) (2026-03-15 13:57)
+
+### Solution 1: Code Verification (Chosen)
+- **Description**: Apply the "secret code" via inputs and verify the 7-segment output shows the intended letter.
+- **Reasoning**: Verifies the unique functional goal of the project.
+
+## VGABlock Verification Strategy (Test-ID 3542) (2026-03-15 13:57)
+
+### Solution 1: Sync Signal Verification (Chosen)
+- **Description**: Verify HSync and VSync initialization and initial toggling.
+- **Reasoning**: Standard verification approach for VGA projects in this framework.
+
+## SotaSoC Verification Strategy (Test-ID 3543) (2026-03-15 13:57)
+
+### Solution 1: Reset State (Chosen)
+- **Description**: Verify that UART and SPI outputs are in their expected idle state (e.g., UART_TX high) after reset.
+- **Reasoning**: Confirms the complex SoC's peripherals are correctly initialized and the reset signal propagates as expected.
+
+## Tiny Ape Out Verification Strategy (Test-ID 3545) (2026-03-15 13:57)
+
+### Solution 1: Pattern Testing (Chosen)
+- **Description**: Test various input patterns to verify the logic mapping in this Wokwi project.
+- **Reasoning**: Appropriate for simple Wokwi designs with direct pin mappings.
+
+## tiny-tapeout-workshop-result Verification Strategy (Test-ID 3547) (2026-03-15 13:57)
+
+### Solution 1: Enable and Mux Verification (Chosen)
+- **Description**: Verify that outputs toggle when enabled and remain stable when disabled.
+- **Reasoning**: Directly tests the control logic and multiplexing described in the project's description.
+
 ## OCP MXFP8 Streaming MAC Unit Verification Strategy (Test-ID 3990) (2026-03-15 08:58)
 
 ### Solution 1: Protocol Initial Phase (Chosen)

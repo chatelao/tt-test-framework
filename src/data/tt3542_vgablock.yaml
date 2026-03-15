@@ -1,0 +1,22 @@
+project: "VGABlock"
+metadata:
+  source: "https://github.com/ezelioli/tt-efcl-workshop"
+signals:
+  UO_OUT:
+    type: "output"
+    width: 8
+  CLK:
+    type: "clock"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+  - name: "Sync Initialization"
+    cycles: 10
+    values:
+      RST_N: 1

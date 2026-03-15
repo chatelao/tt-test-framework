@@ -1,5 +1,25 @@
 # Discarded Solutions
 
+## m6502 Microcontroller Verification Strategy (Test-ID 3528) (2026-03-15 13:57)
+
+### Solution 2: NOP Fetch
+- **Description**: Provide NOP instructions on the data bus and observe the address increment.
+- **Reasoning for Discarding**: Requires several cycles of complex bus multiplexing which is too verbose for a simple functional test.
+
+### Solution 3: Reset only
+- **Description**: Verify outputs are stable during reset.
+- **Reasoning for Discarding**: Does not verify that the CPU starts operation after reset.
+
+## FH Joanneum TinyTapeout Verification Strategy (Test-ID 3531) (2026-03-15 13:57)
+
+### Solution 2: SPI Echo
+- **Description**: Send a byte via SPI and expect an echo or response.
+- **Reasoning for Discarding**: Depends on the software loaded into the SERV core, which is not easily deterministic without full RTL simulation.
+
+### Solution 3: GPIO Toggle
+- **Description**: Set GPIO inputs and expect a change on outputs.
+- **Reasoning for Discarding**: Similarly depends on the internal software state.
+
 ## OCP MXFP8 Streaming MAC Unit Verification Strategy (Test-ID 3990) (2026-03-15 08:58)
 
 ### Solution 2: Full 41-Cycle Sequence
