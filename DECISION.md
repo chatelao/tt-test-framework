@@ -1,5 +1,11 @@
 # Decisions
 
+## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3548-3559) (2026-03-16 10:00)
+
+### Solution 1: Targeted Functional Verification (Chosen)
+- **Description**: Implement simple functional test cases for each of the 10 projects (Full Adder, Rasterizer, Counter, Clock Divider, Letter Display, etc.) based on their specific logic and pinouts.
+- **Reasoning**: This provides meaningful verification for a diverse set of projects ranging from simple combinational logic to complex VGA and sequential designs.
+
 ## m6502 Microcontroller Verification Strategy (Test-ID 3528) (2026-03-15 13:57)
 
 ### Solution 1: Bus Initialization (Chosen)

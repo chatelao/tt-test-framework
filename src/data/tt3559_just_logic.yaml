@@ -1,0 +1,17 @@
+project: "Just logic"
+metadata:
+  source: "https://github.com/Jannis-Uni/TinyTapeout"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+
+test_steps:
+  - name: "Logic check"
+    cycles: 1
+    values:
+      ui_in: 0xFF
+      uo_out: 0x00

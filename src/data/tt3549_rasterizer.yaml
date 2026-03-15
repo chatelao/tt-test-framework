@@ -1,0 +1,28 @@
+project: "Tiny Triangle Rasterizer"
+metadata:
+  source: "https://github.com/tomolt/tomolt_tiny_tapeout_ic"
+signals:
+  rst_n:
+    type: "input"
+    width: 1
+  hsync:
+    type: "output"
+    width: 1
+  vsync:
+    type: "output"
+    width: 1
+  RGB:
+    type: "output"
+    width: 3
+
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      rst_n: 0
+  - name: "Initial state after reset"
+    cycles: 1
+    values:
+      rst_n: 1
+      hsync: 1
+      vsync: 1

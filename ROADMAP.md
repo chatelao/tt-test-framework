@@ -2,16 +2,6 @@
 
 ## Planned
   - [ ] Create simple testcase for each assigned tile from TTIHP26A shuttle
-    - [ ] Test-ID: [3548](https://app.tinytapeout.com/projects/3548), Repo: https://github.com/joh-1x/tiny-tapeout-workshop
-    - [ ] Test-ID: [3549](https://app.tinytapeout.com/projects/3549), Repo: https://github.com/tomolt/tomolt_tiny_tapeout_ic
-    - [ ] Test-ID: [3550](https://app.tinytapeout.com/projects/3550), Repo: https://github.com/elFuchso/tinytapeout-wokwi
-    - [ ] Test-ID: [3552](https://app.tinytapeout.com/projects/3552), Repo: https://github.com/alexey-serdyuk/tiny_tapeout_workshop
-    - [ ] Test-ID: [3553](https://app.tinytapeout.com/projects/3553), Repo: https://github.com/stsar/tiny_tapeout
-    - [ ] Test-ID: [3554](https://app.tinytapeout.com/projects/3554), Repo: https://github.com/MarvinBrth/7-Segment-Wokwi-Design
-    - [ ] Test-ID: [3555](https://app.tinytapeout.com/projects/3555), Repo: https://github.com/fschh/tt-experiment
-    - [ ] Test-ID: [3557](https://app.tinytapeout.com/projects/3557), Repo: https://github.com/tobiasgreiser/tiny_tapeout_workshop
-    - [ ] Test-ID: [3558](https://app.tinytapeout.com/projects/3558), Repo: https://github.com/PaxPlay/tiny-tapeout-design
-    - [ ] Test-ID: [3559](https://app.tinytapeout.com/projects/3559), Repo: https://github.com/Jannis-Uni/TinyTapeout
     - [ ] Test-ID: [3560](https://app.tinytapeout.com/projects/3560), Repo: https://github.com/JohannesNekes/Tiny-Tapeout-RGB-PWM
     - [ ] Test-ID: [3561](https://app.tinytapeout.com/projects/3561), Repo: https://github.com/yJulian/tiny-tapeout
     - [ ] Test-ID: [3562](https://app.tinytapeout.com/projects/3562), Repo: https://github.com/Ancash/tt
@@ -168,6 +158,16 @@
 - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
+- [x] Create simple testcase for Test-ID 3559 (Just logic) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3558 (Cool Stuff) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3557 (Clocked Full Adder) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3555 (Second TT experiment) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3554 (7-Segment-Wokwi-Design) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3553 (adder) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3552 (Primitive clock divider) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3550 ((Hexa)Decimal Counter) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3549 (Tiny Triangle Rasterizer) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3548 (Full Adder Test) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3547 (tiny-tapeout-workshop-result) (2026-03-15)
 - [x] Create simple testcase for Test-ID 3545 (Tiny Ape Out) (2026-03-15)
 - [x] Create simple testcase for Test-ID 3543 (SotaSoC) (2026-03-15)
