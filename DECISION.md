@@ -1,6 +1,12 @@
 # Decisions
 
-## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3563-3663) (2026-03-16 12:00)
+## Next 10 Projects (project-id modulo 5 = 2) Verification Strategy (Test-IDs 3622-3717) (2026-03-16 14:00)
+
+### Solution 1: Targeted Functional Verification (Chosen)
+- **Description**: Implement simple functional test cases for each of the 10 projects (WIP 7-seg, Counter, VGA, Collatz, Posit MAC, Half Adder, SPI RAM, Test Gates, Basic Test, ISC77x8) based on their specific logic and pinouts.
+- **Reasoning**: This provides meaningful verification for a diverse set of projects ranging from simple combinational logic to complex sequential and VGA designs.
+
+## 10 Projects (project-id modulo 5 = 2) Verification Strategy (Test-IDs 3562-3617) (2026-03-16 11:30)
 
 ### Solution 1: Targeted Functional Verification (Chosen)
 - **Description**: Implement simple functional test cases for the next batch of 10 projects (RS Half Adder, My first tapeout, Custom ASIC, neb tt26a first asic, custom_lol, Workshop Day, Freddys tapeout, Nielss first failure, little frequency divider, Johnson counter).
