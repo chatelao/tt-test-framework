@@ -1,0 +1,24 @@
+project: "Tiny_Tapeout_Test"
+metadata:
+  source: "https://github.com/Shaip161/TinyTapeOut"
+  project_id: "3619"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial state"
+    cycles: 1
+    values:
+      ui_in: 0
+  - name: "Inversion Test"
+    cycles: 1
+    values:
+      ui_in: 0b00000101
+  - name: "Pass-through Test"
+    cycles: 1
+    values:
+      ui_in: 0b10100000

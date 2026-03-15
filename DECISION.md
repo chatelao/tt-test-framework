@@ -1,16 +1,10 @@
 # Decisions
 
-## Next 10 Projects (project-id modulo 5 = 2) Verification Strategy (Test-IDs 3622-3717) (2026-03-16 14:00)
+## Verification Strategy for 10 Projects with ID % 5 = 4 (IDs 3569-3624) (2026-03-16 14:00)
 
-### Solution 1: Targeted Functional Verification (Chosen)
-- **Description**: Implement simple functional test cases for each of the 10 projects (WIP 7-seg, Counter, VGA, Collatz, Posit MAC, Half Adder, SPI RAM, Test Gates, Basic Test, ISC77x8) based on their specific logic and pinouts.
-- **Reasoning**: This provides meaningful verification for a diverse set of projects ranging from simple combinational logic to complex sequential and VGA designs.
-
-## 10 Projects (project-id modulo 5 = 2) Verification Strategy (Test-IDs 3562-3617) (2026-03-16 11:30)
-
-### Solution 1: Targeted Functional Verification (Chosen)
-- **Description**: Implement simple functional test cases for the next batch of 10 projects (RS Half Adder, My first tapeout, Custom ASIC, neb tt26a first asic, custom_lol, Workshop Day, Freddys tapeout, Nielss first failure, little frequency divider, Johnson counter).
-- **Reasoning**: Ensures all projects in the current modulo-based batch are verified based on their specific architectures (Wokwi or Verilog).
+### Solution 1: Targeted Functional and Wokwi Logic Verification (Chosen)
+- **Description**: Implement specific test cases for IDs 3569, 3574, 3579, 3584, 3589, 3594, 3599, 3604, 3619, and 3624 based on Verilog and Wokwi diagram analysis.
+- **Reasoning**: This provides meaningful verification for a mix of complex CPU/ALU designs and simpler logic-gate based Wokwi projects, ensuring that both sequential and combinational behaviors are checked.
 
 ## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3548-3559) (2026-03-16 10:00)
 

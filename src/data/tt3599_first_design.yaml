@@ -1,0 +1,24 @@
+project: "^My first design"
+metadata:
+  source: "https://github.com/mabo-elfotoh/my_tiny_tape_design"
+  project_id: "3599"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Input 0"
+    cycles: 1
+    values:
+      ui_in: 0
+  - name: "Not Test"
+    cycles: 1
+    values:
+      ui_in: 0b00000001
+  - name: "Pass-through Test"
+    cycles: 1
+    values:
+      ui_in: 0b01010000

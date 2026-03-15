@@ -1,0 +1,24 @@
+project: "Tobias first Wokwi design"
+metadata:
+  source: "https://github.com/ucmpb/TinyTapeout"
+  project_id: "3604"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial state"
+    cycles: 1
+    values:
+      ui_in: 0
+  - name: "Logic Test"
+    cycles: 1
+    values:
+      ui_in: 0b00001111
+  - name: "Pass-through Test"
+    cycles: 1
+    values:
+      ui_in: 0b11110000
