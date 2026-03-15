@@ -1,0 +1,17 @@
+project: "custom_lol"
+metadata:
+  source: "https://github.com/mar-3123/tiny_tapeout"
+signals:
+  CLK: {type: clock, width: 1}
+  UI_IN: {type: input, width: 8}
+  UO_OUT: {type: output, width: 8}
+test_steps:
+  - name: "Initial"
+    cycles: 1
+    values: {UI_IN: 0, UO_OUT: 0x01}
+  - name: "Logic high"
+    cycles: 1
+    values: {UI_IN: 0x4A, UO_OUT: 0x00}
+  - name: "Toggle CLK"
+    cycles: 1
+    values: {UI_IN: 0x4A, UO_OUT: 0x02}
