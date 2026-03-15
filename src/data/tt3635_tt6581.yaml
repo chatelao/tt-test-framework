@@ -1,0 +1,43 @@
+project: "TT6581"
+metadata:
+  source: "https://github.com/apedersen00/tt6581"
+  project_id: "3635"
+signals:
+  ENA:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+  UIO:
+    type: "inout"
+    width: 8
+
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ENA: 1
+      RST_N: 0
+      UI_IN: 0
+      UIO: 0x01
+      UO_OUT: 0
+
+  - name: "Idle"
+    cycles: 1
+    values:
+      RST_N: 1
+      UIO: 0x01
+      UO_OUT: 0
+
+  - name: "SPI Select"
+    cycles: 1
+    values:
+      UIO: 0x00
+      UO_OUT: 0

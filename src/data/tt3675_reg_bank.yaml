@@ -1,0 +1,43 @@
+project: "SPI and I2C Register Bank"
+metadata:
+  source: "https://github.com/calonso88/dtu_tt_workshop"
+  project_id: "3675"
+signals:
+  ENA:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+  UIO:
+    type: "inout"
+    width: 8
+
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ENA: 1
+      RST_N: 0
+      UI_IN: 0x00
+      UIO: 0x16 # SPI CS_N=1, I2C SCL=1, SDA=1
+      UO_OUT: 0
+
+  - name: "Idle SPI"
+    cycles: 1
+    values:
+      RST_N: 1
+      UI_IN: 0x00 # SPI mode
+      UIO: 0x16
+      UO_OUT: 0
+
+  - name: "SPI Select"
+    cycles: 1
+    values:
+      UIO: 0x06 # CS_N=0
