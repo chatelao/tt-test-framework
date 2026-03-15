@@ -1,5 +1,19 @@
 # Decisions
 
+## Handling of Project 3390 (mini mosbius) (2026-03-14 18:40)
+
+### Solution 1: Skip Project 3390 (Chosen)
+- **Description**: Skip the project because it is designated as "Analog" and belongs to the `ttsky25b` shuttle, which is outside the current digital verification scope for `ttihp26a`.
+- **Reasoning**: This adheres to the project policy of excluding analog designs and focusing on the primary `ttihp26a` shuttle for now.
+
+### Solution 2: Implement basic test case for Project 3390
+- **Description**: Create a minimal YAML test case for Project 3390 despite its analog nature.
+- **Reasoning for Discarding**: Our framework is optimized for digital logic, and analog projects are explicitly skipped according to project memory and guidelines.
+
+### Solution 3: Add to Planned section for ttsky25b
+- **Description**: Keep Project 3390 in the roadmap but move it to a future shuttle section.
+- **Reasoning for Discarding**: Unnecessary complexity as the current focus is entirely on completing the `ttihp26a` shuttle.
+
 ## Verification Strategy for 12 TTIHP26a Projects (2026-03-14 18:00)
 
 ### Solution 1: Manual exploration and YAML creation (Chosen)
