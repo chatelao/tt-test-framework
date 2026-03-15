@@ -1,0 +1,21 @@
+project: "Tiny Tapeout Test"
+metadata:
+  source: "https://github.com/MertErmann/tiny_tapeout_1"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "NOT and pass-through test"
+    cycles: 1
+    values:
+      ui_in: 0b11110000
+      uo_out: 0b11111111
+  - name: "NOT and pass-through test 2"
+    cycles: 1
+    values:
+      ui_in: 0b00001111
+      uo_out: 0b00000000
