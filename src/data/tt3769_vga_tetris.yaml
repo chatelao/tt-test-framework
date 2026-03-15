@@ -1,0 +1,32 @@
+project: "VGA Tetris"
+metadata:
+  source: "https://github.com/JPGHhb/ttihp-vga-tetris"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  RST_N: {name: "RST_N", type: input, width: 1}
+  LEFT: {name: "LEFT", type: input, width: 1}
+  RIGHT: {name: "RIGHT", type: input, width: 1}
+  ROTATE: {name: "ROTATE", type: input, width: 1}
+  DOWN: {name: "DOWN", type: input, width: 1}
+  R: {name: "R", type: output, width: 2}
+  G: {name: "G", type: output, width: 2}
+  B: {name: "B", type: output, width: 2}
+  VSYNC: {name: "VSYNC", type: output, width: 1}
+  HSYNC: {name: "HSYNC", type: output, width: 1}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      LEFT: 0
+      RIGHT: 0
+      ROTATE: 0
+      DOWN: 0
+  - name: "Active"
+    cycles: 10
+    values:
+      RST_N: 1
+      LEFT: 0
+      RIGHT: 0
+      ROTATE: 0
+      DOWN: 0

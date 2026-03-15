@@ -1,0 +1,23 @@
+project: "Chisel Async Test"
+metadata:
+  source: "https://github.com/tjarker/ttihp-feb-2026"
+signals:
+  UI_IN: {name: "UI_IN", type: "input", width: 8}
+  UO_OUT: {name: "UO_OUT", type: "output", width: 8}
+test_steps:
+  - name: "Pattern 1"
+    cycles: 1
+    values:
+      UI_IN: 0
+  - name: "Pattern 2"
+    cycles: 1
+    values:
+      UI_IN: 255
+  - name: "Pattern 3"
+    cycles: 1
+    values:
+      UI_IN: 170
+  - name: "Pattern 4"
+    cycles: 1
+    values:
+      UI_IN: 85
