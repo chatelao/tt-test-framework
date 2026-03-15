@@ -1,0 +1,33 @@
+project: "Tiny Tapeout"
+metadata:
+  source: "https://github.com/AriVishnu-01/Tiny-Tapeout"
+  project_id: "3585"
+signals:
+  ENA:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ENA: 1
+      RST_N: 0
+      UI_IN: 0
+      UO_OUT: 0
+
+  - name: "Logic Test (OR gates)"
+    cycles: 4
+    values:
+      RST_N: 1
+      UI_IN: 0xAA
+      UO_OUT: 0x00

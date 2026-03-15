@@ -1,0 +1,39 @@
+project: "FirstTapeOut2"
+metadata:
+  source: "https://github.com/pageeecs/FirstTapeout"
+  project_id: "3575"
+signals:
+  ENA:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ENA: 1
+      RST_N: 0
+      UI_IN: 0
+      UO_OUT: 0
+
+  - name: "Logic 0"
+    cycles: 1
+    values:
+      RST_N: 1
+      UI_IN: 0
+      UO_OUT: 0
+
+  - name: "Logic 1 (AND gates)"
+    cycles: 1
+    values:
+      UI_IN: 0x0F
+      UO_OUT: 0x7D
