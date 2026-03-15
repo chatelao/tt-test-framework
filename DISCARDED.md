@@ -1,5 +1,15 @@
 # Discarded Solutions
 
+## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3560-3610) (2026-03-16 14:00)
+
+### Solution 2: Generic Pattern Testing
+- **Description**: Apply a standard set of patterns (all zeros, all ones, alternating) to all 10 projects.
+- **Reasoning for Discarding**: Faster to implement but may not verify specific functional blocks correctly, especially for sequential or specialized designs like serializers.
+
+### Solution 3: Reset-only Verification
+- **Description**: Only verify the reset state of the projects.
+- **Reasoning for Discarding**: Too minimal; doesn't prove the design actually works or transitions between states.
+
 ## m6502 Microcontroller Verification Strategy (Test-ID 3528) (2026-03-15 13:57)
 
 ### Solution 2: NOP Fetch
