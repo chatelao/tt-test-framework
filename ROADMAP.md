@@ -38,7 +38,6 @@
     - [ ] Test-ID: [3622](https://app.tinytapeout.com/projects/3622), Repo: https://github.com/DebuggingDisaster/wowki
     - [ ] Test-ID: [3623](https://app.tinytapeout.com/projects/3623), Repo: https://github.com/pauld0503/paul_tiny_tapeout
     - [ ] Test-ID: [3626](https://app.tinytapeout.com/projects/3626), Repo: https://github.com/sam-m7/tinyTapeoutChip1
-    - [ ] Test-ID: [3629](https://app.tinytapeout.com/projects/3629), Repo: https://github.com/kmosta19/TinyTapeoutProject
     - [ ] Test-ID: [3632](https://app.tinytapeout.com/projects/3632), Repo: https://github.com/matth-fischer/TT_VGA
     - [ ] Test-ID: [3635](https://app.tinytapeout.com/projects/3635), Repo: https://github.com/apedersen00/tt6581
     - [ ] Test-ID: [3641](https://app.tinytapeout.com/projects/3641), Repo: https://github.com/brmurrell3/tt_um_brmurrell3_m31_accel
@@ -46,7 +45,6 @@
     - [ ] Test-ID: [3651](https://app.tinytapeout.com/projects/3651), Repo: https://github.com/BoredSemiRetiredEngineer/ttihp_submission
     - [ ] Test-ID: [3654](https://app.tinytapeout.com/projects/3654), Repo: https://github.com/EzraWolf/TinyMOA-IHP26a
     - [ ] Test-ID: [3656](https://app.tinytapeout.com/projects/3656), Repo: https://github.com/tjarker/ttihp-feb-2026
-    - [ ] Test-ID: [3659](https://app.tinytapeout.com/projects/3659), Repo: https://github.com/swenson/ttihp-quad-sieve
     - [ ] Test-ID: [3661](https://app.tinytapeout.com/projects/3661), Repo: https://github.com/leonllrmc/tinytapeout_26a_llrsub1
     - [ ] Test-ID: [3664](https://app.tinytapeout.com/projects/3664), Repo: https://github.com/pakesson/tt_glitcher
     - [ ] Test-ID: [3669](https://app.tinytapeout.com/projects/3669), Repo: https://github.com/karlmose/tinytapeout_wokwi_test
@@ -65,10 +63,8 @@
     - [ ] Test-ID: [3701](https://app.tinytapeout.com/projects/3701), Repo: https://github.com/celien-14/cremedelacreme
     - [ ] Test-ID: [3706](https://app.tinytapeout.com/projects/3706), Repo: https://github.com/giffel1/Scott-s-first-Wokwi-design
     - [ ] Test-ID: [3713](https://app.tinytapeout.com/projects/3713), Repo: https://github.com/Jfvind/tt-jfvind
-    - [ ] Test-ID: [3714](https://app.tinytapeout.com/projects/3714), Repo: https://github.com/anilthilsted/tinytapeout_first
     - [ ] Test-ID: [3716](https://app.tinytapeout.com/projects/3716), Repo: https://github.com/Birkwk/Chip
     - [ ] Test-ID: [3718](https://app.tinytapeout.com/projects/3718), Repo: https://github.com/johannakin1/Hemmeligkode
-    - [ ] Test-ID: [3719](https://app.tinytapeout.com/projects/3719), Repo: https://github.com/Heinikm/TinyTapeout
     - [ ] Test-ID: [3722](https://app.tinytapeout.com/projects/3722), Repo: https://github.com/donmonki/tt01_chip_design
     - [ ] Test-ID: [3728](https://app.tinytapeout.com/projects/3728), Repo: https://github.com/GitteBailey/TinyTapeoutWorkshop
     - [ ] Test-ID: [3729](https://app.tinytapeout.com/projects/3729), Repo: https://github.com/martaalfonso/pomasic

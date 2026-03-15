@@ -1,0 +1,27 @@
+project: "Glitcher (Pulse Generator)"
+metadata:
+  source: "https://github.com/pakesson/tt_glitcher"
+signals:
+  CLK: {name: 'CLK', type: clock, width: 1}
+  RST_N: {name: 'RST_N', type: input, width: 1}
+  UI_IN: {name: 'UI_IN', type: input, width: 8}
+  UO_OUT: {name: 'UO_OUT', type: output, width: 8}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      UI_IN: 0
+  - name: "Idle after Reset"
+    cycles: 4
+    values:
+      RST_N: 1
+      UI_IN: 0
+  - name: "Trigger"
+    cycles: 2
+    values:
+      UI_IN: 0x01 # Trigger input ui[0]
+  - name: "Back to Idle"
+    cycles: 4
+    values:
+      UI_IN: 0
