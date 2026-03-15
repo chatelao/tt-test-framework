@@ -1,0 +1,28 @@
+project: "tophat"
+metadata:
+  source: "https://github.com/pgfarley/tophat"
+  project_id: "3648"
+signals:
+  ui_in:
+    name: "UI_IN"
+    type: "input"
+    width: 8
+  uo_out:
+    name: "UO_OUT"
+    type: "output"
+    width: 8
+  uio:
+    name: "UIO"
+    type: "inout"
+    width: 8
+test_steps:
+  - name: "Initial Reset"
+    cycles: 5
+    values:
+      UI_IN: 0
+      UIO: 0
+  - name: "Idle observation"
+    cycles: 10
+    values:
+      UI_IN: 0
+      UIO: 0

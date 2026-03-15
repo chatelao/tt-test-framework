@@ -1,0 +1,38 @@
+project: "LoRa Edge SoC"
+metadata:
+  source: "https://github.com/TechHU-GS/tt_rv32_trial"
+  project_id: "3775"
+signals:
+  ENA:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+  UIO:
+    type: "inout"
+    width: 8
+
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ENA: 1
+      RST_N: 0
+      UI_IN: 0x80 # UART RX idle high
+      UIO: 0xFF
+      UO_OUT: 0x01 # UART TX idle high?
+
+  - name: "Idle"
+    cycles: 1
+    values:
+      RST_N: 1
+      UI_IN: 0x80
+      UIO: 0xFF
+      UO_OUT: 0x01

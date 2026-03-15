@@ -1,0 +1,67 @@
+project: "Malthes First Template"
+metadata:
+  source: "https://github.com/Malthe2512/Tinytape"
+  project_id: "3695"
+signals:
+  ENA:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ENA: 1
+      RST_N: 0
+      UI_IN: 0
+      UO_OUT: 0
+
+  - name: "Johnson Counter 1"
+    cycles: 1
+    values:
+      RST_N: 1
+      UO_OUT: 0x01
+
+  - name: "Johnson Counter 2"
+    cycles: 1
+    values:
+      UO_OUT: 0x03
+
+  - name: "Johnson Counter 3"
+    cycles: 1
+    values:
+      UO_OUT: 0x07
+
+  - name: "Johnson Counter 4"
+    cycles: 1
+    values:
+      UO_OUT: 0x0F
+
+  - name: "Johnson Counter 5"
+    cycles: 1
+    values:
+      UO_OUT: 0x0E
+
+  - name: "Johnson Counter 6"
+    cycles: 1
+    values:
+      UO_OUT: 0x0C
+
+  - name: "Johnson Counter 7"
+    cycles: 1
+    values:
+      UO_OUT: 0x08
+
+  - name: "Johnson Counter 8"
+    cycles: 1
+    values:
+      UO_OUT: 0x00

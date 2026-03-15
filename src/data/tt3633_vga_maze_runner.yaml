@@ -1,0 +1,22 @@
+project: "VGA Maze Runner"
+metadata:
+  source: "https://github.com/phsauter/vga-playground-maze"
+  project_id: "3633"
+signals:
+  ui_in:
+    name: "UI_IN"
+    type: "input"
+    width: 8
+  uo_out:
+    name: "UO_OUT"
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial Reset"
+    cycles: 5
+    values:
+      UI_IN: 0
+  - name: "Observe HSync/VSync"
+    cycles: 20
+    values:
+      UI_IN: 0

@@ -1,0 +1,24 @@
+project: "MyFirstChip (Patterns)"
+metadata:
+  source: "https://github.com/pablo-dk/TinyTapeoutDTU_chip"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+  clk:
+    type: "clock"
+    width: 1
+test_steps:
+  - name: "Logic check"
+    cycles: 1
+    values:
+      ui_in: 0b00000001
+      uo_out: 0b00000011
+  - name: "Input H"
+    cycles: 1
+    values:
+      ui_in: 0b10000000
+      uo_out: 0b00000011

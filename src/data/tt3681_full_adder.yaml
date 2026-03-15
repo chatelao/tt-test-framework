@@ -1,0 +1,29 @@
+project: "MJ Wokwi project (Full Adder)"
+metadata:
+  source: "https://github.com/mjuels/tinytapeoutworkshop"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+  clk:
+    type: "clock"
+    width: 1
+test_steps:
+  - name: "Sum 0 + 0"
+    cycles: 1
+    values:
+      ui_in: 0
+      uo_out: 0
+  - name: "Sum 1 + 0"
+    cycles: 1
+    values:
+      ui_in: 1
+      uo_out: 1
+  - name: "Sum 1 + 1"
+    cycles: 1
+    values:
+      ui_in: 3
+      uo_out: 2

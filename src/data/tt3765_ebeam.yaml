@@ -1,0 +1,45 @@
+project: "E-Beam Inspection Pixel Core"
+metadata:
+  source: "https://github.com/ermalfierza1/E-Beam-Inspection-Pixel-Core"
+  project_id: "3765"
+signals:
+  ENA:
+    type: "input"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+  UIO:
+    type: "inout"
+    width: 8
+
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ENA: 1
+      RST_N: 0
+      UI_IN: 0
+      UIO: 0x04
+      UO_OUT: 0
+
+  - name: "Initialize Mean"
+    cycles: 1
+    values:
+      RST_N: 1
+      UI_IN: 100
+      UIO: 0x03
+      UO_OUT: 0x00
+
+  - name: "Steady State"
+    cycles: 1
+    values:
+      UI_IN: 100
+      UIO: 0x01
+      UO_OUT: 0x00

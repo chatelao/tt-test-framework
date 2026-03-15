@@ -1,0 +1,29 @@
+project: "Hello World (Logic gates)"
+metadata:
+  source: "https://github.com/Sirius-DK/456571875721383937"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+  clk:
+    type: "clock"
+    width: 1
+test_steps:
+  - name: "AND test"
+    cycles: 1
+    values:
+      ui_in: 0b00000011
+      uo_out: 0b01000000
+  - name: "NOT test"
+    cycles: 1
+    values:
+      ui_in: 0b00000100
+      uo_out: 0b00000100
+  - name: "Pass-through"
+    cycles: 1
+    values:
+      ui_in: 0b00010000
+      uo_out: 0b00010000

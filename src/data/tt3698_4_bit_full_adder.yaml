@@ -1,0 +1,29 @@
+project: "4-bit full adder"
+metadata:
+  source: "https://github.com/DragonDavid75/TinyTapeoutProjectWokwi"
+  project_id: "3698"
+signals:
+  ui_in:
+    name: "UI_IN"
+    type: "input"
+    width: 8
+  uo_out:
+    name: "UO_OUT"
+    type: "output"
+    width: 8
+test_steps:
+  - name: "1 + 1 = 2"
+    cycles: 1
+    values:
+      UI_IN: 0b00010001
+      UO_OUT: 0b00000010
+  - name: "5 + 10 = 15"
+    cycles: 1
+    values:
+      UI_IN: 0b10100101
+      UO_OUT: 0b00001111
+  - name: "15 + 1 = 16 (Carry out)"
+    cycles: 1
+    values:
+      UI_IN: 0b00011111
+      UO_OUT: 0b00010000
