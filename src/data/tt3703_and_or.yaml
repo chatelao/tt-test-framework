@@ -1,0 +1,34 @@
+project: "And_Or"
+metadata:
+  source: "https://github.com/David-Weis/Wokwi-chip-design"
+  project_id: "3703"
+signals:
+  ui_in:
+    name: "UI_IN"
+    type: "input"
+    width: 8
+  uo_out:
+    name: "UO_OUT"
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Group 1: (IN0 & IN1) | (IN2 & IN3) = UO0, UO1"
+    cycles: 1
+    values:
+      UI_IN: 0b00000011
+      UO_OUT: 0b00000011
+  - name: "Group 2: (IN4 & IN5) | (IN6 & IN7) = UO6, UO7"
+    cycles: 1
+    values:
+      UI_IN: 0b01010000
+      UO_OUT: 0b11000000
+  - name: "All group inputs high"
+    cycles: 1
+    values:
+      UI_IN: 0b11111111
+      UO_OUT: 0b11000011
+  - name: "All low"
+    cycles: 1
+    values:
+      UI_IN: 0b00000000
+      UO_OUT: 0b00000000

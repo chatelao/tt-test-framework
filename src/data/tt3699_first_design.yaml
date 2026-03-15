@@ -1,0 +1,27 @@
+project: "Tiny Tapeout First Design (Logic Gates)"
+metadata:
+  source: "https://github.com/Skillygonzales/tiny_tapeout_demo"
+signals:
+  CLK: {name: 'CLK', type: clock, width: 1}
+  RST_N: {name: 'RST_N', type: input, width: 1}
+  UI_IN: {name: 'UI_IN', type: input, width: 8}
+  UO_OUT: {name: 'UO_OUT', type: output, width: 8}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      UI_IN: 0
+  - name: "AND/OR Test"
+    cycles: 1
+    values:
+      RST_N: 1
+      UI_IN: 0x01 # ui[0]
+  - name: "AND/OR Test 2"
+    cycles: 1
+    values:
+      UI_IN: 0x09 # ui[0] and ui[3]
+  - name: "NAND Test"
+    cycles: 1
+    values:
+      UI_IN: 0x82 # ui[1] and ui[7]

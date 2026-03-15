@@ -1,0 +1,30 @@
+project: "2 Digit Display"
+metadata:
+  source: "https://github.com/MathiasKES/TinyTapeout2026-wokwi"
+  project_id: "3678"
+signals:
+  ui_in:
+    name: "UI_IN"
+    type: "input"
+    width: 8
+  uo_out:
+    name: "UO_OUT"
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Input 0 active (switches on digit 1?)"
+    cycles: 1
+    values:
+      UI_IN: 0b00000001
+  - name: "Input 1 active (switches on digit 2?)"
+    cycles: 1
+    values:
+      UI_IN: 0b00000010
+  - name: "Both inactive"
+    cycles: 1
+    values:
+      UI_IN: 0b00000000
+  - name: "Both active"
+    cycles: 1
+    values:
+      UI_IN: 0b00000011

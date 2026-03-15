@@ -1,0 +1,27 @@
+project: "First tinytapeout 234 (Logic & Pass-through)"
+metadata:
+  source: "https://github.com/anilthilsted/tinytapeout_first"
+signals:
+  CLK: {name: 'CLK', type: clock, width: 1}
+  RST_N: {name: 'RST_N', type: input, width: 1}
+  UI_IN: {name: 'UI_IN', type: input, width: 8}
+  UO_OUT: {name: 'UO_OUT', type: output, width: 8}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      UI_IN: 0
+  - name: "AND Test"
+    cycles: 1
+    values:
+      RST_N: 1
+      UI_IN: 0x03 # ui[0] and ui[1]
+  - name: "NOR Test"
+    cycles: 1
+    values:
+      UI_IN: 0xC0 # ui[6] or ui[7] -> NOR
+  - name: "Pass-through Test"
+    cycles: 1
+    values:
+      UI_IN: 0x0C # ui[2], ui[3]
