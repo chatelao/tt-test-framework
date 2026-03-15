@@ -1,0 +1,18 @@
+project: Counter
+metadata:
+  source: https://github.com/oscargus/ttsky-vhdl-makeAchip-izaha684
+signals:
+  ui_in: {name: ui_in, type: input, width: 8}
+  uo_out: {name: uo_out, type: output, width: 8}
+  clk: {name: clk, type: clock, width: 1}
+  rst_n: {name: rst_n, type: input, width: 1}
+test_steps:
+  - name: Reset
+    cycles: 1
+    values: {rst_n: 0, ui_in: 0}
+  - name: Count Up
+    cycles: 5
+    values: {rst_n: 1, ui_in: 1}
+  - name: Count Down
+    cycles: 5
+    values: {rst_n: 1, ui_in: 0}
