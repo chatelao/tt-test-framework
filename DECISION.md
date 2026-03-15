@@ -1,5 +1,11 @@
 # Decisions
 
+## 10 Projects (project-id modulo 5 = 2) Verification Strategy (Test-IDs 3562-3617) (2026-03-16 11:30)
+
+### Solution 1: Analysis of Wokwi Logic (Chosen)
+- **Description**: Analyze the Wokwi `diagram.json` and `info.yaml` for each project (IDs 3562, 3567, 3572, 3582, 3592, 3597, 3602, 3607, 3612, 3617) to define functional test steps.
+- **Reasoning**: Ensures that the test cases accurately reflect the intended logic of these 10 projects, ranging from simple logic gates to 7-segment displays and shift registers.
+
 ## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3548-3559) (2026-03-16 10:00)
 
 ### Solution 1: Targeted Functional Verification (Chosen)
