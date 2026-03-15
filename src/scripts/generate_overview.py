@@ -32,6 +32,17 @@ def get_tshirt_size(tiles):
     except:
         return tiles
 
+def get_novelty_stars(size):
+    mapping = {
+        "S": "⭐",
+        "M": "⭐⭐",
+        "L": "⭐⭐⭐",
+        "XL": "⭐⭐⭐⭐",
+        "XXL": "⭐⭐⭐⭐⭐",
+        "XXXL": "⭐⭐⭐⭐⭐"
+    }
+    return mapping.get(size, "N/A")
+
 async def get_project_details(pids):
     details = {}
     async with async_playwright() as p:
@@ -133,8 +144,8 @@ async def main():
 
     with open("TTIHP26A_PROJECTS.md", "w") as f:
         f.write("# TTIHP26A Projects Overview\n\n")
-        f.write("| Summary | T-shirt size | Test Data | Waveform | TinyTapeout Page |\n")
-        f.write("|---------|--------------|-----------|----------|------------------|\n")
+        f.write("| Summary | Novelty | T-shirt size | Test Data | Waveform | TinyTapeout Page |\n")
+        f.write("|---------|---------|--------------|-----------|----------|------------------|\n")
 
         for pid in unique_pids:
             # Prefer name from scraping, fallback to roadmap
@@ -145,13 +156,14 @@ async def main():
 
             tiles = details.get("tiles", "Unknown")
             size = get_tshirt_size(tiles)
+            novelty = get_novelty_stars(size)
             yaml_path, svg_path = find_files(pid)
 
             test_data_link = f"[YAML]({yaml_path})" if yaml_path else "N/A"
             waveform_link = f"[SVG]({svg_path})" if svg_path else "N/A"
             tt_page_link = f"[Project {pid}](https://app.tinytapeout.com/projects/{pid})"
 
-            f.write(f"| {name} | {size} | {test_data_link} | {waveform_link} | {tt_page_link} |\n")
+            f.write(f"| {name} | {novelty} | {size} | {test_data_link} | {waveform_link} | {tt_page_link} |\n")
 
     print("Generated TTIHP26A_PROJECTS.md")
 
