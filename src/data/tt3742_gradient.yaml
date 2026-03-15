@@ -1,0 +1,32 @@
+project: "Gradient 01"
+metadata:
+  source: "https://github.com/bleeptrack/gradient01"
+signals:
+  CLK: {name: 'CLK', type: clock, width: 1}
+  RST_N: {name: 'RST_N', type: input, width: 1}
+  UI_IN: {name: 'UI_IN', type: input, width: 8}
+  UO_OUT: {name: 'UO_OUT', type: output, width: 8}
+  UIO_IN: {name: 'UIO_IN', type: input, width: 8}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      UI_IN: 0
+      UIO_IN: 0
+  - name: "Addition 1"
+    cycles: 1
+    values:
+      RST_N: 1
+      UI_IN: 10
+      UIO_IN: 20
+  - name: "Addition 2"
+    cycles: 1
+    values:
+      UI_IN: 100
+      UIO_IN: 50
+  - name: "Addition Overflow"
+    cycles: 1
+    values:
+      UI_IN: 200
+      UIO_IN: 100

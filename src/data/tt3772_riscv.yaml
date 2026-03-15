@@ -1,0 +1,20 @@
+project: "ttihp-26a-risc-v-wg-swc1"
+metadata:
+  source: "https://github.com/risc-v-wg/ttihp-26a-risc-v-wg-swc1"
+signals:
+  CLK: {name: 'CLK', type: clock, width: 1}
+  RST_N: {name: 'RST_N', type: input, width: 1}
+  RX: {name: 'RX', type: input, width: 1}
+  TX: {name: 'TX', type: output, width: 1}
+  LED: {name: 'LED', type: output, width: 3}
+test_steps:
+  - name: "Reset"
+    cycles: 10
+    values:
+      RST_N: 0
+      RX: 1
+  - name: "Boot"
+    cycles: 50
+    values:
+      RST_N: 1
+      RX: 1

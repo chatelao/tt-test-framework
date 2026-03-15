@@ -201,7 +201,7 @@
 | Hidden combination | ⭐ | S | N/A | N/A | [Project 3718](https://app.tinytapeout.com/projects/3718) |
 | Test | ⭐ | S | [YAML](src/data/tt3719_test.yaml) | [SVG](waveforms/tt3719_test.svg) | [Project 3719](https://app.tinytapeout.com/projects/3719) |
 | Tiny Tapeout Copenhagen 2026 1st Project | ⭐ | S | [YAML](src/data/tt3720_copenhagen.yaml) | [SVG](waveforms/tt3720_copenhagen.svg) | [Project 3720](https://app.tinytapeout.com/projects/3720) |
-| Design_test_workshop | ⭐ | S | N/A | N/A | [Project 3722](https://app.tinytapeout.com/projects/3722) |
+| Design_test_workshop | ⭐ | S | [YAML](src/data/tt3722_workshop.yaml) | [SVG](waveforms/tt3722_workshop.svg) | [Project 3722](https://app.tinytapeout.com/projects/3722) |
 | 7 segment number viewer | ⭐ | S | [YAML](src/data/tt3723_7seg_viewer.yaml) | [SVG](waveforms/tt3723_7seg_viewer.svg) | [Project 3723](https://app.tinytapeout.com/projects/3723) |
 | sree | ⭐ | S | [YAML](src/data/tt3724_sree.yaml) | [SVG](waveforms/tt3724_sree.svg) | [Project 3724](https://app.tinytapeout.com/projects/3724) |
 | Tiny Tapeout Test Gates | ⭐ | S | [YAML](src/data/tt3725_gates.yaml) | [SVG](waveforms/tt3725_gates.svg) | [Project 3725](https://app.tinytapeout.com/projects/3725) |
@@ -217,28 +217,34 @@
 | Verilog ring oscillator V2 | ⭐ | S | [YAML](src/data/tt3737_ringosc.yaml) | [SVG](waveforms/tt3737_ringosc.svg) | [Project 3737](https://app.tinytapeout.com/projects/3737) |
 | ADPLL | ⭐ | S | [YAML](src/data/tt3738_adpll.yaml) | [SVG](waveforms/tt3738_adpll.svg) | [Project 3738](https://app.tinytapeout.com/projects/3738) |
 | tiny_tester | ⭐ | S | [YAML](src/data/tt3740_tiny_tester.yaml) | [SVG](waveforms/tt3740_tiny_tester.svg) | [Project 3740](https://app.tinytapeout.com/projects/3740) |
+| Gradient 01 | ⭐ | S | [YAML](src/data/tt3742_gradient.yaml) | [SVG](waveforms/tt3742_gradient.svg) | [Project 3742](https://app.tinytapeout.com/projects/3742) |
 | Wedgetail TCDE REV01 | ⭐ | S | [YAML](src/data/tt3743_wedgetail.yaml) | [SVG](waveforms/tt3743_wedgetail.svg) | [Project 3743](https://app.tinytapeout.com/projects/3743) |
 | FABulous FPGA | ⭐⭐⭐⭐⭐ | XXL | [YAML](src/data/tt3744_fabulous.yaml) | [SVG](waveforms/tt3744_fabulous.svg) | [Project 3744](https://app.tinytapeout.com/projects/3744) |
 | Lab and Lectures SoC | ⭐ | S | [YAML](src/data/tt3745_soc.yaml) | [SVG](waveforms/tt3745_soc.svg) | [Project 3745](https://app.tinytapeout.com/projects/3745) |
 | ttihp-HDSISO8 | ⭐ | S | [YAML](src/data/tt3747_hdsiso8.yaml) | [SVG](waveforms/tt3747_hdsiso8.svg) | [Project 3747](https://app.tinytapeout.com/projects/3747) |
 | AdEx Neuron NCS | ⭐⭐⭐ | L | N/A | N/A | [Project 3750](https://app.tinytapeout.com/projects/3750) |
+| XW‘s Tiny Tapeout Design | ⭐ | S | [YAML](src/data/tt3752_xw_nand.yaml) | [SVG](waveforms/tt3752_xw_nand.svg) | [Project 3752](https://app.tinytapeout.com/projects/3752) |
 | FOMO | ⭐ | S | [YAML](src/data/tt3753_fomo.yaml) | [SVG](waveforms/tt3753_fomo.svg) | [Project 3753](https://app.tinytapeout.com/projects/3753) |
 | Tiny Tapeout Factory Test for ttihp-timer | ⭐ | S | [YAML](src/data/tt3755_timer_test.yaml) | [SVG](waveforms/tt3755_timer_test.svg) | [Project 3755](https://app.tinytapeout.com/projects/3755) |
 | Photo Frame | ⭐ | S | [YAML](src/data/tt3756_photo_frame.yaml) | [SVG](waveforms/tt3756_photo_frame.svg) | [Project 3756](https://app.tinytapeout.com/projects/3756) |
-| Neuromorphic Tile | ⭐⭐⭐ | L | N/A | N/A | [Project 3757](https://app.tinytapeout.com/projects/3757) |
+| Neuromorphic Tile | ⭐⭐⭐ | L | [YAML](src/data/tt3757_neuron.yaml) | [SVG](waveforms/tt3757_neuron.svg) | [Project 3757](https://app.tinytapeout.com/projects/3757) |
 | miniMAC | ⭐ | S | N/A | N/A | [Project 3758](https://app.tinytapeout.com/projects/3758) |
 | test hard macro | ⭐⭐ | M | [YAML](src/data/tt3759_adder4b.yaml) | [SVG](waveforms/tt3759_adder4b.svg) | [Project 3759](https://app.tinytapeout.com/projects/3759) |
 | Canright SBOX | ⭐ | S | N/A | N/A | [Project 3763](https://app.tinytapeout.com/projects/3763) |
 | Silly Mixer | ⭐ | S | [YAML](src/data/tt3764_mixer.yaml) | [SVG](waveforms/tt3764_mixer.svg) | [Project 3764](https://app.tinytapeout.com/projects/3764) |
 | E-Beam Inspection Pixel Core | ⭐⭐ | M | [YAML](src/data/tt3765_ebeam.yaml) | [SVG](waveforms/tt3765_ebeam.svg) | [Project 3765](https://app.tinytapeout.com/projects/3765) |
 | 8-bit SEM Floating-Point Multiplier | ⭐ | S | N/A | N/A | [Project 3766](https://app.tinytapeout.com/projects/3766) |
+| Awesome checkers chip | ⭐ | S | [YAML](src/data/tt3767_checkers.yaml) | [SVG](waveforms/tt3767_checkers.svg) | [Project 3767](https://app.tinytapeout.com/projects/3767) |
 | Kalman Filter for IMU | ⭐⭐ | M | N/A | N/A | [Project 3768](https://app.tinytapeout.com/projects/3768) |
 | VGA Tetris | ⭐⭐⭐ | L | N/A | N/A | [Project 3769](https://app.tinytapeout.com/projects/3769) |
 | Count To Ten | ⭐ | S | N/A | N/A | [Project 3771](https://app.tinytapeout.com/projects/3771) |
-| ttihp-26a-risc-v-wg-swc1 | ⭐⭐⭐⭐⭐ | XXL | N/A | N/A | [Project 3772](https://app.tinytapeout.com/projects/3772) |
+| ttihp-26a-risc-v-wg-swc1 | ⭐⭐⭐⭐⭐ | XXL | [YAML](src/data/tt3772_riscv.yaml) | [SVG](waveforms/tt3772_riscv.svg) | [Project 3772](https://app.tinytapeout.com/projects/3772) |
 | LoRa Edge SoC | ⭐⭐⭐⭐ | XL | [YAML](src/data/tt3775_lora_soc.yaml) | [SVG](waveforms/tt3775_lora_soc.svg) | [Project 3775](https://app.tinytapeout.com/projects/3775) |
 | Bandgap Reference + PTAT Sensor | ⭐⭐ | M | N/A | N/A | [Project 3778](https://app.tinytapeout.com/projects/3778) |
 | Chip ROM | ⭐ | S | [YAML](src/data/tt3782_chip_rom.yaml) | [SVG](waveforms/tt3782_chip_rom.svg) | [Project 3782](https://app.tinytapeout.com/projects/3782) |
+| Tiny D-Cache | ⭐ | S | [YAML](src/data/tt3787_dcache.yaml) | [SVG](waveforms/tt3787_dcache.svg) | [Project 3787](https://app.tinytapeout.com/projects/3787) |
+| Directional toggle of VGA playground example | ⭐ | S | [YAML](src/data/tt3792_vga_toggle.yaml) | [SVG](waveforms/tt3792_vga_toggle.svg) | [Project 3792](https://app.tinytapeout.com/projects/3792) |
+| DKTT01 - VGA Glider | ⭐ | S | [YAML](src/data/tt3797_vga_glider.yaml) | [SVG](waveforms/tt3797_vga_glider.svg) | [Project 3797](https://app.tinytapeout.com/projects/3797) |
 | 1-bit counter and 2-to-4 decoder | ⭐ | S | [YAML](src/data/tt3802_counter_decoder.yaml) | [SVG](waveforms/tt3802_counter_decoder.svg) | [Project 3802](https://app.tinytapeout.com/projects/3802) |
 | Hardware UTF Encoder/Decoder | ⭐ | S | [YAML](src/data/tt3812_utf8.yaml) | [SVG](waveforms/tt3812_utf8.svg) | [Project 3812](https://app.tinytapeout.com/projects/3812) |
 | SEQ_MAC_INF_16H3 - Neural Network Inference Accelerator | ⭐⭐ | M | N/A | N/A | [Project 3948](https://app.tinytapeout.com/projects/3948) |
@@ -256,6 +262,6 @@
 | TinyTapeout-Processor2 | ⭐⭐⭐⭐ | XL | N/A | N/A | [Project 3991](https://app.tinytapeout.com/projects/3991) |
 | tiny_dino | ⭐ | S | N/A | N/A | [Project 3998](https://app.tinytapeout.com/projects/3998) |
 | KianV SV32 TT Linux SoC | ⭐⭐⭐⭐⭐ | XXXL | N/A | N/A | [Project 3999](https://app.tinytapeout.com/projects/3999) |
-| Infinity Core | ⭐ | S | N/A | N/A | [Project 4002](https://app.tinytapeout.com/projects/4002) |
+| Infinity Core | ⭐ | S | [YAML](src/data/tt4002_infinity.yaml) | [SVG](waveforms/tt4002_infinity.svg) | [Project 4002](https://app.tinytapeout.com/projects/4002) |
 | 4-bit processor | ⭐ | S | N/A | N/A | [Project 4003](https://app.tinytapeout.com/projects/4003) |
 | DLX coprocessor | ⭐ | S | N/A | N/A | [Project 4006](https://app.tinytapeout.com/projects/4006) |

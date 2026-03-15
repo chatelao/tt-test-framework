@@ -1,0 +1,22 @@
+project: "Awesome checkers chip"
+metadata:
+  source: "https://github.com/shimmydee/TinyTapeout_workshop"
+signals:
+  CLK: {name: 'CLK', type: clock, width: 1}
+  RST_N: {name: 'RST_N', type: input, width: 1}
+  HSYNC: {name: 'HSYNC', type: output, width: 1}
+  VSYNC: {name: 'VSYNC', type: output, width: 1}
+  RGB: {name: 'RGB', type: output, width: 6}
+test_steps:
+  - name: "Reset"
+    cycles: 2
+    values:
+      RST_N: 0
+  - name: "Sync Start"
+    cycles: 20
+    values:
+      RST_N: 1
+  - name: "Running"
+    cycles: 100
+    values:
+      RST_N: 1

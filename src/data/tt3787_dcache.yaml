@@ -1,0 +1,31 @@
+project: "Tiny D-Cache"
+metadata:
+  source: "https://github.com/Niels5931/ttihp_simple_dcache"
+signals:
+  CLK: {name: 'CLK', type: clock, width: 1}
+  RST_N: {name: 'RST_N', type: input, width: 1}
+  REQ_VALID: {name: 'REQ_VALID', type: input, width: 1}
+  REQ_READY: {name: 'REQ_READY', type: output, width: 1}
+  RESP_VALID: {name: 'RESP_VALID', type: output, width: 1}
+  ADDR: {name: 'ADDR', type: input, width: 4}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      REQ_VALID: 0
+      ADDR: 0
+  - name: "Idle"
+    cycles: 2
+    values:
+      RST_N: 1
+      REQ_VALID: 0
+  - name: "Request"
+    cycles: 1
+    values:
+      REQ_VALID: 1
+      ADDR: 0xA
+  - name: "Wait"
+    cycles: 5
+    values:
+      REQ_VALID: 0

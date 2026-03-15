@@ -1,0 +1,37 @@
+project: "XW‘s Tiny Tapeout Design"
+metadata:
+  source: "https://github.com/xinyi362/TinyTapeout"
+signals:
+  CLK: {name: 'CLK', type: clock, width: 1}
+  RST_N: {name: 'RST_N', type: input, width: 1}
+  A: {name: 'A', type: input, width: 1}
+  B: {name: 'B', type: input, width: 1}
+  NAND_OUT: {name: 'NAND_OUT', type: output, width: 1}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      A: 0
+      B: 0
+  - name: "0 & 0"
+    cycles: 1
+    values:
+      RST_N: 1
+      A: 0
+      B: 0
+  - name: "0 & 1"
+    cycles: 1
+    values:
+      A: 0
+      B: 1
+  - name: "1 & 0"
+    cycles: 1
+    values:
+      A: 1
+      B: 0
+  - name: "1 & 1"
+    cycles: 1
+    values:
+      A: 1
+      B: 1

@@ -9,19 +9,16 @@
     - [ ] Test-ID: [3713](https://app.tinytapeout.com/projects/3713), Repo: https://github.com/Jfvind/tt-jfvind
     - [ ] Test-ID: [3716](https://app.tinytapeout.com/projects/3716), Repo: https://github.com/Birkwk/Chip
     - [ ] Test-ID: [3718](https://app.tinytapeout.com/projects/3718), Repo: https://github.com/johannakin1/Hemmeligkode
-    - [ ] Test-ID: [3722](https://app.tinytapeout.com/projects/3722), Repo: https://github.com/donmonki/tt01_chip_design
     - [ ] Test-ID: [3728](https://app.tinytapeout.com/projects/3728), Repo: https://github.com/GitteBailey/TinyTapeoutWorkshop
     - [ ] Test-ID: [3729](https://app.tinytapeout.com/projects/3729), Repo: https://github.com/martaalfonso/pomasic
     - [ ] Test-ID: [3731](https://app.tinytapeout.com/projects/3731), Repo: https://github.com/Nazgul-0/tinytapeoutGDS
     - [ ] Test-ID: [3734](https://app.tinytapeout.com/projects/3734), Repo: https://github.com/tarkor111/tiny-tapeout-design
-    - [ ] Test-ID: [3757](https://app.tinytapeout.com/projects/3757), Repo: https://github.com/crockpotveggies/neuron-ttihp
     - [ ] Test-ID: [3758](https://app.tinytapeout.com/projects/3758), Repo: https://github.com/YannGuidon/miniMAC_tx
     - [ ] Test-ID: [3763](https://app.tinytapeout.com/projects/3763), Repo: https://github.com/coastalwhite/tinytapeout-ihp-canright
     - [ ] Test-ID: [3766](https://app.tinytapeout.com/projects/3766), Repo: https://github.com/DelosReyesJordan/ttihp26a-FP8-SEM-Multiplier
     - [ ] Test-ID: [3768](https://app.tinytapeout.com/projects/3768), Repo: https://github.com/intv0id/tt-ihp-TinyKalman
     - [ ] Test-ID: [3769](https://app.tinytapeout.com/projects/3769), Repo: https://github.com/JPGHhb/ttihp-vga-tetris
     - [ ] Test-ID: [3771](https://app.tinytapeout.com/projects/3771), Repo: https://github.com/Isk1337/Count-To-Ten
-    - [ ] Test-ID: [3772](https://app.tinytapeout.com/projects/3772), Repo: https://github.com/risc-v-wg/ttihp-26a-risc-v-wg-swc1
     - [ ] Test-ID: [3778](https://app.tinytapeout.com/projects/3778), Repo: https://github.com/TechHU-GS/analog-trial (Skipped - Analog)
     - [ ] Test-ID: [3948](https://app.tinytapeout.com/projects/3948), Repo: https://github.com/Neuromurf/ttihp26a-inferenceFCNN-16h3
     - [ ] Test-ID: [3949](https://app.tinytapeout.com/projects/3949), Repo: https://github.com/obrhubr/ttihp-submission
@@ -34,7 +31,6 @@
     - [ ] Test-ID: [3991](https://app.tinytapeout.com/projects/3991), Repo: https://github.com/matei-coder/TinyTapeout-Processor2
     - [ ] Test-ID: [3998](https://app.tinytapeout.com/projects/3998), Repo: https://github.com/RongGi/tiny_dino
     - [ ] Test-ID: [3999](https://app.tinytapeout.com/projects/3999), Repo: https://github.com/splinedrive/kianv-sv32-tt-linux-soc
-    - [ ] Test-ID: [4002](https://app.tinytapeout.com/projects/4002), Repo: https://github.com/FilteredNoise/tt-infinity-core
     - [ ] Test-ID: [4003](https://app.tinytapeout.com/projects/4003), Repo: https://github.com/alessio8132/IHP26a-4-bit-processor
     - [ ] Test-ID: [4006](https://app.tinytapeout.com/projects/4006), Repo: https://github.com/GianmarcoFortunelli/TT_coprocessor
   - [ ] Add support for asynchronous signals (Planned)
@@ -47,6 +43,16 @@
   - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
+- [x] Create simple testcase for Test-ID 3722 (Design_test_workshop) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3742 (Gradient 01) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3752 (XW‘s Tiny Tapeout Design) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3757 (Neuromorphic Tile) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3767 (Awesome checkers chip) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3772 (ttihp-26a-risc-v-wg-swc1) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3787 (Tiny D-Cache) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3792 (Directional toggle of VGA playground example) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3797 (DKTT01 - VGA Glider) (2026-03-16)
+- [x] Create simple testcase for Test-ID 4002 (Infinity Core) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3775 (LoRa Edge SoC) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3765 (E-Beam Inspection Pixel Core) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3756 (Photo Frame) (2026-03-16)
