@@ -1,0 +1,23 @@
+project: "Tschai's Tic-Tac-Toe"
+metadata:
+  source: "https://github.com/tschai-yim/ttihp-mill"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  RST_N: {name: "RST_N", type: input, width: 1}
+  BTN: {name: "BTN", type: input, width: 8}
+  LED: {name: "LED", type: output, width: 8}
+  BTN_BR: {name: "BTN_BR", type: inout, width: 1}
+  LED_BR: {name: "LED_BR", type: inout, width: 1}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      BTN: 0
+      BTN_BR: 0
+  - name: "Idle"
+    cycles: 5
+    values:
+      RST_N: 1
+      BTN: 0
+      BTN_BR: 0

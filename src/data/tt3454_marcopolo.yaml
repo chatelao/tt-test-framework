@@ -1,0 +1,24 @@
+project: "MarcoPolo"
+metadata:
+  source: "https://github.com/javiBajoCero/ttgf-verilog-template"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  RST_N: {name: "RST_N", type: input, width: 1}
+  UART_RX: {name: "UART_RX", type: input, width: 1}
+  UART_TX: {name: "UART_TX", type: output, width: 1}
+  TICK_RX: {name: "TICK_RX", type: output, width: 1}
+  TICK_TX: {name: "TICK_TX", type: output, width: 1}
+  TRIG: {name: "TRIG", type: output, width: 1}
+  BUSY: {name: "BUSY", type: output, width: 1}
+  LED: {name: "LED", type: output, width: 1}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      UART_RX: 1
+  - name: "Idle"
+    cycles: 5
+    values:
+      RST_N: 1
+      UART_RX: 1

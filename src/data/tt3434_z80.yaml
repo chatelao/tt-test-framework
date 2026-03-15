@@ -1,0 +1,42 @@
+project: "Zilog Z80"
+metadata:
+  source: "https://github.com/rejunity/z80-open-silicon"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  RST_N: {name: "RST_N", type: input, width: 1}
+  WAIT_N: {name: "WAIT_N", type: input, width: 1}
+  INT_N: {name: "INT_N", type: input, width: 1}
+  NMI_N: {name: "NMI_N", type: input, width: 1}
+  BUSRQ_N: {name: "BUSRQ_N", type: input, width: 1}
+  CONFIG: {name: "CONFIG", type: input, width: 2}
+  MUX: {name: "MUX", type: input, width: 2}
+  M1_A0: {name: "M1_A0", type: output, width: 1}
+  MREQ_A1: {name: "MREQ_A1", type: output, width: 1}
+  IORQ_A2: {name: "IORQ_A2", type: output, width: 1}
+  RD_A3: {name: "RD_A3", type: output, width: 1}
+  WR_A4: {name: "WR_A4", type: output, width: 1}
+  RFSH_A5: {name: "RFSH_A5", type: output, width: 1}
+  HALT_A6: {name: "HALT_A6", type: output, width: 1}
+  BUSAK_A7: {name: "BUSAK_A7", type: output, width: 1}
+  DATA: {name: "DATA", type: inout, width: 8}
+test_steps:
+  - name: "Reset"
+    cycles: 3
+    values:
+      RST_N: 0
+      WAIT_N: 1
+      INT_N: 1
+      NMI_N: 1
+      BUSRQ_N: 1
+      CONFIG: 0
+      MUX: 0
+  - name: "Release Reset"
+    cycles: 5
+    values:
+      RST_N: 1
+      WAIT_N: 1
+      INT_N: 1
+      NMI_N: 1
+      BUSRQ_N: 1
+      CONFIG: 0
+      MUX: 0
