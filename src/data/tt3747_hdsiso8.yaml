@@ -1,0 +1,53 @@
+project: "ttihp-HDSISO8"
+metadata:
+  source: "https://github.com/ygdes/ttihp-HDSISO8"
+  project_id: "3747"
+signals:
+  clk:
+    type: clock
+    width: 1
+  rst_n:
+    type: input
+    width: 1
+  UI_IN:
+    type: input
+    width: 8
+  UO_OUT:
+    type: output
+    width: 8
+  UIO:
+    type: inout
+    width: 8
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      clk: 0
+      rst_n: 0
+      UI_IN: 0
+      UIO: 0
+  - name: "Wait for reset"
+    cycles: 1
+    values:
+      clk: 1
+      rst_n: 0
+  - name: "Internal reset sync"
+    cycles: 2
+    values:
+      clk: 1
+      rst_n: 1
+      UI_IN: 0b00000100 # EXT_RST = 1
+  - name: "Deassert EXT_RST"
+    cycles: 1
+    values:
+      clk: 0
+      UI_IN: 0b00000000
+  - name: "Watch Johnson counter"
+    cycles: 8
+    values:
+      clk: 1
+  - name: "Check Johnson #0"
+    cycles: 1
+    values:
+      clk: 0
+      UO_OUT: 0b00000100 # UO_OUT[2] = Johnson #0

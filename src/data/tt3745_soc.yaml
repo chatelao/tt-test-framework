@@ -1,0 +1,48 @@
+project: "Lab and Lectures SoC"
+metadata:
+  source: "https://github.com/alokerdas/tt_um_ihp26a_LnL_SoC"
+  project_id: "3745"
+signals:
+  clk:
+    type: clock
+    width: 1
+  rst_n:
+    type: input
+    width: 1
+  UI_IN:
+    type: input
+    width: 8
+  UO_OUT:
+    type: output
+    width: 8
+  UIO:
+    type: inout
+    width: 8
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      clk: 0
+      rst_n: 0
+      UI_IN: 0
+      UIO: 0
+  - name: "Wait for reset"
+    cycles: 2
+    values:
+      clk: 1
+      rst_n: 0
+  - name: "CPU Boot"
+    cycles: 10
+    values:
+      clk: 1
+      rst_n: 1
+  - name: "Set keyboard"
+    cycles: 1
+    values:
+      clk: 0
+      UI_IN: 0x41 # 'A'
+      UIO: 1 # cpu keyboard in flag
+  - name: "Process keyboard"
+    cycles: 5
+    values:
+      clk: 1
