@@ -1,0 +1,27 @@
+project: "Count Upwards"
+metadata:
+  source: "https://github.com/Andreas-Noebel/Tiny-Tapeout"
+signals:
+  clk:
+    type: "clock"
+    width: 1
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Count 0"
+    cycles: 1
+    values:
+      uo_out: 0x3f
+  - name: "Count 1"
+    cycles: 1
+    values:
+      uo_out: 0x06
+  - name: "Count 2"
+    cycles: 1
+    values:
+      uo_out: 0x5b
+  - name: "Count 3"
+    cycles: 1
+    values:
+      uo_out: 0x4f

@@ -1,0 +1,19 @@
+project: "Freddys tapeout"
+metadata:
+  source: "https://github.com/Freddy-mllr/FreddysTapeout"
+signals:
+  UI_IN: {type: input, width: 8}
+  UO_OUT: {type: output, width: 8}
+test_steps:
+  - name: "Initial"
+    cycles: 1
+    values: {UI_IN: 0, UO_OUT: 0}
+  - name: "ui0 high"
+    cycles: 1
+    values: {UI_IN: 0x01, UO_OUT: 0x04}
+  - name: "ui1 high"
+    cycles: 1
+    values: {UI_IN: 0x02, UO_OUT: 0}
+  - name: "both high"
+    cycles: 1
+    values: {UI_IN: 0x03, UO_OUT: 0x04}

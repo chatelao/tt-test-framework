@@ -1,0 +1,43 @@
+project: "4-to-1 Multiplexer"
+metadata:
+  source: "https://github.com/kenny3010/GDS1"
+signals:
+  ui[0:3]: {name: "DATA_IN", type: input, width: 4}
+  ui[5]: {name: "SEL0", type: input, width: 1}
+  ui[6]: {name: "SEL1", type: input, width: 1}
+  uo[0]: {name: "MUX_OUT", type: output, width: 1}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0:3]: 0
+      ui[5]: 0
+      ui[6]: 0
+  - name: "Select Input 0"
+    cycles: 1
+    values:
+      ui[0:3]: 0x1
+      ui[5]: 0
+      ui[6]: 0
+      uo[0]: 1
+  - name: "Select Input 1"
+    cycles: 1
+    values:
+      ui[0:3]: 0x2
+      ui[5]: 1
+      ui[6]: 0
+      uo[0]: 1
+  - name: "Select Input 2"
+    cycles: 1
+    values:
+      ui[0:3]: 0x4
+      ui[5]: 0
+      ui[6]: 1
+      uo[0]: 1
+  - name: "Select Input 3"
+    cycles: 1
+    values:
+      ui[0:3]: 0x8
+      ui[5]: 1
+      ui[6]: 1
+      uo[0]: 1
