@@ -1,10 +1,18 @@
 # Decisions
 
-## Verification Strategy for 10 Projects with ID % 5 = 4 (IDs 3569-3624) (2026-03-16 14:00)
+## TTIHP26A Projects Overview Generation (2026-03-16 11:30)
 
-### Solution 1: Targeted Functional and Wokwi Logic Verification (Chosen)
-- **Description**: Implement specific test cases for IDs 3569, 3574, 3579, 3584, 3589, 3594, 3599, 3604, 3619, and 3624 based on Verilog and Wokwi diagram analysis.
-- **Reasoning**: This provides meaningful verification for a mix of complex CPU/ALU designs and simpler logic-gate based Wokwi projects, ensuring that both sequential and combinational behaviors are checked.
+### Solution 1: Automated Scraping and Generation (Chosen)
+- **Description**: Use a Playwright-based script to scrape the TinyTapeout website for project metadata and combine it with local file checks to generate the markdown table.
+- **Reasoning**: This is the most accurate and scalable way to handle over 100 projects, ensuring that "Tiles" data (not available locally) and project names are up-to-date.
+
+### Solution 2: Manual Table Creation
+- **Description**: Manually gather data for each project and write the markdown table.
+- **Reasoning for Discarding**: Extremely time-consuming and prone to human error given the large number of projects.
+
+### Solution 3: Static Metadata File
+- **Description**: Create a static JSON/YAML file with all project metadata and use a simple script to render the table.
+- **Reasoning for Discarding**: Requires manual maintenance of the metadata file; automated scraping is superior for initial creation and future updates.
 
 ## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3548-3559) (2026-03-16 10:00)
 

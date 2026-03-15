@@ -124,16 +124,7 @@
 - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
-- [x] Create simple testcase for Test-ID 3569 (RTX 8090) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3574 (Tudor BCD Test) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3579 (Programmable 8-BIT CPU) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3584 (Tiny Tapeout) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3589 (83rk: Tiny Tapeout) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3594 (Test) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3599 (^My first design) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3604 (Tobias first Wokwi design) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3619 (Tiny_Tapeout_Test) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3624 (Tiny Tapeout 1) (2026-03-15)
+- [x] Create project overview table TTIHP26A_PROJECTS.md (2026-03-16)
 - [x] Create simple testcase for Test-ID 3559 (Just logic) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3558 (Cool Stuff) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3557 (Clocked Full Adder) (2026-03-16)
