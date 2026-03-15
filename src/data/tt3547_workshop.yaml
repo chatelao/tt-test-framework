@@ -1,0 +1,51 @@
+project: "tiny-tapeout-workshop-result"
+metadata:
+  source: "https://github.com/raninninn/tiny-tapeout-working-repo"
+signals:
+  INPUT_A:
+    type: "input"
+    width: 1
+  INPUT_B:
+    type: "input"
+    width: 1
+  ENABLE:
+    type: "input"
+    width: 1
+  MUX_OUT:
+    type: "output"
+    width: 1
+  COPY_A:
+    type: "output"
+    width: 1
+  COPY_B:
+    type: "output"
+    width: 1
+  CLK:
+    type: "clock"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      INPUT_A: 0
+      INPUT_B: 0
+      ENABLE: 0
+  - name: "Disabled"
+    cycles: 1
+    values:
+      RST_N: 1
+      INPUT_A: 1
+      INPUT_B: 1
+      ENABLE: 0
+  - name: "Enabled"
+    cycles: 1
+    values:
+      ENABLE: 1
+  - name: "Toggle A"
+    cycles: 1
+    values:
+      INPUT_A: 0

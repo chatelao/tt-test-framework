@@ -1,0 +1,43 @@
+project: "SotaSoC"
+metadata:
+  source: "https://github.com/sotatek-dev/ttihp-SotaSoC"
+signals:
+  SPI_MISO:
+    type: "input"
+    width: 1
+  GPIO_IN:
+    type: "input"
+    width: 6
+  UART0_RX:
+    type: "input"
+    width: 1
+  UART0_TX:
+    type: "output"
+    width: 1
+  ERROR_FLAG:
+    type: "output"
+    width: 1
+  GPIO_OUT:
+    type: "output"
+    width: 6
+  UIO:
+    type: "inout"
+    width: 8
+  CLK:
+    type: "clock"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      UART0_TX: 1
+      ERROR_FLAG: 0
+  - name: "Idle"
+    cycles: 5
+    values:
+      RST_N: 1
+      UART0_TX: 1

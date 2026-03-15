@@ -1,0 +1,58 @@
+project: "m6502 Microcontroller"
+metadata:
+  source: "https://github.com/chrismoos/tt-led-controller"
+signals:
+  MUX_SEL:
+    type: "input"
+    width: 2
+  RDY:
+    type: "input"
+    width: 1
+  NMI_N:
+    type: "input"
+    width: 1
+  IRQ_N:
+    type: "input"
+    width: 1
+  SO_N:
+    type: "input"
+    width: 1
+  GPIOA:
+    type: "inout"
+    width: 6
+  PHI1:
+    type: "output"
+    width: 1
+  PHI2:
+    type: "output"
+    width: 1
+  RW:
+    type: "output"
+    width: 1
+  SYNC:
+    type: "output"
+    width: 1
+  MUX_DATA:
+    type: "inout"
+    width: 8
+  CLK:
+    type: "clock"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      MUX_SEL: 0
+      RDY: 1
+      NMI_N: 1
+      IRQ_N: 1
+      SO_N: 1
+  - name: "Initialization"
+    cycles: 5
+    values:
+      RST_N: 1
+      RW: 1

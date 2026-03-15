@@ -1,0 +1,32 @@
+project: "Tiny Ape Out"
+metadata:
+  source: "https://github.com/Byte-01100110/TT-Ape-out"
+signals:
+  UI_IN:
+    type: "input"
+    width: 8
+  UO_OUT:
+    type: "output"
+    width: 8
+  CLK:
+    type: "clock"
+    width: 1
+  RST_N:
+    type: "input"
+    width: 1
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      UI_IN: 0x00
+      UO_OUT: 0x00
+  - name: "Pattern 1"
+    cycles: 1
+    values:
+      RST_N: 1
+      UI_IN: 0xAA
+  - name: "Pattern 2"
+    cycles: 1
+    values:
+      UI_IN: 0x55
