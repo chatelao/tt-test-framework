@@ -1,5 +1,11 @@
 # Decisions
 
+## Verification Strategy for 10 Projects with ID % 5 = 4 (IDs 3569-3624) (2026-03-16 14:00)
+
+### Solution 1: Targeted Functional and Wokwi Logic Verification (Chosen)
+- **Description**: Implement specific test cases for IDs 3569, 3574, 3579, 3584, 3589, 3594, 3599, 3604, 3619, and 3624 based on Verilog and Wokwi diagram analysis.
+- **Reasoning**: This provides meaningful verification for a mix of complex CPU/ALU designs and simpler logic-gate based Wokwi projects, ensuring that both sequential and combinational behaviors are checked.
+
 ## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3548-3559) (2026-03-16 10:00)
 
 ### Solution 1: Targeted Functional Verification (Chosen)

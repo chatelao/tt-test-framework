@@ -1,0 +1,24 @@
+project: "Tiny Tapeout"
+metadata:
+  source: "https://github.com/Tuan9304/gds"
+  project_id: "3584"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Input All Zero"
+    cycles: 1
+    values:
+      ui_in: 0
+  - name: "XOR Test"
+    cycles: 1
+    values:
+      ui_in: 0b00000011 # IN0=1, IN1=1 -> OUT0=0 (XOR)
+  - name: "XOR Test 2"
+    cycles: 1
+    values:
+      ui_in: 0b00000001 # IN0=1, IN1=0 -> OUT0=1 (XOR)
