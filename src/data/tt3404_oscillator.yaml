@@ -1,0 +1,24 @@
+project: "Verilog Multistage Oscillator with Enable and Counter"
+metadata:
+  source: "https://github.com/RemingtonHolder/tapeout_verilog"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  RST_N: {name: "RST_N", type: input, width: 1}
+  TAPS: {name: "TAPS", type: input, width: 3}
+  OUT: {name: "OUT", type: output, width: 8}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      TAPS: 0
+  - name: "Enable"
+    cycles: 1
+    values:
+      RST_N: 1
+      TAPS: 7
+  - name: "Running"
+    cycles: 10
+    values:
+      RST_N: 1
+      TAPS: 7

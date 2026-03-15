@@ -1,5 +1,15 @@
 # Discarded Solutions
 
+## 10 Additional TTIHP26a Projects (ID % 5 = 4) (2026-03-16 17:00)
+
+### Solution 2: Generic Reset and Pattern Test
+- **Description**: Use a uniform test template (reset + basic patterns) for all 10 projects regardless of their internal logic.
+- **Reasoning for Discarding**: While faster, it fails to verify the specific functionality of complex designs like the Z80 or VGA controllers.
+
+### Solution 3: Automated Truth Table Generation
+- **Description**: Attempt to automatically generate all possible input combinations for each project.
+- **Reasoning for Discarding**: Impractical for sequential designs and results in excessively large YAML files that are difficult to review.
+
 ## 10 Projects (project-id modulo 5 = 2) Verification Strategy (Test-IDs 3562-3617) (2026-03-16 11:30)
 
 ### Solution 2: Static Reset Only Verification
