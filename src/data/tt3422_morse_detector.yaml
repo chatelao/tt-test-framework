@@ -1,0 +1,27 @@
+project: "Morse Code Detector (With Serial RX)"
+metadata:
+  source: "https://github.com/KerCrafter/morse_code_tto"
+signals:
+  ui[0]: {name: "DOT_INP", type: input, width: 1}
+  ui[1]: {name: "DASH_INP", type: input, width: 1}
+  ui[2]: {name: "CHAR_SPACE", type: input, width: 1}
+  uo[0:7]: {name: "CHAR_CODE", type: output, width: 8}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0]: 0
+      ui[1]: 0
+      ui[2]: 0
+  - name: "Send Dot"
+    cycles: 1
+    values:
+      ui[0]: 1
+  - name: "Send Dash"
+    cycles: 1
+    values:
+      ui[1]: 1
+  - name: "End Char"
+    cycles: 1
+    values:
+      ui[2]: 1

@@ -1,0 +1,22 @@
+project: "Flame demo"
+metadata:
+  source: "https://github.com/kbeckmann/ttgf0p2-kbeckmann-flame"
+signals:
+  uo[3]: {name: "VSYNC", type: output, width: 1}
+  uo[7]: {name: "HSYNC", type: output, width: 1}
+  uo[4:6]: {name: "RGB0", type: output, width: 3}
+  uo[0:2]: {name: "RGB1", type: output, width: 3}
+  uio[7]: {name: "AUDIO_PWM", type: output, width: 1}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      uo[7]: 1
+  - name: "Wait for HSync"
+    cycles: 10
+    values:
+      uo[7]: 1
+  - name: "Wait for start of line"
+    cycles: 1
+    values:
+      uo[7]: 0

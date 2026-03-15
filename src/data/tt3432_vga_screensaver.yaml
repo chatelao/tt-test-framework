@@ -1,0 +1,28 @@
+project: "Wafer.space Logo VGA Screensaver"
+metadata:
+  source: "https://github.com/TinyTapeout/tt-waferspace-vga-screensaver"
+signals:
+  ui[0]: {name: "TILE", type: input, width: 1}
+  ui[1]: {name: "SOLID_COLOR", type: input, width: 1}
+  uo[3]: {name: "VSYNC", type: output, width: 1}
+  uo[7]: {name: "HSYNC", type: output, width: 1}
+  uo[4:6]: {name: "RGB_LOW", type: output, width: 3}
+  uo[0:2]: {name: "RGB_HIGH", type: output, width: 3}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0]: 0
+      ui[1]: 0
+  - name: "HSync high initially"
+    cycles: 1
+    values:
+      uo[7]: 1
+  - name: "Wait for HSync pulse"
+    cycles: 800 # A full VGA line is roughly 800 pixels
+    values:
+      uo[7]: 1
+  - name: "HSync pulse start"
+    cycles: 1
+    values:
+      uo[7]: 0

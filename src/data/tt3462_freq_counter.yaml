@@ -1,0 +1,30 @@
+project: "Frequency Counter SSD1306 OLED"
+metadata:
+  source: "https://github.com/embelon/ttgf-frequency-counter-oled"
+signals:
+  ui[0]: {name: "CLK_X", type: input, width: 1}
+  uo[0]: {name: "OLED_NRST", type: output, width: 1}
+  uo[3]: {name: "OLED_NCS", type: output, width: 1}
+  uo[5]: {name: "OLED_CLK", type: output, width: 1}
+  uo[6]: {name: "OLED_DATA", type: output, width: 1}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0]: 0
+  - name: "Initialize"
+    cycles: 1
+    values:
+      uo[0]: 0 # OLED reset active
+  - name: "Release Reset"
+    cycles: 1
+    values:
+      uo[0]: 1
+  - name: "Pulse input"
+    cycles: 1
+    values:
+      ui[0]: 1
+  - name: "Wait for OLED activity"
+    cycles: 10
+    values:
+      ui[0]: 0

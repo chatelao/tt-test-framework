@@ -1,0 +1,19 @@
+project: "NCO"
+metadata:
+  source: "https://github.com/pantelis300/tt_um_pantelis300_nco"
+signals:
+  ui[0:7]: {name: "FREQ_CTRL", type: input, width: 8}
+  uo[0:7]: {name: "DAC_OUT", type: output, width: 8}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0:7]: 0
+  - name: "Wait for reset"
+    cycles: 4
+    values:
+      ui[0:7]: 0x01
+  - name: "Oscillate"
+    cycles: 4
+    values:
+      ui[0:7]: 0x10

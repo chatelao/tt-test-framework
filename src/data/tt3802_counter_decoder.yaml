@@ -1,0 +1,52 @@
+project: "1-bit counter and 2-to-4 decoder"
+metadata:
+  source: "https://github.com/kapis20/tiny_tapeout_template"
+signals:
+  ui[0]: {name: "CLK_EXT", type: input, width: 1}
+  ui[1]: {name: "RST_N", type: input, width: 1}
+  ui[6]: {name: "DEC_A", type: input, width: 1}
+  ui[7]: {name: "DEC_B", type: input, width: 1}
+  uo[0]: {name: "COUNT_Q", type: output, width: 1}
+  uo[4:7]: {name: "DEC_Y", type: output, width: 4}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0]: 0
+      ui[1]: 0
+      ui[6]: 0
+      ui[7]: 0
+  - name: "Initialize"
+    cycles: 1
+    values:
+      ui[1]: 1
+      uo[0]: 0
+      uo[4:7]: 0b0001
+  - name: "Count 1"
+    cycles: 1
+    values:
+      ui[0]: 1
+      uo[0]: 1
+  - name: "Count 2 (back to 0)"
+    cycles: 1
+    values:
+      ui[0]: 0
+      uo[0]: 0
+  - name: "Decode 01"
+    cycles: 1
+    values:
+      ui[6]: 1
+      ui[7]: 0
+      uo[4:7]: 0b0010
+  - name: "Decode 10"
+    cycles: 1
+    values:
+      ui[6]: 0
+      ui[7]: 1
+      uo[4:7]: 0b0100
+  - name: "Decode 11"
+    cycles: 1
+    values:
+      ui[6]: 1
+      ui[7]: 1
+      uo[4:7]: 0b1000

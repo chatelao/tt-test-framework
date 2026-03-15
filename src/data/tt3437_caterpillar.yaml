@@ -1,0 +1,25 @@
+project: "Simon's Caterpillar"
+metadata:
+  source: "https://github.com/htfab/ttgf0p2-caterpillar"
+signals:
+  ui[0:3]: {name: "BUTTONS", type: input, width: 4}
+  uo[0:3]: {name: "LEDS", type: output, width: 4}
+  uo[5:6]: {name: "DIGITS", type: output, width: 2}
+  uio[0:6]: {name: "SEGMENTS", type: output, width: 7}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0:3]: 0
+  - name: "Initialize"
+    cycles: 1
+    values:
+      uo[0:3]: 0
+  - name: "Press Red Button"
+    cycles: 1
+    values:
+      ui[0]: 1
+  - name: "Press Green Button"
+    cycles: 1
+    values:
+      ui[1]: 1
