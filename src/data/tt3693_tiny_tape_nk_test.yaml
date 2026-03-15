@@ -1,0 +1,29 @@
+project: "TinyTapeNkTest"
+metadata:
+  source: "https://github.com/Niko78a1/tinytapeNK"
+  project_id: "3693"
+signals:
+  ui_in:
+    name: "UI_IN"
+    type: "input"
+    width: 8
+  uo_out:
+    name: "UO_OUT"
+    type: "output"
+    width: 8
+test_steps:
+  - name: "IN0=1, IN1=1"
+    cycles: 1
+    values:
+      UI_IN: 0b00000011
+      UO_OUT: 0b00000001
+  - name: "IN0=0, IN1=0"
+    cycles: 1
+    values:
+      UI_IN: 0b00000000
+      UO_OUT: 0b11111111
+  - name: "IN0=1, IN1=0"
+    cycles: 1
+    values:
+      UI_IN: 0b00000001
+      UO_OUT: 0b00000010

@@ -1,0 +1,26 @@
+project: "My first design"
+metadata:
+  source: "https://github.com/vntinas/My_Test_design"
+  project_id: "3708"
+signals:
+  ui_in:
+    name: "UI_IN"
+    type: "input"
+    width: 8
+  uo_out:
+    name: "UO_OUT"
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Initial state"
+    cycles: 1
+    values:
+      UI_IN: 0
+  - name: "Clocking counter"
+    cycles: 20
+    values:
+      UI_IN: 0
+  - name: "Exercise mixed logic"
+    cycles: 1
+    values:
+      UI_IN: 0b11000000
