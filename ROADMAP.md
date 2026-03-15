@@ -124,6 +124,16 @@
 - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
+- [x] Create simple testcase for Test-ID 3812 (Hardware UTF Encoder/Decoder) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3522 (Tiny D-Cache) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3477 (Flame demo) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3422 (Morse Code Detector (With Serial RX)) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3462 (Frequency Counter SSD1306 OLED) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3437 (Simon's Caterpillar) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3432 (Wafer.space Logo VGA Screensaver) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3417 (NCO) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3802 (1-bit counter and 2-to-4 decoder) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3782 (Chip ROM) (2026-03-15)
 - [x] Add Novelty column to TTIHP26A_PROJECTS.md (2026-03-15)
 - [x] Create project overview table TTIHP26A_PROJECTS.md (2026-03-16)
 - [x] Create simple testcase for Test-ID 3559 (Just logic) (2026-03-16)

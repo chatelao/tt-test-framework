@@ -1,0 +1,29 @@
+project: "Hardware UTF Encoder/Decoder"
+metadata:
+  source: "https://github.com/RebeccaRGB/hardware-utf8"
+signals:
+  ui[4]: {name: "WRITE_N", type: input, width: 1}
+  ui[5]: {name: "CIO_N", type: input, width: 1}
+  uo[0]: {name: "READY", type: output, width: 1}
+  uio[0:7]: {name: "IO", type: inout, width: 8}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[4]: 1
+      ui[5]: 1
+      uio[0:7]: 0
+  - name: "Wait for ready"
+    cycles: 1
+    values:
+      uo[0]: 1
+  - name: "Write byte"
+    cycles: 1
+    values:
+      ui[4]: 0
+      uio[0:7]: 0x41 # 'A'
+  - name: "Read status"
+    cycles: 1
+    values:
+      ui[4]: 1
+      ui[5]: 0
