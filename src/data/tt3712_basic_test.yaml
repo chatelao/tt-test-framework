@@ -1,0 +1,19 @@
+project: "Amaury Basic Test"
+metadata:
+  source: "https://github.com/Ora-ng3/tiny-tapeout-basic"
+signals:
+  ui[0:7]: {name: "IN", type: input, width: 8}
+  uo[0:7]: {name: "OUT", type: output, width: 8}
+test_steps:
+  - name: "Zeros"
+    cycles: 1
+    values:
+      ui[0:7]: 0
+  - name: "Ones"
+    cycles: 1
+    values:
+      ui[0:7]: 0xFF
+  - name: "Pattern"
+    cycles: 1
+    values:
+      ui[0:7]: 0x55

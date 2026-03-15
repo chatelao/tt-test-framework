@@ -1,0 +1,37 @@
+project: "Half Adder"
+metadata:
+  source: "https://github.com/Abdulah-Korishe/Abdulah-s-1st-tiny-tapeout-design"
+signals:
+  ui[0]: {name: "A", type: input, width: 1}
+  ui[1]: {name: "B", type: input, width: 1}
+  uo[0]: {name: "SUM", type: output, width: 1}
+  uo[1]: {name: "CARRY", type: output, width: 1}
+test_steps:
+  - name: "0+0"
+    cycles: 1
+    values:
+      ui[0]: 0
+      ui[1]: 0
+      uo[0]: 0
+      uo[1]: 0
+  - name: "0+1"
+    cycles: 1
+    values:
+      ui[0]: 0
+      ui[1]: 1
+      uo[0]: 1
+      uo[1]: 0
+  - name: "1+0"
+    cycles: 1
+    values:
+      ui[0]: 1
+      ui[1]: 0
+      uo[0]: 1
+      uo[1]: 0
+  - name: "1+1"
+    cycles: 1
+    values:
+      ui[0]: 1
+      ui[1]: 1
+      uo[0]: 0
+      uo[1]: 1

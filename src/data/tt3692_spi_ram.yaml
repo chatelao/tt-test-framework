@@ -1,0 +1,19 @@
+project: "SPI RAM Driver"
+metadata:
+  source: "https://github.com/Romultra/2-bit-adder-TTIHP26a"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  uo[0:7]: {name: "RAM_DATA_OUT", type: output, width: 8}
+  uio[0]: {name: "SPI_CS", type: output, width: 1}
+  uio[1]: {name: "SPI_MOSI", type: output, width: 1}
+  uio[2]: {name: "SPI_MISO", type: input, width: 1}
+  uio[3]: {name: "SPI_SCK", type: output, width: 1}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      uio[2]: 0
+  - name: "Idle"
+    cycles: 4
+    values:
+      uio[2]: 1
