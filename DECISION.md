@@ -1,5 +1,19 @@
 # Decisions
 
+## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3560-3610) (2026-03-16 14:00)
+
+### Solution 1: Targeted Functional Verification (Chosen)
+- **Description**: Implement specific functional tests for each project based on their description and pinout (e.g., PWM duty cycle, Serializer sequence, Logic gates).
+- **Reasoning**: Provides meaningful verification of the unique logic in each project and ensures higher quality test data.
+
+### Solution 2: Generic Pattern Testing
+- **Description**: Apply a standard set of patterns (all zeros, all ones, alternating) to all 10 projects.
+- **Reasoning for Discarding**: Faster to implement but may not verify specific functional blocks correctly, especially for sequential or specialized designs like serializers.
+
+### Solution 3: Reset-only Verification
+- **Description**: Only verify the reset state of the projects.
+- **Reasoning for Discarding**: Too minimal; doesn't prove the design actually works or transitions between states.
+
 ## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3548-3559) (2026-03-16 10:00)
 
 ### Solution 1: Targeted Functional Verification (Chosen)
