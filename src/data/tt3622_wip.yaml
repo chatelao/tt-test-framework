@@ -1,0 +1,16 @@
+project: "WIP 7-seg Spinner"
+metadata:
+  source: "https://github.com/DebuggingDisaster/wowki"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  ui[0:7]: {name: "SW", type: input, width: 8}
+  uo[0:7]: {name: "SEG", type: output, width: 8}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0:7]: 0
+  - name: "Active"
+    cycles: 5
+    values:
+      ui[0:7]: 0xFF
