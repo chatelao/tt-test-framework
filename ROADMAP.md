@@ -158,6 +158,7 @@
 - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
+- [x] Create project overview table TTIHP26A_PROJECTS.md (2026-03-16)
 - [x] Create simple testcase for Test-ID 3559 (Just logic) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3558 (Cool Stuff) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3557 (Clocked Full Adder) (2026-03-16)
