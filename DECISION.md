@@ -1,5 +1,11 @@
 # Decisions
 
+## OCP MXFP8 Streaming MAC Unit Verification Strategy (Test-ID 3990) (2026-03-15 08:58)
+
+### Solution 1: Protocol Initial Phase (Chosen)
+- **Description**: Verify the initial 5 cycles of the protocol: Metadata load, Scale A load, Scale B load, and the start of the streaming phase.
+- **Reasoning**: This confirms the FSM correctly transitions through the configuration states into the streaming state as documented, providing a clear and readable timing diagram.
+
 ## Handling of Project 3390 (mini mosbius) (2026-03-14 18:40)
 
 ### Solution 1: Skip Project 3390 (Chosen)

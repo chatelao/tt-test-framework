@@ -1,6 +1,7 @@
 # Roadmap
 
 ## Finished
+- [x] Create simple testcase for Test-ID 3990 (OCP MXFP8 Streaming MAC Unit) (2026-03-15)
 - [x] Create simple testcase for Test-ID 3390 (mini mosbius) (Skipped - Analog / Not in shuttle ttihp26a) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3756 (Photo Frame) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3753 (FOMO) (2026-03-14)
