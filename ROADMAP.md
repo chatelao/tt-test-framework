@@ -124,6 +124,7 @@
 - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
+- [x] Add Novelty column to TTIHP26A_PROJECTS.md (2026-03-15)
 - [x] Create project overview table TTIHP26A_PROJECTS.md (2026-03-16)
 - [x] Create simple testcase for Test-ID 3559 (Just logic) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3558 (Cool Stuff) (2026-03-16)

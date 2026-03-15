@@ -1,5 +1,11 @@
 # Decisions
 
+## Add Novelty Column to TTIHP26A Projects Overview (2026-03-15 15:45)
+
+### Solution 1: Size-based Heuristic (Chosen)
+- **Description**: Implement the "Novelty" column using a T-shirt size-based heuristic (S: ⭐, M: ⭐⭐, L: ⭐⭐⭐, XL: ⭐⭐⭐⭐, XXL/XXXL: ⭐⭐⭐⭐⭐) to provide a deterministic 1-5 star rating.
+- **Reasoning**: This provides a consistent and automated way to fill the novelty rating based on project complexity (area/tiles), which is a good proxy for "novelty" in the context of TinyTapeout projects when specific ratings are not available.
+
 ## TTIHP26A Projects Overview Generation (2026-03-16 11:30)
 
 ### Solution 1: Automated Scraping and Generation (Chosen)
