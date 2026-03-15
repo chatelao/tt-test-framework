@@ -1,0 +1,23 @@
+project: "DR Flip-flop Counter"
+metadata:
+  source: "https://github.com/Estel64/Beccas_tinytapeout"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  uo[0:3]: {name: "COUNT", type: output, width: 4}
+test_steps:
+  - name: "Initial"
+    cycles: 1
+    values:
+      uo[0:3]: 0
+  - name: "Count 1"
+    cycles: 1
+    values:
+      uo[0:3]: 1
+  - name: "Count 2"
+    cycles: 1
+    values:
+      uo[0:3]: 2
+  - name: "Count 3"
+    cycles: 1
+    values:
+      uo[0:3]: 3

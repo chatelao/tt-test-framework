@@ -1,0 +1,28 @@
+project: "Bit-Serial Collatz Checker"
+metadata:
+  source: "https://github.com/TheMightyDuckOfDoom/tinytapeout-bit-serial-collatz"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  ui[0]: {name: "Serial_In", type: input, width: 1}
+  ui[1]: {name: "Main_Reg_EN", type: input, width: 1}
+  ui[2]: {name: "Step_Reg_RD_EN", type: input, width: 1}
+  ui[3]: {name: "Start", type: input, width: 1}
+  uo[0]: {name: "Serial_Out", type: output, width: 1}
+  uo[1]: {name: "Step_Out", type: output, width: 1}
+  uo[2]: {name: "Finished", type: output, width: 1}
+  uo[3]: {name: "Overflow", type: output, width: 1}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0:3]: 0
+  - name: "Load"
+    cycles: 4
+    values:
+      ui[0]: 1
+      ui[1]: 1
+  - name: "Process"
+    cycles: 4
+    values:
+      ui[1]: 0
+      ui[3]: 1

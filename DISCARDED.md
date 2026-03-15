@@ -157,3 +157,13 @@
 ### Solution 3: Sequential Input Sweeping (8 cycles)
 - **Description**: Use a single test case with 8 cycles where inputs change at each clock edge.
 - **Reasoning for Discarding**: Similar to Solution 1 but less explicit in naming each step's purpose in the YAML.
+
+## 10 Additional TTIHP26a Projects (ID % 5 = 0) (2026-03-16 16:00)
+
+### Solution 2: Generic Reset and Pattern Test
+- **Description**: Use a uniform test template (reset + basic patterns) for all 10 projects regardless of their internal logic.
+- **Reasoning for Discarding**: While faster, it fails to verify the specific functionality of complex designs like VGA controllers or debouncers.
+
+### Solution 3: Automated Truth Table Generation
+- **Description**: Attempt to automatically generate all possible input combinations for each project.
+- **Reasoning for Discarding**: Impractical for sequential designs and results in excessively large YAML files that are difficult to review.
