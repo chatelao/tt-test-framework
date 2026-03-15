@@ -1,0 +1,29 @@
+project: "idk"
+metadata:
+  source: "https://github.com/jfho/tt-chip"
+  project_id: "3688"
+signals:
+  ui_in:
+    name: "UI_IN"
+    type: "input"
+    width: 8
+  uo_out:
+    name: "UO_OUT"
+    type: "output"
+    width: 8
+test_steps:
+  - name: "Test AND gate 1 (IN0 & IN1)"
+    cycles: 1
+    values:
+      UI_IN: 0b00000011
+      UO_OUT: 0b00010001
+  - name: "Test pass-through 4 (IN4)"
+    cycles: 1
+    values:
+      UI_IN: 0b00010000
+      UO_OUT: 0b00010000
+  - name: "All inputs high"
+    cycles: 1
+    values:
+      UI_IN: 0b11111111
+      UO_OUT: 0b11111111
