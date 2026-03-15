@@ -3,21 +3,15 @@
 ## Planned
   - [ ] Create simple testcase for each assigned tile from TTIHP26A shuttle
     - [ ] Test-ID: [3523](https://app.tinytapeout.com/projects/3523), Repo: https://github.com/hoene/tt_um_hoene_firsttry (Skipped - Analog)
-    - [ ] Test-ID: [3656](https://app.tinytapeout.com/projects/3656), Repo: https://github.com/tjarker/ttihp-feb-2026
-    - [ ] Test-ID: [3701](https://app.tinytapeout.com/projects/3701), Repo: https://github.com/celien-14/cremedelacreme
-    - [ ] Test-ID: [3706](https://app.tinytapeout.com/projects/3706), Repo: https://github.com/giffel1/Scott-s-first-Wokwi-design
     - [ ] Test-ID: [3713](https://app.tinytapeout.com/projects/3713), Repo: https://github.com/Jfvind/tt-jfvind
-    - [ ] Test-ID: [3716](https://app.tinytapeout.com/projects/3716), Repo: https://github.com/Birkwk/Chip
     - [ ] Test-ID: [3718](https://app.tinytapeout.com/projects/3718), Repo: https://github.com/johannakin1/Hemmeligkode
     - [ ] Test-ID: [3722](https://app.tinytapeout.com/projects/3722), Repo: https://github.com/donmonki/tt01_chip_design
     - [ ] Test-ID: [3728](https://app.tinytapeout.com/projects/3728), Repo: https://github.com/GitteBailey/TinyTapeoutWorkshop
     - [ ] Test-ID: [3729](https://app.tinytapeout.com/projects/3729), Repo: https://github.com/martaalfonso/pomasic
-    - [ ] Test-ID: [3731](https://app.tinytapeout.com/projects/3731), Repo: https://github.com/Nazgul-0/tinytapeoutGDS
     - [ ] Test-ID: [3734](https://app.tinytapeout.com/projects/3734), Repo: https://github.com/tarkor111/tiny-tapeout-design
     - [ ] Test-ID: [3757](https://app.tinytapeout.com/projects/3757), Repo: https://github.com/crockpotveggies/neuron-ttihp
     - [ ] Test-ID: [3758](https://app.tinytapeout.com/projects/3758), Repo: https://github.com/YannGuidon/miniMAC_tx
     - [ ] Test-ID: [3763](https://app.tinytapeout.com/projects/3763), Repo: https://github.com/coastalwhite/tinytapeout-ihp-canright
-    - [ ] Test-ID: [3766](https://app.tinytapeout.com/projects/3766), Repo: https://github.com/DelosReyesJordan/ttihp26a-FP8-SEM-Multiplier
     - [ ] Test-ID: [3768](https://app.tinytapeout.com/projects/3768), Repo: https://github.com/intv0id/tt-ihp-TinyKalman
     - [ ] Test-ID: [3769](https://app.tinytapeout.com/projects/3769), Repo: https://github.com/JPGHhb/ttihp-vga-tetris
     - [ ] Test-ID: [3771](https://app.tinytapeout.com/projects/3771), Repo: https://github.com/Isk1337/Count-To-Ten
@@ -57,6 +51,16 @@
 - [x] Create simple testcase for Test-ID 3719 (Test (XOR & D-FlipFlop)) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3717 (ISC77x8 Side Scrolling Display) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3715 (Switch deBounce for Rotary Encoder) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3591 (Tiny Tapeout N) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3596 (TinyTapeoutTestProject) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3601 (just copy 4 not gates) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3606 (Tiny Tapeout Accumulator) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3656 (Chisel Async Test) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3701 (Cremedelcreme) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3706 (Scott's first Wokwi design) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3716 (Tiny Tapeout chip) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3731 (fullAdder) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3766 (8-bit SEM Floating-Point Multiplier) (2026-03-15)
 - [x] Create simple testcase for Test-ID 3714 (First tinytapeout 234 (Logic & Pass-through)) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3712 (Amaury Basic Test) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3708 (My first design) (2026-03-16)
