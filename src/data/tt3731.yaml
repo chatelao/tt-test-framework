@@ -1,0 +1,34 @@
+project: "fullAdder"
+metadata:
+  source: "https://github.com/Nazgul-0/tinytapeoutGDS"
+signals:
+  A: {name: "A", type: "input", width: 1}
+  B: {name: "B", type: "input", width: 1}
+  Cin: {name: "Cin", type: "input", width: 1}
+  Sum: {name: "Sum", type: "output", width: 1}
+  Cout: {name: "Cout", type: "output", width: 1}
+test_steps:
+  - name: "0+0+0"
+    cycles: 1
+    values: {A: 0, B: 0, Cin: 0}
+  - name: "1+0+0"
+    cycles: 1
+    values: {A: 1, B: 0, Cin: 0}
+  - name: "0+1+0"
+    cycles: 1
+    values: {A: 0, B: 1, Cin: 0}
+  - name: "1+1+0"
+    cycles: 1
+    values: {A: 1, B: 1, Cin: 0}
+  - name: "0+0+1"
+    cycles: 1
+    values: {A: 0, B: 0, Cin: 1}
+  - name: "1+0+1"
+    cycles: 1
+    values: {A: 1, B: 0, Cin: 1}
+  - name: "0+1+1"
+    cycles: 1
+    values: {A: 0, B: 1, Cin: 1}
+  - name: "1+1+1"
+    cycles: 1
+    values: {A: 1, B: 1, Cin: 1}

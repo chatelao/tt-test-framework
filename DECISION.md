@@ -661,3 +661,69 @@ Manually browse the TinyTapeout application website to find projects and calcula
 
 ### Solution 3: Sequential ID check
 Check all IDs sequentially from 3400 upwards regardless of modulo and then filter.
+
+## 10 Additional TTIHP26A Projects (ID % 5 = 1) (2026-03-16 17:15)
+
+### Solution 1: Targeted Functional Verification (Chosen)
+- **Description**: Implement specific test cases for each of the 10 selected projects (SEM Multiplier, Full Adder, Logic Gates, etc.) based on their repository logic and pinout.
+- **Reasoning**: Ensures each test case is meaningful and accurately reflects the project's unique design and intended behavior.
+
+## Tiny Tapeout N Verification Strategy (Test-ID 3591) (2026-03-16 17:15)
+
+### Solution 1: Logic Verification (Chosen)
+- **Description**: Test the XOR, AND, and MUX logic by toggling the respective inputs and verifying the outputs on uo[3], uo[6], and uo[7].
+- **Reasoning**: Directly verifies the three distinct logic blocks identified in the Wokwi diagram.
+
+## TinyTapeoutTestProject Verification Strategy (Test-ID 3596) (2026-03-16 17:15)
+
+### Solution 1: Inversion Verification (Chosen)
+- **Description**: Test the bitwise inversion of the lower nibble (ui[3:0] to uo[3:0]).
+- **Reasoning**: Confirms the functionality of the standard 4-NOT gate template used in this project.
+
+## just copy 4 not gates Verification Strategy (Test-ID 3601) (2026-03-16 17:15)
+
+### Solution 1: Inversion Verification (Chosen)
+- **Description**: Test the bitwise inversion of the lower nibble (ui[3:0] to uo[3:0]).
+- **Reasoning**: Confirms the functionality of the standard 4-NOT gate template used in this project.
+
+## Tiny Tapeout Accumulator Verification Strategy (Test-ID 3606) (2026-03-16 17:15)
+
+### Solution 1: Inversion Verification (Chosen)
+- **Description**: Test the bitwise inversion of the lower nibble (ui[3:0] to uo[3:0]).
+- **Reasoning**: Confirms the functionality of the standard 4-NOT gate template used in this project, despite the project's name.
+
+## Chisel Async Test Verification Strategy (Test-ID 3656) (2026-03-16 17:15)
+
+### Solution 1: Pass-through Verification (Chosen)
+- **Description**: Verify that the input signals on ui[7:0] are correctly passed through to uo[7:0].
+- **Reasoning**: Simple and effective way to verify the basic connectivity of this Chisel-based project.
+
+## Cremedelcreme Verification Strategy (Test-ID 3701) (2026-03-16 17:15)
+
+### Solution 1: Inversion and Pass-through (Chosen)
+- **Description**: Verify the inversion of ui[3:0] and the direct pass-through of ui[7:4].
+- **Reasoning**: Matches the observed logic in the Wokwi diagram, combining common template elements.
+
+## Scott's first Wokwi design Verification Strategy (Test-ID 3706) (2026-03-16 17:15)
+
+### Solution 1: Global AND Verification (Chosen)
+- **Description**: Verify that the logical AND of ui[4] and ui[6] drives all bits of the output uo[7:0].
+- **Reasoning**: Accurately reflects the unique "one-drives-all" architecture seen in the Wokwi connections.
+
+## Tiny Tapeout chip Verification Strategy (Test-ID 3716) (2026-03-16 17:15)
+
+### Solution 1: Sequential Verification (Chosen)
+- **Description**: Toggle the clock and inputs to verify that the D-flip-flops are correctly capturing and outputting values.
+- **Reasoning**: Directly tests the sequential nature of the design as seen in the Wokwi diagram.
+
+## fullAdder Verification Strategy (Test-ID 3731) (2026-03-16 17:15)
+
+### Solution 1: Full Truth Table (Chosen)
+- **Description**: Test all 8 combinations of inputs A, B, and Cin to verify the Sum and Carry outputs.
+- **Reasoning**: Provides exhaustive verification of the 1-bit full adder implementation.
+
+## 8-bit SEM Floating-Point Multiplier Verification Strategy (Test-ID 3766) (2026-03-16 17:15)
+
+### Solution 1: Special Case and Normal Multiplication (Chosen)
+- **Description**: Test NaN/Zero detection and a representative floating-point multiplication.
+- **Reasoning**: Covers both the critical edge cases and the primary functional requirement of the design.
