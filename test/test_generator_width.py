@@ -21,7 +21,7 @@ def test_generator_concise_width(tmp_path):
     result = subprocess.run([sys.executable, "src/scripts/generate_waveform.py", str(test_yaml)], capture_output=True, text=True)
     assert result.returncode == 0
 
-    svg_file = "images/concise_width.svg"
+    svg_file = "waveforms/concise_width.svg"
     assert os.path.exists(svg_file)
 
     with open(svg_file, "r") as f:

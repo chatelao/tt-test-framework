@@ -2,6 +2,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 .pytest_cache/
-images/*.png
+waveforms/*.png
 src/puml/*.puml
 test/*.yaml

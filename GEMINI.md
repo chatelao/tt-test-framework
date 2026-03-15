@@ -18,7 +18,7 @@
 
 ## Finishing
 - Check the boxes of solved tasks in the ROADMAP.md
-- Be sure all /src/data have generated /src/plantuml and /images
+- Be sure all /src/data have generated /src/plantuml and /waveforms
 
 # Project structure
 - ROADMAP.md - Planned & finished tasks of the product
@@ -30,11 +30,11 @@
 - /specifications - Convert "non .md" files for caching and readability purpose to Markdown
 - /design - Keep a human well readable design specification, write them before implementing
 - /design - Keep a human well readable design specification, write them before implementing
-- /src/scripts - Tools to verify the data and generate the images/documents
+- /src/scripts - Tools to verify the data and generate the waveforms/documents
 - /src/schema  - The schema of the test data files
 - /src/data    - Instances of the test schema
 - /src/puml    - Generate PlantUML timing diagramm files from every data file
-- /images      - Generate timing diagramm files from every plantuml file
+- /waveforms      - Generate timing diagramm files from every plantuml file
 - /src/docs    - Generate documentation for each test set
 - /test   - Test cases for all tasks, used to verify everything in src
 - /.github/workflows - For every push on every branch, re-generate all deliverables from the sources

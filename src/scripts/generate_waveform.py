@@ -118,12 +118,12 @@ def process_test_case(data, test_steps, output_base, case_name=None, outdir=None
     if outdir:
         svg_path = os.path.join(outdir, f"{output_base}{name_suffix}.svg")
     else:
-        svg_path = os.path.join("images", f"{output_base}{name_suffix}.svg")
+        svg_path = os.path.join("waveforms", f"{output_base}{name_suffix}.svg")
 
     if outdir:
         os.makedirs(outdir, exist_ok=True)
     else:
-        os.makedirs("images", exist_ok=True)
+        os.makedirs("waveforms", exist_ok=True)
 
     # Render SVG
     svg = wavedrom.render(json_str)
@@ -133,7 +133,7 @@ def process_test_case(data, test_steps, output_base, case_name=None, outdir=None
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate WaveDrom timing diagrams from YAML test definitions.')
     parser.add_argument('input_yaml', help='Path to the input YAML file')
-    parser.add_argument('--outdir', help='Optional output directory for SVG images (defaults to images/)')
+    parser.add_argument('--outdir', help='Optional output directory for SVG waveforms (defaults to waveforms/)')
     parser.add_argument('--suffix', help='Optional suffix for the output filename')
 
     args = parser.parse_args()

@@ -32,7 +32,7 @@ python src/scripts/generate_waveform.py <path_to_yaml>
 
 The script will output:
 - A `.puml` file containing the timing diagram source.
-- A `.png` image (if a PlantUML renderer is available).
+- An `.svg` image.
 
 ### Rendering PUML to Image
 

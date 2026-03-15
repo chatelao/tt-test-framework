@@ -18,7 +18,7 @@ This tool allows you to define the operational sequence of your Tiny-Tapeout pro
 - `src/data`: Contains test cases (e.g., MicroPython example).
 - `src/scripts`: Tooling for waveform generation.
 - `src/puml`: Generated PlantUML source files.
-- `images`: Generated PNG waveforms.
+- `waveforms`: Generated SVG waveforms.
 - `test`: End-to-end tests for the framework.
 
 ## Quick Start
@@ -28,4 +28,4 @@ This tool allows you to define the operational sequence of your Tiny-Tapeout pro
    ```bash
    python src/scripts/generate_waveform.py src/data/my_test.yaml
    ```
-3. View the resulting `.puml` file in `src/puml/` and `.png` in `images/`.
+3. View the resulting `.puml` file in `src/puml/` and `.svg` in `waveforms/`.
