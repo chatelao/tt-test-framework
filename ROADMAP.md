@@ -47,6 +47,16 @@
   - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
+- [x] Create simple testcase for Test-ID 3445 (Wildcat RISC-V) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3440 (Zedulo TestChip1) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3435 (TinyQV Risc-V SoC) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3430 (Classic 8-bit era Programmable Sound Generator SN76489) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3425 (2048 sliding tile puzzle game (VGA)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3420 (KianV RISC-V RV32E Baremetal SoC) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3415 (SimProc (Simple Processor)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3410 (Counter) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3405 (My (S)VGA Playground) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3400 (FIR Filter) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3775 (LoRa Edge SoC) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3765 (E-Beam Inspection Pixel Core) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3756 (Photo Frame) (2026-03-16)
