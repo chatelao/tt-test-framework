@@ -84,7 +84,7 @@
 | little frequency divider | ⭐ | S | [YAML](src/data/tt3623_freq_divider.yaml) | [SVG](waveforms/tt3623_freq_divider.svg) | [Project 3623](https://app.tinytapeout.com/projects/3623) |
 | 74LS138 | ⭐ | S | [YAML](src/data/tt3625_74ls138.yaml) | [SVG](waveforms/tt3625_74ls138.svg) | [Project 3625](https://app.tinytapeout.com/projects/3625) |
 | Test - clock divider | ⭐ | S | N/A | N/A | [Project 3626](https://app.tinytapeout.com/projects/3626) |
-| WIP | ⭐ | S | N/A | N/A | [Project 3629](https://app.tinytapeout.com/projects/3629) |
+| WIP | ⭐ | S | [YAML](src/data/tt3629_wip.yaml) | [SVG](waveforms/tt3629_wip.svg) | [Project 3629](https://app.tinytapeout.com/projects/3629) |
 | VGA Squares | ⭐ | S | [YAML](src/data/tt3632_vga_squares.yaml) | [SVG](waveforms/tt3632_vga_squares.svg) | [Project 3632](https://app.tinytapeout.com/projects/3632) |
 | VGA Maze Runner | ⭐ | S | N/A | N/A | [Project 3633](https://app.tinytapeout.com/projects/3633) |
 | TT6581 | ⭐⭐⭐ | L | N/A | N/A | [Project 3635](https://app.tinytapeout.com/projects/3635) |
@@ -95,17 +95,17 @@
 | tophat | ⭐⭐ | M | N/A | N/A | [Project 3648](https://app.tinytapeout.com/projects/3648) |
 | Silly demo | ⭐ | S | N/A | N/A | [Project 3651](https://app.tinytapeout.com/projects/3651) |
 | SID Voice Synthesizer | ⭐⭐ | M | N/A | N/A | [Project 3653](https://app.tinytapeout.com/projects/3653) |
-| TinyMOA: RISC-V CPU with Compute-in-Memory Accelerator | ⭐⭐⭐⭐⭐ | XXL | N/A | N/A | [Project 3654](https://app.tinytapeout.com/projects/3654) |
+| TinyMOA: RISC-V CPU with Compute-in-Memory Accelerator | ⭐⭐⭐⭐⭐ | XXL | [YAML](src/data/tt3654_tinymoa.yaml) | [SVG](waveforms/tt3654_tinymoa.svg) | [Project 3654](https://app.tinytapeout.com/projects/3654) |
 | Chisel Async Test | ⭐ | S | N/A | N/A | [Project 3656](https://app.tinytapeout.com/projects/3656) |
 | 4-Bit Adder | ⭐ | S | [YAML](src/data/tt3657_4bit_adder.yaml) | [SVG](waveforms/tt3657_4bit_adder.svg) | [Project 3657](https://app.tinytapeout.com/projects/3657) |
-| quad-sieve | ⭐⭐⭐ | L | N/A | N/A | [Project 3659](https://app.tinytapeout.com/projects/3659) |
+| quad-sieve | ⭐⭐⭐ | L | [YAML](src/data/tt3659_quad_sieve.yaml) | [SVG](waveforms/tt3659_quad_sieve.svg) | [Project 3659](https://app.tinytapeout.com/projects/3659) |
 | LLR simple VGA GPU | ⭐⭐ | M | N/A | N/A | [Project 3661](https://app.tinytapeout.com/projects/3661) |
 | Bernstein-Yang Modular Inverse (secp256k1) | ⭐⭐⭐⭐⭐ | XXL | [YAML](src/data/tt3662_test.yaml) | [SVG](waveforms/tt3662_test.svg) | [Project 3662](https://app.tinytapeout.com/projects/3662) |
-| Glitcher | ⭐ | S | N/A | N/A | [Project 3664](https://app.tinytapeout.com/projects/3664) |
+| Glitcher | ⭐ | S | [YAML](src/data/tt3664_glitcher.yaml) | [SVG](waveforms/tt3664_glitcher.svg) | [Project 3664](https://app.tinytapeout.com/projects/3664) |
 | TeenySPU | ⭐ | S | [YAML](src/data/tt3665_teenyspu.yaml) | [SVG](waveforms/tt3665_teenyspu.svg) | [Project 3665](https://app.tinytapeout.com/projects/3665) |
 | Moving Average Filter - Configurable Digital Signal Processor | ⭐ | S | [YAML](src/data/tt3666_dsp.yaml) | [SVG](waveforms/tt3666_dsp.svg) | [Project 3666](https://app.tinytapeout.com/projects/3666) |
 | Tiny tapeout and gate test | ⭐ | S | N/A | N/A | [Project 3668](https://app.tinytapeout.com/projects/3668) |
-| Full-adder | ⭐ | S | N/A | N/A | [Project 3669](https://app.tinytapeout.com/projects/3669) |
+| Full-adder | ⭐ | S | [YAML](src/data/tt3669_tiny_perceptron.yaml) | [SVG](waveforms/tt3669_tiny_perceptron.svg) | [Project 3669](https://app.tinytapeout.com/projects/3669) |
 | Test | ⭐ | S | N/A | N/A | [Project 3671](https://app.tinytapeout.com/projects/3671) |
 | 7 Segment Binary Viewer | ⭐ | S | [YAML](src/data/tt3674_7seg_binary.yaml) | [SVG](waveforms/tt3674_7seg_binary.svg) | [Project 3674](https://app.tinytapeout.com/projects/3674) |
 | Register bank accessible through SPI and I2C | ⭐ | S | N/A | N/A | [Project 3675](https://app.tinytapeout.com/projects/3675) |
@@ -118,15 +118,15 @@
 | Paafus First Chip Design | ⭐ | S | [YAML](src/data/tt3685_paafu.yaml) | [SVG](waveforms/tt3685_paafu.svg) | [Project 3685](https://app.tinytapeout.com/projects/3685) |
 | MyFirstChip | ⭐ | S | N/A | N/A | [Project 3686](https://app.tinytapeout.com/projects/3686) |
 | idk | ⭐ | S | N/A | N/A | [Project 3688](https://app.tinytapeout.com/projects/3688) |
-| Simple counter | ⭐ | S | N/A | N/A | [Project 3689](https://app.tinytapeout.com/projects/3689) |
+| Simple counter | ⭐ | S | [YAML](src/data/tt3689_simple_counter.yaml) | [SVG](waveforms/tt3689_simple_counter.svg) | [Project 3689](https://app.tinytapeout.com/projects/3689) |
 | Hello World | ⭐ | S | N/A | N/A | [Project 3691](https://app.tinytapeout.com/projects/3691) |
 | TinyTapeNkTest | ⭐ | S | N/A | N/A | [Project 3693](https://app.tinytapeout.com/projects/3693) |
-| WIP Bin to Dec | ⭐ | S | N/A | N/A | [Project 3694](https://app.tinytapeout.com/projects/3694) |
+| WIP Bin to Dec | ⭐ | S | [YAML](src/data/tt3694_bin2dec_wip.yaml) | [SVG](waveforms/tt3694_bin2dec_wip.svg) | [Project 3694](https://app.tinytapeout.com/projects/3694) |
 | Malthes First Template | ⭐ | S | N/A | N/A | [Project 3695](https://app.tinytapeout.com/projects/3695) |
 | Alex first circuit | ⭐ | S | N/A | N/A | [Project 3696](https://app.tinytapeout.com/projects/3696) |
 | GDS Test | ⭐ | S | [YAML](src/data/tt3697_gds_test.yaml) | [SVG](waveforms/tt3697_gds_test.svg) | [Project 3697](https://app.tinytapeout.com/projects/3697) |
 | 4-bit full adder | ⭐ | S | N/A | N/A | [Project 3698](https://app.tinytapeout.com/projects/3698) |
-| Tiny Tapeout First Design | ⭐ | S | N/A | N/A | [Project 3699](https://app.tinytapeout.com/projects/3699) |
+| Tiny Tapeout First Design | ⭐ | S | [YAML](src/data/tt3699_first_design.yaml) | [SVG](waveforms/tt3699_first_design.svg) | [Project 3699](https://app.tinytapeout.com/projects/3699) |
 | test | ⭐ | S | N/A | N/A | [Project 3700](https://app.tinytapeout.com/projects/3700) |
 | Cremedelcreme | ⭐ | S | N/A | N/A | [Project 3701](https://app.tinytapeout.com/projects/3701) |
 | And_Or | ⭐ | S | N/A | N/A | [Project 3703](https://app.tinytapeout.com/projects/3703) |
@@ -138,10 +138,10 @@
 | Undecided | ⭐ | S | [YAML](src/data/tt3710_undecided.yaml) | [SVG](waveforms/tt3710_undecided.svg) | [Project 3710](https://app.tinytapeout.com/projects/3710) |
 | Tiny Tapeout Workshop Test | ⭐ | S | [YAML](src/data/tt3711_gates.yaml) | [SVG](waveforms/tt3711_gates.svg) | [Project 3711](https://app.tinytapeout.com/projects/3711) |
 | JayF-HA | ⭐ | S | N/A | N/A | [Project 3713](https://app.tinytapeout.com/projects/3713) |
-| First tinytapeout 234 | ⭐ | S | N/A | N/A | [Project 3714](https://app.tinytapeout.com/projects/3714) |
+| First tinytapeout 234 | ⭐ | S | [YAML](src/data/tt3714_first_tt.yaml) | [SVG](waveforms/tt3714_first_tt.svg) | [Project 3714](https://app.tinytapeout.com/projects/3714) |
 | Tiny Tapeout chip | ⭐ | S | N/A | N/A | [Project 3716](https://app.tinytapeout.com/projects/3716) |
 | Hidden combination | ⭐ | S | N/A | N/A | [Project 3718](https://app.tinytapeout.com/projects/3718) |
-| Test | ⭐ | S | N/A | N/A | [Project 3719](https://app.tinytapeout.com/projects/3719) |
+| Test | ⭐ | S | [YAML](src/data/tt3719_test.yaml) | [SVG](waveforms/tt3719_test.svg) | [Project 3719](https://app.tinytapeout.com/projects/3719) |
 | Tiny Tapeout Copenhagen 2026 1st Project | ⭐ | S | [YAML](src/data/tt3720_copenhagen.yaml) | [SVG](waveforms/tt3720_copenhagen.svg) | [Project 3720](https://app.tinytapeout.com/projects/3720) |
 | Design_test_workshop | ⭐ | S | N/A | N/A | [Project 3722](https://app.tinytapeout.com/projects/3722) |
 | 7 segment number viewer | ⭐ | S | [YAML](src/data/tt3723_7seg_viewer.yaml) | [SVG](waveforms/tt3723_7seg_viewer.svg) | [Project 3723](https://app.tinytapeout.com/projects/3723) |
