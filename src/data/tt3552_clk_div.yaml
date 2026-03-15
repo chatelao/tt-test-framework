@@ -1,0 +1,13 @@
+project: "Primitive clock divider"
+metadata:
+  source: "https://github.com/alexey-serdyuk/tiny_tapeout_workshop"
+signals:
+  uo_out:
+    type: "output"
+    width: 8
+
+test_steps:
+  - name: "Wait for output"
+    cycles: 10
+    values:
+      uo_out: 0x00

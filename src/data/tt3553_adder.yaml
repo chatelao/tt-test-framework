@@ -1,0 +1,17 @@
+project: "adder"
+metadata:
+  source: "https://github.com/stsar/tiny_tapeout"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+
+test_steps:
+  - name: "Broken adder"
+    cycles: 1
+    values:
+      ui_in: 0
+      uo_out: 0

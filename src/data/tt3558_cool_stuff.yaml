@@ -1,0 +1,17 @@
+project: "Cool Stuff"
+metadata:
+  source: "https://github.com/PaxPlay/tiny-tapeout-design"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+
+test_steps:
+  - name: "Full adder test (ui[0], ui[1], ui[2])"
+    cycles: 1
+    values:
+      ui_in: 0b00000111
+      uo_out: 0b00000011
