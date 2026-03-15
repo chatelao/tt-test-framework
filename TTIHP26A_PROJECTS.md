@@ -1,6 +1,8 @@
 # TTIHP26A Projects Overview
 
-| Summary | T-shirt size | Test Data | Waveform | TinyTapeout Page |
+https://app.tinytapeout.com/shuttles/ttihp26a
+
+| Summary | T-shirt size | Test Data | Waveform | TT Page |
 |---------|--------------|-----------|----------|------------------|
 | mini mosbius | XL | N/A | N/A | [Project 3390](https://app.tinytapeout.com/projects/3390) |
 | Chip ROM | S | [YAML](src/data/tt3486_chip_rom.yaml) | [SVG](waveforms/tt3486_chip_rom.svg) | [Project 3486](https://app.tinytapeout.com/projects/3486) |
