@@ -1,0 +1,31 @@
+project: "Cell mux"
+metadata:
+  source: "https://github.com/htfab/ttgf0p2-cells"
+signals:
+  PAGE: {name: "PAGE", type: input, width: 5}
+  IN: {name: "IN", type: input, width: 3}
+  OUT: {name: "OUT", type: output, width: 8}
+  IN35: {name: "IN35", type: inout, width: 3}
+  EN_TRI: {name: "EN_TRI", type: inout, width: 1}
+test_steps:
+  - name: "Page 0"
+    cycles: 1
+    values:
+      PAGE: 0
+      IN: 0
+      IN35: 0
+      EN_TRI: 0
+  - name: "Page 1"
+    cycles: 1
+    values:
+      PAGE: 1
+      IN: 7
+      IN35: 7
+      EN_TRI: 1
+  - name: "Page 31"
+    cycles: 1
+    values:
+      PAGE: 31
+      IN: 0
+      IN35: 0
+      EN_TRI: 0

@@ -1,5 +1,19 @@
 # Decisions
 
+## 10 Additional TTIHP26a Projects (ID % 5 = 4) (2026-03-16 17:00)
+
+### Solution 1: Targeted Functional Verification (Chosen)
+- **Description**: Research and implement specific test cases for each of the 10 selected projects (Z80, VGA, Tic-Tac-Toe, etc.) based on their repository logic.
+- **Reasoning**: Ensures each test case is meaningful and accurately reflects the project's unique design and intended behavior.
+
+### Solution 2: Generic Reset and Pattern Test
+- **Description**: Use a uniform test template (reset + basic patterns) for all 10 projects regardless of their internal logic.
+- **Reasoning for Discarding**: While faster, it fails to verify the specific functionality of complex designs like the Z80 or VGA controllers.
+
+### Solution 3: Automated Truth Table Generation
+- **Description**: Attempt to automatically generate all possible input combinations for each project.
+- **Reasoning for Discarding**: Impractical for sequential designs and results in excessively large YAML files that are difficult to review.
+
 ## Add Novelty Column to TTIHP26A Projects Overview (2026-03-15 15:45)
 
 ### Solution 1: Size-based Heuristic (Chosen)

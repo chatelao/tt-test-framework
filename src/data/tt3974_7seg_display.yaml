@@ -1,0 +1,26 @@
+project: "O2ELHd 7segment display"
+metadata:
+  source: "https://github.com/OzelHD/wokwi_test"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  RST_N: {name: "RST_N", type: input, width: 1}
+  A: {name: "A", type: input, width: 1}
+  B: {name: "B", type: input, width: 1}
+  C: {name: "C", type: input, width: 1}
+  SEG: {name: "SEG", type: output, width: 7}
+  DOT: {name: "DOT", type: output, width: 1}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      RST_N: 0
+      A: 0
+      B: 0
+      C: 0
+  - name: "Active"
+    cycles: 10
+    values:
+      RST_N: 1
+      A: 0
+      B: 0
+      C: 0

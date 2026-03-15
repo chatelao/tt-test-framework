@@ -19,16 +19,13 @@
     - [ ] Test-ID: [3763](https://app.tinytapeout.com/projects/3763), Repo: https://github.com/coastalwhite/tinytapeout-ihp-canright
     - [ ] Test-ID: [3766](https://app.tinytapeout.com/projects/3766), Repo: https://github.com/DelosReyesJordan/ttihp26a-FP8-SEM-Multiplier
     - [ ] Test-ID: [3768](https://app.tinytapeout.com/projects/3768), Repo: https://github.com/intv0id/tt-ihp-TinyKalman
-    - [ ] Test-ID: [3769](https://app.tinytapeout.com/projects/3769), Repo: https://github.com/JPGHhb/ttihp-vga-tetris
     - [ ] Test-ID: [3771](https://app.tinytapeout.com/projects/3771), Repo: https://github.com/Isk1337/Count-To-Ten
     - [ ] Test-ID: [3772](https://app.tinytapeout.com/projects/3772), Repo: https://github.com/risc-v-wg/ttihp-26a-risc-v-wg-swc1
     - [ ] Test-ID: [3778](https://app.tinytapeout.com/projects/3778), Repo: https://github.com/TechHU-GS/analog-trial (Skipped - Analog)
     - [ ] Test-ID: [3948](https://app.tinytapeout.com/projects/3948), Repo: https://github.com/Neuromurf/ttihp26a-inferenceFCNN-16h3
     - [ ] Test-ID: [3949](https://app.tinytapeout.com/projects/3949), Repo: https://github.com/obrhubr/ttihp-submission
     - [ ] Test-ID: [3960](https://app.tinytapeout.com/projects/3960), Repo: https://github.com/anujic/anujic_ttihp26a (Skipped - Analog)
-    - [ ] Test-ID: [3974](https://app.tinytapeout.com/projects/3974), Repo: https://github.com/OzelHD/wokwi_test
     - [ ] Test-ID: [3978](https://app.tinytapeout.com/projects/3978), Repo: https://github.com/libormiller/ttihp-simon
-    - [ ] Test-ID: [3979](https://app.tinytapeout.com/projects/3979), Repo: https://github.com/tschai-yim/ttihp-mill
     - [ ] Test-ID: [3987](https://app.tinytapeout.com/projects/3987), Repo: https://github.com/gfcwfzkm/ttihp-scope (Skipped - Analog)
     - [ ] Test-ID: [3988](https://app.tinytapeout.com/projects/3988), Repo: https://github.com/htfab/ttihp-microlane-demo
     - [ ] Test-ID: [3991](https://app.tinytapeout.com/projects/3991), Repo: https://github.com/matei-coder/TinyTapeout-Processor2
@@ -47,6 +44,16 @@
   - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
+- [x] Create simple testcase for Test-ID 3979 (Tschai's Tic-Tac-Toe) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3974 (O2ELHd 7segment display) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3769 (VGA Tetris) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3534 (TinyTapeOut_gate) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3454 (MarcoPolo) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3449 (VGA Drop (audio/visual demo)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3439 (Cell mux) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3434 (Zilog Z80) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3409 (xorshift) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3404 (Verilog Multistage Oscillator with Enable and Counter) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3775 (LoRa Edge SoC) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3765 (E-Beam Inspection Pixel Core) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3756 (Photo Frame) (2026-03-16)
