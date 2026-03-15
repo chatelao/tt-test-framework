@@ -1,0 +1,19 @@
+project: "Custom_ASIC"
+metadata:
+  source: "https://github.com/jackb7273-jpg/Tiny_Tapeout"
+signals:
+  UI_IN: {type: input, width: 8}
+  UO_OUT: {type: output, width: 8}
+test_steps:
+  - name: "All zeros"
+    cycles: 1
+    values: {UI_IN: 0, UO_OUT: 0x40}
+  - name: "Set ui0"
+    cycles: 1
+    values: {UI_IN: 0x01, UO_OUT: 0x01}
+  - name: "Set ui1"
+    cycles: 1
+    values: {UI_IN: 0x02, UO_OUT: 0x00}
+  - name: "Set ui7"
+    cycles: 1
+    values: {UI_IN: 0x80, UO_OUT: 0x01}

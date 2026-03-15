@@ -1,39 +1,21 @@
-project: "random stuff"
+project: "random stuff (NOT gates)"
 metadata:
-  source: "https://wokwi.com/projects/455303279136701441"
+  source: "https://github.com/vlad-penchev/tinytapeoutz"
 signals:
-  UI_IN:
+  ui_in:
     type: "input"
     width: 8
-  CLK:
-    type: "input"
-    width: 1
-  RST_N:
-    type: "input"
-    width: 1
-  UO_OUT:
+  uo_out:
     type: "output"
     width: 8
 test_steps:
-  - name: "Reset"
+  - name: "NOT test"
     cycles: 1
     values:
-      UI_IN: 0x00
-      RST_N: 0
-      UO_OUT: 0x00
-  - name: "Out of Reset"
+      ui_in: 0b00000100 # ui[2]=1, ui[3]=0
+      uo_out: 0b00000100 # uo[2]=not ui[2]=0, uo[3]=not ui[3]=1 -> 0b0100 = 4
+  - name: "NOT test 2"
     cycles: 1
     values:
-      UI_IN: 0x00
-      RST_N: 1
-      UO_OUT: 0x00
-  - name: "Pattern 1"
-    cycles: 1
-    values:
-      UI_IN: 0x1F
-      UO_OUT: 0x03
-  - name: "Pattern 2"
-    cycles: 1
-    values:
-      UI_IN: 0x00
-      UO_OUT: 0x00
+      ui_in: 0b00001000 # ui[2]=0, ui[3]=1
+      uo_out: 0b00001000 # uo[2]=not 0 = 1, uo[3]=not 1 = 0 -> 0b1000 = 8

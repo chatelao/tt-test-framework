@@ -1,0 +1,34 @@
+project: "Tiny Tapeout N"
+metadata:
+  source: "https://github.com/Nama222/Tiny-Tapeout"
+signals:
+  clk:
+    type: "clock"
+    width: 1
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+test_steps:
+  - name: "XOR test 0^0"
+    cycles: 1
+    values:
+      ui_in: 0b00000000
+      uo_out: 0b00000000
+  - name: "XOR test 1^0"
+    cycles: 1
+    values:
+      ui_in: 0b00000001
+      uo_out: 0b00001000 # uo[3] = ui[0]^ui[1]
+  - name: "MUX test (sel=1, in5=1, in6=0 -> uo6=0)"
+    cycles: 1
+    values:
+      ui_in: 0b10100000
+      uo_out: 0b00000000
+  - name: "MUX test (sel=1, in5=1, in6=1 -> uo6=1)"
+    cycles: 1
+    values:
+      ui_in: 0b11100000
+      uo_out: 0b01000000
