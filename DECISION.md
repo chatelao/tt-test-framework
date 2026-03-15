@@ -404,8 +404,8 @@
 
 ## Project Structure Reorganization (2025-05-23 09:00)
 
-### Solution 1: Move images to /images and .puml to /src/puml (Chosen)
-- **Description**: Relocate generated PNG images to the root `/images` directory and PlantUML source files to `/src/puml`.
+### Solution 1: Move waveforms to /waveforms and .puml to /src/puml (Chosen)
+- **Description**: Relocate generated PNG waveforms to the root `/waveforms` directory and PlantUML source files to `/src/puml`.
 - **Reasoning**: Adheres to the user's specific request for better organization and separation of source files from generated artifacts.
 
 ### Solution 2: Move all artifacts to a single /artifacts directory

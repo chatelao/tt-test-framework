@@ -19,9 +19,9 @@ def test_generator(tmp_path):
     # Use sys.executable to match the environment
     result = subprocess.run([sys.executable, "src/scripts/generate_waveform.py", str(test_yaml)], capture_output=True, text=True)
     assert result.returncode == 0
-    assert os.path.exists("images/test_case.svg")
+    assert os.path.exists("waveforms/test_case.svg")
 
-    with open("images/test_case.svg", "r") as f:
+    with open("waveforms/test_case.svg", "r") as f:
         content = f.read()
         assert "<svg" in content
         assert "SIG" in content
@@ -50,13 +50,13 @@ def test_generator_multiple_cases(tmp_path):
     result = subprocess.run([sys.executable, "src/scripts/generate_waveform.py", str(test_yaml)], capture_output=True, text=True)
     assert result.returncode == 0
 
-    assert os.path.exists("images/multi_case_CaseA.svg")
-    assert os.path.exists("images/multi_case_CaseB.svg")
+    assert os.path.exists("waveforms/multi_case_CaseA.svg")
+    assert os.path.exists("waveforms/multi_case_CaseB.svg")
 
-    with open("images/multi_case_CaseA.svg", "r") as f:
+    with open("waveforms/multi_case_CaseA.svg", "r") as f:
         content = f.read()
         assert "SIG" in content
 
-    with open("images/multi_case_CaseB.svg", "r") as f:
+    with open("waveforms/multi_case_CaseB.svg", "r") as f:
         content = f.read()
         assert "SIG" in content
