@@ -2,57 +2,8 @@
 
 ## Planned
   - [ ] Create simple testcase for each assigned tile from TTIHP26A shuttle
-    - [ ] Test-ID: [3560](https://app.tinytapeout.com/projects/3560), Repo: https://github.com/JohannesNekes/Tiny-Tapeout-RGB-PWM
-    - [ ] Test-ID: [3562](https://app.tinytapeout.com/projects/3562), Repo: https://github.com/Ancash/tt
-    - [ ] Test-ID: [3567](https://app.tinytapeout.com/projects/3567), Repo: https://github.com/trupus/tt
-    - [ ] Test-ID: [3568](https://app.tinytapeout.com/projects/3568), Repo: https://github.com/youju26/tinytapeout
-    - [ ] Test-ID: [3570](https://app.tinytapeout.com/projects/3570), Repo: https://github.com/IsAreWhoKey/TTWorkshopThing
-    - [ ] Test-ID: [3572](https://app.tinytapeout.com/projects/3572), Repo: https://github.com/Aber-58/TinyTapeout-Aber
-    - [ ] Test-ID: [3573](https://app.tinytapeout.com/projects/3573), Repo: https://github.com/jackb7273-jpg/Tiny_Tapeout
-    - [ ] Test-ID: [3575](https://app.tinytapeout.com/projects/3575), Repo: https://github.com/pageeecs/FirstTapeout
-    - [ ] Test-ID: [3578](https://app.tinytapeout.com/projects/3578), Repo: https://github.com/neb-o/tinytapeout_260207
-    - [ ] Test-ID: [3580](https://app.tinytapeout.com/projects/3580), Repo: https://github.com/ManaOverflow/TinyTapeoutWorkshop
-    - [ ] Test-ID: [3582](https://app.tinytapeout.com/projects/3582), Repo: https://github.com/Shanmukha-ms/cim_tiny_tapeout
-    - [ ] Test-ID: [3585](https://app.tinytapeout.com/projects/3585), Repo: https://github.com/AriVishnu-01/Tiny-Tapeout
-    - [ ] Test-ID: [3588](https://app.tinytapeout.com/projects/3588), Repo: https://github.com/mar-3123/tiny_tapeout
-    - [ ] Test-ID: [3590](https://app.tinytapeout.com/projects/3590), Repo: https://github.com/jknotrowling/TinyTapeout
-    - [ ] Test-ID: [3592](https://app.tinytapeout.com/projects/3592), Repo: https://github.com/kenny3010/GDS1
-    - [ ] Test-ID: [3593](https://app.tinytapeout.com/projects/3593), Repo: https://github.com/Montagsfrei/TinyTapeoutWorkshop
-    - [ ] Test-ID: [3595](https://app.tinytapeout.com/projects/3595), Repo: https://github.com/SinnMachen/nein
-    - [ ] Test-ID: [3597](https://app.tinytapeout.com/projects/3597), Repo: https://github.com/Nampuk/tapatapatapa
-    - [ ] Test-ID: [3598](https://app.tinytapeout.com/projects/3598), Repo: https://github.com/Freddy-mllr/FreddysTapeout
-    - [ ] Test-ID: [3600](https://app.tinytapeout.com/projects/3600), Repo: https://github.com/dabro02/Daniel-s-Wokwi-Design
-    - [ ] Test-ID: [3602](https://app.tinytapeout.com/projects/3602), Repo: https://github.com/PleinR02/test
-    - [ ] Test-ID: [3605](https://app.tinytapeout.com/projects/3605), Repo: https://github.com/ArthFink/TinyTapeout
-    - [ ] Test-ID: [3607](https://app.tinytapeout.com/projects/3607), Repo: https://github.com/RimaitosLab/TinyTapeoutWorkshop
-    - [ ] Test-ID: [3610](https://app.tinytapeout.com/projects/3610), Repo: https://github.com/LordTaek/GDS_Creator
-    - [ ] Test-ID: [3612](https://app.tinytapeout.com/projects/3612), Repo: https://github.com/flo100500/tinytapeout
-    - [ ] Test-ID: [3613](https://app.tinytapeout.com/projects/3613), Repo: https://github.com/Engelbrecht-N/Wokiwi_template
-    - [ ] Test-ID: [3617](https://app.tinytapeout.com/projects/3617), Repo: https://github.com/plhrtr/TinyTapeOutTest
-    - [ ] Test-ID: [3620](https://app.tinytapeout.com/projects/3620), Repo: https://github.com/can-lehmann/tt-fpga
-    - [ ] Test-ID: [3622](https://app.tinytapeout.com/projects/3622), Repo: https://github.com/DebuggingDisaster/wowki
-    - [ ] Test-ID: [3623](https://app.tinytapeout.com/projects/3623), Repo: https://github.com/pauld0503/paul_tiny_tapeout
-    - [ ] Test-ID: [3629](https://app.tinytapeout.com/projects/3629), Repo: https://github.com/kmosta19/TinyTapeoutProject
-    - [ ] Test-ID: [3632](https://app.tinytapeout.com/projects/3632), Repo: https://github.com/matth-fischer/TT_VGA
-    - [ ] Test-ID: [3633](https://app.tinytapeout.com/projects/3633), Repo: https://github.com/phsauter/vga-playground-maze
-    - [ ] Test-ID: [3635](https://app.tinytapeout.com/projects/3635), Repo: https://github.com/apedersen00/tt6581
-    - [ ] Test-ID: [3645](https://app.tinytapeout.com/projects/3645), Repo: https://github.com/gonsolo/borg_tinyqv
-    - [ ] Test-ID: [3648](https://app.tinytapeout.com/projects/3648), Repo: https://github.com/pgfarley/tophat
-    - [ ] Test-ID: [3653](https://app.tinytapeout.com/projects/3653), Repo: https://github.com/rrrh/tiny_sid_chip
-    - [ ] Test-ID: [3654](https://app.tinytapeout.com/projects/3654), Repo: https://github.com/EzraWolf/TinyMOA-IHP26a
+    - [ ] Test-ID: [3523](https://app.tinytapeout.com/projects/3523), Repo: https://github.com/hoene/tt_um_hoene_firsttry (Skipped - Analog)
     - [ ] Test-ID: [3656](https://app.tinytapeout.com/projects/3656), Repo: https://github.com/tjarker/ttihp-feb-2026
-    - [ ] Test-ID: [3659](https://app.tinytapeout.com/projects/3659), Repo: https://github.com/swenson/ttihp-quad-sieve
-    - [ ] Test-ID: [3664](https://app.tinytapeout.com/projects/3664), Repo: https://github.com/pakesson/tt_glitcher
-    - [ ] Test-ID: [3669](https://app.tinytapeout.com/projects/3669), Repo: https://github.com/karlmose/tinytapeout_wokwi_test
-    - [ ] Test-ID: [3675](https://app.tinytapeout.com/projects/3675), Repo: https://github.com/calonso88/dtu_tt_workshop
-    - [ ] Test-ID: [3678](https://app.tinytapeout.com/projects/3678), Repo: https://github.com/MathiasKES/TinyTapeout2026-wokwi
-    - [ ] Test-ID: [3688](https://app.tinytapeout.com/projects/3688), Repo: https://github.com/jfho/tt-chip
-    - [ ] Test-ID: [3689](https://app.tinytapeout.com/projects/3689), Repo: https://github.com/McHerman/Tinytapeout
-    - [ ] Test-ID: [3693](https://app.tinytapeout.com/projects/3693), Repo: https://github.com/Niko78a1/tinytapeNK
-    - [ ] Test-ID: [3694](https://app.tinytapeout.com/projects/3694), Repo: https://github.com/SciFiCarrot/tiny-tapeout-workshop
-    - [ ] Test-ID: [3695](https://app.tinytapeout.com/projects/3695), Repo: https://github.com/Malthe2512/Tinytape
-    - [ ] Test-ID: [3698](https://app.tinytapeout.com/projects/3698), Repo: https://github.com/DragonDavid75/TinyTapeoutProjectWokwi
-    - [ ] Test-ID: [3699](https://app.tinytapeout.com/projects/3699), Repo: https://github.com/Skillygonzales/tiny_tapeout_demo
     - [ ] Test-ID: [3701](https://app.tinytapeout.com/projects/3701), Repo: https://github.com/celien-14/cremedelacreme
     - [ ] Test-ID: [3706](https://app.tinytapeout.com/projects/3706), Repo: https://github.com/giffel1/Scott-s-first-Wokwi-design
     - [ ] Test-ID: [3713](https://app.tinytapeout.com/projects/3713), Repo: https://github.com/Jfvind/tt-jfvind
@@ -64,12 +15,14 @@
     - [ ] Test-ID: [3731](https://app.tinytapeout.com/projects/3731), Repo: https://github.com/Nazgul-0/tinytapeoutGDS
     - [ ] Test-ID: [3734](https://app.tinytapeout.com/projects/3734), Repo: https://github.com/tarkor111/tiny-tapeout-design
     - [ ] Test-ID: [3757](https://app.tinytapeout.com/projects/3757), Repo: https://github.com/crockpotveggies/neuron-ttihp
+    - [ ] Test-ID: [3758](https://app.tinytapeout.com/projects/3758), Repo: https://github.com/YannGuidon/miniMAC_tx
     - [ ] Test-ID: [3763](https://app.tinytapeout.com/projects/3763), Repo: https://github.com/coastalwhite/tinytapeout-ihp-canright
     - [ ] Test-ID: [3766](https://app.tinytapeout.com/projects/3766), Repo: https://github.com/DelosReyesJordan/ttihp26a-FP8-SEM-Multiplier
     - [ ] Test-ID: [3768](https://app.tinytapeout.com/projects/3768), Repo: https://github.com/intv0id/tt-ihp-TinyKalman
     - [ ] Test-ID: [3769](https://app.tinytapeout.com/projects/3769), Repo: https://github.com/JPGHhb/ttihp-vga-tetris
     - [ ] Test-ID: [3771](https://app.tinytapeout.com/projects/3771), Repo: https://github.com/Isk1337/Count-To-Ten
     - [ ] Test-ID: [3772](https://app.tinytapeout.com/projects/3772), Repo: https://github.com/risc-v-wg/ttihp-26a-risc-v-wg-swc1
+    - [ ] Test-ID: [3778](https://app.tinytapeout.com/projects/3778), Repo: https://github.com/TechHU-GS/analog-trial (Skipped - Analog)
     - [ ] Test-ID: [3948](https://app.tinytapeout.com/projects/3948), Repo: https://github.com/Neuromurf/ttihp26a-inferenceFCNN-16h3
     - [ ] Test-ID: [3949](https://app.tinytapeout.com/projects/3949), Repo: https://github.com/obrhubr/ttihp-submission
     - [ ] Test-ID: [3960](https://app.tinytapeout.com/projects/3960), Repo: https://github.com/anujic/anujic_ttihp26a (Skipped - Analog)
@@ -84,33 +37,125 @@
     - [ ] Test-ID: [4002](https://app.tinytapeout.com/projects/4002), Repo: https://github.com/FilteredNoise/tt-infinity-core
     - [ ] Test-ID: [4003](https://app.tinytapeout.com/projects/4003), Repo: https://github.com/alessio8132/IHP26a-4-bit-processor
     - [ ] Test-ID: [4006](https://app.tinytapeout.com/projects/4006), Repo: https://github.com/GianmarcoFortunelli/TT_coprocessor
-    - [ ] Test-ID: [3778](https://app.tinytapeout.com/projects/3778), Repo: https://github.com/TechHU-GS/analog-trial (Skipped - Analog)
-    - [ ] Test-ID: [3523](https://app.tinytapeout.com/projects/3523), Repo: https://github.com/hoene/tt_um_hoene_firsttry (Skipped - Analog)
-    - [ ] Test-ID: [3758](https://app.tinytapeout.com/projects/3758), Repo: https://github.com/YannGuidon/miniMAC_tx
-
-- [ ] Add support for asynchronous signals (Planned)
-- [ ] Integrate with GHDL/Verilator for automated verification (Planned)
-- [ ] Integration with a simulator to verify test steps (Planned)
-- [ ] Improve documentation with examples (Planned)
-
+  - [ ] Add support for asynchronous signals (Planned)
+  - [ ] Integrate with GHDL/Verilator for automated verification (Planned)
+  - [ ] Integration with a simulator to verify test steps (Planned)
+  - [ ] Improve documentation with examples (Planned)
 
 ## Proposed
-- [ ] UI for defining test steps
-- [ ] Export to VHDL/Verilog testbench
+  - [ ] UI for defining test steps
+  - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
-- [x] Create simple testcase for Test-ID 3812 (Hardware UTF Encoder/Decoder) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3522 (Tiny D-Cache) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3477 (Flame demo) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3422 (Morse Code Detector (With Serial RX)) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3462 (Frequency Counter SSD1306 OLED) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3437 (Simon's Caterpillar) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3432 (Wafer.space Logo VGA Screensaver) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3417 (NCO) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3802 (1-bit counter and 2-to-4 decoder) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3782 (Chip ROM) (2026-03-15)
-- [x] Add Novelty column to TTIHP26A_PROJECTS.md (2026-03-15)
-- [x] Create project overview table TTIHP26A_PROJECTS.md (2026-03-16)
+- [x] Create simple testcase for Test-ID 3775 (LoRa Edge SoC) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3765 (E-Beam Inspection Pixel Core) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3756 (Photo Frame) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3755 (Tiny Tapeout Factory Test for ttihp-timer) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3735 (Workshop) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3730 (Tiny Tapeout Test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3725 (Tiny Tapeout Test Gates) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3719 (Test (XOR & D-FlipFlop)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3717 (ISC77x8 Side Scrolling Display) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3715 (Switch deBounce for Rotary Encoder) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3714 (First tinytapeout 234 (Logic & Pass-through)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3712 (Amaury Basic Test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3708 (My first design) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3705 (demo_chip) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3703 (And_Or) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3702 (Test Gates) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3700 (One One) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3699 (Tiny Tapeout First Design (Logic Gates)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3698 (4-bit full adder) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3696 (Alex first circuit (Johnson counter)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3695 (Malthes First Template) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3694 (WIP Bin to Dec (OR Logic)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3693 (TinyTapeNkTest) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3692 (SPI RAM Driver) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3691 (Hello World (Logic gates)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3689 (Simple Counter (Ripple Counter)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3688 (idk) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3687 (Half Adder) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3686 (MyFirstChip (Patterns)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3681 (MJ Wokwi project (Full Adder)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3680 (nand_gate) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3678 (2 Digit Display) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3676 (Counter Circuit) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3675 (SPI and I2C Register Bank) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3671 (Test (AND gate)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3670 (Full Adder) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3669 (Tiny Perceptron (Branch Predictor)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3668 (Tiny tapeout and gate test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3667 (8Bit Posit MAC Unit) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3664 (Glitcher (Pulse Generator)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3663 (Johnson counter) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3661 (LLR simple VGA GPU) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3659 (quad-sieve) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3654 (TinyMOA: RISC-V CPU with CIM Accelerator) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3653 (SID Voice Synthesizer) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3651 (Silly demo) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3650 (Cyber EMBEDDEDINN) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3648 (tophat) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3646 (4-bit Counter) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3645 (Borg - Vertex shader) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3642 (Bit-Serial Collatz Checker) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3641 (M31 Mersenne-31 Arithmetic Accelerator) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3640 (VGA Rings) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3635 (TT6581) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3633 (VGA Maze Runner) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3632 (VGA Squares) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3630 (VGA demo) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3629 (WIP (Logic & Pass-through)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3627 (DR Flip-flop Counter) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3626 (Test - shift register) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3624 (Tiny Tapeout 1) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3623 (little frequency divider) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3622 (WIP 7-seg Spinner) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3620 (Test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3619 (Tiny_Tapeout_Test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3617 (6-bit Ring Register WIP) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3616 (Two Song Buzzer Player) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3615 (gatekeeping the gates) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3613 (Nielss first failure) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3612 (6-bit Ring Register) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3611 (Count Upwards (7-segment)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3610 (Test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3607 (Switch Puzzle Logic) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3605 (DDMTD) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3604 (Tobias first Wokwi design) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3602 (Flip-Flop Test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3600 (Simon Says) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3599 (^My first design) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3598 (Freddys tapeout) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3597 (Apfelstrudel) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3595 (Hello tinyTapout) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3594 (Test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3593 (Workshop Day) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3592 (4-to-1 Multiplexer) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3590 (bad multiplexer) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3589 (83rk: Tiny Tapeout) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3588 (custom_lol) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3586 (Clock Divider Test Project) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3585 (Tiny Tapeout) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3584 (Tiny Tapeout) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3582 (Invertors Class Template) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3580 (Try1) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3579 (Programmable 8-BIT CPU) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3578 (neb tt26a first asic) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3576 (Tiny Tapeout Test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3575 (FirstTapeOut2) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3574 (Tudor BCD Test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3573 (Custom_ASIC) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3572 (Tiny Tapeout - Riddle Implementation) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3571 (Tiny Tapeout N) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3570 (Temporary Title) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3569 (RTX 8090) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3568 (My first tapeout) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3567 (Inverter Template Test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3566 (test (AND gate)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3563 (RS Half adder) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3562 (7-Segment Adder (0, 1, 2)) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3561 (uCore) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3560 (RGB PWM) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3559 (Just logic) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3558 (Cool Stuff) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3557 (Clocked Full Adder) (2026-03-16)
@@ -121,19 +166,36 @@
 - [x] Create simple testcase for Test-ID 3550 ((Hexa)Decimal Counter) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3549 (Tiny Triangle Rasterizer) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3548 (Full Adder Test) (2026-03-16)
-- [x] Create simple testcase for Test-ID 3547 (tiny-tapeout-workshop-result) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3545 (Tiny Ape Out) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3543 (SotaSoC) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3542 (VGABlock) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3540 (My first Wokwi design) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3539 (secretNo) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3537 (6 Bit Roulette) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3533 (Piggybag) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3531 (FH Joanneum TinyTapeout) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3528 (m6502 Microcontroller) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3502 (Herald) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3519 (Quad SPI Aggregator) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3515 (Discrete-to-ASIC Delta-Sigma Acquisition System) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3514 (SnakeGame) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3511 (vga test project) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3510 (Not a Dinosaur) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3509 (Silly Dog) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3508 (Tadder) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3507 (test_prj) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3506 (Snake) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3505 (TinyTapeout test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3504 (test) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3503 (RandomNum) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3498 (MBIST + MBISR Built-In Memory Test & Repair) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3497 (Silicon Art - Pixel Pig + Canary Token) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3495 (Simon Says memory game) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3494 (VGA Pride) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3493 (INTERCAL ALU) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3492 (Hardware UTF Encoder/Decoder) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3491 (Universal Binary to Segment Decoder) (2026-03-16)
+- [x] Create simple testcase for Test-ID 3489 (VGA Tiny Logo Roto Zoomer) (2026-03-16)
+- [x] Create project overview table TTIHP26A_PROJECTS.md (2026-03-16)
 - [x] Create simple testcase for Test-ID 3990 (OCP MXFP8 Streaming MAC Unit) (2026-03-15)
-- [x] Create simple testcase for Test-ID 3390 (mini mosbius) (Skipped - Analog / Not in shuttle ttihp26a) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3975 (vga_ca) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3970 (smolCPU) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3957 (VoGAl) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3812 (Hardware UTF Encoder/Decoder) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3802 (1-bit counter and 2-to-4 decoder) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3782 (Chip ROM) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3764 (Silly Mixer) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3759 (test hard macro) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3753 (FOMO) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3750 (AdEx Neuron NCS) (Skipped - Analog) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3747 (ttihp-HDSISO8) (2026-03-14)
@@ -142,60 +204,75 @@
 - [x] Create simple testcase for Test-ID 3743 (Wedgetail TCDE REV01) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3740 (tiny_tester) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3738 (ADPLL) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3737 (Verilog ring oscillator V2) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3736 (Linear Timecode (LTC) generator) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3733 (Smart LED digital) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3726 (Johnson counter) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3724 (sree) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3723 (7 segment number viewer) (2025-05-23)
+- [x] Create simple testcase for Test-ID 3720 (Copenhagen Workshop) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3711 (Logic Gates Test) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3710 (Undecided) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3709 (TTIHP26a_Luke_Meta) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3707 (tinytapeout_henningp_2bin_to_4bit_decoder) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3704 (Hello GDS) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3697 (GDS Test) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3685 (Paafus First Chip) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3684 (7 Segment BCD / CLA) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3682 (I2C to SPI Bridge) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3679 (Full Adder) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3674 (7 Segment Binary Viewer) (2025-05-23)
+- [x] Create simple testcase for Test-ID 3666 (Moving Average Filter) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3665 (TeenySPU) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3662 (ttip-test) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3657 (4-Bit Adder) (2025-05-23)
+- [x] Create simple testcase for Test-ID 3647 (2x2 Systolic array) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3638 (Yet another VGA tinytapeout) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3625 (74LS138 Inverter + Pass-through) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3618 (tt-verilog) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3614 (1-bit Full Adder) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3609 (tinytapeout) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3608 (Doom? Full Adder) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3603 (TinyTapeout logic gate test) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3587 (lriglooCs-first-Wokwi-design) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3581 (random stuff) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3577 (18-bit Ripple Counter) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3565 (FH Joanneum TinyTapeout) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3564 (2-Bit Adder) (2025-05-23)
+- [x] Create simple testcase for Test-ID 3556 (Yturkeri_Mytinytapeout) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3551 (Mein Hund Gniesbert) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3547 (tiny-tapeout-workshop-result) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3546 (1-4 Counter) (2025-05-23)
+- [x] Create simple testcase for Test-ID 3545 (Tiny Ape Out) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3543 (SotaSoC) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3542 (VGABlock) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3541 (2 Bit Adder) (2025-05-23)
+- [x] Create simple testcase for Test-ID 3540 (My first Wokwi design) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3539 (secretNo) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3538 (tinytapout_test) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3537 (6 Bit Roulette) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3534 (Herald) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3533 (Piggybag) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3531 (FH Joanneum TinyTapeout) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3528 (m6502 Microcontroller) (2026-03-15)
 - [x] Create simple testcase for Test-ID 3526 (tinyTapeVerilog_out) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3524 (Digital Lock with Easter Eggs) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3522 (Tiny D-Cache) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3512 (Silly Dog VGA) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3502 (Herald) (2026-03-15)
 - [x] Create simple testcase for Test-ID 3499 (Oscillating Bones) (Skipped - Analog) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3487 (Tiny Tapeout Factory Test) (2026-03-14)
 - [x] Create simple testcase for Test-ID 3486 (Chip ROM) (2026-03-14)
+- [x] Create simple testcase for Test-ID 3477 (Flame demo) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3462 (Frequency Counter SSD1306 OLED) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3437 (Simon's Caterpillar) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3432 (Wafer.space Logo VGA Screensaver) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3422 (Morse Code Detector (With Serial RX)) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3417 (NCO) (2026-03-15)
+- [x] Create simple testcase for Test-ID 3390 (mini mosbius) (Skipped - Analog / Not in shuttle ttihp26a) (2026-03-14)
+- [x] Add Novelty column to TTIHP26A_PROJECTS.md (2026-03-15)
 - [x] Render all testsets into /waveform with -wf suffix using WaveDrom (2026-03-14)
-- [x] Create simple testcase for Test-ID 3565 (FH Joanneum TinyTapeout) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3534 (Herald) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3682 (I2C to SPI Bridge) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3662 (ttip-test) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3726 (Johnson counter) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3975 (vga_ca) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3618 (tt-verilog) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3707 (tinytapeout_henningp_2bin_to_4bit_decoder) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3609 (tinytapeout) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3759 (test hard macro) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3538 (tinytapout_test) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3724 (sree) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3970 (smolCPU) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3581 (random stuff) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3587 (lriglooCs-first-Wokwi-design) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3556 (Yturkeri_Mytinytapeout) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3638 (Yet another VGA tinytapeout) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3957 (VoGAl) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3737 (Verilog ring oscillator V2) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3603 (TinyTapeout logic gate test) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3711 (Logic Gates Test) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3614 (1-bit Full Adder) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3647 (2x2 Systolic array) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3720 (Copenhagen Workshop) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3684 (7 Segment BCD / CLA) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3665 (TeenySPU) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3764 (Silly Mixer) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3512 (Silly Dog VGA) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3685 (Paafus First Chip) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3666 (Moving Average Filter) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3551 (Mein Hund Gniesbert) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3704 (Hello GDS) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3697 (GDS Test) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3679 (Full Adder) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3608 (Doom? Full Adder) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3577 (18-bit Ripple Counter) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3625 (74LS138 Inverter + Pass-through) (2026-03-14)
-- [x] Create simple testcase for Test-ID 3723 (7 segment number viewer) (2025-05-23)
-- [x] Create simple testcase for Test-ID 3674 (7 Segment Binary Viewer) (2025-05-23)
-- [x] Create simple testcase for Test-ID 3657 (4-Bit Adder) (2025-05-23)
 - [x] Add optional source field to test case data (2026-03-14)
-- [x] Create simple testcase for Test-ID 3541 (2 Bit Adder) (2025-05-23)
-- [x] Create simple testcase for Test-ID 3564 (2-Bit Adder) (2025-05-23)
-- [x] Create simple testcase for Test-ID 3546 (1-4 Counter) (2025-05-23)
 - [x] Support for multiple test cases in one YAML file (2025-05-22)
 - [x] Implement YAML validator against the schema (2025-05-22)
 - [x] Create YAML data for "micropython-example-tt-devkit" (2025-05-22)
