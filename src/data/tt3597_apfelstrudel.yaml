@@ -1,0 +1,41 @@
+project: "Apfelstrudel"
+metadata:
+  source: "https://github.com/Nampuk/tapatapatapa"
+signals:
+  ui[0:7]: {name: "UI_IN", type: input, width: 8}
+  uo[0:7]: {name: "UO_OUT", type: output, width: 8}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0:7]: 0
+  - name: "Test Logic Group 1"
+    cycles: 1
+    values:
+      ui[0]: 0 # UO0 = NOT(UI0) = 1
+      ui[1]: 1 # UO1 = UO0 & UI1 = 1 & 1 = 1
+      uo[0:1]: 0x3
+  - name: "Test Logic Group 2"
+    cycles: 1
+    values:
+      ui[2]: 1
+      ui[3]: 0 # UO2 = UI2 NAND UI3 = 1 NAND 0 = 1
+      uo[2]: 1
+  - name: "Test Logic Group 3"
+    cycles: 1
+    values:
+      ui[4]: 1 # UO4 = NOT(UI4) = 0
+      ui[5]: 1 # UO5 = UI4 XOR UI5 = 1 XOR 1 = 0
+      uo[4:5]: 0x0
+  - name: "Test Pass-through"
+    cycles: 1
+    values:
+      ui[6]: 1
+      uo[6]: 1
+  - name: "Test Logic Group 4"
+    cycles: 1
+    values:
+      ui[2]: 1
+      ui[3]: 1 # UO2 = 1 NAND 1 = 0. NOR1:A = 0
+      ui[7]: 0 # UO7 = 0 NOR 0 = 1
+      uo[7]: 1

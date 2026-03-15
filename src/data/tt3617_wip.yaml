@@ -1,0 +1,15 @@
+project: "6-bit Ring Register WIP"
+metadata:
+  source: "https://github.com/plhrtr/TinyTapeOutTest"
+signals:
+  clk: {name: "CLK", type: clock, width: 1}
+  uo[0:5]: {name: "Q", type: output, width: 6}
+test_steps:
+  - name: "Initial State"
+    cycles: 1
+    values:
+      uo[0:5]: 0
+  - name: "Step"
+    cycles: 1
+    values:
+      uo[0:5]: 0

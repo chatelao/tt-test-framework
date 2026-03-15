@@ -1,0 +1,28 @@
+project: "Invertors Class Template"
+metadata:
+  source: "https://github.com/Shanmukha-ms/cim_tiny_tapeout"
+signals:
+  ui[0:3]: {name: "UI_LOW", type: input, width: 4}
+  ui[4:7]: {name: "UI_HIGH", type: input, width: 4}
+  uo[0:3]: {name: "UO_INV", type: output, width: 4}
+  uo[4:7]: {name: "UO_PASS", type: output, width: 4}
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      ui[0:3]: 0
+      ui[4:7]: 0
+  - name: "Test Pattern 1"
+    cycles: 1
+    values:
+      ui[0:3]: 0x3
+      ui[4:7]: 0xC
+      uo[0:3]: 0xC
+      uo[4:7]: 0xC
+  - name: "Test Pattern 2"
+    cycles: 1
+    values:
+      ui[0:3]: 0x5
+      ui[4:7]: 0xA
+      uo[0:3]: 0xA
+      uo[4:7]: 0xA
