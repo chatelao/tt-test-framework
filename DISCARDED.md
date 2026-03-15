@@ -1,5 +1,15 @@
 # Discarded Solutions
 
+## OCP MXFP8 Streaming MAC Unit Verification Strategy (Test-ID 3990) (2026-03-15 08:58)
+
+### Solution 2: Full 41-Cycle Sequence
+- **Description**: Verify the entire 41-cycle standard protocol from initialization to output.
+- **Reasoning for Discarding**: Resulting timing diagram would be overly dense and difficult to read without providing significantly more insight than the initial phase for a simple functional check.
+
+### Solution 3: Reset Only
+- **Description**: Verify only the reset state and initialization at Cycle 0.
+- **Reasoning for Discarding**: Fails to demonstrate the FSM's progression through the multi-cycle configuration sequence.
+
 ## Handling of Project 3390 (mini mosbius) (2026-03-14 18:40)
 
 ### Solution 2: Implement basic test case for Project 3390
