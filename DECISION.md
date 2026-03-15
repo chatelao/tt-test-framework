@@ -1,5 +1,11 @@
 # Decisions
 
+## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3563-3663) (2026-03-16 12:00)
+
+### Solution 1: Targeted Functional Verification (Chosen)
+- **Description**: Implement simple functional test cases for the next batch of 10 projects (RS Half Adder, My first tapeout, Custom ASIC, neb tt26a first asic, custom_lol, Workshop Day, Freddys tapeout, Nielss first failure, little frequency divider, Johnson counter).
+- **Reasoning**: Ensures all projects in the current modulo-based batch are verified based on their specific architectures (Wokwi or Verilog).
+
 ## Next 10 TTIHP26a Projects Verification Strategy (Test-IDs 3548-3559) (2026-03-16 10:00)
 
 ### Solution 1: Targeted Functional Verification (Chosen)
