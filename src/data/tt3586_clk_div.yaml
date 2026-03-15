@@ -1,6 +1,6 @@
-project: "Two Song Buzzer Player"
+project: "Clock Divider Test Project"
 metadata:
-  source: "https://github.com/CT4111/test_WOKWI_Circute"
+  source: "https://github.com/werrever/TinyTapeout_werrever"
 signals:
   ui_in:
     type: "input"
@@ -21,13 +21,15 @@ test_steps:
       rst_n: 0
       ui_in: 0
       uo_out: 0
-  - name: "Play Song 0"
-    cycles: 5
+  - name: "Select Clock"
+    cycles: 1
     values:
       rst_n: 1
-      ui_in: 0
-  - name: "Play Song 1"
-    cycles: 5
+      ui_in: 0b00000101
+      uo_out: 0
+  - name: "Wait for clock"
+    cycles: 8
     values:
       rst_n: 1
-      ui_in: 1
+      ui_in: 0b00000101
+      uo_out: 0

@@ -1,0 +1,90 @@
+project: "M31 Mersenne-31 Arithmetic Accelerator"
+metadata:
+  source: "https://github.com/brmurrell3/tt_um_brmurrell3_m31_accel"
+signals:
+  ui_in:
+    type: "input"
+    width: 8
+  uo_out:
+    type: "output"
+    width: 8
+  uio_in:
+    type: "input"
+    width: 8
+  uio_out:
+    type: "output"
+    width: 8
+  clk:
+    type: "clock"
+    width: 1
+  rst_n:
+    type: "input"
+    width: 1
+test_steps:
+  - name: "Reset"
+    cycles: 1
+    values:
+      rst_n: 0
+      ui_in: 0
+      uio_in: 0
+      uo_out: 0
+  - name: "Load A byte 0"
+    cycles: 1
+    values:
+      rst_n: 1
+      uio_in: 0b00000000
+      ui_in: 0x05
+  - name: "Load A byte 1"
+    cycles: 1
+    values:
+      rst_n: 1
+      uio_in: 0b00000000
+      ui_in: 0x00
+  - name: "Load A byte 2"
+    cycles: 1
+    values:
+      rst_n: 1
+      uio_in: 0b00000000
+      ui_in: 0x00
+  - name: "Load A byte 3"
+    cycles: 1
+    values:
+      rst_n: 1
+      uio_in: 0b00000000
+      ui_in: 0x00
+  - name: "Load B byte 0"
+    cycles: 1
+    values:
+      rst_n: 1
+      uio_in: 0b00000010
+      ui_in: 0x10
+  - name: "Load B byte 1"
+    cycles: 1
+    values:
+      rst_n: 1
+      uio_in: 0b00000010
+      ui_in: 0x00
+  - name: "Load B byte 2"
+    cycles: 1
+    values:
+      rst_n: 1
+      uio_in: 0b00000010
+      ui_in: 0x00
+  - name: "Load B byte 3"
+    cycles: 1
+    values:
+      rst_n: 1
+      uio_in: 0b00000010
+      ui_in: 0x00
+  - name: "Execute ADD"
+    cycles: 1
+    values:
+      rst_n: 1
+      uio_in: 0b00000001
+      ui_in: 0x01
+  - name: "Read A byte 0"
+    cycles: 1
+    values:
+      rst_n: 1
+      uio_in: 0b00000100
+      uo_out: 0x15
