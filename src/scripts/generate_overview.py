@@ -81,89 +81,140 @@ async def get_project_details(pids):
     return details
 
 def parse_roadmap():
-    projects = []
+    roadmap_data = {} # pid -> {"name": ..., "reason": ...}
+    if not os.path.exists("ROADMAP.md"):
+        return roadmap_data
+
     with open("ROADMAP.md", "r") as f:
         lines = f.readlines()
 
-    # Matches planned tasks
-    # - [ ] Test-ID: [3560](https://app.tinytapeout.com/projects/3560), Repo: ...
     planned_re = re.compile(r"Test-ID: \[(\d+)\]")
-
-    # Matches finished tasks
-    # - [x] Create simple testcase for Test-ID 3559 (Just logic) (2026-03-16)
     finished_re = re.compile(r"Test-ID (\d+) \((.*?)\)")
+    skip_re = re.compile(r"\(Skipped - (.*?)\)")
 
     for line in lines:
-        m = planned_re.search(line)
-        if m:
-            pid = m.group(1)
-            projects.append({"id": pid, "name": "Unknown"})
-            continue
+        pid = None
+        name = "Unknown"
+        reason = None
 
-        m = finished_re.search(line)
-        if m:
-            pid = m.group(1)
-            name = m.group(2)
-            # Check if already added
-            found = False
-            for p in projects:
-                if p["id"] == pid:
-                    if p["name"] == "Unknown":
-                        p["name"] = name
-                    found = True
-                    break
-            if not found:
-                projects.append({"id": pid, "name": name})
+        m_skip = skip_re.search(line)
+        if m_skip:
+            reason = m_skip.group(1)
 
-    return projects
+        m_planned = planned_re.search(line)
+        if m_planned:
+            pid = m_planned.group(1)
+        else:
+            m_finished = finished_re.search(line)
+            if m_finished:
+                pid = m_finished.group(1)
+                name = m_finished.group(2)
+
+        if pid:
+            if pid not in roadmap_data:
+                roadmap_data[pid] = {"name": name, "reason": reason}
+            else:
+                if roadmap_data[pid]["name"] == "Unknown" and name != "Unknown":
+                    roadmap_data[pid]["name"] = name
+                if roadmap_data[pid]["reason"] is None and reason is not None:
+                    roadmap_data[pid]["reason"] = reason
+
+    return roadmap_data
 
 def find_files(pid):
-    yaml_file = ""
-    svg_file = ""
+    yaml_path = ""
+    svg_path = ""
 
-    for f in os.listdir("src/data"):
-        if f.startswith(f"tt{pid}") and f.endswith(".yaml"):
-            yaml_file = f"src/data/{f}"
-            break
+    if os.path.exists("src/data"):
+        for f in os.listdir("src/data"):
+            if f.startswith(f"tt{pid}") and f.endswith(".yaml"):
+                yaml_path = f"src/data/{f}"
+                break
 
-    for f in os.listdir("waveforms"):
-        if f.startswith(f"tt{pid}") and f.endswith(".svg"):
-            svg_file = f"waveforms/{f}"
-            break
+    if os.path.exists("waveforms"):
+        for f in os.listdir("waveforms"):
+            if f.startswith(f"tt{pid}") and f.endswith(".svg"):
+                svg_path = f"waveforms/{f}"
+                break
 
-    return yaml_file, svg_file
+    return yaml_path, svg_path
 
 async def main():
-    projects_from_roadmap = parse_roadmap()
-    # Filter unique IDs
-    unique_pids = sorted(list(set(p["id"] for p in projects_from_roadmap)), key=int)
+    # Collect all PIDs
+    all_pids = set()
 
-    print(f"Found {len(unique_pids)} projects in ROADMAP.md")
+    # From Roadmap
+    roadmap_data = parse_roadmap()
+    all_pids.update(roadmap_data.keys())
+
+    # From Files
+    if os.path.exists("src/data"):
+        for f in os.listdir("src/data"):
+            m = re.search(r"tt(\d+)", f)
+            if m: all_pids.add(m.group(1))
+
+    if os.path.exists("waveforms"):
+        for f in os.listdir("waveforms"):
+            m = re.search(r"tt(\d+)", f)
+            if m: all_pids.add(m.group(1))
+
+    # Remove obvious non-IDs (like 26 from ttihp26a if accidentally caught)
+    # tt IDs are usually 4 digits in this shuttle (starting 3390)
+    unique_pids = sorted([p for p in all_pids if len(p) >= 4], key=int)
+
+    print(f"Total projects identified: {len(unique_pids)}")
 
     project_details = await get_project_details(unique_pids)
 
+    testable_projects = []
+    untestable_projects = []
+
+    for pid in unique_pids:
+        details = project_details.get(pid, {})
+        name = details.get("name", "Unknown")
+        if name == "Unknown":
+            name = roadmap_data.get(pid, {}).get("name", "Unknown")
+
+        tiles = details.get("tiles", "Unknown")
+        size = get_tshirt_size(tiles)
+        novelty = get_novelty_stars(size)
+        yaml_path, svg_path = find_files(pid)
+
+        reason = roadmap_data.get(pid, {}).get("reason")
+
+        project_info = {
+            "id": pid,
+            "name": name,
+            "novelty": novelty,
+            "size": size,
+            "yaml_path": yaml_path,
+            "svg_path": svg_path,
+            "reason": reason
+        }
+
+        if reason:
+            untestable_projects.append(project_info)
+        else:
+            testable_projects.append(project_info)
+
     with open("TTIHP26A_PROJECTS.md", "w") as f:
         f.write("# TTIHP26A Projects Overview\n\n")
+
+        f.write("## Testable Designs\n\n")
         f.write("| Summary | Novelty | T-shirt size | Test Data | Waveform | TinyTapeout Page |\n")
         f.write("|---------|---------|--------------|-----------|----------|------------------|\n")
+        for p in testable_projects:
+            test_data_link = f"[YAML]({p['yaml_path']})" if p['yaml_path'] else "N/A"
+            waveform_link = f"[SVG]({p['svg_path']})" if p['svg_path'] else "N/A"
+            tt_page_link = f"[Project {p['id']}](https://app.tinytapeout.com/projects/{p['id']})"
+            f.write(f"| {p['name']} | {p['novelty']} | {p['size']} | {test_data_link} | {waveform_link} | {tt_page_link} |\n")
 
-        for pid in unique_pids:
-            # Prefer name from scraping, fallback to roadmap
-            details = project_details.get(pid, {})
-            name = details.get("name", "Unknown")
-            if name == "Unknown":
-                name = next((p["name"] for p in projects_from_roadmap if p["id"] == pid), "Unknown")
-
-            tiles = details.get("tiles", "Unknown")
-            size = get_tshirt_size(tiles)
-            novelty = get_novelty_stars(size)
-            yaml_path, svg_path = find_files(pid)
-
-            test_data_link = f"[YAML]({yaml_path})" if yaml_path else "N/A"
-            waveform_link = f"[SVG]({svg_path})" if svg_path else "N/A"
-            tt_page_link = f"[Project {pid}](https://app.tinytapeout.com/projects/{pid})"
-
-            f.write(f"| {name} | {novelty} | {size} | {test_data_link} | {waveform_link} | {tt_page_link} |\n")
+        f.write("\n## Untestable Designs\n\n")
+        f.write("| Summary | Novelty | T-shirt size | Why | TinyTapeout Page |\n")
+        f.write("|---------|---------|--------------|-----|------------------|\n")
+        for p in untestable_projects:
+            tt_page_link = f"[Project {p['id']}](https://app.tinytapeout.com/projects/{p['id']})"
+            f.write(f"| {p['name']} | {p['novelty']} | {p['size']} | {p['reason']} | {tt_page_link} |\n")
 
     print("Generated TTIHP26A_PROJECTS.md")
 
