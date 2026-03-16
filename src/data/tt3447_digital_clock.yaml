@@ -1,0 +1,19 @@
+project: "7-Segment Digital Desk Clock"
+metadata:
+  source: "https://github.com/sellicott/digital_clock_gf0p2"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  UI_IN: {name: "UI_IN", type: input, width: 8}
+  UO_OUT: {name: "UO_OUT", type: output, width: 8}
+  UIO_IN: {name: "UIO_IN", type: input, width: 8}
+  UIO_OUT: {name: "UIO_OUT", type: output, width: 8}
+test_steps:
+  - name: "Initial state"
+    cycles: 1
+    values: {UI_IN: 0, UIO_IN: 0}
+  - name: "Ref clock high"
+    cycles: 1
+    values: {UI_IN: 1, UIO_IN: 0} # refclk is ui[0]
+  - name: "SPI activity"
+    cycles: 5
+    values: {UI_IN: 0, UIO_IN: 0}

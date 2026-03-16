@@ -1,0 +1,18 @@
+project: "TTSKY26a Dummy"
+metadata:
+  source: "https://github.com/algofoogle/ttsky26a-dummy"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  UI_IN: {name: "UI_IN", type: input, width: 8}
+  UO_OUT: {name: "UO_OUT", type: output, width: 8}
+  UIO_IN: {name: "UIO_IN", type: input, width: 8}
+test_steps:
+  - name: "Addition 1+2=3"
+    cycles: 1
+    values: {UI_IN: 1, UIO_IN: 2, UO_OUT: 3}
+  - name: "Addition 10+20=30"
+    cycles: 1
+    values: {UI_IN: 10, UIO_IN: 20, UO_OUT: 30}
+  - name: "Addition 128+127=255"
+    cycles: 1
+    values: {UI_IN: 128, UIO_IN: 127, UO_OUT: 255}

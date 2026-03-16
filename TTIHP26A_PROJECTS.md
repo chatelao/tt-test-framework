@@ -2,9 +2,13 @@
 
 | Summary | Novelty | T-shirt size | Test Data | Waveform | TinyTapeout Page |
 |---------|---------|--------------|-----------|----------|------------------|
-| mini mosbius | ⭐⭐⭐⭐ | XL | N/A | N/A | [Project 3390](https://app.tinytapeout.com/projects/3390) |
+| Tiny Tapeout | N/A | Unknown | N/A | N/A | [Project 3390](https://app.tinytapeout.com/projects/3390) |
+| Bouncing squares | ⭐ | S | [YAML](src/data/tt3392_bouncing_squares.yaml) | [SVG](waveforms/tt3392_bouncing_squares.svg) | [Project 3392](https://app.tinytapeout.com/projects/3392) |
+| React Chip | ⭐ | S | [YAML](src/data/tt3397_react_chip.yaml) | [SVG](waveforms/tt3397_react_chip.svg) | [Project 3397](https://app.tinytapeout.com/projects/3397) |
 | FIR Filter | ⭐ | S | [YAML](src/data/tt3400_fir_filter.yaml) | [SVG](waveforms/tt3400_fir_filter.svg) | [Project 3400](https://app.tinytapeout.com/projects/3400) |
+| Verilog Multistage Oscillator with Enable and Counter | ⭐ | S | [YAML](src/data/tt3404_oscillator.yaml) | [SVG](waveforms/tt3404_oscillator.svg) | [Project 3404](https://app.tinytapeout.com/projects/3404) |
 | My (S)VGA Playground | ⭐⭐ | M | [YAML](src/data/tt3405_vga_playground.yaml) | [SVG](waveforms/tt3405_vga_playground.svg) | [Project 3405](https://app.tinytapeout.com/projects/3405) |
+| xorshift | ⭐ | S | [YAML](src/data/tt3409_xorshift.yaml) | [SVG](waveforms/tt3409_xorshift.svg) | [Project 3409](https://app.tinytapeout.com/projects/3409) |
 | Counter | ⭐ | S | [YAML](src/data/tt3410_counter.yaml) | [SVG](waveforms/tt3410_counter.svg) | [Project 3410](https://app.tinytapeout.com/projects/3410) |
 | SimProc (Simple Processor) | ⭐⭐⭐ | L | [YAML](src/data/tt3415_simproc.yaml) | [SVG](waveforms/tt3415_simproc.svg) | [Project 3415](https://app.tinytapeout.com/projects/3415) |
 | NCO | ⭐ | S | [YAML](src/data/tt3417_nco.yaml) | [SVG](waveforms/tt3417_nco.svg) | [Project 3417](https://app.tinytapeout.com/projects/3417) |
@@ -13,11 +17,20 @@
 | 2048 sliding tile puzzle game (VGA) | ⭐⭐⭐ | L | [YAML](src/data/tt3425_vga_2048.yaml) | [SVG](waveforms/tt3425_vga_2048.svg) | [Project 3425](https://app.tinytapeout.com/projects/3425) |
 | Classic 8-bit era Programmable Sound Generator SN76489 | ⭐ | S | [YAML](src/data/tt3430_sn76489.yaml) | [SVG](waveforms/tt3430_sn76489.svg) | [Project 3430](https://app.tinytapeout.com/projects/3430) |
 | Wafer.space Logo VGA Screensaver | ⭐⭐ | M | [YAML](src/data/tt3432_vga_screensaver.yaml) | [SVG](waveforms/tt3432_vga_screensaver.svg) | [Project 3432](https://app.tinytapeout.com/projects/3432) |
+| Zilog Z80 | ⭐⭐⭐ | L | [YAML](src/data/tt3434_z80.yaml) | [SVG](waveforms/tt3434_z80.svg) | [Project 3434](https://app.tinytapeout.com/projects/3434) |
 | TinyQV Risc-V SoC | ⭐⭐⭐⭐⭐ | XXL | [YAML](src/data/tt3435_tinyqv.yaml) | [SVG](waveforms/tt3435_tinyqv.svg) | [Project 3435](https://app.tinytapeout.com/projects/3435) |
 | Simon's Caterpillar | ⭐⭐ | M | [YAML](src/data/tt3437_caterpillar.yaml) | [SVG](waveforms/tt3437_caterpillar.svg) | [Project 3437](https://app.tinytapeout.com/projects/3437) |
+| Cell mux | ⭐ | S | [YAML](src/data/tt3439_cell_mux.yaml) | [SVG](waveforms/tt3439_cell_mux.svg) | [Project 3439](https://app.tinytapeout.com/projects/3439) |
 | Zedulo TestChip1 | ⭐ | S | [YAML](src/data/tt3440_zedtc1.yaml) | [SVG](waveforms/tt3440_zedtc1.svg) | [Project 3440](https://app.tinytapeout.com/projects/3440) |
 | Wildcat RISC-V | ⭐⭐⭐⭐ | XL | [YAML](src/data/tt3445_wildcat.yaml) | [SVG](waveforms/tt3445_wildcat.svg) | [Project 3445](https://app.tinytapeout.com/projects/3445) |
+| 7-Segment Digital Desk Clock | ⭐ | S | [YAML](src/data/tt3447_digital_clock.yaml) | [SVG](waveforms/tt3447_digital_clock.svg) | [Project 3447](https://app.tinytapeout.com/projects/3447) |
+| VGA Drop (audio/visual demo) | ⭐⭐⭐ | L | [YAML](src/data/tt3449_vga_drop.yaml) | [SVG](waveforms/tt3449_vga_drop.svg) | [Project 3449](https://app.tinytapeout.com/projects/3449) |
+| megabytebeat | ⭐⭐⭐⭐ | XL | [YAML](src/data/tt3452_megabytebeat.yaml) | [SVG](waveforms/tt3452_megabytebeat.svg) | [Project 3452](https://app.tinytapeout.com/projects/3452) |
+| MarcoPolo | ⭐ | S | [YAML](src/data/tt3454_marcopolo.yaml) | [SVG](waveforms/tt3454_marcopolo.svg) | [Project 3454](https://app.tinytapeout.com/projects/3454) |
+| CAN Controller for Rocket | ⭐⭐ | M | [YAML](src/data/tt3457_can_controller.yaml) | [SVG](waveforms/tt3457_can_controller.svg) | [Project 3457](https://app.tinytapeout.com/projects/3457) |
 | Frequency Counter SSD1306 OLED | ⭐⭐ | M | [YAML](src/data/tt3462_freq_counter.yaml) | [SVG](waveforms/tt3462_freq_counter.svg) | [Project 3462](https://app.tinytapeout.com/projects/3462) |
+| LISA 8-Bit Microcontroller | ⭐⭐⭐⭐⭐ | XXL | [YAML](src/data/tt3467_lisa_cpu.yaml) | [SVG](waveforms/tt3467_lisa_cpu.svg) | [Project 3467](https://app.tinytapeout.com/projects/3467) |
+| Dog Battle Game | ⭐ | S | [YAML](src/data/tt3472_dog_battle.yaml) | [SVG](waveforms/tt3472_dog_battle.svg) | [Project 3472](https://app.tinytapeout.com/projects/3472) |
 | Flame demo | ⭐ | S | [YAML](src/data/tt3477_flame_demo.yaml) | [SVG](waveforms/tt3477_flame_demo.svg) | [Project 3477](https://app.tinytapeout.com/projects/3477) |
 | Chip ROM | ⭐ | S | [YAML](src/data/tt3486_chip_rom.yaml) | [SVG](waveforms/tt3486_chip_rom.svg) | [Project 3486](https://app.tinytapeout.com/projects/3486) |
 | Tiny Tapeout Factory Test | ⭐ | S | [YAML](src/data/tt3487_factory_test.yaml) | [SVG](waveforms/tt3487_factory_test.svg) | [Project 3487](https://app.tinytapeout.com/projects/3487) |
@@ -245,16 +258,19 @@
 | Canright SBOX | ⭐ | S | [YAML](src/data/tt3763_canright_sbox.yaml) | [SVG](waveforms/tt3763_canright_sbox.svg) | [Project 3763](https://app.tinytapeout.com/projects/3763) |
 | Silly Mixer | ⭐ | S | [YAML](src/data/tt3764_mixer.yaml) | [SVG](waveforms/tt3764_mixer.svg) | [Project 3764](https://app.tinytapeout.com/projects/3764) |
 | E-Beam Inspection Pixel Core | ⭐⭐ | M | [YAML](src/data/tt3765_ebeam.yaml) | [SVG](waveforms/tt3765_ebeam.svg) | [Project 3765](https://app.tinytapeout.com/projects/3765) |
-| 8-bit SEM Floating-Point Multiplier | ⭐ | S | N/A | N/A | [Project 3766](https://app.tinytapeout.com/projects/3766) |
+| 8-bit SEM Floating-Point Multiplier | ⭐ | S | [YAML](src/data/tt3766.yaml) | [SVG](waveforms/tt3766.svg) | [Project 3766](https://app.tinytapeout.com/projects/3766) |
 | Kalman Filter for IMU | ⭐⭐ | M | [YAML](src/data/tt3768_kalman_filter.yaml) | [SVG](waveforms/tt3768_kalman_filter.svg) | [Project 3768](https://app.tinytapeout.com/projects/3768) |
-| VGA Tetris | ⭐⭐⭐ | L | N/A | N/A | [Project 3769](https://app.tinytapeout.com/projects/3769) |
+| VGA Tetris | ⭐⭐⭐ | L | [YAML](src/data/tt3769_vga_tetris.yaml) | [SVG](waveforms/tt3769_vga_tetris.svg) | [Project 3769](https://app.tinytapeout.com/projects/3769) |
 | Count To Ten | ⭐ | S | N/A | N/A | [Project 3771](https://app.tinytapeout.com/projects/3771) |
 | ttihp-26a-risc-v-wg-swc1 | ⭐⭐⭐⭐⭐ | XXL | N/A | N/A | [Project 3772](https://app.tinytapeout.com/projects/3772) |
 | LoRa Edge SoC | ⭐⭐⭐⭐ | XL | [YAML](src/data/tt3775_lora_soc.yaml) | [SVG](waveforms/tt3775_lora_soc.svg) | [Project 3775](https://app.tinytapeout.com/projects/3775) |
 | Bandgap Reference + PTAT Sensor | ⭐⭐ | M | N/A | N/A | [Project 3778](https://app.tinytapeout.com/projects/3778) |
 | Chip ROM | ⭐ | S | [YAML](src/data/tt3782_chip_rom.yaml) | [SVG](waveforms/tt3782_chip_rom.svg) | [Project 3782](https://app.tinytapeout.com/projects/3782) |
+| Tiny D-Cache | ⭐ | S | [YAML](src/data/tt3787_dcache.yaml) | [SVG](waveforms/tt3787_dcache.svg) | [Project 3787](https://app.tinytapeout.com/projects/3787) |
 | 1-bit counter and 2-to-4 decoder | ⭐ | S | [YAML](src/data/tt3802_counter_decoder.yaml) | [SVG](waveforms/tt3802_counter_decoder.svg) | [Project 3802](https://app.tinytapeout.com/projects/3802) |
 | Hardware UTF Encoder/Decoder | ⭐ | S | [YAML](src/data/tt3812_utf8.yaml) | [SVG](waveforms/tt3812_utf8.svg) | [Project 3812](https://app.tinytapeout.com/projects/3812) |
+| TinyTapeout Traffic Light Controller | ⭐ | S | [YAML](src/data/tt3817_traffic_light.yaml) | [SVG](waveforms/tt3817_traffic_light.svg) | [Project 3817](https://app.tinytapeout.com/projects/3817) |
+| TTSKY26a Dummy | ⭐ | S | [YAML](src/data/tt3827_dummy_adder.yaml) | [SVG](waveforms/tt3827_dummy_adder.svg) | [Project 3827](https://app.tinytapeout.com/projects/3827) |
 | SEQ_MAC_INF_16H3 - Neural Network Inference Accelerator | ⭐⭐ | M | [YAML](src/data/tt3948_seq_mac_inf.yaml) | [SVG](waveforms/tt3948_seq_mac_inf.svg) | [Project 3948](https://app.tinytapeout.com/projects/3948) |
 | 8-bit Prime Number Detector | ⭐ | S | N/A | N/A | [Project 3949](https://app.tinytapeout.com/projects/3949) |
 | VoGAl | ⭐ | S | [YAML](src/data/tt3957_vogal.yaml) | [SVG](waveforms/tt3957_vogal.svg) | [Project 3957](https://app.tinytapeout.com/projects/3957) |
@@ -263,7 +279,7 @@
 | O2ELHd 7segment display | ⭐ | S | [YAML](src/data/tt3974_7seg_display.yaml) | [SVG](waveforms/tt3974_7seg_display.svg) | [Project 3974](https://app.tinytapeout.com/projects/3974) |
 | vga_ca | ⭐ | S | [YAML](src/data/tt3975_vgaca.yaml) | [SVG](waveforms/tt3975_vgaca.svg) | [Project 3975](https://app.tinytapeout.com/projects/3975) |
 | SIMON | ⭐⭐ | M | [YAML](src/data/tt3978_simon.yaml) | [SVG](waveforms/tt3978_simon.svg) | [Project 3978](https://app.tinytapeout.com/projects/3978) |
-| Tschai's Tic-Tac-Toe | ⭐ | S | N/A | N/A | [Project 3979](https://app.tinytapeout.com/projects/3979) |
+| Tschai's Tic-Tac-Toe | ⭐ | S | [YAML](src/data/tt3979_tictactoe.yaml) | [SVG](waveforms/tt3979_tictactoe.svg) | [Project 3979](https://app.tinytapeout.com/projects/3979) |
 | Basic Oszilloscope and Signal Generator | ⭐⭐ | M | N/A | N/A | [Project 3987](https://app.tinytapeout.com/projects/3987) |
 | microlane demo project | ⭐ | S | [YAML](src/data/tt3988_microlane_demo.yaml) | [SVG](waveforms/tt3988_microlane_demo.svg) | [Project 3988](https://app.tinytapeout.com/projects/3988) |
 | OCP MXFP8 Streaming MAC Unit | ⭐⭐ | M | [YAML](src/data/tt3990_fp8_mul.yaml) | [SVG](waveforms/tt3990_fp8_mul.svg) | [Project 3990](https://app.tinytapeout.com/projects/3990) |

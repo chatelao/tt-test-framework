@@ -1,0 +1,14 @@
+project: "megabytebeat"
+metadata:
+  source: "https://github.com/proppy/ttgf-megabytebeat"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  UI_IN: {name: "UI_IN", type: input, width: 8}
+  UO_OUT: {name: "UO_OUT", type: output, width: 8}
+test_steps:
+  - name: "Initial state"
+    cycles: 1
+    values: {UI_IN: 0}
+  - name: "PWM output activity"
+    cycles: 10
+    values: {UI_IN: 170} # Example parameters ui[7:0]
