@@ -1,0 +1,17 @@
+project: "Bouncing squares"
+metadata:
+  source: "https://github.com/parabolaguay-boop/bouncing-squares"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  UI_IN: {name: "UI_IN", type: input, width: 8}
+  UO_OUT: {name: "UO_OUT", type: output, width: 8}
+test_steps:
+  - name: "Initial state"
+    cycles: 1
+    values: {UI_IN: 0}
+  - name: "HSync high"
+    cycles: 5
+    values: {UI_IN: 0, UO_OUT: 128} # HSync is uo[7]
+  - name: "Activity"
+    cycles: 10
+    values: {UI_IN: 0}

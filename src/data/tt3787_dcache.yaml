@@ -1,0 +1,17 @@
+project: "Tiny D-Cache"
+metadata:
+  source: "https://github.com/Niels5931/ttihp_simple_dcache"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  UI_IN: {name: "UI_IN", type: input, width: 8}
+  UO_OUT: {name: "UO_OUT", type: output, width: 8}
+test_steps:
+  - name: "Initial state"
+    cycles: 1
+    values: {UI_IN: 0}
+  - name: "Cache Ready"
+    cycles: 1
+    values: {UI_IN: 0, UO_OUT: 16} # req_ready is uo[4]
+  - name: "Handshake"
+    cycles: 2
+    values: {UI_IN: 16, UO_OUT: 16} # req_valid is ui[4]

@@ -1,0 +1,17 @@
+project: "CAN Controller for Rocket"
+metadata:
+  source: "https://github.com/noritsuna/ttgf0p2-tt_um_noritsuna_CAN_CTRL"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  UI_IN: {name: "UI_IN", type: input, width: 8}
+  UO_OUT: {name: "UO_OUT", type: output, width: 8}
+test_steps:
+  - name: "Initial state"
+    cycles: 1
+    values: {UI_IN: 8} # Reset active low ui[3]
+  - name: "Enable"
+    cycles: 1
+    values: {UI_IN: 0, UO_OUT: 4} # TT_Enable is uo[2]
+  - name: "Clock toggle"
+    cycles: 1
+    values: {UI_IN: 0, UO_OUT: 12} # TT_Clock is uo[3]

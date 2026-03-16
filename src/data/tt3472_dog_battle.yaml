@@ -1,0 +1,17 @@
+project: "Dog Battle Game"
+metadata:
+  source: "https://github.com/sophusand/tt_gf_DOG_FIGHT"
+signals:
+  CLK: {name: "CLK", type: clock, width: 1}
+  UI_IN: {name: "UI_IN", type: input, width: 8}
+  UO_OUT: {name: "UO_OUT", type: output, width: 8}
+test_steps:
+  - name: "Initial state"
+    cycles: 1
+    values: {UI_IN: 2} # reset_n high
+  - name: "VGA Sync high"
+    cycles: 5
+    values: {UI_IN: 2, UO_OUT: 3} # vga_vs uo[0], vga_hs uo[1]
+  - name: "Activity"
+    cycles: 10
+    values: {UI_IN: 2}
