@@ -9,8 +9,17 @@ signals:
   rst_n: {name: rst_n, type: input, width: 1}
 test_steps:
   - name: Reset
-    cycles: 1
+    cycles: 2
     values: {rst_n: 0, ui_in: 0}
-  - name: Initial Boot
+  - name: Boot Sequence
+    cycles: 20
+    values: {rst_n: 1, ui_in: 0x01} # Enable LED via ui[0]
+  - name: Instruction Execution
+    cycles: 50
+    values: {rst_n: 1, ui_in: 0x01}
+  - name: Toggle LED Enable
     cycles: 10
-    values: {rst_n: 1, ui_in: 0}
+    values: {rst_n: 1, ui_in: 0x00}
+  - name: Restore LED Enable
+    cycles: 38
+    values: {rst_n: 1, ui_in: 0x01}
