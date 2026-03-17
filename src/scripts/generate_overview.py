@@ -236,6 +236,11 @@ async def main():
         else:
             testable_projects.append(project_info)
 
+    # Sort by complexity (T-shirt size) descending, then by ID ascending
+    complexity_map = {"S": 1, "M": 2, "L": 3, "XL": 4, "XXL": 5, "XXXL": 6, "Unknown": 0}
+    testable_projects.sort(key=lambda x: (-complexity_map.get(x["size"], 0), int(x["id"])))
+    untestable_projects.sort(key=lambda x: (-complexity_map.get(x["size"], 0), int(x["id"])))
+
     with open("TTIHP26A_PROJECTS.md", "w") as f:
         f.write("# TTIHP26A Projects Overview\n\n")
 
