@@ -2,42 +2,27 @@ project: "FH Joanneum TinyTapeout"
 metadata:
   source: "https://github.com/Electronic-and-Computer-Engineering/TT_IHP26a_FH_uC"
 signals:
-  SPI_MISO:
-    type: "input"
-    width: 1
-  GPIO_IN:
-    type: "input"
-    width: 4
-  SPI_MOSI:
-    type: "output"
-    width: 1
-  SPI_CLK:
-    type: "output"
-    width: 1
-  SPI_CS1_N:
-    type: "output"
-    width: 1
-  SPI_CS2_N:
-    type: "output"
-    width: 1
-  GPIO_OUT:
-    type: "output"
-    width: 4
-  CLK:
-    type: "clock"
-    width: 1
-  RST_N:
-    type: "input"
-    width: 1
+  SPI_MISO: {type: input, width: 1}
+  GPIO_IN: {type: input, width: 4}
+  SPI_MOSI: {type: output, width: 1}
+  SPI_CLK: {type: output, width: 1}
+  SPI_CS1_N: {type: output, width: 1}
+  SPI_CS2_N: {type: output, width: 1}
+  GPIO_OUT: {type: output, width: 4}
+  CLK: {type: clock, width: 1}
+  RST_N: {type: input, width: 1}
 test_steps:
   - name: "Reset"
-    cycles: 1
+    cycles: 10
     values:
       RST_N: 0
-      SPI_MOSI: 0
-      GPIO_OUT: 0x0
-  - name: "Idle"
-    cycles: 5
+      SPI_MISO: 0
+      GPIO_IN: 0x0
+  - name: "Wait for SERV Startup"
+    cycles: 20
     values:
       RST_N: 1
-      GPIO_OUT: 0x0
+  - name: "Observe SPI Activity"
+    cycles: 90
+    values:
+      RST_N: 1

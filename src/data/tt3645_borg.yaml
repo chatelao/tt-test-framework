@@ -3,36 +3,26 @@ metadata:
   source: "https://github.com/gonsolo/borg_tinyqv"
   project_id: "3645"
 signals:
-  ENA:
-    type: "input"
-    width: 1
-  RST_N:
-    type: "input"
-    width: 1
-  UI_IN:
-    type: "input"
-    width: 8
-  UO_OUT:
-    type: "output"
-    width: 8
-  UIO:
-    type: "inout"
-    width: 8
+  ENA: {type: input, width: 1}
+  RST_N: {type: input, width: 1}
+  UI_IN: {type: input, width: 8}
+  UO_OUT: {type: output, width: 8}
+  UIO_IN: {name: uio_in, type: input, width: 8}
+  UIO_OUT: {name: uio_out, type: output, width: 8}
+  CLK: {type: clock, width: 1}
 
 test_steps:
   - name: "Reset"
-    cycles: 1
+    cycles: 5
     values:
       ENA: 1
       RST_N: 0
-      UI_IN: 0
-      UIO: 0xFF
-      UO_OUT: 0
+      UI_IN: 0x80 # UART RX idle high
+      UIO_IN: 0xFF
 
-  - name: "Idle"
-    cycles: 1
+  - name: "Idle/Boot"
+    cycles: 115
     values:
       RST_N: 1
-      UI_IN: 0x80 # UART RX idle high
-      UIO: 0xFF
-      UO_OUT: 0x01 # UART TX idle high
+      UI_IN: 0x80
+      UIO_IN: 0xFF
