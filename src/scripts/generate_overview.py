@@ -236,7 +236,8 @@ async def main():
         else:
             testable_projects.append(project_info)
 
-    with open("TTIHP26A_PROJECTS.md", "w") as f:
+    os.makedirs("src/docs", exist_ok=True)
+    with open("src/docs/TTIHP26A_PROJECTS.md", "w") as f:
         f.write("# TTIHP26A Projects Overview\n\n")
 
         f.write("## Testable Designs\n\n")
@@ -255,7 +256,7 @@ async def main():
             tt_page_link = f"[Project {p['id']}](https://app.tinytapeout.com/projects/{p['id']})"
             f.write(f"| {p['name']} | {p['novelty']} | {p['size']} | {p['reason']} | {tt_page_link} |\n")
 
-    print("Generated TTIHP26A_PROJECTS.md")
+    print("Generated src/docs/TTIHP26A_PROJECTS.md")
 
 if __name__ == "__main__":
     asyncio.run(main())

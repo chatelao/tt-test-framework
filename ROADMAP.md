@@ -1,21 +1,21 @@
 # Roadmap
 
 ## Planned
-  - [ ] Create simple testcase for each assigned tile from TTIHP26A shuttle
-    - [ ] Test-ID: [3523](https://app.tinytapeout.com/projects/3523), Repo: Unknown (Skipped - Analog)
-    - [ ] Test-ID: [3778](https://app.tinytapeout.com/projects/3778), Repo: Unknown (Skipped - Analog)
-    - [ ] Test-ID: [3960](https://app.tinytapeout.com/projects/3960), Repo: Unknown (Skipped - Analog)
-    - [ ] Test-ID: [3987](https://app.tinytapeout.com/projects/3987), Repo: Unknown (Skipped - Analog)
-  - [ ] Add support for asynchronous signals (Planned)
-  - [ ] Integrate with GHDL/Verilator for automated verification (Planned)
-  - [ ] Integration with a simulator to verify test steps (Planned)
-  - [ ] Improve documentation with examples (Planned)
+  - [ ] Add support for asynchronous signals
+  - [ ] Integrate with GHDL/Verilator for automated verification
+  - [ ] Integration with a simulator to verify test steps
+  - [ ] Improve documentation with examples
+  - [ ] Add support for automated test case generation from Verilog source
 
 ## Proposed
   - [ ] UI for defining test steps
   - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
+- [x] Create simple testcase for Test-ID 3987 (Basic Oszilloscope and Signal Generator) (Skipped - Analog) (2025-05-23)
+- [x] Create simple testcase for Test-ID 3960 (True-er Random Number Generator TRNG) (Skipped - Analog) (2025-05-23)
+- [x] Create simple testcase for Test-ID 3778 (Bandgap Reference + PTAT Sensor ANALOG) (Skipped - Analog) (2025-05-23)
+- [x] Create simple testcase for Test-ID 3523 (first try) (Skipped - Analog) (2025-05-23)
 - [x] Create simple testcase for Test-ID 4006 (Custom coprocessor) (2025-05-23)
 - [x] Create simple testcase for Test-ID 4003 (4-bit processor) (2025-05-23)
 - [x] Create simple testcase for Test-ID 4002 (Infinity Core) (2025-05-23)

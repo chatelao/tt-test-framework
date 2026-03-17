@@ -283,6 +283,6 @@
 | Oscillating Bones | ⭐⭐ | M | Analog | [Project 3499](https://app.tinytapeout.com/projects/3499) |
 | first try | ⭐⭐ | M | Analog | [Project 3523](https://app.tinytapeout.com/projects/3523) |
 | AdEx Neuron NCS | ⭐⭐⭐ | L | Analog | [Project 3750](https://app.tinytapeout.com/projects/3750) |
-| Bandgap Reference + PTAT Sensor | ⭐⭐ | M | Analog | [Project 3778](https://app.tinytapeout.com/projects/3778) |
-| True(er) Random Number Generator (TRNG) | ⭐ | S | Analog | [Project 3960](https://app.tinytapeout.com/projects/3960) |
+| Bandgap Reference + PTAT Sensor ANALOG | ⭐⭐ | M | Analog | [Project 3778](https://app.tinytapeout.com/projects/3778) |
+| True-er Random Number Generator TRNG | ⭐ | S | Analog | [Project 3960](https://app.tinytapeout.com/projects/3960) |
 | Basic Oszilloscope and Signal Generator | ⭐⭐ | M | Analog | [Project 3987](https://app.tinytapeout.com/projects/3987) |
