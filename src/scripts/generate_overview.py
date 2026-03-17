@@ -52,8 +52,11 @@ async def get_project_details(pids):
             try:
                 url = f"https://app.tinytapeout.com/projects/{pid}"
                 await page.goto(url, timeout=30000)
-                # Wait a bit for the SPA to render
-                await page.wait_for_timeout(1000)
+                # Wait for the specific title element if possible, or network idle
+                try:
+                    await page.wait_for_selector("h1.MuiTypography-h4", timeout=5000)
+                except:
+                    await page.wait_for_load_state("networkidle")
 
                 # Extract Tiles
                 tiles = "Unknown"
@@ -79,6 +82,19 @@ async def get_project_details(pids):
                 details[pid] = {"tiles": "Unknown", "name": "Unknown"}
         await browser.close()
     return details
+
+def get_title_from_yaml(yaml_path):
+    if not yaml_path or not os.path.exists(yaml_path):
+        return None
+    try:
+        with open(yaml_path, 'r') as f:
+            content = f.read()
+            m = re.search(r'project:\s*(.*)', content)
+            if m:
+                return m.group(1).strip()
+    except:
+        pass
+    return None
 
 def parse_roadmap():
     roadmap_data = {} # pid -> {"name": ..., "reason": ...}
@@ -118,6 +134,15 @@ def parse_roadmap():
                     roadmap_data[pid]["name"] = name
                 if roadmap_data[pid]["reason"] is None and reason is not None:
                     roadmap_data[pid]["reason"] = reason
+
+    # Also check if it is skipped based on titles like " (Skipped - Analog)"
+    for pid in roadmap_data:
+        name = roadmap_data[pid]["name"]
+        if " (Skipped - " in name:
+            s_match = re.search(r" \(Skipped - (.*?)\)", name)
+            if s_match:
+                roadmap_data[pid]["reason"] = s_match.group(1)
+                roadmap_data[pid]["name"] = name.replace(s_match.group(0), "")
 
     return roadmap_data
 
@@ -170,10 +195,24 @@ async def main():
     untestable_projects = []
 
     for pid in unique_pids:
+        yaml_path, svg_path = find_files(pid)
+        yaml_title = get_title_from_yaml(yaml_path)
+
         details = project_details.get(pid, {})
-        name = details.get("name", "Unknown")
-        if name == "Unknown":
-            name = roadmap_data.get(pid, {}).get("name", "Unknown")
+        fetched_name = details.get("name", "Unknown")
+        roadmap_name = roadmap_data.get(pid, {}).get("name", "Unknown")
+
+        # Priority: YAML > Roadmap > Fetched > Unknown
+        name = yaml_title
+        if not name or name == "Unknown" or name == "Tiny Tapeout":
+            if roadmap_name != "Unknown":
+                name = roadmap_name
+            else:
+                name = fetched_name
+
+        # Clean up quotes if present
+        if name.startswith('"') and name.endswith('"'):
+            name = name[1:-1]
 
         tiles = details.get("tiles", "Unknown")
         size = get_tshirt_size(tiles)
