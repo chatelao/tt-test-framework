@@ -241,7 +241,7 @@ async def main():
     testable_projects.sort(key=lambda x: (-complexity_map.get(x["size"], 0), int(x["id"])))
     untestable_projects.sort(key=lambda x: (-complexity_map.get(x["size"], 0), int(x["id"])))
 
-    with open("TTIHP26A_PROJECTS.md", "w") as f:
+    with open("src/docs/TTIHP26A_PROJECTS.md", "w") as f:
         f.write("# TTIHP26A Projects Overview\n\n")
 
         f.write("## Testable Designs\n\n")

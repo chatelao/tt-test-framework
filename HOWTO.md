@@ -24,16 +24,10 @@ test_steps:
 
 ## Generating Waveforms
 
-Use the provided script to generate a PlantUML timing diagram:
+Use the provided script to generate a WaveDrom timing diagram:
 
 ```bash
 python src/scripts/generate_waveform.py <path_to_yaml>
 ```
 
-The script will output:
-- A `.puml` file containing the timing diagram source.
-- An `.svg` image.
-
-### Rendering PUML to Image
-
-If the automatic rendering fails, you can use the online [PlantUML Server](http://www.plantuml.com/plantuml/) by pasting the contents of the `.puml` file.
+The script will output an `.svg` image in the `waveforms/` directory.

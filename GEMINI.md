@@ -13,23 +13,20 @@
 
 ## Finishing
 - Check the boxes of solved tasks in the ROADMAP.md
-- Be sure all /src/data have generated /src/plantuml and /waveforms
+- Be sure all /src/data have generated /waveforms
 
 # Project structure
 - ROADMAP.md - Planned & finished tasks of the product
 - README.md - Overview of the product
 - HOWTO.md - Usage instruction of the product
-- / - Keep only GEMINI.md, HOWTO.md, README.md, DECISION.md and ROADMAP.md in the root directory
+- / - Keep only GEMINI.md, HOWTO.md, README.md, DECISION.md, DISCARDED.md, ROADMAP.md, requirements.txt and .gitignore in the root directory
 - /specifications - Download and store original specification, add ".original." in the name before the extension
 - /specifications - NEVER change ".original." files
 - /specifications - Convert "non .md" files for caching and readability purpose to Markdown
-- /design - Keep a human well readable design specification, write them before implementing
-- /design - Keep a human well readable design specification, write them before implementing
 - /src/scripts - Tools to verify the data and generate the waveforms/documents
 - /src/schema  - The schema of the test data files
 - /src/data    - Instances of the test schema
-- /src/puml    - Generate PlantUML timing diagramm files from every data file
-- /waveforms      - Generate timing diagramm files from every plantuml file
+- /waveforms      - Generate timing diagramm files from every data file
 - /src/docs    - Generate documentation for each test set
 - /test   - Test cases for all tasks, used to verify everything in src
 - /.github/workflows - For every push on every branch, re-generate all deliverables from the sources
