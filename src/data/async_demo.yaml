@@ -1,0 +1,13 @@
+project: "Async Demo"
+metadata:
+  async: true
+signals:
+  ui_in: {type: "input", width: 8}
+  uo_out: {type: "output", width: 8}
+test_steps:
+  - name: "Input 0"
+    cycles: 1
+    values: {ui_in: 0}
+  - name: "Input 255"
+    cycles: 1
+    values: {ui_in: 255}

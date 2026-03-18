@@ -9,6 +9,8 @@ properties:
     properties:
       source:
         type: string
+      async:
+        type: boolean
   signals:
     type: object
     additionalProperties:

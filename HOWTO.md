@@ -20,7 +20,27 @@ test_steps:
 ### Signal Types
 - `input`: Signals driven into the chip.
 - `output`: Signals coming from the chip.
-- `clock`: Clock signal (usually handled automatically by the generator).
+- `clock`: Clock signal. If a signal is defined with this type, it will be used as the reference clock in the waveform instead of the default `CLK`.
+
+## Advanced Metadata
+
+The `metadata` section at the root of the YAML file supports additional flags:
+
+- `async`: (boolean) If set to `true`, no automatic clock signal (default `CLK` or custom `clock` types) will be rendered in the timing diagram. This is useful for pure combinational designs.
+
+Example:
+```yaml
+project: "Combinational Logic"
+metadata:
+  async: true
+signals:
+  ui_in: {type: "input", width: 8}
+  uo_out: {type: "output", width: 8}
+test_steps:
+  - name: "Step 1"
+    cycles: 1
+    values: {ui_in: 0x55}
+```
 
 ## Generating Waveforms
 

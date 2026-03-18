@@ -23,6 +23,25 @@ def test_validator_valid(tmp_path):
     assert result.returncode == 0
     assert "Validation successful" in result.stdout
 
+def test_validator_async_metadata(tmp_path):
+    test_yaml = tmp_path / "async_case.yaml"
+    data = {
+        "project": "async_test",
+        "metadata": {"async": True},
+        "signals": {
+            "DATA": {"type": "input", "width": 8}
+        },
+        "test_steps": [
+            {"name": "Step 1", "cycles": 1, "values": {"DATA": 0}}
+        ]
+    }
+    with open(test_yaml, "w") as f:
+        yaml.dump(data, f)
+
+    result = subprocess.run([sys.executable, "src/scripts/validate_yaml.py", str(test_yaml)], capture_output=True, text=True)
+    assert result.returncode == 0
+    assert "Validation successful" in result.stdout
+
 def test_validator_invalid(tmp_path):
     test_yaml = tmp_path / "invalid_case.yaml"
     # Missing required 'project' field
