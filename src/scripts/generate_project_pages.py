@@ -26,7 +26,7 @@ def generate_markdown(pid, yaml_data, svg_path):
 
     md_content += "\n## Test Waveform\n\n"
     if svg_path and os.path.exists(svg_path):
-        md_content += f"![Waveform](../{svg_path})\n"
+        md_content += f"![Waveform](../../{svg_path})\n"
     else:
         md_content += "Waveform not available.\n"
 
@@ -34,7 +34,7 @@ def generate_markdown(pid, yaml_data, svg_path):
 
 def main():
     data_dir = 'src/data'
-    projects_dir = 'projects'
+    projects_dir = 'src/docs'
     waveforms_dir = 'waveforms'
 
     if not os.path.exists(projects_dir):
@@ -70,7 +70,7 @@ def main():
 
             with open(os.path.join(projects_dir, f"tt{pid}.md"), 'w') as f:
                 f.write(md_content)
-            print(f"Generated projects/tt{pid}.md")
+            print(f"Generated src/docs/tt{pid}.md")
 
 if __name__ == "__main__":
     main()
