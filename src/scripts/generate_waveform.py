@@ -7,6 +7,8 @@ import wavedrom
 
 def generate_wavedrom_json(data, test_steps):
     signals_config = data.get('signals', {})
+    metadata = data.get('metadata', {})
+    is_async = metadata.get('async', False)
 
     # Calculate total cycles
     total_cycles = sum(step.get('cycles', 1) for step in test_steps)
@@ -36,7 +38,8 @@ def generate_wavedrom_json(data, test_steps):
                 phase_timeline[current_cycle] = "."
 
             for sig_name in signals_config:
-                if sig_name == 'CLK': continue
+                if sig_name == 'CLK' or signals_config[sig_name].get('type') == 'clock':
+                    continue
                 val = values.get(sig_name)
                 if val is not None:
                     timelines[sig_name][current_cycle] = val
@@ -47,7 +50,8 @@ def generate_wavedrom_json(data, test_steps):
 
     # Default initialization for cycle 0 if None
     for sig_name in timelines:
-        if sig_name == 'CLK': continue
+        if sig_name == 'CLK' or signals_config.get(sig_name, {}).get('type') == 'clock':
+            continue
         if timelines[sig_name][0] is None:
             timelines[sig_name][0] = 0
 
@@ -64,11 +68,21 @@ def generate_wavedrom_json(data, test_steps):
             phase_data.append(val)
     wd_signals.append({"name": "Phase", "wave": phase_wave, "data": phase_data})
 
-    # CLK signal
-    wd_signals.append({"name": "CLK", "wave": "p" + "." * (total_cycles - 1)})
+    # Clock signals
+    custom_clocks = [n for n, i in signals_config.items() if i.get('type') == 'clock']
+    if not is_async:
+        if custom_clocks:
+            for clk_name in custom_clocks:
+                wd_signals.append({"name": clk_name, "wave": "p" + "." * (total_cycles - 1)})
+        elif 'CLK' in signals_config:
+            wd_signals.append({"name": "CLK", "wave": "p" + "." * (total_cycles - 1)})
+        else:
+            # Default CLK signal if not async and no custom clocks defined in config
+            wd_signals.append({"name": "CLK", "wave": "p" + "." * (total_cycles - 1)})
 
     for sig_name, sig_info in signals_config.items():
-        if sig_name == 'CLK': continue
+        if sig_name == 'CLK' or sig_info.get('type') == 'clock':
+            continue
 
         width = sig_info.get('width', 1)
         is_concise = width > 1 or sig_name in ['UI_IN', 'UIO', 'UO_OUT']

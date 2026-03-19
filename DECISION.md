@@ -1,5 +1,19 @@
 # Decisions
 
+## Support for Asynchronous Signals and Custom Clocks (2025-05-23 15:00)
+
+### Solution 1: Async Metadata and Custom Clock Types (Chosen)
+- **Description**: Introduce an `async: true` flag in the `metadata` section to suppress the default clock, and support a `clock` signal type for custom-named clocks.
+- **Reasoning**: This provides maximum flexibility for both pure combinational designs and sequential designs with non-standard clock names, while remaining fully backward-compatible with existing test data.
+
+### Solution 2: Automated Clock Detection
+- **Description**: Attempt to automatically determine if a design is combinational or sequential by analyzing the signal activity.
+- **Reasoning for Discarding**: Unreliable, as a clock might be present but not toggled in a short test sequence; explicit user intent in the YAML is more deterministic.
+
+### Solution 3: Hardcoded Non-Standard Clock Names
+- **Description**: Add a list of alternative names (e.g., `sys_clk`, `clk_in`) that the generator treats as clocks.
+- **Reasoning for Discarding**: Not scalable and fails to handle arbitrary names used in the hundreds of unique TinyTapeout projects.
+
 ## 10 Additional TTIHP26a Projects (ID % 5 = 4) (2026-03-16 17:00)
 
 ### Solution 1: Targeted Functional Verification (Chosen)

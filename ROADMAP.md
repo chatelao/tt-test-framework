@@ -6,7 +6,7 @@
     - [ ] Test-ID: [3778](https://app.tinytapeout.com/projects/3778), Repo: Unknown (Skipped - Analog)
     - [ ] Test-ID: [3960](https://app.tinytapeout.com/projects/3960), Repo: Unknown (Skipped - Analog)
     - [ ] Test-ID: [3987](https://app.tinytapeout.com/projects/3987), Repo: Unknown (Skipped - Analog)
-  - [ ] Add support for asynchronous signals (Planned)
+- [x] Add support for asynchronous signals (2025-05-23)
   - [ ] Integrate with GHDL/Verilator for automated verification (Planned)
   - [ ] Integration with a simulator to verify test steps (Planned)
   - [ ] Improve documentation with examples (Planned)
