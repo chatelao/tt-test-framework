@@ -3,9 +3,59 @@
 ## Planned
   - [ ] Create simple testcase for each assigned tile from TTIHP26A shuttle
     - [ ] Test-ID: [3523](https://app.tinytapeout.com/projects/3523), Repo: Unknown (Skipped - Analog)
+    - [ ] Test-ID: [3683](https://app.tinytapeout.com/projects/3683), Repo: Unknown
+    - [ ] Test-ID: [3760](https://app.tinytapeout.com/projects/3760), Repo: Unknown (Skipped - Analog)
+    - [ ] Test-ID: [3762](https://app.tinytapeout.com/projects/3762), Repo: Unknown (Skipped - Analog)
     - [ ] Test-ID: [3778](https://app.tinytapeout.com/projects/3778), Repo: Unknown (Skipped - Analog)
     - [ ] Test-ID: [3960](https://app.tinytapeout.com/projects/3960), Repo: Unknown (Skipped - Analog)
+    - [ ] Test-ID: [3984](https://app.tinytapeout.com/projects/3984), Repo: Unknown (Skipped - Analog)
     - [ ] Test-ID: [3987](https://app.tinytapeout.com/projects/3987), Repo: Unknown (Skipped - Analog)
+    - [ ] Test-ID: [4005](https://app.tinytapeout.com/projects/4005), Repo: Unknown
+    - [ ] Test-ID: [4010](https://app.tinytapeout.com/projects/4010), Repo: Unknown (Skipped - Analog)
+    - [ ] Test-ID: [4014](https://app.tinytapeout.com/projects/4014), Repo: Unknown
+    - [ ] Test-ID: [4015](https://app.tinytapeout.com/projects/4015), Repo: Unknown
+    - [ ] Test-ID: [4020](https://app.tinytapeout.com/projects/4020), Repo: Unknown
+    - [ ] Test-ID: [4021](https://app.tinytapeout.com/projects/4021), Repo: Unknown
+    - [ ] Test-ID: [4031](https://app.tinytapeout.com/projects/4031), Repo: Unknown (Skipped - Analog)
+    - [ ] Test-ID: [4032](https://app.tinytapeout.com/projects/4032), Repo: Unknown
+    - [ ] Test-ID: [4034](https://app.tinytapeout.com/projects/4034), Repo: Unknown
+    - [ ] Test-ID: [4038](https://app.tinytapeout.com/projects/4038), Repo: Unknown
+    - [ ] Test-ID: [4039](https://app.tinytapeout.com/projects/4039), Repo: Unknown
+    - [ ] Test-ID: [4043](https://app.tinytapeout.com/projects/4043), Repo: Unknown
+    - [ ] Test-ID: [4044](https://app.tinytapeout.com/projects/4044), Repo: Unknown
+    - [ ] Test-ID: [4045](https://app.tinytapeout.com/projects/4045), Repo: Unknown
+    - [ ] Test-ID: [4046](https://app.tinytapeout.com/projects/4046), Repo: Unknown
+    - [ ] Test-ID: [4048](https://app.tinytapeout.com/projects/4048), Repo: Unknown
+    - [ ] Test-ID: [4049](https://app.tinytapeout.com/projects/4049), Repo: Unknown
+    - [ ] Test-ID: [4050](https://app.tinytapeout.com/projects/4050), Repo: Unknown
+    - [ ] Test-ID: [4055](https://app.tinytapeout.com/projects/4055), Repo: Unknown
+    - [ ] Test-ID: [4056](https://app.tinytapeout.com/projects/4056), Repo: Unknown (Skipped - Analog)
+    - [ ] Test-ID: [4060](https://app.tinytapeout.com/projects/4060), Repo: Unknown
+    - [ ] Test-ID: [4061](https://app.tinytapeout.com/projects/4061), Repo: Unknown
+    - [ ] Test-ID: [4062](https://app.tinytapeout.com/projects/4062), Repo: Unknown
+    - [ ] Test-ID: [4063](https://app.tinytapeout.com/projects/4063), Repo: Unknown
+    - [ ] Test-ID: [4066](https://app.tinytapeout.com/projects/4066), Repo: Unknown
+    - [ ] Test-ID: [4071](https://app.tinytapeout.com/projects/4071), Repo: Unknown
+    - [ ] Test-ID: [4072](https://app.tinytapeout.com/projects/4072), Repo: Unknown
+    - [ ] Test-ID: [4073](https://app.tinytapeout.com/projects/4073), Repo: Unknown
+    - [ ] Test-ID: [4075](https://app.tinytapeout.com/projects/4075), Repo: Unknown
+    - [ ] Test-ID: [4076](https://app.tinytapeout.com/projects/4076), Repo: Unknown
+    - [ ] Test-ID: [4077](https://app.tinytapeout.com/projects/4077), Repo: Unknown
+    - [ ] Test-ID: [4078](https://app.tinytapeout.com/projects/4078), Repo: Unknown
+    - [ ] Test-ID: [4079](https://app.tinytapeout.com/projects/4079), Repo: Unknown
+    - [ ] Test-ID: [4080](https://app.tinytapeout.com/projects/4080), Repo: Unknown
+    - [ ] Test-ID: [4082](https://app.tinytapeout.com/projects/4082), Repo: Unknown
+    - [ ] Test-ID: [4085](https://app.tinytapeout.com/projects/4085), Repo: Unknown
+    - [ ] Test-ID: [4086](https://app.tinytapeout.com/projects/4086), Repo: Unknown
+    - [ ] Test-ID: [4091](https://app.tinytapeout.com/projects/4091), Repo: Unknown
+    - [ ] Test-ID: [4092](https://app.tinytapeout.com/projects/4092), Repo: Unknown
+    - [ ] Test-ID: [4093](https://app.tinytapeout.com/projects/4093), Repo: Unknown
+    - [ ] Test-ID: [4094](https://app.tinytapeout.com/projects/4094), Repo: Unknown
+    - [ ] Test-ID: [4095](https://app.tinytapeout.com/projects/4095), Repo: Unknown
+    - [ ] Test-ID: [4096](https://app.tinytapeout.com/projects/4096), Repo: Unknown
+    - [ ] Test-ID: [4097](https://app.tinytapeout.com/projects/4097), Repo: Unknown
+    - [ ] Test-ID: [4098](https://app.tinytapeout.com/projects/4098), Repo: Unknown (Skipped - Analog)
+    - [ ] Test-ID: [4100](https://app.tinytapeout.com/projects/4100), Repo: Unknown
 - [x] Add support for asynchronous signals (2025-05-23)
   - [ ] Integrate with GHDL/Verilator for automated verification (Planned)
   - [ ] Integration with a simulator to verify test steps (Planned)
