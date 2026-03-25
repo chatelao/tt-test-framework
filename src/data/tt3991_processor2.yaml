@@ -10,69 +10,85 @@ signals:
   clk: {name: clk, type: clock, width: 1}
   rst_n: {name: rst_n, type: input, width: 1}
 test_steps:
-  - name: Reset
-    cycles: 1
-    values: {rst_n: 0, ui_in: 0, uio_in: 0}
-  - name: Enter Load Mode
-    cycles: 2
-    values: {rst_n: 1, ui_in: 0, uio_in: 1} # load_mode=1
-  - name: Load LDI R0, 0x42 (0x70)
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0x70, uio_in: 3} # load_valid=1
-  - name: Load LDI R0, 0x42 (0x70) Valid Low
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0x70, uio_in: 1} # load_valid=0
-  - name: Load LDI R0, 0x42 (0x42)
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0x42, uio_in: 3} # load_valid=1
-  - name: Load LDI R0, 0x42 (0x42) Valid Low
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0x42, uio_in: 1} # load_valid=0
-  - name: Load OUT R0 (0xE0)
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0xE0, uio_in: 3}
-  - name: Load OUT R0 (0xE0) Valid Low
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0xE0, uio_in: 1}
-  - name: Load OUT R0 (0x00)
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0x00, uio_in: 3}
-  - name: Load OUT R0 (0x00) Valid Low
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0x00, uio_in: 1}
-  - name: Load JMP 0 (0xA0)
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0xA0, uio_in: 3}
-  - name: Load JMP 0 (0xA0) Valid Low
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0xA0, uio_in: 1}
-  - name: Load JMP 0 (0x00)
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0x00, uio_in: 3}
-  - name: Load JMP 0 (0x00) Valid Low
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0x00, uio_in: 1}
-  - name: Switch to Execute
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0, uio_in: 0}
-  - name: LDI R0, 0x42 (FETCH)
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0, uio_in: 0, uo_out: 0x00}
-  - name: LDI R0, 0x42 (DECODE)
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0, uio_in: 0, uo_out: 0x00}
-  - name: LDI R0, 0x42 (EXECUTE)
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0, uio_in: 0, uo_out: 0x00}
-  - name: OUT R0 (FETCH)
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0, uio_in: 0, uo_out: 0x00}
-  - name: OUT R0 (DECODE)
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0, uio_in: 0, uo_out: 0x00}
-  - name: OUT R0 (EXECUTE)
-    cycles: 1
-    values: {rst_n: 1, ui_in: 0, uio_in: 0, uo_out: 0x42}
-  - name: Loop Execution
-    cycles: 96
-    values: {rst_n: 1, ui_in: 0, uio_in: 0}
+- name: Reset
+  cycles: 1
+  values: {rst_n: 0, ui_in: 0, uio_in: 0}
+- name: Enter Load Mode
+  cycles: 2
+  values: {rst_n: 1, ui_in: 0, uio_in: 1}   # load_mode=1
+- name: Load LDI R0, 0x42 (0x70)
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0x70, uio_in: 3}   # load_valid=1
+- name: Load LDI R0, 0x42 (0x70) Valid Low
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0x70, uio_in: 1}   # load_valid=0
+- name: Load LDI R0, 0x42 (0x42)
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0x42, uio_in: 3}   # load_valid=1
+- name: Load LDI R0, 0x42 (0x42) Valid Low
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0x42, uio_in: 1}   # load_valid=0
+- name: Load OUT R0 (0xE0)
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0xE0, uio_in: 3}
+- name: Load OUT R0 (0xE0) Valid Low
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0xE0, uio_in: 1}
+- name: Load OUT R0 (0x00)
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0x00, uio_in: 3}
+- name: Load OUT R0 (0x00) Valid Low
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0x00, uio_in: 1}
+- name: Load JMP 0 (0xA0)
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0xA0, uio_in: 3}
+- name: Load JMP 0 (0xA0) Valid Low
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0xA0, uio_in: 1}
+- name: Load JMP 0 (0x00)
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0x00, uio_in: 3}
+- name: Load JMP 0 (0x00) Valid Low
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0x00, uio_in: 1}
+- name: Switch to Execute
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0, uio_in: 0}
+- name: LDI R0, 0x42 (FETCH)
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0, uio_in: 0, uo_out: 0x00}
+- name: LDI R0, 0x42 (DECODE)
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0, uio_in: 0, uo_out: 0x00}
+- name: LDI R0, 0x42 (EXECUTE)
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0, uio_in: 0, uo_out: 0x00}
+- name: OUT R0 (FETCH)
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0, uio_in: 0, uo_out: 0x00}
+- name: OUT R0 (DECODE)
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0, uio_in: 0, uo_out: 0x00}
+- name: OUT R0 (EXECUTE)
+  cycles: 1
+  values: {rst_n: 1, ui_in: 0, uio_in: 0, uo_out: 0x42}
+- name: Loop Execution
+  cycles: 96
+  values: {rst_n: 1, ui_in: 0, uio_in: 0}
+bitfields:
+- name: Load Mode Control (uio_in)
+  items:
+  - signal: uio_in
+    description: Programming Protocol Control
+    svg: tt3991_uio_in_load
+    reg:
+      reg:
+      - name: LOAD_MODE
+        bits: 1
+      - name: LOAD_VALID
+        bits: 1
+      - bits: 6
+        name: unused
+      config:
+        hspace: 800
