@@ -50,3 +50,4 @@ bitfields:
         name: unused
       config:
         hspace: 800
+        bits: 8
