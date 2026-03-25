@@ -248,17 +248,27 @@ async def main():
         f.write("| Summary | Novelty | T-shirt size | Test Data | Waveform | TinyTapeout Page |\n")
         f.write("|---------|---------|--------------|-----------|----------|------------------|\n")
         for p in testable_projects:
-            test_data_link = f"[YAML]({p['yaml_path']})" if p['yaml_path'] else "N/A"
-            waveform_link = f"[SVG]({p['svg_path']})" if p['svg_path'] else "N/A"
+            name_link = f"[{p['name']}](tt{p['id']}.md)"
+            yaml_rel = p['yaml_path'].replace("src/data/", "../data/") if p['yaml_path'] else ""
+            svg_rel = p['svg_path'].replace("waveforms/", "../../waveforms/") if p['svg_path'] else ""
+
+            test_data_link = f"[YAML]({yaml_rel})" if yaml_rel else "N/A"
+            waveform_link = f"[SVG]({svg_rel})" if svg_rel else "N/A"
             tt_page_link = f"[Project {p['id']}](https://app.tinytapeout.com/projects/{p['id']})"
-            f.write(f"| {p['name']} | {p['novelty']} | {p['size']} | {test_data_link} | {waveform_link} | {tt_page_link} |\n")
+            f.write(f"| {name_link} | {p['novelty']} | {p['size']} | {test_data_link} | {waveform_link} | {tt_page_link} |\n")
 
         f.write("\n## Untestable Designs\n\n")
         f.write("| Summary | Novelty | T-shirt size | Why | TinyTapeout Page |\n")
         f.write("|---------|---------|--------------|-----|------------------|\n")
         for p in untestable_projects:
+            # Check if a markdown file exists even for untestable projects
+            md_path = f"src/docs/tt{p['id']}.md"
+            if os.path.exists(md_path):
+                name_link = f"[{p['name']}](tt{p['id']}.md)"
+            else:
+                name_link = p['name']
             tt_page_link = f"[Project {p['id']}](https://app.tinytapeout.com/projects/{p['id']})"
-            f.write(f"| {p['name']} | {p['novelty']} | {p['size']} | {p['reason']} | {tt_page_link} |\n")
+            f.write(f"| {name_link} | {p['novelty']} | {p['size']} | {p['reason']} | {tt_page_link} |\n")
 
     print("Generated TTIHP26A_PROJECTS.md")
 
