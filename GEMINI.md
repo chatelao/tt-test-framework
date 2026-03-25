@@ -14,6 +14,7 @@
 ## Finishing
 - Check the boxes of solved tasks in the ROADMAP.md
 - Be sure all /src/data have generated /waveforms
+- Ensure that in `src/docs/TTIHP26A_PROJECTS.md`, the "Summary" column links to the corresponding `src/docs/tt{ID}.md` file if it exists.
 
 # Project structure
 - ROADMAP.md - Planned & finished tasks of the product
