@@ -10,19 +10,50 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Input 0"
-    cycles: 1
-    values:
-      ui_in: 0
-  - name: "Input 5"
-    cycles: 1
-    values:
-      ui_in: 5
-  - name: "Input 9"
-    cycles: 1
-    values:
-      ui_in: 9
-  - name: "Input 10"
-    cycles: 1
-    values:
-      ui_in: 10
+- name: "Input 0"
+  cycles: 1
+  values:
+    ui_in: 0
+- name: "Input 5"
+  cycles: 1
+  values:
+    ui_in: 5
+- name: "Input 9"
+  cycles: 1
+  values:
+    ui_in: 9
+- name: "Input 10"
+  cycles: 1
+  values:
+    ui_in: 10
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3574_ui_in
+    reg:
+      reg:
+      - name: input1
+        bits: 1
+      - name: input2
+        bits: 1
+      - name: input3
+        bits: 1
+      - name: input4
+        bits: 1
+      - bits: 4
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3574_uo_out
+    reg:
+      reg:
+      - name: Data
+        bits: 8
+      config:
+        hspace: 800

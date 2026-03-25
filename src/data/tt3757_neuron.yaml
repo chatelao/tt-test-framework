@@ -10,12 +10,88 @@ signals:
   clk: {name: clk, type: clock, width: 1}
   rst_n: {name: rst_n, type: input, width: 1}
 test_steps:
-  - name: Reset
-    cycles: 1
-    values: {rst_n: 0, ui_in: 0, uio_in: 0}
-  - name: Idle
-    cycles: 5
-    values: {rst_n: 1, ui_in: 0, uio_in: 0}
-  - name: Config
-    cycles: 2
-    values: {rst_n: 1, ui_in: 0x80, uio_in: 0x0C}
+- name: Reset
+  cycles: 1
+  values: {rst_n: 0, ui_in: 0, uio_in: 0}
+- name: Idle
+  cycles: 5
+  values: {rst_n: 1, ui_in: 0, uio_in: 0}
+- name: Config
+  cycles: 2
+  values: {rst_n: 1, ui_in: 0x80, uio_in: 0x0C}
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3757_ui_in
+    reg:
+      reg:
+      - name: IN_DATA[0] (addr[0])
+        bits: 1
+      - name: IN_DATA[1] (addr[1])
+        bits: 1
+      - name: IN_DATA[2] (addr[2])
+        bits: 1
+      - name: IN_DATA[3] (addr[3])
+        bits: 1
+      - name: IN_DATA[4] (addr[4])
+        bits: 1
+      - name: IN_DATA[5] (addr[5])
+        bits: 1
+      - name: IN_DATA[6] (polarity)
+        bits: 1
+      - name: IN_DATA[7] (is_tick)
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3757_uo_out
+    reg:
+      reg:
+      - name: OUT_DATA[0]
+        bits: 1
+      - name: OUT_DATA[1]
+        bits: 1
+      - name: OUT_DATA[2]
+        bits: 1
+      - name: OUT_DATA[3]
+        bits: 1
+      - name: OUT_DATA[4] (type[0])
+        bits: 1
+      - name: OUT_DATA[5] (type[1])
+        bits: 1
+      - name: OUT_DATA[6] (type[2])
+        bits: 1
+      - name: OUT_DATA[7] (valid)
+        bits: 1
+      config:
+        hspace: 800
+- name: Bidirectional (uio_in)
+  items:
+  - signal: uio_in
+    description: Bidirectional signal mappings
+    svg: tt3757_uio_in
+    reg:
+      reg:
+      - name: IN_REQ (in) / IN_ACK (out)
+        bits: 1
+      - name: OUT_ACK (in) / OUT_REQ (out)
+        bits: 1
+      - name: CFG_OP[0] (in)
+        bits: 1
+      - name: CFG_OP[1] (in)
+        bits: 1
+      - name: CFG_ARG[0] (in)
+        bits: 1
+      - name: CFG_ARG[1] (in)
+        bits: 1
+      - name: CFG_ARG[2] (in)
+        bits: 1
+      - name: CFG_ARG[3] (in)
+        bits: 1
+      config:
+        hspace: 800

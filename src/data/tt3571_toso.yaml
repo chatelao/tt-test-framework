@@ -12,23 +12,54 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "XOR test 0^0"
-    cycles: 1
-    values:
-      ui_in: 0b00000000
-      uo_out: 0b00000000
-  - name: "XOR test 1^0"
-    cycles: 1
-    values:
-      ui_in: 0b00000001
-      uo_out: 0b00001000 # uo[3] = ui[0]^ui[1]
-  - name: "MUX test (sel=1, in5=1, in6=0 -> uo6=0)"
-    cycles: 1
-    values:
-      ui_in: 0b10100000
-      uo_out: 0b00000000
-  - name: "MUX test (sel=1, in5=1, in6=1 -> uo6=1)"
-    cycles: 1
-    values:
-      ui_in: 0b11100000
-      uo_out: 0b01000000
+- name: "XOR test 0^0"
+  cycles: 1
+  values:
+    ui_in: 0b00000000
+    uo_out: 0b00000000
+- name: "XOR test 1^0"
+  cycles: 1
+  values:
+    ui_in: 0b00000001
+    uo_out: 0b00001000   # uo[3] = ui[0]^ui[1]
+- name: "MUX test (sel=1, in5=1, in6=0 -> uo6=0)"
+  cycles: 1
+  values:
+    ui_in: 0b10100000
+    uo_out: 0b00000000
+- name: "MUX test (sel=1, in5=1, in6=1 -> uo6=1)"
+  cycles: 1
+  values:
+    ui_in: 0b11100000
+    uo_out: 0b01000000
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3571_ui_in
+    reg:
+      reg:
+      - name: Input 1
+        bits: 1
+      - name: Input 2
+        bits: 1
+      - name: TODO
+        bits: 1
+      - bits: 5
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3571_uo_out
+    reg:
+      reg:
+      - name: TODO
+        bits: 1
+      - bits: 7
+        name: unused
+      config:
+        hspace: 800

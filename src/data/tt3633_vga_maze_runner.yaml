@@ -12,11 +12,56 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Initial Reset"
-    cycles: 5
-    values:
-      UI_IN: 0
-  - name: "Observe HSync/VSync"
-    cycles: 20
-    values:
-      UI_IN: 0
+- name: "Initial Reset"
+  cycles: 5
+  values:
+    UI_IN: 0
+- name: "Observe HSync/VSync"
+  cycles: 20
+  values:
+    UI_IN: 0
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3633_ui_in
+    reg:
+      reg:
+      - bits: 4
+        name: unused
+      - name: pmod_latch
+        bits: 1
+      - name: pmod_clk
+        bits: 1
+      - name: pmod_data
+        bits: 1
+      - bits: 1
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3633_uo_out
+    reg:
+      reg:
+      - name: R1
+        bits: 1
+      - name: G1
+        bits: 1
+      - name: B1
+        bits: 1
+      - name: VSync
+        bits: 1
+      - name: R0
+        bits: 1
+      - name: G0
+        bits: 1
+      - name: B0
+        bits: 1
+      - name: HSync
+        bits: 1
+      config:
+        hspace: 800

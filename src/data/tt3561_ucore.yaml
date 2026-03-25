@@ -18,44 +18,118 @@ signals:
     type: "input"
     width: 8
 test_steps:
-  - name: "Reset"
-    cycles: 1
-    values:
-      rst_n: 0
-      ui_in: 0
-      uio_in: 0
-      uo_out: 0
-  - name: "Load 0 to addr_oio via periphery"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0
-      uio_in: 0b10011 # DATAFLOW OP, imm=3 (addr_oio)
-  - name: "Write 0xAA to Reg 0"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0xAA
-      uio_in: 0b01000 # MEM OP, imm=0
-  - name: "Check uo_out (Reg 0)"
-    cycles: 1
-    values:
-      rst_n: 1
-      uo_out: 0xAA
-  - name: "Write 0x55 to Reg 1"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0x55
-      uio_in: 0b01001 # MEM OP, imm=1
-  - name: "Load 1 to addr_oio"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 1
-      uio_in: 0b10011
-  - name: "Check uo_out (Reg 1)"
-    cycles: 1
-    values:
-      rst_n: 1
-      uo_out: 0x55
+- name: "Reset"
+  cycles: 1
+  values:
+    rst_n: 0
+    ui_in: 0
+    uio_in: 0
+    uo_out: 0
+- name: "Load 0 to addr_oio via periphery"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0
+    uio_in: 0b10011   # DATAFLOW OP, imm=3 (addr_oio)
+- name: "Write 0xAA to Reg 0"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0xAA
+    uio_in: 0b01000   # MEM OP, imm=0
+- name: "Check uo_out (Reg 0)"
+  cycles: 1
+  values:
+    rst_n: 1
+    uo_out: 0xAA
+- name: "Write 0x55 to Reg 1"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0x55
+    uio_in: 0b01001   # MEM OP, imm=1
+- name: "Load 1 to addr_oio"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 1
+    uio_in: 0b10011
+- name: "Check uo_out (Reg 1)"
+  cycles: 1
+  values:
+    rst_n: 1
+    uo_out: 0x55
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3561_ui_in
+    reg:
+      reg:
+      - name: DATA IN[0]
+        bits: 1
+      - name: DATA IN[1]
+        bits: 1
+      - name: DATA IN[2]
+        bits: 1
+      - name: DATA IN[3]
+        bits: 1
+      - name: DATA IN[4]
+        bits: 1
+      - name: DATA IN[5]
+        bits: 1
+      - name: DATA IN[6]
+        bits: 1
+      - name: DATA IN[7]
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3561_uo_out
+    reg:
+      reg:
+      - name: DATA OUT[0]
+        bits: 1
+      - name: DATA OUT[1]
+        bits: 1
+      - name: DATA OUT[2]
+        bits: 1
+      - name: DATA OUT[3]
+        bits: 1
+      - name: DATA OUT[4]
+        bits: 1
+      - name: DATA OUT[5]
+        bits: 1
+      - name: DATA OUT[6]
+        bits: 1
+      - name: DATA OUT[7]
+        bits: 1
+      config:
+        hspace: 800
+- name: Bidirectional (uio_in)
+  items:
+  - signal: uio_in
+    description: Bidirectional signal mappings
+    svg: tt3561_uio_in
+    reg:
+      reg:
+      - name: IMM [0]
+        bits: 1
+      - name: IMM [1]
+        bits: 1
+      - name: IMM [2]
+        bits: 1
+      - name: OP [0]
+        bits: 1
+      - name: OP [1]
+        bits: 1
+      - name: OP [2]
+        bits: 1
+      - bits: 2
+        name: unused
+      config:
+        hspace: 800

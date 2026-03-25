@@ -13,17 +13,93 @@ signals:
     type: "input"
     width: 8
 test_steps:
-  - name: "Idle"
-    cycles: 5
-    values:
-      ui_in: 0xC0 # /OE and /WE high
-      uio_in: 0x00
-  - name: "Write to register"
-    cycles: 5
-    values:
-      ui_in: 0x40 # /WE low, /OE high
-      uio_in: 0xAA
-  - name: "Read from register"
-    cycles: 5
-    values:
-      ui_in: 0x80 # /WE high, /OE low
+- name: "Idle"
+  cycles: 5
+  values:
+    ui_in: 0xC0   # /OE and /WE high
+    uio_in: 0x00
+- name: "Write to register"
+  cycles: 5
+  values:
+    ui_in: 0x40   # /WE low, /OE high
+    uio_in: 0xAA
+- name: "Read from register"
+  cycles: 5
+  values:
+    ui_in: 0x80   # /WE high, /OE low
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3493_ui_in
+    reg:
+      reg:
+      - name: A0 (address)
+        bits: 1
+      - name: A1 (address)
+        bits: 1
+      - name: S0 (selector)
+        bits: 1
+      - name: S1 (selector)
+        bits: 1
+      - name: S2 (selector)
+        bits: 1
+      - name: S3 (selector)
+        bits: 1
+      - name: /OE (output enable)
+        bits: 1
+      - name: /WE (write enable)
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3493_uo_out
+    reg:
+      reg:
+      - name: D0
+        bits: 1
+      - name: D1
+        bits: 1
+      - name: D2
+        bits: 1
+      - name: D3
+        bits: 1
+      - name: D4
+        bits: 1
+      - name: D5
+        bits: 1
+      - name: D6
+        bits: 1
+      - name: D7
+        bits: 1
+      config:
+        hspace: 800
+- name: Bidirectional (uio_in)
+  items:
+  - signal: uio_in
+    description: Bidirectional signal mappings
+    svg: tt3493_uio_in
+    reg:
+      reg:
+      - name: D0
+        bits: 1
+      - name: D1
+        bits: 1
+      - name: D2
+        bits: 1
+      - name: D3
+        bits: 1
+      - name: D4
+        bits: 1
+      - name: D5
+        bits: 1
+      - name: D6
+        bits: 1
+      - name: D7
+        bits: 1
+      config:
+        hspace: 800

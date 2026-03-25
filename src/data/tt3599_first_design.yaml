@@ -10,15 +10,42 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Input 0"
-    cycles: 1
-    values:
-      ui_in: 0
-  - name: "Not Test"
-    cycles: 1
-    values:
-      ui_in: 0b00000001
-  - name: "Pass-through Test"
-    cycles: 1
-    values:
-      ui_in: 0b01010000
+- name: "Input 0"
+  cycles: 1
+  values:
+    ui_in: 0
+- name: "Not Test"
+  cycles: 1
+  values:
+    ui_in: 0b00000001
+- name: "Pass-through Test"
+  cycles: 1
+  values:
+    ui_in: 0b01010000
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3599_ui_in
+    reg:
+      reg:
+      - name: Data
+        bits: 8
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3599_uo_out
+    reg:
+      reg:
+      - name: output and
+        bits: 1
+      - name: output or
+        bits: 1
+      - bits: 6
+        name: unused
+      config:
+        hspace: 800

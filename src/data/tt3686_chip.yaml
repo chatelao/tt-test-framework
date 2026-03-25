@@ -12,13 +12,50 @@ signals:
     type: "clock"
     width: 1
 test_steps:
-  - name: "Logic check"
-    cycles: 1
-    values:
-      ui_in: 0b00000001
-      uo_out: 0b00000011
-  - name: "Input H"
-    cycles: 1
-    values:
-      ui_in: 0b10000000
-      uo_out: 0b00000011
+- name: "Logic check"
+  cycles: 1
+  values:
+    ui_in: 0b00000001
+    uo_out: 0b00000011
+- name: "Input H"
+  cycles: 1
+  values:
+    ui_in: 0b10000000
+    uo_out: 0b00000011
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3686_ui_in
+    reg:
+      reg:
+      - name: feature_0
+        bits: 1
+      - name: feature_1
+        bits: 1
+      - name: feature_2
+        bits: 1
+      - name: feature_3
+        bits: 1
+      - name: target_class
+        bits: 1
+      - name: Train_mode (0=inference; 1=train)
+        bits: 1
+      - bits: 2
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3686_uo_out
+    reg:
+      reg:
+      - name: predicted_class
+        bits: 1
+      - bits: 7
+        name: unused
+      config:
+        hspace: 800

@@ -13,13 +13,79 @@ signals:
     type: "input"
     width: 8
 test_steps:
-  - name: "Initial state"
-    cycles: 5
-    values:
-      ui_in: 0xFF # All active-low inputs high
-      uio_in: 0x00
-  - name: "Write operation"
-    cycles: 5
-    values:
-      ui_in: 0xEF # READ/WRITE low (write)
-      uio_in: 0x41 # 'A'
+- name: "Initial state"
+  cycles: 5
+  values:
+    ui_in: 0xFF   # All active-low inputs high
+    uio_in: 0x00
+- name: "Write operation"
+  cycles: 5
+  values:
+    ui_in: 0xEF   # READ/WRITE low (write)
+    uio_in: 0x41   # 'A'
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3492_ui_in
+    reg:
+      reg:
+      - name: /ROUT
+        bits: 1
+      - name: ERRS, /PROPS
+        bits: 1
+      - name: CHK
+        bits: 1
+      - name: CBE, /CLE
+        bits: 1
+      - name: READ, /WRITE
+        bits: 1
+      - name: /CIO
+        bits: 1
+      - name: /UIO
+        bits: 1
+      - name: /BIO
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3492_uo_out
+    reg:
+      reg:
+      - name: READY; NORMAL
+        bits: 1
+      - name: RETRY; CONTROL
+        bits: 1
+      - name: INVALID; SURROGATE
+        bits: 1
+      - name: OVERLONG; HIGHCHAR
+        bits: 1
+      - name: NONUNI; PRIVATE
+        bits: 1
+      - name: ERROR; NONCHAR
+        bits: 1
+      - name: UEOF
+        bits: 1
+      - name: BEOF
+        bits: 1
+      config:
+        hspace: 800
+- name: Bidirectional (uio_in)
+  items:
+  - signal: uio_in
+    description: Bidirectional signal mappings
+    svg: tt3492_uio_in
+    reg:
+      reg:
+      - name: I/O LSB
+        bits: 1
+      - name: I/O
+        bits: 6
+      - name: I/O MSB
+        bits: 1
+      config:
+        hspace: 800

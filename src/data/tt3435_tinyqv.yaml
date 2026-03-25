@@ -8,9 +8,60 @@ signals:
   clk: {name: clk, type: clock, width: 1}
   rst_n: {name: rst_n, type: input, width: 1}
 test_steps:
-  - name: Reset
-    cycles: 1
-    values: {rst_n: 0, ui_in: 0x80}
-  - name: UART Idle
-    cycles: 10
-    values: {rst_n: 1, ui_in: 0x80}
+- name: Reset
+  cycles: 1
+  values: {rst_n: 0, ui_in: 0x80}
+- name: UART Idle
+  cycles: 10
+  values: {rst_n: 1, ui_in: 0x80}
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3435_ui_in
+    reg:
+      reg:
+      - name: Interrupt 0
+        bits: 1
+      - name: Interrupt 1
+        bits: 1
+      - name: SPI MISO
+        bits: 1
+      - name: 1 MHz clock for time
+        bits: 1
+      - name: Game controller latch
+        bits: 1
+      - name: Game controller clock
+        bits: 1
+      - name: Game controller data
+        bits: 1
+      - name: UART RX
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3435_uo_out
+    reg:
+      reg:
+      - name: UART TX
+        bits: 1
+      - name: UART RTS
+        bits: 1
+      - name: SPI DC
+        bits: 1
+      - name: SPI MOSI
+        bits: 1
+      - name: SPI CS
+        bits: 1
+      - name: SPI SCK
+        bits: 1
+      - name: Debug UART TX
+        bits: 1
+      - name: Debug signal / PWM
+        bits: 1
+      config:
+        hspace: 800

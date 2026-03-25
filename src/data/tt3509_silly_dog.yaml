@@ -10,15 +10,66 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Initial"
-    cycles: 5
-    values:
-      ui_in: 0x00
-  - name: "Move horizontal"
-    cycles: 5
-    values:
-      ui_in: 0xF0
-  - name: "Move vertical"
-    cycles: 5
-    values:
-      ui_in: 0x0F
+- name: "Initial"
+  cycles: 5
+  values:
+    ui_in: 0x00
+- name: "Move horizontal"
+  cycles: 5
+  values:
+    ui_in: 0xF0
+- name: "Move vertical"
+  cycles: 5
+  values:
+    ui_in: 0x0F
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3509_ui_in
+    reg:
+      reg:
+      - name: vertical 0
+        bits: 1
+      - name: vertical 1
+        bits: 1
+      - name: vertical 2
+        bits: 1
+      - name: vertical 3
+        bits: 1
+      - name: horizontal 0
+        bits: 1
+      - name: horizontal 1
+        bits: 1
+      - name: horizontal 2
+        bits: 1
+      - name: horizontal 3
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3509_uo_out
+    reg:
+      reg:
+      - name: R1
+        bits: 1
+      - name: G1
+        bits: 1
+      - name: B1
+        bits: 1
+      - name: VSync
+        bits: 1
+      - name: R0
+        bits: 1
+      - name: G0
+        bits: 1
+      - name: B0
+        bits: 1
+      - name: HSync
+        bits: 1
+      config:
+        hspace: 800

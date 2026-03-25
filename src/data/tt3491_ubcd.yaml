@@ -13,17 +13,93 @@ signals:
     type: "input"
     width: 8
 test_steps:
-  - name: "Mode 0: Seven Segment"
-    cycles: 5
-    values:
-      uio_in: 0x00 # Mode 0
-      ui_in: 0x00 # Input 0
-  - name: "Mode 0: Input 1"
-    cycles: 5
-    values:
-      ui_in: 0x01
-  - name: "Mode 1: ASCII"
-    cycles: 5
-    values:
-      uio_in: 0x40 # Mode 1 (M0=1, M1=0)
-      ui_in: 0x41 # 'A'
+- name: "Mode 0: Seven Segment"
+  cycles: 5
+  values:
+    uio_in: 0x00   # Mode 0
+    ui_in: 0x00   # Input 0
+- name: "Mode 0: Input 1"
+  cycles: 5
+  values:
+    ui_in: 0x01
+- name: "Mode 1: ASCII"
+  cycles: 5
+  values:
+    uio_in: 0x40   # Mode 1 (M0=1, M1=0)
+    ui_in: 0x41   # 'A'
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3491_ui_in
+    reg:
+      reg:
+      - name: A; D0; A1; A
+        bits: 1
+      - name: B; D1; B1; B
+        bits: 1
+      - name: C; D2; C1; C
+        bits: 1
+      - name: D; D3; D1; D
+        bits: 1
+      - name: V0; D4; A2; E
+        bits: 1
+      - name: V1; D5; B2; -
+        bits: 1
+      - name: V2; D6; C2; /VBI
+        bits: 1
+      - name: /RBI; LC; D2; /RBI
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3491_uo_out
+    reg:
+      reg:
+      - name: Segment a; U1; a
+        bits: 1
+      - name: Segment b; U2; b
+        bits: 1
+      - name: Segment c; V1; c
+        bits: 1
+      - name: Segment d; V2; d
+        bits: 1
+      - name: Segment e; W1; e
+        bits: 1
+      - name: Segment f; W2; f
+        bits: 1
+      - name: Segment g; X1; g
+        bits: 1
+      - name: /RBO; /LTR; X2; /RBO
+        bits: 1
+      config:
+        hspace: 800
+- name: Bidirectional (uio_in)
+  items:
+  - signal: uio_in
+    description: Bidirectional signal mappings
+    svg: tt3491_uio_in
+    reg:
+      reg:
+      - name: X6; X6; Y1; h
+        bits: 1
+      - name: X7; X7; Y2; V
+        bits: 1
+      - name: X9; X9; /LT1; -
+        bits: 1
+      - name: /LT; FS; /LT2; /LT
+        bits: 1
+      - name: /BI (blanking input)
+        bits: 1
+      - name: /AL (active low)
+        bits: 1
+      - name: M0 (mode select)
+        bits: 1
+      - name: M1 (mode select)
+        bits: 1
+      config:
+        hspace: 800

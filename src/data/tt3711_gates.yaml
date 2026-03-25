@@ -9,18 +9,63 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "NAND test 0&0"
-    cycles: 1
-    values:
-      ui_in: 0b00000000
-      uo_out: 0b00000001
-  - name: "NAND test 1&0"
-    cycles: 1
-    values:
-      ui_in: 0b00000001
-      uo_out: 0b00000001
-  - name: "NAND test 1&1"
-    cycles: 1
-    values:
-      ui_in: 0b00000011
-      uo_out: 0b00000000
+- name: "NAND test 0&0"
+  cycles: 1
+  values:
+    ui_in: 0b00000000
+    uo_out: 0b00000001
+- name: "NAND test 1&0"
+  cycles: 1
+  values:
+    ui_in: 0b00000001
+    uo_out: 0b00000001
+- name: "NAND test 1&1"
+  cycles: 1
+  values:
+    ui_in: 0b00000011
+    uo_out: 0b00000000
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3711_ui_in
+    reg:
+      reg:
+      - name: input a
+        bits: 1
+      - name: input b
+        bits: 1
+      - bits: 2
+        name: unused
+      - name: input c
+        bits: 1
+      - name: input d
+        bits: 1
+      - name: input e
+        bits: 1
+      - name: input f
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3711_uo_out
+    reg:
+      reg:
+      - name: output nand
+        bits: 1
+      - bits: 3
+        name: unused
+      - name: out2
+        bits: 1
+      - name: out3
+        bits: 1
+      - name: out4
+        bits: 1
+      - name: out5
+        bits: 1
+      config:
+        hspace: 800

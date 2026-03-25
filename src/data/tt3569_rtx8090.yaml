@@ -19,37 +19,113 @@ signals:
     type: "input"
     width: 1
 test_steps:
-  - name: "Reset"
-    cycles: 1
-    values:
-      ui_in: 0
-      uio_in: 0
-      rst_n: 0
-  - name: "Idle"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0
-      uio_in: 0
-  - name: "Start Add: 3 + 4"
-    cycles: 1
-    values:
-      ui_in: 0b10000011 # start=1, op=0, a=3
-      uio_in: 0b00000100 # b=4, mode=0
-  - name: "LOAD state"
-    cycles: 1
-    values:
-      ui_in: 0b00000000 # clear start
-  - name: "EXECUTE state"
-    cycles: 1
-    values:
-      ui_in: 0
-  - name: "DONE state - Result"
-    cycles: 1
-    values:
-      uo_out: 7
-      uio_out: 0b00001000 # result_valid=1
-  - name: "Back to IDLE"
-    cycles: 1
-    values:
-      uio_out: 0
+- name: "Reset"
+  cycles: 1
+  values:
+    ui_in: 0
+    uio_in: 0
+    rst_n: 0
+- name: "Idle"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0
+    uio_in: 0
+- name: "Start Add: 3 + 4"
+  cycles: 1
+  values:
+    ui_in: 0b10000011   # start=1, op=0, a=3
+    uio_in: 0b00000100   # b=4, mode=0
+- name: "LOAD state"
+  cycles: 1
+  values:
+    ui_in: 0b00000000   # clear start
+- name: "EXECUTE state"
+  cycles: 1
+  values:
+    ui_in: 0
+- name: "DONE state - Result"
+  cycles: 1
+  values:
+    uo_out: 7
+    uio_out: 0b00001000   # result_valid=1
+- name: "Back to IDLE"
+  cycles: 1
+  values:
+    uio_out: 0
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3569_ui_in
+    reg:
+      reg:
+      - name: data_in[0]
+        bits: 1
+      - name: data_in[1]
+        bits: 1
+      - name: data_in[2]
+        bits: 1
+      - name: data_in[3]
+        bits: 1
+      - name: data_in[4]
+        bits: 1
+      - name: data_in[5]
+        bits: 1
+      - name: data_in[6]
+        bits: 1
+      - name: data_in[7]
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3569_uo_out
+    reg:
+      reg:
+      - name: status/data_out[0]
+        bits: 1
+      - name: status/data_out[1]
+        bits: 1
+      - name: status/data_out[2]
+        bits: 1
+      - name: status/data_out[3]
+        bits: 1
+      - name: status/data_out[4]
+        bits: 1
+      - name: status/data_out[5]
+        bits: 1
+      - name: status/data_out[6]
+        bits: 1
+      - name: status/data_out[7]
+        bits: 1
+      config:
+        hspace: 800
+- name: Bidirectional (uio_in)
+  items:
+  - signal: uio_in
+    description: Bidirectional signal mappings
+    svg: tt3569_uio_in
+    reg:
+      reg:
+      - name: slot_sel[0]
+        bits: 1
+      - name: slot_sel[1]
+        bits: 1
+      - name: feature_idx[0]
+        bits: 1
+      - name: feature_idx[1]
+        bits: 1
+      - name: feature_idx[2]
+        bits: 1
+      - name: cmd[0]
+        bits: 1
+      - name: cmd[1]
+        bits: 1
+      - name: strobe
+        bits: 1
+      config:
+        hspace: 800

@@ -15,19 +15,48 @@ signals:
     type: "input"
     width: 1
 test_steps:
-  - name: "Reset"
-    cycles: 1
-    values:
-      rst_n: 0
-      ui_in: 0
-      uo_out: 0
-  - name: "Play Song 0"
-    cycles: 5
-    values:
-      rst_n: 1
-      ui_in: 0
-  - name: "Play Song 1"
-    cycles: 5
-    values:
-      rst_n: 1
-      ui_in: 1
+- name: "Reset"
+  cycles: 1
+  values:
+    rst_n: 0
+    ui_in: 0
+    uo_out: 0
+- name: "Play Song 0"
+  cycles: 5
+  values:
+    rst_n: 1
+    ui_in: 0
+- name: "Play Song 1"
+  cycles: 5
+  values:
+    rst_n: 1
+    ui_in: 1
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3616_ui_in
+    reg:
+      reg:
+      - name: Song select (0=NGGU, 1=Imperial March)
+        bits: 1
+      - name: Pause
+        bits: 1
+      - bits: 6
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3616_uo_out
+    reg:
+      reg:
+      - name: Buzzer PWM output
+        bits: 1
+      - bits: 7
+        name: unused
+      config:
+        hspace: 800

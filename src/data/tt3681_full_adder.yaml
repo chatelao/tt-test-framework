@@ -12,18 +12,49 @@ signals:
     type: "clock"
     width: 1
 test_steps:
-  - name: "Sum 0 + 0"
-    cycles: 1
-    values:
-      ui_in: 0
-      uo_out: 0
-  - name: "Sum 1 + 0"
-    cycles: 1
-    values:
-      ui_in: 1
-      uo_out: 1
-  - name: "Sum 1 + 1"
-    cycles: 1
-    values:
-      ui_in: 3
-      uo_out: 2
+- name: "Sum 0 + 0"
+  cycles: 1
+  values:
+    ui_in: 0
+    uo_out: 0
+- name: "Sum 1 + 0"
+  cycles: 1
+  values:
+    ui_in: 1
+    uo_out: 1
+- name: "Sum 1 + 1"
+  cycles: 1
+  values:
+    ui_in: 3
+    uo_out: 2
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3681_ui_in
+    reg:
+      reg:
+      - name: input a
+        bits: 1
+      - name: input b
+        bits: 1
+      - bits: 6
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3681_uo_out
+    reg:
+      reg:
+      - name: output 1
+        bits: 1
+      - name: output 2
+        bits: 1
+      - bits: 6
+        name: unused
+      config:
+        hspace: 800

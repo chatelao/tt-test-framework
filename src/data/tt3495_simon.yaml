@@ -13,15 +13,64 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Idle"
-    cycles: 10
-    values:
-      ui_in: 0x00
-  - name: "Press Button 1"
-    cycles: 5
-    values:
-      ui_in: 0x01
-  - name: "Release"
-    cycles: 5
-    values:
-      ui_in: 0x00
+- name: "Idle"
+  cycles: 10
+  values:
+    ui_in: 0x00
+- name: "Press Button 1"
+  cycles: 5
+  values:
+    ui_in: 0x01
+- name: "Release"
+  cycles: 5
+  values:
+    ui_in: 0x00
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3495_ui_in
+    reg:
+      reg:
+      - name: btn1
+        bits: 1
+      - name: btn2
+        bits: 1
+      - name: btn3
+        bits: 1
+      - name: btn4
+        bits: 1
+      - name: seginv
+        bits: 1
+      - bits: 2
+        name: unused
+      - name: clk_sel
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3495_uo_out
+    reg:
+      reg:
+      - name: led1
+        bits: 1
+      - name: led2
+        bits: 1
+      - name: led3
+        bits: 1
+      - name: led4
+        bits: 1
+      - name: speaker
+        bits: 1
+      - name: dig1
+        bits: 1
+      - name: dig2
+        bits: 1
+      - name: clk_internal
+        bits: 1
+      config:
+        hspace: 800

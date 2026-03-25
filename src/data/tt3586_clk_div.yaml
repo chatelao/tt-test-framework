@@ -15,21 +15,54 @@ signals:
     type: "input"
     width: 1
 test_steps:
-  - name: "Reset"
-    cycles: 1
-    values:
-      rst_n: 0
-      ui_in: 0
-      uo_out: 0
-  - name: "Select Clock"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0b00000101
-      uo_out: 0
-  - name: "Wait for clock"
-    cycles: 8
-    values:
-      rst_n: 1
-      ui_in: 0b00000101
-      uo_out: 0
+- name: "Reset"
+  cycles: 1
+  values:
+    rst_n: 0
+    ui_in: 0
+    uo_out: 0
+- name: "Select Clock"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0b00000101
+    uo_out: 0
+- name: "Wait for clock"
+  cycles: 8
+  values:
+    rst_n: 1
+    ui_in: 0b00000101
+    uo_out: 0
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3586_ui_in
+    reg:
+      reg:
+      - name: MUX_S0
+        bits: 1
+      - bits: 1
+        name: unused
+      - name: MUX_S1
+        bits: 1
+      - name: MUX_S2
+        bits: 1
+      - bits: 4
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3586_uo_out
+    reg:
+      reg:
+      - name: MUX_out
+        bits: 1
+      - bits: 7
+        name: unused
+      config:
+        hspace: 800

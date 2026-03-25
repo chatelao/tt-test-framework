@@ -13,15 +13,64 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Initial"
-    cycles: 5
-    values:
-      ui_in: 0x00
-  - name: "Restart"
-    cycles: 5
-    values:
-      ui_in: 0x20
-  - name: "Move Up"
-    cycles: 5
-    values:
-      ui_in: 0x01
+- name: "Initial"
+  cycles: 5
+  values:
+    ui_in: 0x00
+- name: "Restart"
+  cycles: 5
+  values:
+    ui_in: 0x20
+- name: "Move Up"
+  cycles: 5
+  values:
+    ui_in: 0x01
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3514_ui_in
+    reg:
+      reg:
+      - name: up
+        bits: 1
+      - name: down
+        bits: 1
+      - name: left
+        bits: 1
+      - name: right
+        bits: 1
+      - name: pause
+        bits: 1
+      - name: restart
+        bits: 1
+      - bits: 2
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3514_uo_out
+    reg:
+      reg:
+      - name: vga r1
+        bits: 1
+      - name: vga g1
+        bits: 1
+      - name: vga b1
+        bits: 1
+      - name: vga vsync
+        bits: 1
+      - name: vga r0
+        bits: 1
+      - name: vga g0
+        bits: 1
+      - name: vga b0
+        bits: 1
+      - name: vga hsync
+        bits: 1
+      config:
+        hspace: 800

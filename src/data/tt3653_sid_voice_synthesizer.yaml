@@ -16,13 +16,50 @@ signals:
     type: "inout"
     width: 8
 test_steps:
-  - name: "Initial Reset"
-    cycles: 5
-    values:
-      UI_IN: 0
-      UIO: 0
-  - name: "Observe PWM"
-    cycles: 20
-    values:
-      UI_IN: 0
-      UIO: 0
+- name: "Initial Reset"
+  cycles: 5
+  values:
+    UI_IN: 0
+    UIO: 0
+- name: "Observe PWM"
+  cycles: 20
+  values:
+    UI_IN: 0
+    UIO: 0
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3653_ui_in
+    reg:
+      reg:
+      - name: reg_addr[0]
+        bits: 1
+      - name: reg_addr[1]
+        bits: 1
+      - name: reg_addr[2]
+        bits: 1
+      - name: voice_select[0]
+        bits: 1
+      - name: voice_select[1]
+        bits: 1
+      - bits: 2
+        name: unused
+      - name: write_enable
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3653_uo_out
+    reg:
+      reg:
+      - name: pwm_out
+        bits: 1
+      - bits: 7
+        name: unused
+      config:
+        hspace: 800

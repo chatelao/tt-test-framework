@@ -9,24 +9,44 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Count"
-    cycles: 4
-    values:
-      uo_out: "static"
+- name: "Count"
+  cycles: 4
+  values:
+    uo_out: "static"
     # Verification of sequence
-  - name: "Step 0"
-    cycles: 1
-    values:
-      uo_out: 0
-  - name: "Step 1"
-    cycles: 1
-    values:
-      uo_out: 1
-  - name: "Step 2"
-    cycles: 1
-    values:
-      uo_out: 2
-  - name: "Step 3"
-    cycles: 1
-    values:
-      uo_out: 3
+- name: "Step 0"
+  cycles: 1
+  values:
+    uo_out: 0
+- name: "Step 1"
+  cycles: 1
+  values:
+    uo_out: 1
+- name: "Step 2"
+  cycles: 1
+  values:
+    uo_out: 2
+- name: "Step 3"
+  cycles: 1
+  values:
+    uo_out: 3
+bitfields:
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3646_uo_out
+    reg:
+      reg:
+      - name: count[0]
+        bits: 1
+      - name: count[1]
+        bits: 1
+      - name: count[2]
+        bits: 1
+      - name: count[3]
+        bits: 1
+      - bits: 4
+        name: unused
+      config:
+        hspace: 800

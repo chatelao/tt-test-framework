@@ -10,15 +10,44 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Idle"
-    cycles: 5
-    values:
-      ui_in: 0x00
-  - name: "Start MBIST"
-    cycles: 5
-    values:
-      ui_in: 0x01
-  - name: "Wait for completion"
-    cycles: 20
-    values:
-      ui_in: 0x01
+- name: "Idle"
+  cycles: 5
+  values:
+    ui_in: 0x00
+- name: "Start MBIST"
+  cycles: 5
+  values:
+    ui_in: 0x01
+- name: "Wait for completion"
+  cycles: 20
+  values:
+    ui_in: 0x01
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3498_ui_in
+    reg:
+      reg:
+      - name: START
+        bits: 1
+      - bits: 7
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3498_uo_out
+    reg:
+      reg:
+      - name: DONE
+        bits: 1
+      - name: FAIL
+        bits: 1
+      - bits: 6
+        name: unused
+      config:
+        hspace: 800

@@ -12,18 +12,67 @@ signals:
     type: "clock"
     width: 1
 test_steps:
-  - name: "AND test"
-    cycles: 1
-    values:
-      ui_in: 0b00000011
-      uo_out: 0b01000000
-  - name: "NOT test"
-    cycles: 1
-    values:
-      ui_in: 0b00000100
-      uo_out: 0b00000100
-  - name: "Pass-through"
-    cycles: 1
-    values:
-      ui_in: 0b00010000
-      uo_out: 0b00010000
+- name: "AND test"
+  cycles: 1
+  values:
+    ui_in: 0b00000011
+    uo_out: 0b01000000
+- name: "NOT test"
+  cycles: 1
+  values:
+    ui_in: 0b00000100
+    uo_out: 0b00000100
+- name: "Pass-through"
+  cycles: 1
+  values:
+    ui_in: 0b00010000
+    uo_out: 0b00010000
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3691_ui_in
+    reg:
+      reg:
+      - name: IN0
+        bits: 1
+      - name: IN1
+        bits: 1
+      - name: IN2
+        bits: 1
+      - name: IN3
+        bits: 1
+      - name: IN4
+        bits: 1
+      - name: IN5
+        bits: 1
+      - bits: 2
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3691_uo_out
+    reg:
+      reg:
+      - name: OUT0
+        bits: 1
+      - name: OUT1
+        bits: 1
+      - name: OUT2
+        bits: 1
+      - name: OUT3
+        bits: 1
+      - name: OUT4
+        bits: 1
+      - name: OUT5
+        bits: 1
+      - name: OUT6
+        bits: 1
+      - name: OUT7
+        bits: 1
+      config:
+        hspace: 800

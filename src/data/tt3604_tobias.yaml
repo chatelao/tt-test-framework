@@ -10,15 +10,44 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Initial state"
-    cycles: 1
-    values:
-      ui_in: 0
-  - name: "Logic Test"
-    cycles: 1
-    values:
-      ui_in: 0b00001111
-  - name: "Pass-through Test"
-    cycles: 1
-    values:
-      ui_in: 0b11110000
+- name: "Initial state"
+  cycles: 1
+  values:
+    ui_in: 0
+- name: "Logic Test"
+  cycles: 1
+  values:
+    ui_in: 0b00001111
+- name: "Pass-through Test"
+  cycles: 1
+  values:
+    ui_in: 0b11110000
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3604_ui_in
+    reg:
+      reg:
+      - name: input a
+        bits: 1
+      - name: input b
+        bits: 1
+      - bits: 6
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3604_uo_out
+    reg:
+      reg:
+      - name: output 0
+        bits: 1
+      - bits: 7
+        name: unused
+      config:
+        hspace: 800

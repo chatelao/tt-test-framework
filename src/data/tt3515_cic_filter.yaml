@@ -10,15 +10,54 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "PDM Input 0"
-    cycles: 5
-    values:
-      ui_in: 0x00
-  - name: "PDM Input 1"
-    cycles: 5
-    values:
-      ui_in: 0x01
-  - name: "Wait for PCM output"
-    cycles: 20
-    values:
-      ui_in: 0x01
+- name: "PDM Input 0"
+  cycles: 5
+  values:
+    ui_in: 0x00
+- name: "PDM Input 1"
+  cycles: 5
+  values:
+    ui_in: 0x01
+- name: "Wait for PCM output"
+  cycles: 20
+  values:
+    ui_in: 0x01
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3515_ui_in
+    reg:
+      reg:
+      - name: PDM Input (d_in)
+        bits: 1
+      - name: NC
+        bits: 7
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3515_uo_out
+    reg:
+      reg:
+      - name: PCM Output Bit 7 (MSB)
+        bits: 1
+      - name: PCM Output Bit 6
+        bits: 1
+      - name: PCM Output Bit 5
+        bits: 1
+      - name: PCM Output Bit 4
+        bits: 1
+      - name: PCM Output Bit 3
+        bits: 1
+      - name: PCM Output Bit 2
+        bits: 1
+      - name: PCM Output Bit 1
+        bits: 1
+      - name: PCM Output Bit 0 (LSB)
+        bits: 1
+      config:
+        hspace: 800

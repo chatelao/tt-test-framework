@@ -10,15 +10,50 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Idle"
-    cycles: 5
-    values:
-      ui_in: 0x00
-  - name: "Input 1 high"
-    cycles: 5
-    values:
-      ui_in: 0x02
-  - name: "Input 3 high"
-    cycles: 5
-    values:
-      ui_in: 0x08
+- name: "Idle"
+  cycles: 5
+  values:
+    ui_in: 0x00
+- name: "Input 1 high"
+  cycles: 5
+  values:
+    ui_in: 0x02
+- name: "Input 3 high"
+  cycles: 5
+  values:
+    ui_in: 0x08
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3505_ui_in
+    reg:
+      reg:
+      - bits: 1
+        name: unused
+      - name: First input
+        bits: 1
+      - bits: 1
+        name: unused
+      - name: Second input
+        bits: 1
+      - bits: 4
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3505_uo_out
+    reg:
+      reg:
+      - bits: 2
+        name: unused
+      - name: First output
+        bits: 1
+      - bits: 5
+        name: unused
+      config:
+        hspace: 800

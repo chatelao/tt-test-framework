@@ -12,23 +12,64 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Group 1: (IN0 & IN1) | (IN2 & IN3) = UO0, UO1"
-    cycles: 1
-    values:
-      UI_IN: 0b00000011
-      UO_OUT: 0b00000011
-  - name: "Group 2: (IN4 & IN5) | (IN6 & IN7) = UO6, UO7"
-    cycles: 1
-    values:
-      UI_IN: 0b01010000
-      UO_OUT: 0b11000000
-  - name: "All group inputs high"
-    cycles: 1
-    values:
-      UI_IN: 0b11111111
-      UO_OUT: 0b11000011
-  - name: "All low"
-    cycles: 1
-    values:
-      UI_IN: 0b00000000
-      UO_OUT: 0b00000000
+- name: "Group 1: (IN0 & IN1) | (IN2 & IN3) = UO0, UO1"
+  cycles: 1
+  values:
+    UI_IN: 0b00000011
+    UO_OUT: 0b00000011
+- name: "Group 2: (IN4 & IN5) | (IN6 & IN7) = UO6, UO7"
+  cycles: 1
+  values:
+    UI_IN: 0b01010000
+    UO_OUT: 0b11000000
+- name: "All group inputs high"
+  cycles: 1
+  values:
+    UI_IN: 0b11111111
+    UO_OUT: 0b11000011
+- name: "All low"
+  cycles: 1
+  values:
+    UI_IN: 0b00000000
+    UO_OUT: 0b00000000
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3703_ui_in
+    reg:
+      reg:
+      - name: Input a
+        bits: 1
+      - name: Input b
+        bits: 1
+      - name: Input c
+        bits: 1
+      - name: Input d
+        bits: 1
+      - name: Input e
+        bits: 1
+      - name: Input f
+        bits: 1
+      - name: Input g
+        bits: 1
+      - name: Input h
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3703_uo_out
+    reg:
+      reg:
+      - name: Output y
+        bits: 2
+      - bits: 4
+        name: unused
+      - name: Output z
+        bits: 2
+      config:
+        hspace: 800

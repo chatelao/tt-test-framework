@@ -9,33 +9,109 @@ signals:
   clk: {name: "clk", type: clock, width: 1}
   rst_n: {name: "rst_n", type: input, width: 1}
 test_steps:
-  - name: "Reset"
-    cycles: 5
-    values: {rst_n: 0, ui_in: 0b00001111, uio_in: 0x00}
-  - name: "Release Reset (T1 Fetch)"
-    cycles: 5
-    values: {rst_n: 1, ui_in: 0b10001111, uio_in: 0x00}
-  - name: "Fetch T2 (MREQ/RD low)"
-    cycles: 5
-    values: {rst_n: 1, ui_in: 0b10001111, uio_in: 0x00}
-  - name: "Fetch T3 (Wait for Data)"
-    cycles: 5
-    values: {rst_n: 1, ui_in: 0b10001111, uio_in: 0x00}
-  - name: "Provide NOP (0x00)"
-    cycles: 5
-    values: {rst_n: 1, ui_in: 0b10001111, uio_in: 0x00}
-  - name: "View High Address Bus"
-    cycles: 5
-    values: {rst_n: 1, ui_in: 0b01001111, uio_in: 0x00}
-  - name: "View Low Address Bus"
-    cycles: 5
-    values: {rst_n: 1, ui_in: 0b00001111, uio_in: 0x00}
-  - name: "View Control Signals"
-    cycles: 5
-    values: {rst_n: 1, ui_in: 0b11001111, uio_in: 0x00}
-  - name: "Idle 1"
-    cycles: 5
-    values: {rst_n: 1, ui_in: 0b11001111, uio_in: 0x00}
-  - name: "Idle 2"
-    cycles: 5
-    values: {rst_n: 1, ui_in: 0b11001111, uio_in: 0x00}
+- name: "Reset"
+  cycles: 5
+  values: {rst_n: 0, ui_in: 0b00001111, uio_in: 0x00}
+- name: "Release Reset (T1 Fetch)"
+  cycles: 5
+  values: {rst_n: 1, ui_in: 0b10001111, uio_in: 0x00}
+- name: "Fetch T2 (MREQ/RD low)"
+  cycles: 5
+  values: {rst_n: 1, ui_in: 0b10001111, uio_in: 0x00}
+- name: "Fetch T3 (Wait for Data)"
+  cycles: 5
+  values: {rst_n: 1, ui_in: 0b10001111, uio_in: 0x00}
+- name: "Provide NOP (0x00)"
+  cycles: 5
+  values: {rst_n: 1, ui_in: 0b10001111, uio_in: 0x00}
+- name: "View High Address Bus"
+  cycles: 5
+  values: {rst_n: 1, ui_in: 0b01001111, uio_in: 0x00}
+- name: "View Low Address Bus"
+  cycles: 5
+  values: {rst_n: 1, ui_in: 0b00001111, uio_in: 0x00}
+- name: "View Control Signals"
+  cycles: 5
+  values: {rst_n: 1, ui_in: 0b11001111, uio_in: 0x00}
+- name: "Idle 1"
+  cycles: 5
+  values: {rst_n: 1, ui_in: 0b11001111, uio_in: 0x00}
+- name: "Idle 2"
+  cycles: 5
+  values: {rst_n: 1, ui_in: 0b11001111, uio_in: 0x00}
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3434_ui_in
+    reg:
+      reg:
+      - name: /WAIT
+        bits: 1
+      - name: /INT
+        bits: 1
+      - name: /NMI
+        bits: 1
+      - name: /BUSRQ
+        bits: 1
+      - name: 'CONFIG -- 00: short MREQ IORQ RD / 01: short MREQ IORQ RD starts early'
+        bits: 1
+      - name: 'CONFIG -- 10: long MREQ IORQ / 11: long MREQ IORQ RD starts early'
+        bits: 1
+      - name: MUX -- address lo/hi bits on the output pins
+        bits: 1
+      - name: MUX -- control signals on the output pins
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3434_uo_out
+    reg:
+      reg:
+      - name: /M1, A0, A8
+        bits: 1
+      - name: /MREQ, A1, A9
+        bits: 1
+      - name: /IORQ, A2, A10
+        bits: 1
+      - name: /RD, A3, A11
+        bits: 1
+      - name: /WR, A4, A12
+        bits: 1
+      - name: /RFSH, A5, A13
+        bits: 1
+      - name: /HALT, A6, A14
+        bits: 1
+      - name: /BUSAK, A7, A15
+        bits: 1
+      config:
+        hspace: 800
+- name: Bidirectional (uio_in)
+  items:
+  - signal: uio_in
+    description: Bidirectional signal mappings
+    svg: tt3434_uio_in
+    reg:
+      reg:
+      - name: D0
+        bits: 1
+      - name: D1
+        bits: 1
+      - name: D2
+        bits: 1
+      - name: D3
+        bits: 1
+      - name: D4
+        bits: 1
+      - name: D5
+        bits: 1
+      - name: D6
+        bits: 1
+      - name: D7
+        bits: 1
+      config:
+        hspace: 800

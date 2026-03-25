@@ -15,33 +15,62 @@ signals:
     type: "input"
     width: 1
 test_steps:
-  - name: "Reset"
-    cycles: 1
-    values:
-      rst_n: 0
-      ui_in: 0
-      uo_out: 0
-  - name: "Shift in 1"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 1
-      uo_out: 0
-  - name: "Shift"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0
-      uo_out: 0
-  - name: "Shift"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0
-      uo_out: 0
-  - name: "Shift out 1"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0
-      uo_out: 1
+- name: "Reset"
+  cycles: 1
+  values:
+    rst_n: 0
+    ui_in: 0
+    uo_out: 0
+- name: "Shift in 1"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 1
+    uo_out: 0
+- name: "Shift"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0
+    uo_out: 0
+- name: "Shift"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0
+    uo_out: 0
+- name: "Shift out 1"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0
+    uo_out: 1
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3626_ui_in
+    reg:
+      reg:
+      - name: Enable
+        bits: 1
+      - bits: 7
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3626_uo_out
+    reg:
+      reg:
+      - name: Clock/4
+        bits: 1
+      - bits: 6
+        name: unused
+      - name: Clock
+        bits: 1
+      config:
+        hspace: 800

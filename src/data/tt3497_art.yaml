@@ -10,11 +10,62 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Pattern 0xAA"
-    cycles: 1
-    values:
-      ui_in: 0xAA
-  - name: "Pattern 0x55"
-    cycles: 1
-    values:
-      ui_in: 0x55
+- name: "Pattern 0xAA"
+  cycles: 1
+  values:
+    ui_in: 0xAA
+- name: "Pattern 0x55"
+  cycles: 1
+  values:
+    ui_in: 0x55
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3497_ui_in
+    reg:
+      reg:
+      - name: in0
+        bits: 1
+      - name: in1
+        bits: 1
+      - name: in2
+        bits: 1
+      - name: in3
+        bits: 1
+      - name: in4
+        bits: 1
+      - name: in5
+        bits: 1
+      - name: in6
+        bits: 1
+      - name: in7
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3497_uo_out
+    reg:
+      reg:
+      - name: out0
+        bits: 1
+      - name: out1
+        bits: 1
+      - name: out2
+        bits: 1
+      - name: out3
+        bits: 1
+      - name: out4
+        bits: 1
+      - name: out5
+        bits: 1
+      - name: out6
+        bits: 1
+      - name: out7
+        bits: 1
+      config:
+        hspace: 800

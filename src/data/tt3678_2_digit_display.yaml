@@ -12,19 +12,68 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Input 0 active (switches on digit 1?)"
-    cycles: 1
-    values:
-      UI_IN: 0b00000001
-  - name: "Input 1 active (switches on digit 2?)"
-    cycles: 1
-    values:
-      UI_IN: 0b00000010
-  - name: "Both inactive"
-    cycles: 1
-    values:
-      UI_IN: 0b00000000
-  - name: "Both active"
-    cycles: 1
-    values:
-      UI_IN: 0b00000011
+- name: "Input 0 active (switches on digit 1?)"
+  cycles: 1
+  values:
+    UI_IN: 0b00000001
+- name: "Input 1 active (switches on digit 2?)"
+  cycles: 1
+  values:
+    UI_IN: 0b00000010
+- name: "Both inactive"
+  cycles: 1
+  values:
+    UI_IN: 0b00000000
+- name: "Both active"
+  cycles: 1
+  values:
+    UI_IN: 0b00000011
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3678_ui_in
+    reg:
+      reg:
+      - name: Connects to an and gate that checks if input 1 is not active and
+          then switches on output pins for digit '1'. Also connects to a not
+          gate for checking if input 1 is active and thus stops displaying a
+          number.
+        bits: 1
+      - name: Connects to an and gate that checks if input 0 is not active and
+          then switches on output pins for digit '2'. Also connects to a not
+          gate for checking if input 0 is active and thus stops displaying a
+          number.
+        bits: 1
+      - bits: 6
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3678_uo_out
+    reg:
+      reg:
+      - name: Toggled by input 0 to display segment A on the 7-segment display.
+        bits: 1
+      - name: Toggled by input 0 and 1 to display segment B on the 7-segment
+          display.
+        bits: 1
+      - name: Toggled by input 0 and 1 to display segment C on the 7-segment
+          display.
+        bits: 1
+      - name: Toggled by input 0 to display segment D on the 7-segment display.
+        bits: 1
+      - name: Toggled by input 0 to display segment E on the 7-segment display.
+        bits: 1
+      - bits: 1
+        name: unused
+      - name: Toggled by input 0 to display segment G on the 7-segment display.
+        bits: 1
+      - bits: 1
+        name: unused
+      config:
+        hspace: 800

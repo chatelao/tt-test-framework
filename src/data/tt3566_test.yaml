@@ -12,23 +12,56 @@ signals:
     type: "clock"
     width: 1
 test_steps:
-  - name: "AND test 0 & 0"
-    cycles: 1
-    values:
-      ui_in: 0b00000000
-      uo_out: 0b00000000
-  - name: "AND test 1 & 0"
-    cycles: 1
-    values:
-      ui_in: 0b00000001
-      uo_out: 0b00000000
-  - name: "AND test 1 & 1"
-    cycles: 1
-    values:
-      ui_in: 0b00000011
-      uo_out: 0b00000001
-  - name: "AND test 0 & 1"
-    cycles: 1
-    values:
-      ui_in: 0b00000010
-      uo_out: 0b00000000
+- name: "AND test 0 & 0"
+  cycles: 1
+  values:
+    ui_in: 0b00000000
+    uo_out: 0b00000000
+- name: "AND test 1 & 0"
+  cycles: 1
+  values:
+    ui_in: 0b00000001
+    uo_out: 0b00000000
+- name: "AND test 1 & 1"
+  cycles: 1
+  values:
+    ui_in: 0b00000011
+    uo_out: 0b00000001
+- name: "AND test 0 & 1"
+  cycles: 1
+  values:
+    ui_in: 0b00000010
+    uo_out: 0b00000000
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3566_ui_in
+    reg:
+      reg:
+      - name: In0
+        bits: 1
+      - name: In1
+        bits: 1
+      - name: In2
+        bits: 1
+      - bits: 5
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3566_uo_out
+    reg:
+      reg:
+      - name: And
+        bits: 1
+      - bits: 6
+        name: unused
+      - name: clc
+        bits: 1
+      config:
+        hspace: 800
