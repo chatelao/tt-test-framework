@@ -18,13 +18,13 @@ def update_tt3990():
                     "signal": "ui_in",
                     "description": "Metadata 0",
                     "svg": "tt3990_ui_in_c0",
-                    "reg": {"reg": [{"name": "NBM Offset A", "bits": 3}, {"name": "LNS Mode", "bits": 2}, {"name": "Loopback", "bits": 1}, {"name": "Debug", "bits": 1}, {"name": "Short Protocol", "bits": 1}], "config": {"hspace": 800}}
+                    "reg": {"reg": [{"name": "NBM Offset A", "bits": 3}, {"name": "LNS Mode", "bits": 2}, {"name": "Loopback", "bits": 1}, {"name": "Debug", "bits": 1}, {"name": "Short Protocol", "bits": 1}], "config": {"hspace": 800, "bits": 8}}
                 },
                 {
                     "signal": "uio_in",
                     "description": "Metadata 1",
                     "svg": "tt3990_uio_in_c0",
-                    "reg": {"reg": [{"name": "NBM Offset B", "bits": 3}, {"name": "Rounding Mode", "bits": 2}, {"name": "Overflow", "bits": 1}, {"name": "Packed Mode", "bits": 1}, {"name": "MX+ Enable", "bits": 1}], "config": {"hspace": 800}}
+                    "reg": {"reg": [{"name": "NBM Offset B", "bits": 3}, {"name": "Rounding Mode", "bits": 2}, {"name": "Overflow", "bits": 1}, {"name": "Packed Mode", "bits": 1}, {"name": "MX+ Enable", "bits": 1}], "config": {"hspace": 800, "bits": 8}}
                 }
             ]
         },
@@ -35,13 +35,13 @@ def update_tt3990():
                     "signal": "ui_in",
                     "description": "Scale A (8-bit Unsigned)",
                     "svg": "tt3990_data_8b",
-                    "reg": {"reg": [{"name": "Scale", "bits": 8}], "config": {"hspace": 800}}
+                    "reg": {"reg": [{"name": "Scale", "bits": 8}], "config": {"hspace": 800, "bits": 8}}
                 },
                 {
                     "signal": "uio_in",
                     "description": "Config A",
                     "svg": "tt3990_uio_in_c1",
-                    "reg": {"reg": [{"name": "Format", "bits": 3}, {"name": "BM Index", "bits": 5}], "config": {"hspace": 800}}
+                    "reg": {"reg": [{"name": "Format", "bits": 3}, {"name": "BM Index", "bits": 5}], "config": {"hspace": 800, "bits": 8}}
                 }
             ]
         },
@@ -52,13 +52,13 @@ def update_tt3990():
                     "signal": "ui_in",
                     "description": "Scale B (8-bit Unsigned)",
                     "svg": "tt3990_data_8b",
-                    "reg": {"reg": [{"name": "Scale", "bits": 8}], "config": {"hspace": 800}}
+                    "reg": {"reg": [{"name": "Scale", "bits": 8}], "config": {"hspace": 800, "bits": 8}}
                 },
                 {
                     "signal": "uio_in",
                     "description": "Config B",
                     "svg": "tt3990_uio_in_c2",
-                    "reg": {"reg": [{"name": "Format", "bits": 3}, {"name": "BM Index", "bits": 5}], "config": {"hspace": 800}}
+                    "reg": {"reg": [{"name": "Format", "bits": 3}, {"name": "BM Index", "bits": 5}], "config": {"hspace": 800, "bits": 8}}
                 }
             ]
         },
@@ -69,13 +69,13 @@ def update_tt3990():
                     "signal": "ui_in",
                     "description": "Element A_i (8-bit Float/Int)",
                     "svg": "tt3990_data_8b",
-                    "reg": {"reg": [{"name": "Data", "bits": 8}], "config": {"hspace": 800}}
+                    "reg": {"reg": [{"name": "Data", "bits": 8}], "config": {"hspace": 800, "bits": 8}}
                 },
                 {
                     "signal": "uio_in",
                     "description": "Element B_i (8-bit Float/Int)",
                     "svg": "tt3990_data_8b",
-                    "reg": {"reg": [{"name": "Data", "bits": 8}], "config": {"hspace": 800}}
+                    "reg": {"reg": [{"name": "Data", "bits": 8}], "config": {"hspace": 800, "bits": 8}}
                 }
             ]
         },
@@ -86,7 +86,7 @@ def update_tt3990():
                     "signal": "uo_out",
                     "description": "Result Byte (serialized MSB to LSB)",
                     "svg": "tt3990_data_8b",
-                    "reg": {"reg": [{"name": "Result", "bits": 8}], "config": {"hspace": 800}}
+                    "reg": {"reg": [{"name": "Result", "bits": 8}], "config": {"hspace": 800, "bits": 8}}
                 }
             ]
         }
@@ -108,7 +108,7 @@ def update_tt3415():
                     "signal": "uio_in",
                     "description": "BAUD Rate (Cycles per bit = {uio_in, 2'b00})",
                     "svg": "tt3415_uio_in_baud",
-                    "reg": {"reg": [{"name": "BAUD[7:0]", "bits": 8}], "config": {"hspace": 800}}
+                    "reg": {"reg": [{"name": "BAUD[7:0]", "bits": 8}], "config": {"hspace": 800, "bits": 8}}
                 }
             ]
         }
@@ -130,7 +130,7 @@ def update_tt3641():
                     "signal": "uio_in",
                     "description": "Command and Register Selection",
                     "svg": "tt3641_uio_in_ctrl",
-                    "reg": {"reg": [{"name": "CMD_EN", "bits": 1}, {"name": "REG_SEL[0]", "bits": 1}, {"name": "RW", "bits": 1}, {"name": "REG_SEL[1]", "bits": 1}, {"bits": 4, "name": "unused"}], "config": {"hspace": 800}}
+                    "reg": {"reg": [{"name": "CMD_EN", "bits": 1}, {"name": "REG_SEL[0]", "bits": 1}, {"name": "RW", "bits": 1}, {"name": "REG_SEL[1]", "bits": 1}, {"bits": 4, "name": "unused"}], "config": {"hspace": 800, "bits": 8}}
                 }
             ]
         }
@@ -152,7 +152,7 @@ def update_tt3991():
                     "signal": "uio_in",
                     "description": "Programming Protocol Control",
                     "svg": "tt3991_uio_in_load",
-                    "reg": {"reg": [{"name": "LOAD_MODE", "bits": 1}, {"name": "LOAD_VALID", "bits": 1}, {"bits": 6, "name": "unused"}], "config": {"hspace": 800}}
+                    "reg": {"reg": [{"name": "LOAD_MODE", "bits": 1}, {"name": "LOAD_VALID", "bits": 1}, {"bits": 6, "name": "unused"}], "config": {"hspace": 800, "bits": 8}}
                 }
             ]
         }

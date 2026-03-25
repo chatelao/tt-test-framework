@@ -83,6 +83,7 @@ bitfields:
         bits: 1
       config:
         hspace: 800
+        bits: 8
   - signal: uio_in
     description: Metadata 1
     svg: tt3990_uio_in_c0
@@ -100,6 +101,7 @@ bitfields:
         bits: 1
       config:
         hspace: 800
+        bits: 8
 - name: 'Cycle 1: Scale A & Config A'
   items:
   - signal: ui_in
@@ -111,6 +113,7 @@ bitfields:
         bits: 8
       config:
         hspace: 800
+        bits: 8
   - signal: uio_in
     description: Config A
     svg: tt3990_uio_in_c1
@@ -122,6 +125,7 @@ bitfields:
         bits: 5
       config:
         hspace: 800
+        bits: 8
 - name: 'Cycle 2: Scale B & Config B'
   items:
   - signal: ui_in
@@ -133,6 +137,7 @@ bitfields:
         bits: 8
       config:
         hspace: 800
+        bits: 8
   - signal: uio_in
     description: Config B
     svg: tt3990_uio_in_c2
@@ -144,6 +149,7 @@ bitfields:
         bits: 5
       config:
         hspace: 800
+        bits: 8
 - name: 'Cycles 3-34: Element Streaming'
   items:
   - signal: ui_in
@@ -155,6 +161,7 @@ bitfields:
         bits: 8
       config:
         hspace: 800
+        bits: 8
   - signal: uio_in
     description: Element B_i (8-bit Float/Int)
     svg: tt3990_data_8b
@@ -164,6 +171,7 @@ bitfields:
         bits: 8
       config:
         hspace: 800
+        bits: 8
 - name: 'Cycles 37-40: Result Output'
   items:
   - signal: uo_out
@@ -175,3 +183,4 @@ bitfields:
         bits: 8
       config:
         hspace: 800
+        bits: 8

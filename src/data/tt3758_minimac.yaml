@@ -43,6 +43,7 @@ bitfields:
         bits: 1
       config:
         hspace: 800
+        bits: 8
 - name: Output (uo_out)
   items:
   - signal: uo_out
@@ -68,6 +69,7 @@ bitfields:
         bits: 1
       config:
         hspace: 800
+        bits: 8
 - name: Bidirectional (uio_in)
   items:
   - signal: uio_in
@@ -93,3 +95,4 @@ bitfields:
         bits: 1
       config:
         hspace: 800
+        bits: 8

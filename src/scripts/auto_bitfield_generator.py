@@ -93,7 +93,7 @@ def generate_bitfields(pid, source_url, signals):
                 "signal": "ui_in",
                 "description": "Input signal mappings",
                 "svg": f"tt{pid}_ui_in",
-                "reg": {"reg": ui_groups, "config": {"hspace": 800}}
+                "reg": {"reg": ui_groups, "config": {"hspace": 800, "bits": 8}}
             }]
         })
 
@@ -106,7 +106,7 @@ def generate_bitfields(pid, source_url, signals):
                 "signal": "uo_out",
                 "description": "Output signal mappings",
                 "svg": f"tt{pid}_uo_out",
-                "reg": {"reg": uo_groups, "config": {"hspace": 800}}
+                "reg": {"reg": uo_groups, "config": {"hspace": 800, "bits": 8}}
             }]
         })
 
@@ -119,7 +119,7 @@ def generate_bitfields(pid, source_url, signals):
                 "signal": "uio_in",
                 "description": "Bidirectional signal mappings",
                 "svg": f"tt{pid}_uio_in",
-                "reg": {"reg": uio_groups, "config": {"hspace": 800}}
+                "reg": {"reg": uio_groups, "config": {"hspace": 800, "bits": 8}}
             }]
         })
 

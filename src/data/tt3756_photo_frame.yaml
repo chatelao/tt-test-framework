@@ -47,3 +47,4 @@ bitfields:
         bits: 1
       config:
         hspace: 800
+        bits: 8

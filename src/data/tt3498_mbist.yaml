@@ -36,6 +36,7 @@ bitfields:
         name: unused
       config:
         hspace: 800
+        bits: 8
 - name: Output (uo_out)
   items:
   - signal: uo_out
@@ -51,3 +52,4 @@ bitfields:
         name: unused
       config:
         hspace: 800
+        bits: 8
