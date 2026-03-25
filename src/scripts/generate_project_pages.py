@@ -4,6 +4,26 @@ import re
 import subprocess
 import json
 
+def decode_value(value, bit_defs):
+    if not isinstance(value, int):
+        return str(value)
+
+    decoded = []
+    current_bit = 0
+    for bd in bit_defs:
+        bits = bd.get('bits', 1)
+        name = bd.get('name', 'unused')
+
+        mask = (1 << bits) - 1
+        field_val = (value >> current_bit) & mask
+
+        if name and name.lower() != 'unused':
+            decoded.append(f"{name}={field_val}")
+
+        current_bit += bits
+
+    return ", ".join(decoded) if decoded else ""
+
 def generate_markdown(pid, yaml_data, svg_path):
     project_name = yaml_data.get('project', f'Project {pid}')
     source_url = yaml_data.get('metadata', {}).get('source', '')
@@ -25,6 +45,117 @@ def generate_markdown(pid, yaml_data, svg_path):
         stype = sig_info.get('type', 'N/A')
         width = sig_info.get('width', 'N/A')
         md_content += f"| {sig_name} | {stype} | {width} |\n"
+
+    # First 10 Cycles table
+    test_steps = yaml_data.get('test_steps')
+    if not test_steps and 'test_cases' in yaml_data:
+        test_steps = yaml_data['test_cases'][0].get('test_steps')
+
+    if test_steps:
+        md_content += "\n## First 10 Cycles\n\n"
+
+        # Filter signals to show in table (exclude clocks for brevity)
+        table_signals = [s for s, info in signals.items() if info.get('type') != 'clock']
+
+        md_content += "| Cycle | Phase | " + " | ".join(table_signals) + " |\n"
+        md_content += "|-------|-------|" + "|".join(["-------" for _ in table_signals]) + "|\n"
+
+        flat_cycles = []
+        for step in test_steps:
+            cycles = step.get('cycles', 1)
+            for i in range(cycles):
+                flat_cycles.append({
+                    'name': step.get('name', ''),
+                    'values': step.get('values', {})
+                })
+                if len(flat_cycles) >= 10:
+                    break
+            if len(flat_cycles) >= 10:
+                break
+
+        last_values = {sig: 0 for sig in table_signals}
+
+        for i, cycle in enumerate(flat_cycles):
+            phase_name = cycle['name']
+            row = [str(i), phase_name]
+
+            for sig_name in table_signals:
+                val = cycle['values'].get(sig_name)
+                if val is None:
+                    val = last_values.get(sig_name, 0)
+
+                last_values[sig_name] = val
+
+                # Decoding logic
+                decoded_str = ""
+                if isinstance(val, int) and 'bitfields' in yaml_data:
+                    # Try to find a matching bitfield group
+                    best_group = None
+                    best_item = None
+
+                    # 1. Try to find a group that matches the phase name AND contains the signal
+                    for group in yaml_data['bitfields']:
+                        # Check for common prefix or containment
+                        g_name = group['name'].lower()
+                        p_name = phase_name.lower()
+
+                        # Match if one contains the other, or if they share a common "Cycle N" prefix
+                        match = g_name in p_name or p_name in g_name
+                        if not match:
+                            # Try matching numbers if 'cycle' or 'step' is present
+                            nums1 = re.findall(r'(\d+)', g_name)
+                            nums2 = re.findall(r'(\d+)', p_name)
+                            if nums1 and nums2:
+                                # If they share any number and both mention 'cycle'
+                                if ('cycle' in g_name or 'step' in g_name) and \
+                                   ('cycle' in p_name or 'step' in p_name):
+                                    common = set(nums1) & set(nums2)
+                                    if common:
+                                        match = True
+
+                        if match:
+                            for item in group['items']:
+                                if item['signal'] == sig_name:
+                                    best_group = group
+                                    best_item = item
+                                    break
+                        if best_item: break
+
+                    # 2. Fallback: find any group that contains the signal name in its name
+                    if not best_item:
+                        for group in yaml_data['bitfields']:
+                            if sig_name.lower() in group['name'].lower():
+                                for item in group['items']:
+                                    if item['signal'] == sig_name:
+                                        best_group = group
+                                        best_item = item
+                                        break
+                            if best_item: break
+
+                    # 3. Last resort: find the first group that defines this signal
+                    if not best_item:
+                        for group in yaml_data['bitfields']:
+                            for item in group['items']:
+                                if item['signal'] == sig_name:
+                                    best_group = group
+                                    best_item = item
+                                    break
+                            if best_item: break
+
+                    if best_item:
+                        bit_defs = best_item.get('reg', {}).get('reg', [])
+                        if bit_defs:
+                            decoded_str = decode_value(val, bit_defs)
+
+                if decoded_str:
+                    row.append(f"{hex(val)} ({decoded_str})")
+                else:
+                    if isinstance(val, int):
+                        row.append(hex(val))
+                    else:
+                        row.append(str(val))
+
+            md_content += "| " + " | ".join(row) + " |\n"
 
     if 'bitfields' in yaml_data:
         md_content += "\n## Bit Patterns\n\n"
