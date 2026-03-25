@@ -10,15 +10,52 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Input All Zero"
-    cycles: 1
-    values:
-      ui_in: 0
-  - name: "XOR Test"
-    cycles: 1
-    values:
-      ui_in: 0b00000011 # IN0=1, IN1=1 -> OUT0=0 (XOR)
-  - name: "XOR Test 2"
-    cycles: 1
-    values:
-      ui_in: 0b00000001 # IN0=1, IN1=0 -> OUT0=1 (XOR)
+- name: "Input All Zero"
+  cycles: 1
+  values:
+    ui_in: 0
+- name: "XOR Test"
+  cycles: 1
+  values:
+    ui_in: 0b00000011   # IN0=1, IN1=1 -> OUT0=0 (XOR)
+- name: "XOR Test 2"
+  cycles: 1
+  values:
+    ui_in: 0b00000001   # IN0=1, IN1=0 -> OUT0=1 (XOR)
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3584_ui_in
+    reg:
+      reg:
+      - name: '1'
+        bits: 1
+      - name: '2'
+        bits: 1
+      - name: '3'
+        bits: 1
+      - name: '4'
+        bits: 1
+      - name: '5'
+        bits: 1
+      - name: '6'
+        bits: 1
+      - name: '7'
+        bits: 1
+      - name: '8'
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3584_uo_out
+    reg:
+      reg:
+      - name: Data
+        bits: 8
+      config:
+        hspace: 800

@@ -12,15 +12,38 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Initial state"
-    cycles: 1
-    values:
-      UI_IN: 0
-  - name: "Clocking counter"
-    cycles: 20
-    values:
-      UI_IN: 0
-  - name: "Exercise mixed logic"
-    cycles: 1
-    values:
-      UI_IN: 0b11000000
+- name: "Initial state"
+  cycles: 1
+  values:
+    UI_IN: 0
+- name: "Clocking counter"
+  cycles: 20
+  values:
+    UI_IN: 0
+- name: "Exercise mixed logic"
+  cycles: 1
+  values:
+    UI_IN: 0b11000000
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3708_ui_in
+    reg:
+      reg:
+      - name: Data
+        bits: 8
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3708_uo_out
+    reg:
+      reg:
+      - name: Data
+        bits: 8
+      config:
+        hspace: 800

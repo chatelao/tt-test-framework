@@ -8,74 +8,113 @@ signals:
   rst_n: {name: rst_n, type: input, width: 1}
 
 test_steps:
-  - name: "Reset"
-    cycles: 1
-    values:
-      rst_n: 0
-      ui_in: 0
-  - name: "A=0, B=0, Cin=0"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0x00
-      uo_out: 0x00
-  - name: "A=1, B=0, Cin=0"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0x01
-      uo_out: 0x01
-  - name: "A=0, B=1, Cin=0"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0x02
-      uo_out: 0x01
-  - name: "A=1, B=1, Cin=0"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0x03
-      uo_out: 0x02
-  - name: "A=0, B=0, Cin=1"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0x80
-      uo_out: 0x01
-  - name: "A=1, B=0, Cin=1"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0x81
-      uo_out: 0x02
-  - name: "A=0, B=1, Cin=1"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0x82
-      uo_out: 0x02
-  - name: "A=1, B=1, Cin=1"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0x83
-      uo_out: 0x03
-  - name: "Extra logic test 1"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0x0C
-      uo_out: 0x00
-  - name: "Extra logic test 2"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0x8C
-      uo_out: 0x01
-  - name: "Idle"
-    cycles: 1
-    values:
-      rst_n: 1
-      ui_in: 0x00
-      uo_out: 0x00
+- name: "Reset"
+  cycles: 1
+  values:
+    rst_n: 0
+    ui_in: 0
+- name: "A=0, B=0, Cin=0"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0x00
+    uo_out: 0x00
+- name: "A=1, B=0, Cin=0"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0x01
+    uo_out: 0x01
+- name: "A=0, B=1, Cin=0"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0x02
+    uo_out: 0x01
+- name: "A=1, B=1, Cin=0"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0x03
+    uo_out: 0x02
+- name: "A=0, B=0, Cin=1"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0x80
+    uo_out: 0x01
+- name: "A=1, B=0, Cin=1"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0x81
+    uo_out: 0x02
+- name: "A=0, B=1, Cin=1"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0x82
+    uo_out: 0x02
+- name: "A=1, B=1, Cin=1"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0x83
+    uo_out: 0x03
+- name: "Extra logic test 1"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0x0C
+    uo_out: 0x00
+- name: "Extra logic test 2"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0x8C
+    uo_out: 0x01
+- name: "Idle"
+  cycles: 1
+  values:
+    rst_n: 1
+    ui_in: 0x00
+    uo_out: 0x00
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3558_ui_in
+    reg:
+      reg:
+      - name: MIDI note bit 0
+        bits: 1
+      - name: MIDI note bit 1
+        bits: 1
+      - name: MIDI note bit 2
+        bits: 1
+      - name: MIDI note bit 3
+        bits: 1
+      - name: MIDI note bit 4
+        bits: 1
+      - name: MIDI note bit 5
+        bits: 1
+      - name: MIDI note bit 6
+        bits: 1
+      - name: Gate (note on)
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3558_uo_out
+    reg:
+      reg:
+      - bits: 7
+        name: unused
+      - name: AudioPWM
+        bits: 1
+      config:
+        hspace: 800

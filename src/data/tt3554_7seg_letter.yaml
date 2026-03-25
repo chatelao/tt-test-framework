@@ -10,27 +10,70 @@ signals:
     width: 7
 
 test_steps:
-  - name: "Display M (000)"
-    cycles: 1
-    values:
-      ui_in: 0
-  - name: "Display a (001)"
-    cycles: 1
-    values:
-      ui_in: 1
-  - name: "Display r (010)"
-    cycles: 1
-    values:
-      ui_in: 2
-  - name: "Display v (011)"
-    cycles: 1
-    values:
-      ui_in: 3
-  - name: "Display i (100)"
-    cycles: 1
-    values:
-      ui_in: 4
-  - name: "Display n (101)"
-    cycles: 1
-    values:
-      ui_in: 5
+- name: "Display M (000)"
+  cycles: 1
+  values:
+    ui_in: 0
+- name: "Display a (001)"
+  cycles: 1
+  values:
+    ui_in: 1
+- name: "Display r (010)"
+  cycles: 1
+  values:
+    ui_in: 2
+- name: "Display v (011)"
+  cycles: 1
+  values:
+    ui_in: 3
+- name: "Display i (100)"
+  cycles: 1
+  values:
+    ui_in: 4
+- name: "Display n (101)"
+  cycles: 1
+  values:
+    ui_in: 5
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3554_ui_in
+    reg:
+      reg:
+      - name: 1.Bit for Letter selection
+        bits: 1
+      - name: 2.Bit for Letter selection
+        bits: 1
+      - name: 3.Bit for Letter selection
+        bits: 1
+      - bits: 5
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3554_uo_out
+    reg:
+      reg:
+      - name: a-pin on the 7-Segment
+        bits: 1
+      - name: b-pin on the 7-Segment
+        bits: 1
+      - name: c-pin on the 7-Segment
+        bits: 1
+      - name: d-pin on the 7-Segment
+        bits: 1
+      - name: e-pin on the 7-Segment
+        bits: 1
+      - name: f-pin on the 7-Segment
+        bits: 1
+      - name: g-pin on the 7-Segment
+        bits: 1
+      - bits: 1
+        name: unused
+      config:
+        hspace: 800

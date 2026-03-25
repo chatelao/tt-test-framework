@@ -12,18 +12,69 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Test AND gate 1 (IN0 & IN1)"
-    cycles: 1
-    values:
-      UI_IN: 0b00000011
-      UO_OUT: 0b00010001
-  - name: "Test pass-through 4 (IN4)"
-    cycles: 1
-    values:
-      UI_IN: 0b00010000
-      UO_OUT: 0b00010000
-  - name: "All inputs high"
-    cycles: 1
-    values:
-      UI_IN: 0b11111111
-      UO_OUT: 0b11111111
+- name: "Test AND gate 1 (IN0 & IN1)"
+  cycles: 1
+  values:
+    UI_IN: 0b00000011
+    UO_OUT: 0b00010001
+- name: "Test pass-through 4 (IN4)"
+  cycles: 1
+  values:
+    UI_IN: 0b00010000
+    UO_OUT: 0b00010000
+- name: "All inputs high"
+  cycles: 1
+  values:
+    UI_IN: 0b11111111
+    UO_OUT: 0b11111111
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3688_ui_in
+    reg:
+      reg:
+      - name: input 0
+        bits: 1
+      - name: input 1
+        bits: 1
+      - name: input 2
+        bits: 1
+      - name: input 3
+        bits: 1
+      - name: input 4
+        bits: 1
+      - name: input 5
+        bits: 1
+      - name: input 6
+        bits: 1
+      - name: input 7
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3688_uo_out
+    reg:
+      reg:
+      - name: output 0
+        bits: 1
+      - name: output 1
+        bits: 1
+      - name: output 2
+        bits: 1
+      - name: output 3
+        bits: 1
+      - name: output 4
+        bits: 1
+      - name: output 5
+        bits: 1
+      - name: output 6
+        bits: 1
+      - name: output 7
+        bits: 1
+      config:
+        hspace: 800

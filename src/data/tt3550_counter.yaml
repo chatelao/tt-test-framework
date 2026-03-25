@@ -10,15 +10,56 @@ signals:
     width: 8
 
 test_steps:
-  - name: "Initial state"
-    cycles: 1
-    values:
-      ui_in: 0
-  - name: "Select Decimal"
-    cycles: 1
-    values:
-      ui_in: 1
-  - name: "Select Hexadecimal"
-    cycles: 1
-    values:
-      ui_in: 2
+- name: "Initial state"
+  cycles: 1
+  values:
+    ui_in: 0
+- name: "Select Decimal"
+  cycles: 1
+  values:
+    ui_in: 1
+- name: "Select Hexadecimal"
+  cycles: 1
+  values:
+    ui_in: 2
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3550_ui_in
+    reg:
+      reg:
+      - name: Up/ Down
+        bits: 1
+      - name: Hex/ Dec
+        bits: 1
+      - bits: 6
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3550_uo_out
+    reg:
+      reg:
+      - name: seg_a
+        bits: 1
+      - name: seg_b
+        bits: 1
+      - name: seg_c
+        bits: 1
+      - name: seg_d
+        bits: 1
+      - name: seg_e
+        bits: 1
+      - name: seg_f
+        bits: 1
+      - name: seg_g
+        bits: 1
+      - name: dot (Hex Mode Ind)
+        bits: 1
+      config:
+        hspace: 800

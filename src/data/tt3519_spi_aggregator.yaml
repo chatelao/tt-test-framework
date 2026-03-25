@@ -13,13 +13,89 @@ signals:
     type: "input"
     width: 8
 test_steps:
-  - name: "Initial Config"
-    cycles: 5
-    values:
-      ui_in: 0x00
-      uio_in: 0x00
-  - name: "Active"
-    cycles: 20
-    values:
-      ui_in: 0xAA
-      uio_in: 0x55
+- name: "Initial Config"
+  cycles: 5
+  values:
+    ui_in: 0x00
+    uio_in: 0x00
+- name: "Active"
+  cycles: 20
+  values:
+    ui_in: 0xAA
+    uio_in: 0x55
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3519_ui_in
+    reg:
+      reg:
+      - name: CFG_BITDEPTH_0
+        bits: 1
+      - name: CFG_BITDEPTH_1
+        bits: 1
+      - name: CFG_BITDEPTH_2
+        bits: 1
+      - name: CFG_BITDEPTH_3
+        bits: 1
+      - name: CFG_NULL_0
+        bits: 1
+      - name: CFG_NULL_1
+        bits: 1
+      - name: CFG_CLKDIV_0
+        bits: 1
+      - name: CFG_CLKDIV_1
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3519_uo_out
+    reg:
+      reg:
+      - name: ADC0_SCLK
+        bits: 1
+      - name: ADC0_CS_N
+        bits: 1
+      - name: ADC1_SCLK
+        bits: 1
+      - name: TX_MOSI
+        bits: 1
+      - name: ADC1_CS_N
+        bits: 1
+      - name: TX_SCLK
+        bits: 1
+      - name: ADC2_SCLK
+        bits: 1
+      - name: ADC2_CS_N
+        bits: 1
+      config:
+        hspace: 800
+- name: Bidirectional (uio_in)
+  items:
+  - signal: uio_in
+    description: Bidirectional signal mappings
+    svg: tt3519_uio_in
+    reg:
+      reg:
+      - name: ADC0_MISO
+        bits: 1
+      - name: ADC1_MISO
+        bits: 1
+      - name: ADC2_MISO
+        bits: 1
+      - name: ADC3_MISO
+        bits: 1
+      - name: ADC3_SCLK
+        bits: 1
+      - name: ADC3_CS_N
+        bits: 1
+      - name: TX_CS_N
+        bits: 1
+      - bits: 1
+        name: unused
+      config:
+        hspace: 800

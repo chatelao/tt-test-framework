@@ -12,18 +12,65 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "1 + 1 = 2"
-    cycles: 1
-    values:
-      UI_IN: 0b00010001
-      UO_OUT: 0b00000010
-  - name: "5 + 10 = 15"
-    cycles: 1
-    values:
-      UI_IN: 0b10100101
-      UO_OUT: 0b00001111
-  - name: "15 + 1 = 16 (Carry out)"
-    cycles: 1
-    values:
-      UI_IN: 0b00011111
-      UO_OUT: 0b00010000
+- name: "1 + 1 = 2"
+  cycles: 1
+  values:
+    UI_IN: 0b00010001
+    UO_OUT: 0b00000010
+- name: "5 + 10 = 15"
+  cycles: 1
+  values:
+    UI_IN: 0b10100101
+    UO_OUT: 0b00001111
+- name: "15 + 1 = 16 (Carry out)"
+  cycles: 1
+  values:
+    UI_IN: 0b00011111
+    UO_OUT: 0b00010000
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3698_ui_in
+    reg:
+      reg:
+      - name: a0
+        bits: 1
+      - name: a1
+        bits: 1
+      - name: a2
+        bits: 1
+      - name: a3
+        bits: 1
+      - name: b0
+        bits: 1
+      - name: b1
+        bits: 1
+      - name: b2
+        bits: 1
+      - name: b3
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3698_uo_out
+    reg:
+      reg:
+      - name: s0
+        bits: 1
+      - name: s1
+        bits: 1
+      - name: s2
+        bits: 1
+      - name: s3
+        bits: 1
+      - name: c
+        bits: 1
+      - bits: 3
+        name: unused
+      config:
+        hspace: 800

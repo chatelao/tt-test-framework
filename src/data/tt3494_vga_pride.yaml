@@ -10,15 +10,62 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Initial Reset"
-    cycles: 5
-    values:
-      ui_in: 0x80 # reset high
-  - name: "Next Flag"
-    cycles: 5
-    values:
-      ui_in: 0x40 # next high
-  - name: "Wait"
-    cycles: 10
-    values:
-      ui_in: 0x00
+- name: "Initial Reset"
+  cycles: 5
+  values:
+    ui_in: 0x80   # reset high
+- name: "Next Flag"
+  cycles: 5
+  values:
+    ui_in: 0x40   # next high
+- name: "Wait"
+  cycles: 10
+  values:
+    ui_in: 0x00
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3494_ui_in
+    reg:
+      reg:
+      - name: address mode
+        bits: 1
+      - bits: 3
+        name: unused
+      - name: set
+        bits: 1
+      - name: prev
+        bits: 1
+      - name: next
+        bits: 1
+      - name: reset
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3494_uo_out
+    reg:
+      reg:
+      - name: R1
+        bits: 1
+      - name: G1
+        bits: 1
+      - name: B1
+        bits: 1
+      - name: VSync
+        bits: 1
+      - name: R0
+        bits: 1
+      - name: G0
+        bits: 1
+      - name: B0
+        bits: 1
+      - name: HSync
+        bits: 1
+      config:
+        hspace: 800

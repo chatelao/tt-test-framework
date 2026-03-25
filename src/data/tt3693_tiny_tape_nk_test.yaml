@@ -12,18 +12,41 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "IN0=1, IN1=1"
-    cycles: 1
-    values:
-      UI_IN: 0b00000011
-      UO_OUT: 0b00000001
-  - name: "IN0=0, IN1=0"
-    cycles: 1
-    values:
-      UI_IN: 0b00000000
-      UO_OUT: 0b11111111
-  - name: "IN0=1, IN1=0"
-    cycles: 1
-    values:
-      UI_IN: 0b00000001
-      UO_OUT: 0b00000010
+- name: "IN0=1, IN1=1"
+  cycles: 1
+  values:
+    UI_IN: 0b00000011
+    UO_OUT: 0b00000001
+- name: "IN0=0, IN1=0"
+  cycles: 1
+  values:
+    UI_IN: 0b00000000
+    UO_OUT: 0b11111111
+- name: "IN0=1, IN1=0"
+  cycles: 1
+  values:
+    UI_IN: 0b00000001
+    UO_OUT: 0b00000010
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3693_ui_in
+    reg:
+      reg:
+      - name: Data
+        bits: 8
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3693_uo_out
+    reg:
+      reg:
+      - name: Data
+        bits: 8
+      config:
+        hspace: 800

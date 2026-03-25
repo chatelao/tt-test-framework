@@ -9,13 +9,54 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "NOT test"
-    cycles: 1
-    values:
-      ui_in: 0b00000100 # ui[2]=1, ui[3]=0
-      uo_out: 0b00000100 # uo[2]=not ui[2]=0, uo[3]=not ui[3]=1 -> 0b0100 = 4
-  - name: "NOT test 2"
-    cycles: 1
-    values:
-      ui_in: 0b00001000 # ui[2]=0, ui[3]=1
-      uo_out: 0b00001000 # uo[2]=not 0 = 1, uo[3]=not 1 = 0 -> 0b1000 = 8
+- name: "NOT test"
+  cycles: 1
+  values:
+    ui_in: 0b00000100   # ui[2]=1, ui[3]=0
+    uo_out: 0b00000100   # uo[2]=not ui[2]=0, uo[3]=not ui[3]=1 -> 0b0100 = 4
+- name: "NOT test 2"
+  cycles: 1
+  values:
+    ui_in: 0b00001000   # ui[2]=0, ui[3]=1
+    uo_out: 0b00001000   # uo[2]=not 0 = 1, uo[3]=not 1 = 0 -> 0b1000 = 8
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3581_ui_in
+    reg:
+      reg:
+      - bits: 6
+        name: unused
+      - name: HI
+        bits: 1
+      - name: LO
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3581_uo_out
+    reg:
+      reg:
+      - name: seg_a
+        bits: 1
+      - name: seg_b
+        bits: 1
+      - name: seg_c
+        bits: 1
+      - name: seg_d
+        bits: 1
+      - name: seg_e
+        bits: 1
+      - name: seg_f
+        bits: 1
+      - name: seg_g
+        bits: 1
+      - name: seg_h
+        bits: 1
+      config:
+        hspace: 800

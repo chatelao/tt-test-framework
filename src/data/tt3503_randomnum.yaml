@@ -10,15 +10,66 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Input 0"
-    cycles: 5
-    values:
-      ui_in: 0x00
-  - name: "Pass through test"
-    cycles: 5
-    values:
-      ui_in: 0x08 # IN3
-  - name: "XOR test"
-    cycles: 5
-    values:
-      ui_in: 0x60 # IN5=1, IN6=1 -> OUT6 should be 0
+- name: "Input 0"
+  cycles: 5
+  values:
+    ui_in: 0x00
+- name: "Pass through test"
+  cycles: 5
+  values:
+    ui_in: 0x08   # IN3
+- name: "XOR test"
+  cycles: 5
+  values:
+    ui_in: 0x60   # IN5=1, IN6=1 -> OUT6 should be 0
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3503_ui_in
+    reg:
+      reg:
+      - name: A_IN0 (shared input, tied with ui[1] and ui[2])
+        bits: 1
+      - name: A_IN1 (shared input, tied with ui[0] and ui[2])
+        bits: 1
+      - name: A_IN2 (shared input, tied with ui[0] and ui[1])
+        bits: 1
+      - name: IN3 (direct to output)
+        bits: 1
+      - name: IN4 (direct to output)
+        bits: 1
+      - name: IN5 (XOR and direct)
+        bits: 1
+      - name: IN6 (XOR and AND)
+        bits: 1
+      - name: IN7 (AND input)
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3503_uo_out
+    reg:
+      reg:
+      - name: OUT0 (NOT A, seven-segment control)
+        bits: 1
+      - name: OUT1 (NOT A, seven-segment control)
+        bits: 1
+      - name: OUT2 (NOT A, seven-segment control)
+        bits: 1
+      - name: OUT3 (direct from IN3)
+        bits: 1
+      - name: OUT4 (direct from IN4)
+        bits: 1
+      - name: OUT5 (direct from IN5)
+        bits: 1
+      - name: OUT6 (IN5 XOR IN6)
+        bits: 1
+      - name: OUT7 (IN6 AND IN7)
+        bits: 1
+      config:
+        hspace: 800

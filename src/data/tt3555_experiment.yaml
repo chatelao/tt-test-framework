@@ -10,13 +10,64 @@ signals:
     width: 8
 
 test_steps:
-  - name: "Passthrough test 0xAA"
-    cycles: 1
-    values:
-      ui_in: 0xAA
-      uo_out: 0xAA
-  - name: "Passthrough test 0x55"
-    cycles: 1
-    values:
-      ui_in: 0x55
-      uo_out: 0x55
+- name: "Passthrough test 0xAA"
+  cycles: 1
+  values:
+    ui_in: 0xAA
+    uo_out: 0xAA
+- name: "Passthrough test 0x55"
+  cycles: 1
+  values:
+    ui_in: 0x55
+    uo_out: 0x55
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3555_ui_in
+    reg:
+      reg:
+      - name: sw0
+        bits: 1
+      - name: sw1
+        bits: 1
+      - name: sw2
+        bits: 1
+      - name: sw3
+        bits: 1
+      - name: sw4
+        bits: 1
+      - name: sw5
+        bits: 1
+      - name: sw6
+        bits: 1
+      - name: sw7
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3555_uo_out
+    reg:
+      reg:
+      - name: dis0
+        bits: 1
+      - name: dis1
+        bits: 1
+      - name: dis2
+        bits: 1
+      - name: dis3
+        bits: 1
+      - name: dis4
+        bits: 1
+      - name: dis5
+        bits: 1
+      - name: dis6
+        bits: 1
+      - name: dis7
+        bits: 1
+      config:
+        hspace: 800

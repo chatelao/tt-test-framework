@@ -12,23 +12,74 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "A=0, B=0"
-    cycles: 1
-    values:
-      UI_IN: 0b00000000
-      UO_OUT: 0b00000000
-  - name: "A=1, B=0"
-    cycles: 1
-    values:
-      UI_IN: 0b00000001
-      UO_OUT: 0b00000000
-  - name: "A=0, B=1"
-    cycles: 1
-    values:
-      UI_IN: 0b00000010
-      UO_OUT: 0b00000000
-  - name: "A=1, B=1"
-    cycles: 1
-    values:
-      UI_IN: 0b00000011
-      UO_OUT: 0b00000001
+- name: "A=0, B=0"
+  cycles: 1
+  values:
+    UI_IN: 0b00000000
+    UO_OUT: 0b00000000
+- name: "A=1, B=0"
+  cycles: 1
+  values:
+    UI_IN: 0b00000001
+    UO_OUT: 0b00000000
+- name: "A=0, B=1"
+  cycles: 1
+  values:
+    UI_IN: 0b00000010
+    UO_OUT: 0b00000000
+- name: "A=1, B=1"
+  cycles: 1
+  values:
+    UI_IN: 0b00000011
+    UO_OUT: 0b00000001
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3668_ui_in
+    reg:
+      reg:
+      - name: FULL_A
+        bits: 1
+      - name: FULL_B
+        bits: 1
+      - name: XOR_1
+        bits: 1
+      - name: XOR_2
+        bits: 1
+      - name: AND_1
+        bits: 1
+      - name: AND_2
+        bits: 1
+      - name: D_FLIP
+        bits: 1
+      - name: INV
+        bits: 1
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3668_uo_out
+    reg:
+      reg:
+      - name: SUM
+        bits: 1
+      - name: CARRY
+        bits: 1
+      - name: XOR
+        bits: 1
+      - name: NAND
+        bits: 1
+      - name: AND
+        bits: 1
+      - name: Q"
+        bits: 1
+      - name: Q_B
+        bits: 1
+      - name: INV_B
+        bits: 1
+      config:
+        hspace: 800

@@ -10,12 +10,49 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Initial Reset"
-    cycles: 5
-    values:
-      ui_in: 0
-      uo_out: 0
-  - name: "Wait for Sync"
-    cycles: 20
-    values:
-      ui_in: 0
+- name: "Initial Reset"
+  cycles: 5
+  values:
+    ui_in: 0
+    uo_out: 0
+- name: "Wait for Sync"
+  cycles: 20
+  values:
+    ui_in: 0
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3489_ui_in
+    reg:
+      reg:
+      - name: Data
+        bits: 8
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3489_uo_out
+    reg:
+      reg:
+      - name: TinyVGA PMOD - R1
+        bits: 1
+      - name: TinyVGA PMOD - G1
+        bits: 1
+      - name: TinyVGA PMOD - B1
+        bits: 1
+      - name: TinyVGA PMOD - VSync
+        bits: 1
+      - name: TinyVGA PMOD - R0
+        bits: 1
+      - name: TinyVGA PMOD - G0
+        bits: 1
+      - name: TinyVGA PMOD - B0
+        bits: 1
+      - name: TinyVGA PMOD - HSync
+        bits: 1
+      config:
+        hspace: 800

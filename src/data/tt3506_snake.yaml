@@ -10,11 +10,50 @@ signals:
     type: "output"
     width: 8
 test_steps:
-  - name: "Wait for movement"
-    cycles: 10
-    values:
-      ui_in: 0x00
-  - name: "Button A pressed"
-    cycles: 5
-    values:
-      ui_in: 0x01
+- name: "Wait for movement"
+  cycles: 10
+  values:
+    ui_in: 0x00
+- name: "Button A pressed"
+  cycles: 5
+  values:
+    ui_in: 0x01
+bitfields:
+- name: Input (ui_in)
+  items:
+  - signal: ui_in
+    description: Input signal mappings
+    svg: tt3506_ui_in
+    reg:
+      reg:
+      - name: A
+        bits: 1
+      - bits: 7
+        name: unused
+      config:
+        hspace: 800
+- name: Output (uo_out)
+  items:
+  - signal: uo_out
+    description: Output signal mappings
+    svg: tt3506_uo_out
+    reg:
+      reg:
+      - name: sevseg:A
+        bits: 1
+      - name: sevseg:B
+        bits: 1
+      - name: sevseg:C
+        bits: 1
+      - name: sevseg:D
+        bits: 1
+      - name: sevseg:E
+        bits: 1
+      - name: sevseg:F
+        bits: 1
+      - name: sevseg:G
+        bits: 1
+      - name: sevseg:DP
+        bits: 1
+      config:
+        hspace: 800
