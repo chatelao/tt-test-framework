@@ -248,7 +248,12 @@ async def main():
         f.write("| Summary | Novelty | T-shirt size | Test Data | Waveform | TinyTapeout Page |\n")
         f.write("|---------|---------|--------------|-----------|----------|------------------|\n")
         for p in testable_projects:
-            name_link = f"[{p['name']}](tt{p['id']}.md)"
+            # Check if a markdown file exists
+            md_path = f"src/docs/tt{p['id']}.md"
+            if os.path.exists(md_path):
+                name_link = f"[{p['name']}](tt{p['id']}.md)"
+            else:
+                name_link = p['name']
             yaml_rel = p['yaml_path'].replace("src/data/", "../data/") if p['yaml_path'] else ""
             svg_rel = p['svg_path'].replace("waveforms/", "../../waveforms/") if p['svg_path'] else ""
 
