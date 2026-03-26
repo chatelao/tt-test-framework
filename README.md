@@ -12,6 +12,10 @@ This tool allows you to define the operational sequence of your Tiny-Tapeout pro
 - **Waveform Generation**: Automatically creates WaveDrom timing diagrams.
 - **MicroPython Compatible**: Designed to reflect steps used in hardware testing with the TT DevKit.
 
+## Documentation
+
+The full documentation is available at [tt-test-framework.readthedocs.io](https://tt-test-framework.readthedocs.io/).
+
 ## Project Structure
 
 - `src/schema`: Defines the YAML structure.
