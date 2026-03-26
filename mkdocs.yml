@@ -1,0 +1,12 @@
+site_name: TT Test Framework
+docs_dir: src/docs
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Welcome: index.md
+  - Projects Overview: TTIHP26A_PROJECTS.md

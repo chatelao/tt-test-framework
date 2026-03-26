@@ -5,3 +5,4 @@ __pycache__/
 waveforms/*.png
 src/puml/*.puml
 test/*.yaml
+site/

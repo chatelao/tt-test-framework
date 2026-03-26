@@ -7,3 +7,5 @@ pytest
 wavedrom
 ruamel.yaml
 svgwrite
+mkdocs
+mkdocs-material
