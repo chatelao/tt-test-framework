@@ -254,8 +254,8 @@ async def main():
                 name_link = f"[{p['name']}](tt{p['id']}.md)"
             else:
                 name_link = p['name']
-            yaml_rel = p['yaml_path'].replace("src/data/", "../data/") if p['yaml_path'] else ""
-            svg_rel = p['svg_path'].replace("waveforms/", "../../waveforms/") if p['svg_path'] else ""
+            yaml_rel = p['yaml_path'].replace("src/data/", "data/") if p['yaml_path'] else ""
+            svg_rel = p['svg_path'].replace("waveforms/", "waveforms/") if p['svg_path'] else ""
 
             test_data_link = f"[YAML]({yaml_rel})" if yaml_rel else "N/A"
             waveform_link = f"[SVG]({svg_rel})" if svg_rel else "N/A"

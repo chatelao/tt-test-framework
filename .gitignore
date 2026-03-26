@@ -6,3 +6,4 @@ waveforms/*.png
 src/puml/*.puml
 test/*.yaml
 site/
+*.log

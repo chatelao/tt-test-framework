@@ -178,12 +178,12 @@ def generate_markdown(pid, yaml_data, svg_path):
                     except subprocess.CalledProcessError as e:
                         print(f"Error generating SVG {svg_filepath}: {e}")
 
-                md_content += f"![{item['signal']} {group['name']}](../../waveforms/{svg_name})\n"
+                md_content += f"![{item['signal']} {group['name']}](waveforms/{svg_name})\n"
             md_content += "\n"
 
     md_content += "\n## Test Waveform\n\n"
     if svg_path and os.path.exists(svg_path):
-        md_content += f"![Waveform](../../{svg_path})\n"
+        md_content += f"![Waveform](waveforms/{os.path.basename(svg_path)})\n"
     else:
         md_content += "Waveform not available.\n"
 
