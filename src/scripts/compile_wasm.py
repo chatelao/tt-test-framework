@@ -8,7 +8,20 @@ import sys
 DATA_DIR = "src/data"
 WASM_DIR = "wasm"
 WRAPPER_CPP = "src/scripts/wasm_top.cpp"
-VERILATOR_INCLUDE = "/usr/share/verilator/include"
+
+def get_verilator_include():
+    try:
+        result = subprocess.run(["verilator", "-V"], capture_output=True, text=True)
+        for line in result.stdout.splitlines():
+            if "VERILATOR_ROOT" in line and "=" in line:
+                root = line.split("=")[1].strip()
+                if root:
+                    return os.path.join(root, "include")
+    except Exception:
+        pass
+    return "/usr/share/verilator/include"
+
+VERILATOR_INCLUDE = get_verilator_include()
 
 def compile_project(yaml_path):
     filename = os.path.basename(yaml_path)

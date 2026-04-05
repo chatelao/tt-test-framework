@@ -7,4 +7,5 @@ src/puml/*.puml
 test/*.yaml
 site/
 *.log
-/wasm/
+/wasm/*.js
+/wasm/*.wasm
