@@ -28,7 +28,7 @@ def compile_project(yaml_path):
     if not filename.startswith('tt'):
         return
 
-    project_id = filename.split('_')[0]
+    project_id = filename.split('_')[0].split('.')[0]
 
     if os.path.exists(os.path.join(WASM_DIR, f"{project_id}.js")):
         print(f"Skipping {project_id}: already compiled")
@@ -72,24 +72,49 @@ def compile_project(yaml_path):
 
         project_info = info.get('project', {})
         language = project_info.get('language', '').lower()
-        if 'verilog' not in language and 'systemverilog' not in language:
-            print(f"Skipping {project_id}: Language is '{language}', not Verilog/SystemVerilog")
-            return
 
         top_module = project_info.get('top_module')
         source_files = project_info.get('source_files', [])
 
-        if not top_module or not source_files:
-            print(f"Skipping {project_id}: top_module or source_files missing in info.yaml")
+        # Robust check for Verilog/SystemVerilog
+        is_verilog = 'verilog' in language or 'systemverilog' in language
+        if not is_verilog:
+            # Check if there are .v or .sv files in src/ anyway
+            if glob.glob(os.path.join(temp_dir, "src", "**", "*.v"), recursive=True) or \
+               glob.glob(os.path.join(temp_dir, "src", "**", "*.sv"), recursive=True):
+                is_verilog = True
+
+        if not is_verilog:
+            print(f"Skipping {project_id}: Language is '{language}', not Verilog/SystemVerilog")
+            return
+
+        if not top_module:
+            print(f"Skipping {project_id}: top_module missing in info.yaml")
             return
 
         # Prepare verilator command
-        v_sources = [os.path.join(temp_dir, "src", f) for f in source_files]
-        # Check if all source files exist
-        missing_files = [f for f in v_sources if not os.path.exists(f)]
-        if missing_files:
-             print(f"Warning for {project_id}: Some source files missing: {missing_files}")
-             v_sources = [f for f in v_sources if os.path.exists(f)]
+        src_dir = os.path.join(temp_dir, "src")
+        include_dirs = [src_dir]
+        for root, dirs, files in os.walk(src_dir):
+            for d in dirs:
+                include_dirs.append(os.path.join(root, d))
+
+        v_sources = []
+        if source_files:
+            for f in source_files:
+                found = False
+                for d in include_dirs:
+                    full_path = os.path.join(d, f)
+                    if os.path.exists(full_path):
+                        v_sources.append(full_path)
+                        found = True
+                        break
+                if not found:
+                    print(f"Warning for {project_id}: Source file {f} not found")
+        else:
+            # Try to find all .v and .sv files if source_files is empty
+            v_sources = glob.glob(os.path.join(temp_dir, "src", "**", "*.v"), recursive=True) + \
+                        glob.glob(os.path.join(temp_dir, "src", "**", "*.sv"), recursive=True)
 
         if not v_sources:
              print(f"Skipping {project_id}: No valid source files found in src/")
@@ -98,7 +123,7 @@ def compile_project(yaml_path):
         print(f"Verilating {project_id}...")
         verilator_cmd = [
             "verilator", "--cc", "--prefix", "Vtop",
-            "-I" + os.path.join(temp_dir, "src"),
+        ] + ["-I" + d for d in include_dirs] + [
             "--top-module", top_module,
             "-Wno-fatal", # Don't stop on warnings
         ] + v_sources
@@ -111,19 +136,10 @@ def compile_project(yaml_path):
         # Compile with emcc
         print(f"Compiling {project_id} to WASM...")
         obj_dir = "obj_dir"
-        # We need to compile Verilator support files and generated files
         verilated_files = [
             os.path.join(VERILATOR_INCLUDE, "verilated.cpp"),
             os.path.join(VERILATOR_INCLUDE, "verilated_threads.cpp")
         ]
-
-        cpp_files = glob.glob(os.path.join(obj_dir, "*.cpp"))
-        # Some files might not exist if we use glob.glob on a pattern that verilator doesn't always produce.
-        # But here we are using glob.glob(os.path.join(obj_dir, "*.cpp")) which should only return existing files.
-        # The error "No such file or directory" for a file returned by glob usually means a race condition
-        # or that glob returned something that emcc can't find (unlikely).
-        # Wait a bit to ensure filesystem sync? No, let's just be sure they exist.
-        cpp_files = [f for f in cpp_files if os.path.exists(f)]
 
         vtop_cpp_files = [f for f in glob.glob(os.path.join(obj_dir, "Vtop*.cpp")) if os.path.exists(f)]
 
