@@ -7,3 +7,15 @@ src/puml/*.puml
 test/*.yaml
 site/
 *.log
+/wasm/*.js
+/wasm/*.wasm
+!/wasm/tt3404.*
+!/wasm/tt3420.*
+!/wasm/tt3434.*
+!/wasm/tt3489.*
+!/wasm/tt3492.*
+!/wasm/tt3495.*
+!/wasm/tt3514.*
+!/wasm/tt3519.*
+!/wasm/tt3641.*
+!/wasm/tt4006.*
