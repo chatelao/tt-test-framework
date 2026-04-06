@@ -23,6 +23,11 @@ def get_verilator_include():
 
 VERILATOR_INCLUDE = get_verilator_include()
 
+def escape_cpp_string(s):
+    if not s:
+        return ""
+    return s.replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n').replace('\r', '\\r')
+
 def compile_project(yaml_path):
     filename = os.path.basename(yaml_path)
     if not filename.startswith('tt'):
@@ -30,6 +35,7 @@ def compile_project(yaml_path):
 
     project_id = filename.split('_')[0].split('.')[0]
 
+    # Check if target JS exists, skip if already compiled
     if os.path.exists(os.path.join(WASM_DIR, f"{project_id}.js")):
         print(f"Skipping {project_id}: already compiled")
         return
@@ -75,6 +81,37 @@ def compile_project(yaml_path):
 
         top_module = project_info.get('top_module')
         source_files = project_info.get('source_files', [])
+
+        # Extract metadata for WASM
+        description = project_info.get('description', '')
+        how_it_works = project_info.get('how_it_works', '')
+        how_to_test = project_info.get('how_to_test', '')
+
+        long_description = description
+        if how_it_works:
+            long_description += "\n\nHow it works:\n" + how_it_works
+        if how_to_test:
+            long_description += "\n\nHow to test:\n" + how_to_test
+
+        # Find info.md
+        info_md_rel_path = ""
+        for root, dirs, files in os.walk(temp_dir):
+            if "info.md" in files:
+                info_md_rel_path = os.path.relpath(os.path.join(root, "info.md"), temp_dir)
+                break
+
+        # Get commit hash
+        commit_hash = subprocess.run(["git", "-C", temp_dir, "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
+
+        # Construct info link
+        info_link = ""
+        if info_md_rel_path:
+            # Assume github if it looks like one
+            if "github.com" in source_url:
+                base_url = source_url.rstrip('/')
+                if base_url.endswith('.git'):
+                    base_url = base_url[:-4]
+                info_link = f"{base_url}/blob/{commit_hash}/{info_md_rel_path}"
 
         # Robust check for Verilog/SystemVerilog
         is_verilog = 'verilog' in language or 'systemverilog' in language
@@ -136,6 +173,15 @@ def compile_project(yaml_path):
         # Compile with emcc
         print(f"Compiling {project_id} to WASM...")
         obj_dir = "obj_dir"
+        if not os.path.exists(obj_dir):
+            os.makedirs(obj_dir)
+
+        # Write metadata.h
+        with open(os.path.join(obj_dir, "metadata.h"), "w") as f:
+            f.write(f'#define PROJECT_DESCRIPTION "{escape_cpp_string(long_description)}"\n')
+            f.write(f'#define PROJECT_INFO_LINK "{escape_cpp_string(info_link)}"\n')
+            f.write(f'#define PROJECT_REPO_LINK "{escape_cpp_string(source_url)}"\n')
+
         verilated_files = [
             os.path.join(VERILATOR_INCLUDE, "verilated.cpp"),
             os.path.join(VERILATOR_INCLUDE, "verilated_threads.cpp")

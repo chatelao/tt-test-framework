@@ -19,6 +19,9 @@ The interface is defined in `src/scripts/wasm_top.cpp` and exposed via Emscripte
 | `get_uo_out()` | `uint8_t` | Returns the current value of the 8-bit `uo_out` port. |
 | `get_uio_out()` | `uint8_t` | Returns the current value of the 8-bit `uio_out` port. |
 | `get_uio_oe()` | `uint8_t` | Returns the current value of the 8-bit `uio_oe` (output enable) port. |
+| `get_description()` | `std::string` | Returns the project description (extracted from `info.yaml`). |
+| `get_info_link()` | `std::string` | Returns a link to the project's `info.md` file on GitHub. |
+| `get_repo_link()` | `std::string` | Returns a link to the project's original repository. |
 
 ## JavaScript Usage Example
 
@@ -38,6 +41,11 @@ async function runSimulation() {
 
     // Create an instance of the project
     const project = new module.ProjectWasm();
+
+    // Get metadata
+    console.log(`Description: ${project.get_description()}`);
+    console.log(`Info Link: ${project.get_info_link()}`);
+    console.log(`Repo Link: ${project.get_repo_link()}`);
 
     // Initialize the project (Reset)
     project.set_rst_n(false);
