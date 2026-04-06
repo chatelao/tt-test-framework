@@ -20,7 +20,7 @@
 - ROADMAP.md - Planned & finished tasks of the product
 - README.md - Overview of the product
 - HOWTO.md - Usage instruction of the product
-- / - Keep only GEMINI.md, HOWTO.md, README.md, DECISION.md, DISCARDED.md, ROADMAP.md, requirements.txt, .gitignore, .readthedocs.yaml and mkdocs.yml in the root directory
+- / - Keep only GEMINI.md, HOWTO.md, README.md, DECISION.md, DISCARDED.md, ROADMAP.md, WASM.md, requirements.txt, .gitignore, .readthedocs.yaml and mkdocs.yml in the root directory
 - /specifications - Download and store original specification, add ".original." in the name before the extension
 - /specifications - NEVER change ".original." files
 - /specifications - Convert "non .md" files for caching and readability purpose to Markdown

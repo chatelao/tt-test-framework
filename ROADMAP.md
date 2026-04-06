@@ -66,6 +66,7 @@
   - [ ] Export to VHDL/Verilog testbench
 
 ## Finished
+- [x] Add WASM interface documentation (WASM.md) (2026-03-16)
 - [x] Create simple testcase for Test-ID 3991 (TinyTapeout-Processor2) (2025-05-23)
 - [x] Create simple testcase for Test-ID 3645 (Borg - Vertex shader) (2025-05-23)
 - [x] Create simple testcase for Test-ID 3531 (FH Joanneum TinyTapeout) (2025-05-23)
