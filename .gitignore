@@ -72,6 +72,7 @@ site/
 !/wasm/tt3640.*
 !/wasm/tt3641.*
 !/wasm/tt3642.*
+!/wasm/tt3647.*
 !/wasm/tt3648.*
 !/wasm/tt3650.*
 !/wasm/tt3651.*
