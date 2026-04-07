@@ -59,7 +59,7 @@ def compile_project(yaml_path):
     try:
         print(f"--- Processing {project_id} ---")
         print(f"Cloning {source_url}...")
-        result = subprocess.run(["git", "clone", "--depth", "1", source_url, temp_dir], capture_output=True)
+        result = subprocess.run(["git", "clone", "--depth", "1", "--recursive", source_url, temp_dir], capture_output=True)
         if result.returncode != 0:
             print(f"Failed to clone {source_url}: {result.stderr.decode()}")
             return

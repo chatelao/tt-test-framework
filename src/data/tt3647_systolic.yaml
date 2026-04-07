@@ -20,6 +20,11 @@ test_steps:
     values:
       UI_IN: 0x00
       UIO_IN: 0x00
+  - name: "Clocking"
+    cycles: 5
+    values:
+      UI_IN: 0x00
+      UIO_IN: 0x00
   - name: "Idle"
     cycles: 5
     values:
