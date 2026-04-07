@@ -1,0 +1,2 @@
+-bash: verilator: command not found
+-bash: emcc: command not found
