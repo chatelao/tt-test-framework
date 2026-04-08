@@ -32,7 +32,7 @@
 | [VGA Tetris](tt3769.md) | ⭐⭐⭐ | L | [YAML](data/tt3769_vga_tetris.yaml) | [SVG](waveforms/tt3769_vga_tetris.svg) | [Project 3769](https://app.tinytapeout.com/projects/3769) |
 | [OCP MXFP8 Streaming MAC Unit](tt3990.md) | ⭐⭐⭐ | L | [YAML](data/tt3990_fp8_mul.yaml) | [SVG](waveforms/tt3990_uio_in_c2.svg) | [Project 3990](https://app.tinytapeout.com/projects/3990) |
 | [Tiny NPU: 4-Way Parallel INT8 Inference Engine](tt4032.md) | ⭐⭐⭐ | L | [YAML](data/tt4032_tiny_npu_4_way_parallel_int8_inference_engine.yaml) | N/A | [Project 4032](https://app.tinytapeout.com/projects/4032) |
-| [Spongent-88 Hash Accelerator](tt4073.md) | ⭐⭐⭐ | L | [YAML](data/tt4073_spongent_88_hash_accelerator.yaml) | N/A | [Project 4073](https://app.tinytapeout.com/projects/4073) |
+| [Spongent-88 Hash Accelerator](tt4073.md) | ⭐⭐⭐ | L | [YAML](data/tt4073_spongent_88_hash_accelerator.yaml) | [SVG](waveforms/tt4073_data_byte.svg) | [Project 4073](https://app.tinytapeout.com/projects/4073) |
 | [USB CDC (Serial) Device](tt4094.md) | ⭐⭐⭐ | L | [YAML](data/tt4094_usb_cdc.yaml) | N/A | [Project 4094](https://app.tinytapeout.com/projects/4094) |
 | [My (S)VGA Playground](tt3405.md) | ⭐⭐ | M | [YAML](data/tt3405_vga_playground.yaml) | [SVG](waveforms/tt3405_vga_playground.svg) | [Project 3405](https://app.tinytapeout.com/projects/3405) |
 | [Wafer.space Logo VGA Screensaver](tt3432.md) | ⭐⭐ | M | [YAML](data/tt3432_vga_screensaver.yaml) | [SVG](waveforms/tt3432_vga_screensaver.svg) | [Project 3432](https://app.tinytapeout.com/projects/3432) |
