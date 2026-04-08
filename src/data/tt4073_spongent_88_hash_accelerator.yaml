@@ -319,6 +319,816 @@ test_cases:
       uio_in: 0x0
     expected:
       uo_out: 0x7C
+- name: Hash 0x01 (KAT)
+  test_steps:
+  - name: Reset
+    cycles: 1
+    values:
+      rst_n: 0
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Idle
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: CMD Reset (Addr 0, Data 0)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x8
+  - name: Deassert Write
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Absorb 0x1 (Addr 1, Data 0x1)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x1
+      uio_in: 0x9
+  - name: Deassert Write
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x1
+      uio_in: 0x0
+  - name: Wait for Permutation (25 cycles)
+    cycles: 25
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: 'Hash CMD (Addr 0, Data 2: Pad 0x81 + Squeeze)'
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x2
+      uio_in: 0x8
+  - name: Deassert Write
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x2
+      uio_in: 0x0
+  - name: Wait for Squeeze (25 cycles)
+    cycles: 25
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 0 (Expected 0x8)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x8
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 1 (Expected 0x42)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x42
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 2 (Expected 0xdc)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0xDC
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 3 (Expected 0x1b)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x1B
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 4 (Expected 0x6c)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x6C
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 5 (Expected 0x73)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x73
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 6 (Expected 0x99)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x99
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 7 (Expected 0xeb)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0xEB
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 8 (Expected 0x92)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x92
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 9 (Expected 0xf5)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0xF5
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 10 (Expected 0x40)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x40
+- name: Hash 0x80 (KAT)
+  test_steps:
+  - name: Reset
+    cycles: 1
+    values:
+      rst_n: 0
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Idle
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: CMD Reset (Addr 0, Data 0)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x8
+  - name: Deassert Write
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Absorb 0x80 (Addr 1, Data 0x80)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x80
+      uio_in: 0x9
+  - name: Deassert Write
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x80
+      uio_in: 0x0
+  - name: Wait for Permutation (25 cycles)
+    cycles: 25
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: 'Hash CMD (Addr 0, Data 2: Pad 0x81 + Squeeze)'
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x2
+      uio_in: 0x8
+  - name: Deassert Write
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x2
+      uio_in: 0x0
+  - name: Wait for Squeeze (25 cycles)
+    cycles: 25
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 0 (Expected 0xa0)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0xA0
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 1 (Expected 0x62)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x62
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 2 (Expected 0x3e)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x3E
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 3 (Expected 0x32)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x32
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 4 (Expected 0xcd)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0xCD
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 5 (Expected 0x5a)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x5A
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 6 (Expected 0x6b)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x6B
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 7 (Expected 0xba)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0xBA
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 8 (Expected 0xb)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0xB
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 9 (Expected 0x30)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x30
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 10 (Expected 0x4f)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x4F
+- name: Hash 0xFF (KAT)
+  test_steps:
+  - name: Reset
+    cycles: 1
+    values:
+      rst_n: 0
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Idle
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: CMD Reset (Addr 0, Data 0)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x8
+  - name: Deassert Write
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Absorb 0xff (Addr 1, Data 0xff)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0xFF
+      uio_in: 0x9
+  - name: Deassert Write
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0xFF
+      uio_in: 0x0
+  - name: Wait for Permutation (25 cycles)
+    cycles: 25
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: 'Hash CMD (Addr 0, Data 2: Pad 0x81 + Squeeze)'
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x2
+      uio_in: 0x8
+  - name: Deassert Write
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x2
+      uio_in: 0x0
+  - name: Wait for Squeeze (25 cycles)
+    cycles: 25
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 0 (Expected 0xfe)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0xFE
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 1 (Expected 0x51)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x51
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 2 (Expected 0x16)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x16
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 3 (Expected 0x49)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x49
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 4 (Expected 0xa2)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0xA2
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 5 (Expected 0xfa)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0xFA
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 6 (Expected 0x37)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x37
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 7 (Expected 0x5b)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x5B
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 8 (Expected 0xf9)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0xF9
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 9 (Expected 0x7a)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0x7A
+  - name: Advance Read (Addr 2, RD_EN)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x12
+  - name: Deassert Read
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+  - name: Read Digest Byte 10 (Expected 0xa3)
+    cycles: 1
+    values:
+      rst_n: 1
+      ui_in: 0x0
+      uio_in: 0x0
+    expected:
+      uo_out: 0xA3
 - name: Hash 0xA5 (KAT)
   test_steps:
   - name: Reset
