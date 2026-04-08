@@ -1,6 +1,7 @@
 project: "OCP MXFP8 Streaming MAC Unit"
 metadata:
   source: "https://github.com/chatelao/ttihp-fp8-mul"
+  doc: "https://github.com/chatelao/ttihp-fp8-mul/blob/ihp-sg13cmos5l/docs/test.md#functional-test-sequences"
 signals:
   ui_in:
     type: "input"

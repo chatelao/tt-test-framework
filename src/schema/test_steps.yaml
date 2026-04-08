@@ -9,6 +9,8 @@ properties:
     properties:
       source:
         type: string
+      doc:
+        type: string
       async:
         type: boolean
   signals:
@@ -36,6 +38,8 @@ properties:
           type: object
           properties:
             source:
+              type: string
+            doc:
               type: string
         test_steps:
           $ref: "#/definitions/test_steps"
