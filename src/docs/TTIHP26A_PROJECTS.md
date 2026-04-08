@@ -11,7 +11,7 @@
 | [TinyMOA: RISC-V CPU with CIM Accelerator](tt3654.md) | ⭐⭐⭐⭐⭐ | XXL | [YAML](data/tt3654_tinymoa.yaml) | [SVG](waveforms/tt3654_tinymoa.svg) | [Project 3654](https://app.tinytapeout.com/projects/3654) |
 | [ttip-test](tt3662.md) | ⭐⭐⭐⭐⭐ | XXL | [YAML](data/tt3662_test.yaml) | [SVG](waveforms/tt3662_test.svg) | [Project 3662](https://app.tinytapeout.com/projects/3662) |
 | [ttihp-26a-risc-v-wg-swc1](tt3772.md) | ⭐⭐⭐⭐⭐ | XXL | [YAML](data/tt3772_riscv_rv32i.yaml) | [SVG](waveforms/tt3772_riscv_rv32i.svg) | [Project 3772](https://app.tinytapeout.com/projects/3772) |
-| MNIST Binary Neural Net (Inference) | ⭐⭐⭐⭐⭐ | XXL | N/A | N/A | [Project 4096](https://app.tinytapeout.com/projects/4096) |
+| [MNIST Binary Neural Net (Inference)](tt4096.md) | ⭐⭐⭐⭐⭐ | XXL | [YAML](data/tt4096_mnist_binary_neural_net_inference.yaml) | N/A | [Project 4096](https://app.tinytapeout.com/projects/4096) |
 | [KianV RISC-V RV32E Baremetal SoC](tt3420.md) | ⭐⭐⭐⭐ | XL | [YAML](data/tt3420_kianv_rv32e.yaml) | [SVG](waveforms/tt3420_kianv_rv32e.svg) | [Project 3420](https://app.tinytapeout.com/projects/3420) |
 | [Wildcat RISC-V](tt3445.md) | ⭐⭐⭐⭐ | XL | [YAML](data/tt3445_wildcat.yaml) | [SVG](waveforms/tt3445_ui_in.svg) | [Project 3445](https://app.tinytapeout.com/projects/3445) |
 | [FH Joanneum TinyTapeout](tt3531.md) | ⭐⭐⭐⭐ | XL | [YAML](data/tt3531_fh_uc.yaml) | [SVG](waveforms/tt3531_fh_uc.svg) | [Project 3531](https://app.tinytapeout.com/projects/3531) |
@@ -31,8 +31,8 @@
 | [Neuromorphic Tile](tt3757.md) | ⭐⭐⭐ | L | [YAML](data/tt3757_neuron.yaml) | [SVG](waveforms/tt3757_uo_out.svg) | [Project 3757](https://app.tinytapeout.com/projects/3757) |
 | [VGA Tetris](tt3769.md) | ⭐⭐⭐ | L | [YAML](data/tt3769_vga_tetris.yaml) | [SVG](waveforms/tt3769_vga_tetris.svg) | [Project 3769](https://app.tinytapeout.com/projects/3769) |
 | [OCP MXFP8 Streaming MAC Unit](tt3990.md) | ⭐⭐⭐ | L | [YAML](data/tt3990_fp8_mul.yaml) | [SVG](waveforms/tt3990_uio_in_c2.svg) | [Project 3990](https://app.tinytapeout.com/projects/3990) |
-| Tiny NPU: 4-Way Parallel INT8 Inference Engine | ⭐⭐⭐ | L | N/A | N/A | [Project 4032](https://app.tinytapeout.com/projects/4032) |
-| Spongent-88 Hash Accelerator | ⭐⭐⭐ | L | N/A | N/A | [Project 4073](https://app.tinytapeout.com/projects/4073) |
+| [Tiny NPU: 4-Way Parallel INT8 Inference Engine](tt4032.md) | ⭐⭐⭐ | L | [YAML](data/tt4032_tiny_npu_4_way_parallel_int8_inference_engine.yaml) | N/A | [Project 4032](https://app.tinytapeout.com/projects/4032) |
+| [Spongent-88 Hash Accelerator](tt4073.md) | ⭐⭐⭐ | L | [YAML](data/tt4073_spongent_88_hash_accelerator.yaml) | N/A | [Project 4073](https://app.tinytapeout.com/projects/4073) |
 | [USB CDC (Serial) Device](tt4094.md) | ⭐⭐⭐ | L | [YAML](data/tt4094_usb_cdc.yaml) | N/A | [Project 4094](https://app.tinytapeout.com/projects/4094) |
 | [My (S)VGA Playground](tt3405.md) | ⭐⭐ | M | [YAML](data/tt3405_vga_playground.yaml) | [SVG](waveforms/tt3405_vga_playground.svg) | [Project 3405](https://app.tinytapeout.com/projects/3405) |
 | [Wafer.space Logo VGA Screensaver](tt3432.md) | ⭐⭐ | M | [YAML](data/tt3432_vga_screensaver.yaml) | [SVG](waveforms/tt3432_vga_screensaver.svg) | [Project 3432](https://app.tinytapeout.com/projects/3432) |
@@ -56,11 +56,11 @@
 | [SEQ_MAC_INF_16H3 - Neural Network Inference Accelerator](tt3948.md) | ⭐⭐ | M | [YAML](data/tt3948_seq_mac_inf.yaml) | [SVG](waveforms/tt3948_uio_in.svg) | [Project 3948](https://app.tinytapeout.com/projects/3948) |
 | [SIMON](tt3978.md) | ⭐⭐ | M | [YAML](data/tt3978_simon.yaml) | [SVG](waveforms/tt3978_simon.svg) | [Project 3978](https://app.tinytapeout.com/projects/3978) |
 | [Custom coprocessor](tt4006.md) | ⭐⭐ | M | [YAML](data/tt4006_coprocessor.yaml) | [SVG](waveforms/tt4006_uo_out.svg) | [Project 4006](https://app.tinytapeout.com/projects/4006) |
-| Plasma | ⭐⭐ | M | N/A | N/A | [Project 4048](https://app.tinytapeout.com/projects/4048) |
-| moss_display | ⭐⭐ | M | N/A | N/A | [Project 4050](https://app.tinytapeout.com/projects/4050) |
-| Tiny MMU | ⭐⭐ | M | N/A | N/A | [Project 4063](https://app.tinytapeout.com/projects/4063) |
-| Three Body Solution | ⭐⭐ | M | N/A | N/A | [Project 4071](https://app.tinytapeout.com/projects/4071) |
-| 8-bit RISC-V Lite CPU | ⭐⭐ | M | N/A | N/A | [Project 4076](https://app.tinytapeout.com/projects/4076) |
+| [Plasma VGA](tt4048.md) | ⭐⭐ | M | [YAML](data/tt4048_plasma_vga.yaml) | N/A | [Project 4048](https://app.tinytapeout.com/projects/4048) |
+| [moss_display VGA](tt4050.md) | ⭐⭐ | M | [YAML](data/tt4050_moss_display_vga.yaml) | N/A | [Project 4050](https://app.tinytapeout.com/projects/4050) |
+| [Tiny MMU](tt4063.md) | ⭐⭐ | M | [YAML](data/tt4063_tiny_mmu.yaml) | N/A | [Project 4063](https://app.tinytapeout.com/projects/4063) |
+| [Three Body Solution VGA](tt4071.md) | ⭐⭐ | M | [YAML](data/tt4071_three_body_solution_vga.yaml) | N/A | [Project 4071](https://app.tinytapeout.com/projects/4071) |
+| [8-bit RISC-V Lite CPU](tt4076.md) | ⭐⭐ | M | [YAML](data/tt4076_8_bit_risc_v_lite_cpu.yaml) | N/A | [Project 4076](https://app.tinytapeout.com/projects/4076) |
 | [NYAN CAT](tt4100.md) | ⭐⭐ | M | [YAML](data/tt4100_nyan_cat.yaml) | N/A | [Project 4100](https://app.tinytapeout.com/projects/4100) |
 | [FIR Filter](tt3400.md) | ⭐ | S | [YAML](data/tt3400_fir_filter.yaml) | [SVG](waveforms/tt3400_fir_filter.svg) | [Project 3400](https://app.tinytapeout.com/projects/3400) |
 | [Verilog Multistage Oscillator with Enable and Counter](tt3404.md) | ⭐ | S | [YAML](data/tt3404_oscillator.yaml) | [SVG](waveforms/tt3404_oscillator.svg) | [Project 3404](https://app.tinytapeout.com/projects/3404) |
@@ -212,7 +212,7 @@
 | [nand_gate](tt3680.md) | ⭐ | S | [YAML](data/tt3680_nand.yaml) | [SVG](waveforms/tt3680_nand.svg) | [Project 3680](https://app.tinytapeout.com/projects/3680) |
 | [MJ Wokwi project (Full Adder)](tt3681.md) | ⭐ | S | [YAML](data/tt3681_full_adder.yaml) | [SVG](waveforms/tt3681_full_adder.svg) | [Project 3681](https://app.tinytapeout.com/projects/3681) |
 | [I2C to SPI Bridge](tt3682.md) | ⭐ | S | [YAML](data/tt3682_bridge.yaml) | [SVG](waveforms/tt3682_bridge.svg) | [Project 3682](https://app.tinytapeout.com/projects/3682) |
-| Tiny tape out test | ⭐ | S | N/A | N/A | [Project 3683](https://app.tinytapeout.com/projects/3683) |
+| [Tiny tape out test](tt3683.md) | ⭐ | S | [YAML](data/tt3683_tiny_tape_out_test.yaml) | N/A | [Project 3683](https://app.tinytapeout.com/projects/3683) |
 | [7 Segment BCD / CLA](tt3684.md) | ⭐ | S | [YAML](data/tt3684_cla_bcd.yaml) | [SVG](waveforms/tt3684_cla_bcd.svg) | [Project 3684](https://app.tinytapeout.com/projects/3684) |
 | [Paafus First Chip](tt3685.md) | ⭐ | S | [YAML](data/tt3685_paafu.yaml) | [SVG](waveforms/tt3685_paafu.svg) | [Project 3685](https://app.tinytapeout.com/projects/3685) |
 | [MyFirstChip (Patterns)](tt3686.md) | ⭐ | S | [YAML](data/tt3686_chip.yaml) | [SVG](waveforms/tt3686_uo_out.svg) | [Project 3686](https://app.tinytapeout.com/projects/3686) |
@@ -286,53 +286,53 @@
 | [tiny_dino](tt3998.md) | ⭐ | S | [YAML](data/tt3998_tiny_dino.yaml) | [SVG](waveforms/tt3998_tiny_dino.svg) | [Project 3998](https://app.tinytapeout.com/projects/3998) |
 | [Infinity Core](tt4002.md) | ⭐ | S | [YAML](data/tt4002_infinity_core.yaml) | [SVG](waveforms/tt4002_uo_out.svg) | [Project 4002](https://app.tinytapeout.com/projects/4002) |
 | [4-bit processor](tt4003.md) | ⭐ | S | [YAML](data/tt4003_4bit_processor.yaml) | [SVG](waveforms/tt4003_ui_in.svg) | [Project 4003](https://app.tinytapeout.com/projects/4003) |
-| Triple Modular Redundancy | ⭐ | S | N/A | N/A | [Project 4005](https://app.tinytapeout.com/projects/4005) |
-| VGA multiplex with TRNG | ⭐ | S | N/A | N/A | [Project 4010](https://app.tinytapeout.com/projects/4010) |
-| UART-ALU Processor | ⭐ | S | N/A | N/A | [Project 4014](https://app.tinytapeout.com/projects/4014) |
-| UART interfaced 8ch PWM controller | ⭐ | S | N/A | N/A | [Project 4015](https://app.tinytapeout.com/projects/4015) |
-| A fully functional ALU (Arithmetic logic unit) | ⭐ | S | N/A | N/A | [Project 4020](https://app.tinytapeout.com/projects/4020) |
-| TinyTapeout VGA Checker | ⭐ | S | N/A | N/A | [Project 4021](https://app.tinytapeout.com/projects/4021) |
-| RNG | ⭐ | S | N/A | N/A | [Project 4031](https://app.tinytapeout.com/projects/4031) |
-| 7 segment ihp resistcode | ⭐ | S | N/A | N/A | [Project 4034](https://app.tinytapeout.com/projects/4034) |
-| Bouncing Checkers | ⭐ | S | N/A | N/A | [Project 4038](https://app.tinytapeout.com/projects/4038) |
-| ttihp-HDSISO8RS | ⭐ | S | N/A | N/A | [Project 4039](https://app.tinytapeout.com/projects/4039) |
-| Gate-Level 8-bit MAC with Ripple-Carry Accumulator | ⭐ | S | N/A | N/A | [Project 4043](https://app.tinytapeout.com/projects/4043) |
-| Demoscreen full of RICH | ⭐ | S | N/A | N/A | [Project 4044](https://app.tinytapeout.com/projects/4044) |
-| 8 bit saturated adder | ⭐ | S | N/A | N/A | [Project 4045](https://app.tinytapeout.com/projects/4045) |
-| float_synth | ⭐ | S | N/A | N/A | [Project 4046](https://app.tinytapeout.com/projects/4046) |
-| TinyScanChain | ⭐ | S | N/A | N/A | [Project 4049](https://app.tinytapeout.com/projects/4049) |
-| badstripes | ⭐ | S | N/A | N/A | [Project 4055](https://app.tinytapeout.com/projects/4055) |
-| IHP Gate Delay Characterizer (3-Flavor) | ⭐ | S | N/A | N/A | [Project 4056](https://app.tinytapeout.com/projects/4056) |
-| Mini PSG | ⭐ | S | N/A | N/A | [Project 4060](https://app.tinytapeout.com/projects/4060) |
-| Tiny_ECC | ⭐ | S | N/A | N/A | [Project 4061](https://app.tinytapeout.com/projects/4061) |
-| 4-bit ALU | ⭐ | S | N/A | N/A | [Project 4062](https://app.tinytapeout.com/projects/4062) |
-| 8-bit Prime Number Detector | ⭐ | S | N/A | N/A | [Project 4066](https://app.tinytapeout.com/projects/4066) |
-| Multi-Tool SoC | ⭐ | S | N/A | N/A | [Project 4072](https://app.tinytapeout.com/projects/4072) |
-| Flying Fish | ⭐ | S | N/A | N/A | [Project 4075](https://app.tinytapeout.com/projects/4075) |
-| TinyTapeout Signal Box | ⭐ | S | N/A | N/A | [Project 4077](https://app.tinytapeout.com/projects/4077) |
-| 2 digit minute timer | ⭐ | S | N/A | N/A | [Project 4078](https://app.tinytapeout.com/projects/4078) |
-| Glitch Detector | ⭐ | S | N/A | N/A | [Project 4079](https://app.tinytapeout.com/projects/4079) |
-| hypnotic squares | ⭐ | S | N/A | N/A | [Project 4080](https://app.tinytapeout.com/projects/4080) |
-| 8bit-mac-unit | ⭐ | S | N/A | N/A | [Project 4082](https://app.tinytapeout.com/projects/4082) |
-| 4-Bit Counter and Registers Demo | ⭐ | S | N/A | N/A | [Project 4085](https://app.tinytapeout.com/projects/4085) |
-| Maze Explorer Game | ⭐ | S | N/A | N/A | [Project 4086](https://app.tinytapeout.com/projects/4086) |
-| TinyTapeout SRAM | ⭐ | S | N/A | N/A | [Project 4091](https://app.tinytapeout.com/projects/4091) |
-| Bday Candle Chip | ⭐ | S | N/A | N/A | [Project 4092](https://app.tinytapeout.com/projects/4092) |
-| Code Lock | ⭐ | S | N/A | N/A | [Project 4093](https://app.tinytapeout.com/projects/4093) |
-| Simple Counter | ⭐ | S | N/A | N/A | [Project 4097](https://app.tinytapeout.com/projects/4097) |
+| [Triple Modular Redundancy](tt4005.md) | ⭐ | S | [YAML](data/tt4005_triple_modular_redundancy.yaml) | N/A | [Project 4005](https://app.tinytapeout.com/projects/4005) |
+| [VGA multiplex with TRNG VGA](tt4010.md) | ⭐ | S | [YAML](data/tt4010_vga_multiplex_with_trng_vga.yaml) | N/A | [Project 4010](https://app.tinytapeout.com/projects/4010) |
+| [UART-ALU Processor](tt4014.md) | ⭐ | S | [YAML](data/tt4014_uart_alu_processor.yaml) | N/A | [Project 4014](https://app.tinytapeout.com/projects/4014) |
+| [UART interfaced 8ch PWM controller](tt4015.md) | ⭐ | S | [YAML](data/tt4015_uart_interfaced_8ch_pwm_controller.yaml) | N/A | [Project 4015](https://app.tinytapeout.com/projects/4015) |
+| [A fully functional ALU (Arithmetic logic unit)](tt4020.md) | ⭐ | S | [YAML](data/tt4020_a_fully_functional_alu_arithmetic_logic_unit.yaml) | N/A | [Project 4020](https://app.tinytapeout.com/projects/4020) |
+| [TinyTapeout VGA Checker VGA](tt4021.md) | ⭐ | S | [YAML](data/tt4021_tinytapeout_vga_checker_vga.yaml) | N/A | [Project 4021](https://app.tinytapeout.com/projects/4021) |
+| [RNG](tt4031.md) | ⭐ | S | [YAML](data/tt4031_rng.yaml) | N/A | [Project 4031](https://app.tinytapeout.com/projects/4031) |
+| [7 segment ihp resistcode](tt4034.md) | ⭐ | S | [YAML](data/tt4034_7_segment_ihp_resistcode.yaml) | N/A | [Project 4034](https://app.tinytapeout.com/projects/4034) |
+| [Bouncing Checkers VGA](tt4038.md) | ⭐ | S | [YAML](data/tt4038_bouncing_checkers_vga.yaml) | N/A | [Project 4038](https://app.tinytapeout.com/projects/4038) |
+| [ttihp-HDSISO8RS](tt4039.md) | ⭐ | S | [YAML](data/tt4039_ttihp_hdsiso8rs.yaml) | N/A | [Project 4039](https://app.tinytapeout.com/projects/4039) |
+| [Gate-Level 8-bit MAC with Ripple-Carry Accumulator](tt4043.md) | ⭐ | S | [YAML](data/tt4043_gate_level_8_bit_mac_with_ripple_carry_accumulator.yaml) | N/A | [Project 4043](https://app.tinytapeout.com/projects/4043) |
+| [Demoscreen full of RICH VGA](tt4044.md) | ⭐ | S | [YAML](data/tt4044_demoscreen_full_of_rich_vga.yaml) | N/A | [Project 4044](https://app.tinytapeout.com/projects/4044) |
+| [8 bit saturated adder](tt4045.md) | ⭐ | S | [YAML](data/tt4045_8_bit_saturated_adder.yaml) | N/A | [Project 4045](https://app.tinytapeout.com/projects/4045) |
+| [float_synth](tt4046.md) | ⭐ | S | [YAML](data/tt4046_float_synth.yaml) | N/A | [Project 4046](https://app.tinytapeout.com/projects/4046) |
+| [TinyScanChain](tt4049.md) | ⭐ | S | [YAML](data/tt4049_tinyscanchain.yaml) | N/A | [Project 4049](https://app.tinytapeout.com/projects/4049) |
+| [badstripes](tt4055.md) | ⭐ | S | [YAML](data/tt4055_badstripes.yaml) | N/A | [Project 4055](https://app.tinytapeout.com/projects/4055) |
+| [IHP Gate Delay Characterizer (3-Flavor)](tt4056.md) | ⭐ | S | [YAML](data/tt4056_ihp_gate_delay_characterizer_3_flavor.yaml) | N/A | [Project 4056](https://app.tinytapeout.com/projects/4056) |
+| [Mini PSG](tt4060.md) | ⭐ | S | [YAML](data/tt4060_mini_psg.yaml) | N/A | [Project 4060](https://app.tinytapeout.com/projects/4060) |
+| [Tiny_ECC](tt4061.md) | ⭐ | S | [YAML](data/tt4061_tiny_ecc.yaml) | N/A | [Project 4061](https://app.tinytapeout.com/projects/4061) |
+| [4-bit ALU](tt4062.md) | ⭐ | S | [YAML](data/tt4062_4_bit_alu.yaml) | N/A | [Project 4062](https://app.tinytapeout.com/projects/4062) |
+| [8-bit Prime Number Detector](tt4066.md) | ⭐ | S | [YAML](data/tt4066_8_bit_prime_number_detector.yaml) | N/A | [Project 4066](https://app.tinytapeout.com/projects/4066) |
+| [Multi-Tool SoC](tt4072.md) | ⭐ | S | [YAML](data/tt4072_multi_tool_soc.yaml) | N/A | [Project 4072](https://app.tinytapeout.com/projects/4072) |
+| [Flying Fish VGA](tt4075.md) | ⭐ | S | [YAML](data/tt4075_flying_fish_vga.yaml) | N/A | [Project 4075](https://app.tinytapeout.com/projects/4075) |
+| [TinyTapeout Signal Box](tt4077.md) | ⭐ | S | [YAML](data/tt4077_tinytapeout_signal_box.yaml) | N/A | [Project 4077](https://app.tinytapeout.com/projects/4077) |
+| [2 digit minute timer](tt4078.md) | ⭐ | S | [YAML](data/tt4078_2_digit_minute_timer.yaml) | N/A | [Project 4078](https://app.tinytapeout.com/projects/4078) |
+| [Glitch Detector](tt4079.md) | ⭐ | S | [YAML](data/tt4079_glitch_detector.yaml) | N/A | [Project 4079](https://app.tinytapeout.com/projects/4079) |
+| [hypnotic squares VGA](tt4080.md) | ⭐ | S | [YAML](data/tt4080_hypnotic_squares_vga.yaml) | N/A | [Project 4080](https://app.tinytapeout.com/projects/4080) |
+| [8bit-mac-unit](tt4082.md) | ⭐ | S | [YAML](data/tt4082_8bit_mac_unit.yaml) | N/A | [Project 4082](https://app.tinytapeout.com/projects/4082) |
+| [4-Bit Counter and Registers Demo](tt4085.md) | ⭐ | S | [YAML](data/tt4085_4_bit_counter_and_registers_demo.yaml) | N/A | [Project 4085](https://app.tinytapeout.com/projects/4085) |
+| [Maze Explorer Game](tt4086.md) | ⭐ | S | [YAML](data/tt4086_maze_explorer_game.yaml) | N/A | [Project 4086](https://app.tinytapeout.com/projects/4086) |
+| [TinyTapeout SRAM](tt4091.md) | ⭐ | S | [YAML](data/tt4091_tinytapeout_sram.yaml) | N/A | [Project 4091](https://app.tinytapeout.com/projects/4091) |
+| [Bday Candle Chip](tt4092.md) | ⭐ | S | [YAML](data/tt4092_bday_candle_chip.yaml) | N/A | [Project 4092](https://app.tinytapeout.com/projects/4092) |
+| [Code Lock](tt4093.md) | ⭐ | S | [YAML](data/tt4093_code_lock.yaml) | N/A | [Project 4093](https://app.tinytapeout.com/projects/4093) |
+| [Simple Counter](tt4097.md) | ⭐ | S | [YAML](data/tt4097_simple_counter.yaml) | N/A | [Project 4097](https://app.tinytapeout.com/projects/4097) |
 
 ## Untestable Designs
 
 | Summary | Novelty | T-shirt size | Why | TinyTapeout Page |
 |---------|---------|--------------|-----|------------------|
-| mini mosbius | ⭐⭐⭐⭐ | XL | Analog / Not in shuttle ttihp26a | [Project 3390](https://app.tinytapeout.com/projects/3390) |
-| AdEx Neuron NCS | ⭐⭐⭐ | L | Analog | [Project 3750](https://app.tinytapeout.com/projects/3750) |
-| Genesis | ⭐⭐⭐ | L | Analog | [Project 3760](https://app.tinytapeout.com/projects/3760) |
-| Oscillating Bones | ⭐⭐ | M | Analog | [Project 3499](https://app.tinytapeout.com/projects/3499) |
-| first try | ⭐⭐ | M | Analog | [Project 3523](https://app.tinytapeout.com/projects/3523) |
-| TTIHP_Hall_Sensor | ⭐⭐ | M | Analog | [Project 3762](https://app.tinytapeout.com/projects/3762) |
-| SoilZ v1 Lock-In Impedance Analyzer | ⭐⭐ | M | Analog | [Project 3778](https://app.tinytapeout.com/projects/3778) |
-| Operational Amplifier Test Circuits | ⭐⭐ | M | Analog | [Project 3984](https://app.tinytapeout.com/projects/3984) |
-| Basic Oszilloscope and Signal Generator | ⭐⭐ | M | Analog | [Project 3987](https://app.tinytapeout.com/projects/3987) |
-| True(er) Random Number Generator (TRNG) | ⭐ | S | Analog | [Project 3960](https://app.tinytapeout.com/projects/3960) |
-| LIF Neuron | ⭐ | S | Analog | [Project 4098](https://app.tinytapeout.com/projects/4098) |
+| [mini mosbius](tt3390.md) | ⭐⭐⭐⭐ | XL | Analog / Not in shuttle ttihp26a | [Project 3390](https://app.tinytapeout.com/projects/3390) |
+| [AdEx Neuron NCS ANALOG](tt3750.md) | ⭐⭐⭐ | L | Analog | [Project 3750](https://app.tinytapeout.com/projects/3750) |
+| [Genesis ANALOG](tt3760.md) | ⭐⭐⭐ | L | Analog | [Project 3760](https://app.tinytapeout.com/projects/3760) |
+| [Oscillating Bones](tt3499.md) | ⭐⭐ | M | Analog | [Project 3499](https://app.tinytapeout.com/projects/3499) |
+| [first try](tt3523.md) | ⭐⭐ | M | Analog | [Project 3523](https://app.tinytapeout.com/projects/3523) |
+| [TTIHP_Hall_Sensor](tt3762.md) | ⭐⭐ | M | Analog | [Project 3762](https://app.tinytapeout.com/projects/3762) |
+| [SoilZ v1 Lock-In Impedance Analyzer ANALOG](tt3778.md) | ⭐⭐ | M | Analog | [Project 3778](https://app.tinytapeout.com/projects/3778) |
+| [Operational Amplifier Test Circuits ANALOG](tt3984.md) | ⭐⭐ | M | Analog | [Project 3984](https://app.tinytapeout.com/projects/3984) |
+| [Basic Oszilloscope and Signal Generator](tt3987.md) | ⭐⭐ | M | Analog | [Project 3987](https://app.tinytapeout.com/projects/3987) |
+| [True(er) Random Number Generator (TRNG)](tt3960.md) | ⭐ | S | Analog | [Project 3960](https://app.tinytapeout.com/projects/3960) |
+| [LIF Neuron](tt4098.md) | ⭐ | S | Analog | [Project 4098](https://app.tinytapeout.com/projects/4098) |

@@ -253,7 +253,7 @@ async def main():
             if os.path.exists(md_path):
                 name_link = f"[{p['name']}](tt{p['id']}.md)"
             else:
-                name_link = p['name']
+                name_link = f"[{p['name']}](tt{p['id']}.md)"
             yaml_rel = p['yaml_path'].replace("src/data/", "data/") if p['yaml_path'] else ""
             svg_rel = p['svg_path'].replace("waveforms/", "waveforms/") if p['svg_path'] else ""
 
@@ -271,7 +271,7 @@ async def main():
             if os.path.exists(md_path):
                 name_link = f"[{p['name']}](tt{p['id']}.md)"
             else:
-                name_link = p['name']
+                name_link = f"[{p['name']}](tt{p['id']}.md)"
             tt_page_link = f"[Project {p['id']}](https://app.tinytapeout.com/projects/{p['id']})"
             f.write(f"| {name_link} | {p['novelty']} | {p['size']} | {p['reason']} | {tt_page_link} |\n")
 

@@ -1,0 +1,65 @@
+ID:3499|NAME:Oscillating Bones|REPO:https://github.com/urish/ttihp-oscillating-bones
+ID:3683|NAME:Tiny tape out test|REPO:https://github.com/slugvision/Tinytapeout
+ID:3750|NAME:AdEx Neuron NCS
+ANALOG|REPO:https://github.com/sunny441/ttihp26a-adex-neuron-ncs
+ID:3760|NAME:Genesis
+ANALOG|REPO:https://github.com/brunny95/Genesis
+ID:3762|NAME:TTIHP_Hall_Sensor|REPO:https://github.com/HecmacGPD/TTIHP-Hall-Sensor
+ID:3778|NAME:SoilZ v1 Lock-In Impedance Analyzer
+ANALOG|REPO:https://github.com/TechHU-GS/analog-trial
+ID:3960|NAME:True(er) Random Number Generator (TRNG)|REPO:https://github.com/anujic/anujic_ttihp26a
+ID:3984|NAME:Operational Amplifier Test Circuits
+ANALOG|REPO:https://github.com/gfcwfzkm/ttihp_opamp_bfh_gesep1_mht1_msm9
+ID:3987|NAME:Basic Oszilloscope and Signal Generator|REPO:https://github.com/gfcwfzkm/ttihp-scope
+ID:4005|NAME:Triple Modular Redundancy|REPO:https://github.com/jcdr/trmspi1
+ID:4010|NAME:VGA multiplex with TRNG
+VGA|REPO:https://vga-playground.com/?repo=https%3A%2F%2Fgithub.com%2FDivineMK%2Fttihp26a-tapeout&ref=02218a155272cc73a2ca275f534b96a10d0492f8
+ID:4014|NAME:UART-ALU Processor|REPO:https://github.com/lukkaempf/tt_um_uart_alu
+ID:4015|NAME:UART interfaced 8ch PWM controller|REPO:https://github.com/ADDTDR/tt-pwm-controller
+ID:4020|NAME:A fully functional ALU (Arithmetic logic unit)|REPO:https://github.com/RK4444/tt_ALU_t_rick_ihp_ver
+ID:4021|NAME:TinyTapeout VGA Checker
+VGA|REPO:https://vga-playground.com/?repo=https%3A%2F%2Fgithub.com%2Fadriantrummer%2Ftinytapeout1&ref=484473a75ab5277354fdddd3c5ac30b3dac19649
+ID:4031|NAME:RNG|REPO:https://github.com/Xelef2000/tinytapeout-verilog
+ID:4032|NAME:Tiny NPU: 4-Way Parallel INT8 Inference Engine|REPO:https://github.com/malikweren/ttihp-malik-tiny-npu
+ID:4034|NAME:7 segment ihp resistcode|REPO:https://github.com/bauzx/ttihp-7seg-resistcode
+ID:4038|NAME:Bouncing Checkers
+VGA|REPO:https://vga-playground.com/?repo=https%3A%2F%2Fgithub.com%2Fg-schultz%2Fttihp-verilog&ref=89f33c7cf02cab41f02d6aba32f64e059c67f178
+ID:4039|NAME:ttihp-HDSISO8RS|REPO:https://github.com/ygdes/ttihp-HDSISO8RS
+ID:4043|NAME:Gate-Level 8-bit MAC with Ripple-Carry Accumulator|REPO:https://github.com/malikweren/ttihp-malik-int8-mac
+ID:4044|NAME:Demoscreen full of RICH
+VGA|REPO:https://vga-playground.com/?repo=https%3A%2F%2Fgithub.com%2Fhazellilili%2Ftt-ihp26a-faaaa&ref=7a8d359d1e07bc812d161a1a5062e9794093ecdb
+ID:4045|NAME:8 bit saturated adder|REPO:https://github.com/Blanluc/ttihp-verilog-template
+ID:4046|NAME:float_synth|REPO:https://github.com/NikLeberg/tt_um_float_synth
+ID:4048|NAME:Plasma
+VGA|REPO:https://vga-playground.com/?repo=https%3A%2F%2Fgithub.com%2Fthomasherzog%2FIHP26a-Plasma&ref=f40f099656f59a60cc32a12c76a9c2949d94eb96
+ID:4049|NAME:TinyScanChain|REPO:https://github.com/YannGuidon/TinyScanChain
+ID:4050|NAME:moss_display
+VGA|REPO:https://vga-playground.com/?repo=https%3A%2F%2Fgithub.com%2FKeshihbaNo%2Fmoss_display&ref=837066d3811808dbcbf33926f70089aeedd4fdde
+ID:4055|NAME:badstripes|REPO:https://github.com/maluethi/badstripes
+ID:4056|NAME:IHP Gate Delay Characterizer (3-Flavor)|REPO:https://github.com/catalinlazar/tt_ihp_char_osc
+ID:4060|NAME:Mini PSG|REPO:https://github.com/zettpe/tt-ihp26a-mini-psg
+ID:4061|NAME:Tiny_ECC|REPO:https://github.com/prakh9361/tt0x-TIny_ECC
+ID:4062|NAME:4-bit ALU|REPO:https://github.com/Faultierschnegg/Tiny-Tapeout-4-bit-ALU
+ID:4063|NAME:Tiny MMU|REPO:https://github.com/recursivetree/tt-tmmu
+ID:4066|NAME:8-bit Prime Number Detector|REPO:https://github.com/Maximillian-Udar/ttihp-verilog-template
+ID:4071|NAME:Three Body Solution
+VGA|REPO:https://vga-playground.com/?repo=https%3A%2F%2Fgithub.com%2Fjknotrowling%2FTinyTapeoutVGA&ref=18739ab349c6c2dae0a4d77f5de6e4fefeb43eaa
+ID:4072|NAME:Multi-Tool SoC|REPO:https://github.com/mauro-ciccone/tt-multitool-soc
+ID:4073|NAME:Spongent-88 Hash Accelerator|REPO:https://github.com/imix/ttihp-spongent88
+ID:4075|NAME:Flying Fish
+VGA|REPO:https://vga-playground.com/?repo=https%3A%2F%2Fgithub.com%2FFteve%2FTiny-Tapeout-Submission-FS2026&ref=ed3ef182d5bb6bba416c50105cf6146f52cfd79c
+ID:4076|NAME:8-bit RISC-V Lite CPU|REPO:https://github.com/XxWiwaxX/chip1
+ID:4077|NAME:TinyTapeout Signal Box|REPO:https://github.com/Nprom2/ttihp26a-signal-box
+ID:4078|NAME:2 digit minute timer|REPO:https://github.com/anna-vee/anna_v_twodigittimer
+ID:4079|NAME:Glitch Detector|REPO:https://github.com/mzollin/tt-glitch-detector
+ID:4080|NAME:hypnotic squares
+VGA|REPO:https://vga-playground.com/?repo=https%3A%2F%2Fgithub.com%2Fpietromiotti%2Fttihp-verilog-squares&ref=4fb51cd58abc92e6194e4cd918e79ea7c4ae7427
+ID:4082|NAME:8bit-mac-unit|REPO:https://github.com/bdawg4113/tt-ihp26a-mac
+ID:4085|NAME:4-Bit Counter and Registers Demo|REPO:https://github.com/fischbacher/TinyTapeout-IHP26a-StudentCoaching
+ID:4086|NAME:Maze Explorer Game|REPO:https://github.com/medama2008-glitch/ttihp26a-maze-game
+ID:4091|NAME:TinyTapeout SRAM|REPO:https://github.com/HenryHering/TinyTapeoutSRAM
+ID:4092|NAME:Bday Candle Chip|REPO:https://github.com/biancaceolin/Bday-Chip
+ID:4093|NAME:Code Lock|REPO:https://github.com/jmkrecegit/tt_hdl_ihp26a
+ID:4096|NAME:MNIST Binary Neural Net (Inference)|REPO:https://github.com/marcandrewessner/binaryneuralnet-asic-TTIHP26
+ID:4097|NAME:Simple Counter|REPO:https://github.com/tulrich2/TinyTapeout-Counter
+ID:4098|NAME:LIF Neuron|REPO:https://github.com/abaigol/lif_neuron_Alex
