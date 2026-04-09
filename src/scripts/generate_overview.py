@@ -157,10 +157,19 @@ def find_files(pid):
                 break
 
     if os.path.exists("waveforms"):
-        for f in os.listdir("waveforms"):
-            if f.startswith(f"tt{pid}") and f.endswith(".svg"):
-                svg_path = f"waveforms/{f}"
-                break
+        # First priority: SVG matching the YAML filename (minus extension)
+        if yaml_path:
+            yaml_name = os.path.splitext(os.path.basename(yaml_path))[0]
+            target_svg = f"waveforms/{yaml_name}.svg"
+            if os.path.exists(target_svg):
+                svg_path = target_svg
+
+        # Second priority: Any SVG starting with tt{pid}
+        if not svg_path:
+            for f in os.listdir("waveforms"):
+                if f.startswith(f"tt{pid}") and f.endswith(".svg"):
+                    svg_path = f"waveforms/{f}"
+                    break
 
     return yaml_path, svg_path
 
