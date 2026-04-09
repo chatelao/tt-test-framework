@@ -125,3 +125,4 @@ site/
 !/wasm/tt4002.*
 !/wasm/tt4003.*
 !/wasm/tt4006.*
+!/wasm/tt4154.*
