@@ -82,3 +82,7 @@ test_steps:
     cycles: 1
     values:
       UO_OUT: "Result[7:0]"
+
+metadata:
+  source: "https://github.com/chatelao/ttihp-fp8-mul"
+  doc: "https://github.com/chatelao/ttihp-fp8-mul/blob/ihp-sg13cmos5l/docs/test.md#functional-test-sequences"
